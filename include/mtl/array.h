@@ -30,6 +30,8 @@ template<typename T, std::size_t N> class array
     using const_pointer          = const value_type*;
     using iterator               = pointer;
     using const_iterator         = const_pointer;
+    
+    value_type _elems[N]; // aggregate storage
 
     /// @brief Access operator.
     constexpr auto operator[](size_type i) -> reference { return this->_elems[i]; }
@@ -69,9 +71,6 @@ template<typename T, std::size_t N> class array
     {
         for (auto& e : this->_elems) { e = value; }
     }
-    
-    private:
-    value_type _elems[N]; // aggregate storage
 };
 } // namespace util
 
