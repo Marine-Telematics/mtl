@@ -13,17 +13,28 @@
 
 namespace mtl
 {
+// *****************************************
+// remove_reference
 template<typename T> struct remove_reference      { using type = T; };
 template<typename T> struct remove_reference<T&>  { using type = T; };
 template<typename T> struct remove_reference<T&&> { using type = T; };
 
 template<typename T> using remove_reference_t = typename remove_reference<T>::type;
 
+// *****************************************
+// add_rvalue_reference
 template <typename T> struct add_rvalue_reference { using type = T&&; };
 template <typename T> struct add_rvalue_reference<T&> { using type = T&; };
 
 template <typename T>
 using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
+
+// *****************************************
+// conditional
+template<bool B, class T, class F> struct conditional { using type = T; };
+template<class T, class F> struct conditional<false, T, F> { using type = F; };
+
+template< bool B, class T, class F > using conditional_t = typename conditional<B,T,F>::type;
 }
 
 #endif
