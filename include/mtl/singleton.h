@@ -11,6 +11,7 @@
 #ifndef MTL_SINGLETON_H
 #define MTL_SINGLETON_H
 
+#include "new.h"
 #include "utility.h"
 
 namespace mtl

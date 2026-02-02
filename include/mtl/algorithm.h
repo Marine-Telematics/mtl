@@ -24,6 +24,13 @@ inline constexpr void copy_n(InputIt first, Size count, OutputIt result)
     }
 }
 
+template<typename T>
+constexpr const T& clamp(const T& v, const T& lo, const T& hi)
+{
+    // Same precondition as the standard: !(hi < lo) must be true
+    return (v < lo) ? lo : (hi < v) ? hi : v;
+}
+
 template<class T>
 const T& max(const T& a, const T& b) { return (b < a) ? a : b; }
 
@@ -35,7 +42,6 @@ const T& min(const T& a, const T& b) { return (b < a) ? b : a; }
 
 template<class T, class Compare>
 const T& min(const T& a, const T& b, Compare comp) { return (comp(b, a)) ? b : a; }
-
 }
 
 #endif
