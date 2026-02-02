@@ -34,7 +34,20 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 template<bool B, class T, class F> struct conditional { using type = T; };
 template<class T, class F> struct conditional<false, T, F> { using type = F; };
 
-template< bool B, class T, class F > using conditional_t = typename conditional<B,T,F>::type;
+template<bool B, class T, class F > using conditional_t = typename conditional<B,T,F>::type;
+
+// *****************************************
+// has_const_iterator
+template <typename T> class has_const_iterator
+{
+    template <typename C> static auto test(typename C::const_iterator *) -> char;
+    template <typename C> static auto test(...) -> int;
+
+    public:
+    static constexpr bool value = sizeof(test<T>(nullptr)) == sizeof(char);
+};
+
+template <typename T> using has_const_iterator_v = typename has_const_iterator<T>::value;
 }
 
 #endif

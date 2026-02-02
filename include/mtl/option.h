@@ -15,10 +15,12 @@
 #include <cassert>
 
 #include "utility.h"
+#include "new.h"
 
 namespace mtl
 {
-struct none {};
+struct none_type {};
+[[maybe_unused]] inline static constexpr none_type none{};
 
 template <typename T> class option
 {
@@ -32,8 +34,8 @@ template <typename T> class option
     
     /// Constructors
     constexpr option() : _has(false) {}
-    constexpr option([[maybe_unused]] const none&) : _has(false) { }
-    constexpr option([[maybe_unused]] none&&) : _has(false) { }
+    constexpr option([[maybe_unused]] const none_type&) : _has(false) { }
+    constexpr option([[maybe_unused]] none_type&&) : _has(false) { }
 
     constexpr option(const T& value) : _has(true) { new (&this->_storage) T(value); }
     constexpr option(T&& value) : _has(true) { new (&this->_storage) T(move(value)); }
@@ -141,8 +143,8 @@ template <typename T> class option
     }
 
     private:
-    auto value() -> reference { return *reinterpret_cast<T*>(&_storage); }
-    auto value() const -> const_reference { return *reinterpret_cast<T*>(&_storage); }
+    auto value() -> reference { return *reinterpret_cast<pointer>(&_storage); }
+    auto value() const -> const_reference { return *reinterpret_cast<const_pointer>(&_storage); }
 
     bool _has;
     alignas(T) unsigned char _storage[sizeof(T)];
