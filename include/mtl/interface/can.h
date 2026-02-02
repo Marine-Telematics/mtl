@@ -19,7 +19,7 @@
 #include "../algorithm.h"
 #include "../ranges.h"
 
-namespace mtl::intf::can
+namespace mtl::can
 {
 using id_type   = uint32_t;
 using data_type = uint8_t;
