@@ -16,12 +16,7 @@ namespace mtl
 template<class Size, class InputIt = void *, class OutputIt = void *>
 inline constexpr void copy_n(InputIt first, Size count, OutputIt result)
 {
-    if (count > 0u)
-    {
-        *result = *first;
-        ++result;
-        for (Size i = 1u; i != count; ++i, ++result) *result = *++first;
-    }
+    __builtin_memcpy(result, first, count);
 }
 
 template<typename T>
@@ -32,16 +27,28 @@ constexpr const T& clamp(const T& v, const T& lo, const T& hi)
 }
 
 template<class T>
-const T& max(const T& a, const T& b) { return (b < a) ? a : b; }
+inline constexpr auto max(const T& a, const T& b) -> const T& { return (b < a) ? a : b; }
 
 template<class T, class Compare>
-const T& max(const T& a, const T& b, Compare comp) { return (comp(b, a)) ? a : b; }
+inline constexpr auto max(const T& a, const T& b, Compare comp) -> const T&
+{
+    return (comp(b, a)) ? a : b;
+}
 
 template<class T>
-const T& min(const T& a, const T& b) { return (b < a) ? b : a; }
+inline constexpr auto min(const T& a, const T& b) -> const T&  { return (b < a) ? b : a; }
 
 template<class T, class Compare>
-const T& min(const T& a, const T& b, Compare comp) { return (comp(b, a)) ? b : a; }
+inline constexpr auto min(const T& a, const T& b, Compare comp) -> const T&
+{
+    return (comp(b, a)) ? b : a;
+}
+
+template <typename T, typename... Opts>
+inline constexpr auto oneof(T &&val, Opts &&...opts) -> bool
+{
+    return sizeof...(opts) == 0 ? false : (... || (val == opts));
+}
 }
 
 #endif

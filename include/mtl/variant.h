@@ -13,6 +13,7 @@
 
 #include <cstddef>
 
+#include "algorithm.h"
 #include "utility.h"
 #include "largest.h"
 #include "type_traits.h"
@@ -60,29 +61,56 @@ template<typename T1,
          typename T5 = private_variant::null_type<5>,
          typename T6 = private_variant::null_type<6>,
          typename T7 = private_variant::null_type<7>,
-         typename T8 = private_variant::null_type<8> >
+         typename T8 = private_variant::null_type<8>,
+         typename T9 = private_variant::null_type<9>,
+         typename T10 = private_variant::null_type<10>,
+         typename T11 = private_variant::null_type<11>,
+         typename T12 = private_variant::null_type<12>,
+         typename T13 = private_variant::null_type<13>,
+         typename T14 = private_variant::null_type<14>,
+         typename T15 = private_variant::null_type<15>,
+         typename T16 = private_variant::null_type<16>,
+         typename T17 = private_variant::null_type<17>,
+         typename T18 = private_variant::null_type<18>,
+         typename T19 = private_variant::null_type<19>,
+         typename T20 = private_variant::null_type<19> >
 class variant
 {
     public:
     using index_type    = size_t;
-    using largest_type  = largest_type_t<T1, T2, T3, T4, T5, T6, T7, T8>;
-    using largest_align = typename largest_alignment<T1, T2, T3, T4, T5, T6, T7, T8>::type;
+    using largest_type  = largest_type_t<
+        T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20>;
+    using largest_align = typename largest_alignment<
+        T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20
+        >::type;
     using storage_type  = private_variant::storage_type<largest_align, largest_type>;
     
     // Random value chosen by the universe upon its creation.
     static constexpr index_type unsuported_type_id = 12876387;
     
-    template <typename T>
+    template <typename T, typename U = remove_const_t<T>>
     struct type_id_lookup
     {
-        static const index_type value = is_same_v<T, T1> ? 0 :
-                                        is_same_v<T, T2> ? 1 :
-                                        is_same_v<T, T3> ? 2 :
-                                        is_same_v<T, T4> ? 3 :
-                                        is_same_v<T, T5> ? 4 :
-                                        is_same_v<T, T6> ? 5 :
-                                        is_same_v<T, T7> ? 6 :
-                                        is_same_v<T, T8> ? 7 :
+        static const index_type value = is_same_v<U, T1> ? 0 :
+                                        is_same_v<U, T2> ? 1 :
+                                        is_same_v<U, T3> ? 2 :
+                                        is_same_v<U, T4> ? 3 :
+                                        is_same_v<U, T5> ? 4 :
+                                        is_same_v<U, T6> ? 5 :
+                                        is_same_v<U, T7> ? 6 :
+                                        is_same_v<U, T8> ? 7 :
+                                        is_same_v<U, T9> ? 8 :
+                                        is_same_v<U, T10> ? 9 :
+                                        is_same_v<U, T11> ? 10 :
+                                        is_same_v<U, T12> ? 11 :
+                                        is_same_v<U, T13> ? 12 :
+                                        is_same_v<U, T14> ? 13 :
+                                        is_same_v<U, T15> ? 14 :
+                                        is_same_v<U, T16> ? 15 :
+                                        is_same_v<U, T17> ? 16 :
+                                        is_same_v<U, T18> ? 17 :
+                                        is_same_v<U, T19> ? 18 :
+                                        is_same_v<U, T20> ? 19 :
                                         unsuported_type_id;
     };
     
@@ -94,12 +122,29 @@ class variant
     
     // All types of variant are friends.
     template <typename V1, typename V2, typename V3, typename V4,
-              typename V5, typename V6, typename V7, typename V8>
+              typename V5, typename V6, typename V7, typename V8,
+              typename V9, typename V10, typename V11, typename V12,
+              typename V13, typename V14, typename V15, typename V16,
+              typename V17, typename V18, typename V19, typename V20>
     friend class variant;
     
     // Assignment
     
     constexpr variant() : _hold_index(unsuported_type_id) {}
+    
+    constexpr variant(const variant& other) : _hold_index(unsuported_type_id)
+    {
+        copy_n(&other._storage, sizeof(other._storage), &this->_storage);
+        this->_hold_index = other._hold_index;        
+    }
+    
+    constexpr variant(variant&& other) : _hold_index(unsuported_type_id)
+    {
+        copy_n(&other._storage, sizeof(other._storage), &this->_storage);
+        this->_hold_index = other._hold_index;
+        
+        other.reset();
+    }
     
     ~variant() { reset(); }
     

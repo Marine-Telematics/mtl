@@ -42,6 +42,9 @@ inline static constexpr auto nanf() -> float { return __builtin_nanf("0x7fc000f0
 
 inline static constexpr auto isnan(const double v) -> bool { return __builtin_isnan(v); }
 inline static constexpr auto isnan(const float v) -> bool { return __builtin_isnan(v); }
+
+inline static constexpr auto is_finite(const double v) -> bool { return __builtin_isfinite(v); }
+inline static constexpr auto is_finite(const float v) -> bool { return __builtin_isfinite(v); }
 }
 
 #endif

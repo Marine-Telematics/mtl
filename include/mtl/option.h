@@ -52,7 +52,7 @@ template <typename T> class option
         }
     }
 
-    auto operator=(const option& other) -> reference
+    auto operator=(const option& other) -> option&
     {
         if (this == &other) { return *this; }
 
@@ -77,7 +77,7 @@ template <typename T> class option
         other.reset();
     }
 
-    auto operator=(option&& other) -> reference
+    auto operator=(option&& other) -> option&
     {
         if (this == &other) { return *this; }
 

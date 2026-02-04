@@ -32,6 +32,29 @@ template<typename T> struct remove_reference<T&&> { using type = T; };
 template<typename T> using remove_reference_t = typename remove_reference<T>::type;
 
 // *****************************************
+// remove_cv
+template<class T> struct remove_cv { typedef T type; };
+template<class T> struct remove_cv<const T> { typedef T type; };
+template<class T> struct remove_cv<volatile T> { typedef T type; };
+template<class T> struct remove_cv<const volatile T> { typedef T type; };
+
+template<typename T> using remove_cv_t = typename remove_cv<T>::type;
+
+// *****************************************
+// remove_const 
+template<class T> struct remove_const { typedef T type; };
+template<class T> struct remove_const<const T> { typedef T type; };
+
+template<typename T> using remove_const_t = typename remove_const<T>::type;
+ 
+// *****************************************
+// remove_volatile 
+template<class T> struct remove_volatile { typedef T type; };
+template<class T> struct remove_volatile<volatile T> { typedef T type; };
+
+template<typename T> using remove_volatile_t = typename remove_volatile<T>::type;
+
+// *****************************************
 // add_rvalue_reference
 template <typename T> struct add_rvalue_reference { using type = T&&; };
 template <typename T> struct add_rvalue_reference<T&> { using type = T&; };
