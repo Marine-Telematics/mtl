@@ -16,7 +16,11 @@ namespace mtl
 template<class Size, class InputIt = void *, class OutputIt = void *>
 inline constexpr void copy_n(InputIt first, Size count, OutputIt result)
 {
+#ifdef __ICCARM__
+    __aeabi_memcpy(result, first, count);
+#else
     __builtin_memcpy(result, first, count);
+#endif
 }
 
 template<typename T>
