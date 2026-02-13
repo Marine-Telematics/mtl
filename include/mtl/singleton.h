@@ -13,6 +13,7 @@
 
 #include "new.h"
 #include "utility.h"
+#include "aligned_storage.h"
 
 namespace mtl
 {
@@ -26,34 +27,31 @@ template <typename T> class singleton
     template <typename... Args>
     static auto create(Args&&... args) -> reference
     {
-        if (!_constructed)
+        if (!constructed)
         {
-            new (_buffer) value_t(forward<Args>(args)...);
-            _constructed = true;
+            new (buffer.data()) value_t(forward<Args>(args)...);
+            constructed = true;
         }
 
         return instance();
     }
 
-    static auto instance() -> reference
-    {
-        return *static_cast<pointer>(static_cast<void*>(_buffer));
-    }
+    static auto instance() -> reference { return *(buffer.data()); }
 
     static void destroy()
     {
-        if (_constructed)
+        if (constructed)
         {
             instance().~value_t();
-            _constructed = false;
+            constructed = false;
         }
     }
 
     singleton() = delete;
 
     private:
-    alignas(value_t) inline static unsigned char _buffer[sizeof(value_t)];
-    inline static bool _constructed = false;
+    inline static aligned_storage<value_t> buffer{};
+    inline static bool constructed;
 };
 }
 

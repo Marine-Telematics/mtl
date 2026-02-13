@@ -77,6 +77,13 @@ template<typename T> struct is_same<T, T> : true_type {};
 template<typename T, typename U> inline constexpr bool is_same_v = is_same<T, U>::value;
 
 // *****************************************
+// is_void
+template<class T>
+struct is_void : is_same<void, remove_cv_t<T>> {};
+
+template<typename T> inline constexpr bool is_void_v = is_void<T>::value;
+
+// *****************************************
 // enable_if
 template <bool B, typename T = void> struct enable_if {};
 template <typename T> struct enable_if<true, T> { using type = T; };

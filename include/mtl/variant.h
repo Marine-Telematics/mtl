@@ -84,10 +84,10 @@ class variant
         T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20
         >::type;
     using storage_type  = private_variant::storage_type<largest_align, largest_type>;
-    
+
     // Random value chosen by the universe upon its creation.
     static constexpr index_type unsuported_type_id = 12876387;
-    
+
     template <typename T, typename U = remove_const_t<T>>
     struct type_id_lookup
     {
@@ -113,13 +113,13 @@ class variant
                                         is_same_v<U, T20> ? 19 :
                                         unsuported_type_id;
     };
-    
+
     template<typename T>
     struct is_suported : integral_constant<bool, type_id_lookup<T>::value != unsuported_type_id> {};
-    
+
     template <typename T>
     static constexpr bool is_suported_v = is_suported<T>::value;
-    
+
     // All types of variant are friends.
     template <typename V1, typename V2, typename V3, typename V4,
               typename V5, typename V6, typename V7, typename V8,
@@ -127,43 +127,43 @@ class variant
               typename V13, typename V14, typename V15, typename V16,
               typename V17, typename V18, typename V19, typename V20>
     friend class variant;
-    
+
     // Assignment
-    
+
     constexpr variant() : _hold_index(unsuported_type_id) {}
-    
+
     constexpr variant(const variant& other) : _hold_index(unsuported_type_id)
     {
         copy_n(&other._storage, sizeof(other._storage), &this->_storage);
-        this->_hold_index = other._hold_index;        
+        this->_hold_index = other._hold_index;
     }
-    
+
     constexpr variant(variant&& other) : _hold_index(unsuported_type_id)
     {
         copy_n(&other._storage, sizeof(other._storage), &this->_storage);
         this->_hold_index = other._hold_index;
-        
+
         other.reset();
     }
-    
+
     ~variant() { reset(); }
-    
+
     template <typename T, typename... Args>
     void emplace(Args&&... args)
     {
         static_assert(is_suported_v<T>, "T is not a alternative to this variant");
-        
+
         this->reset();
         new (_storage.data) T(forward<Args>(args)...);
         this->_hold_index = type_id_lookup<T>::value;
     }
-    
+
     template<typename T, typename U = remove_reference_t<T>>
     constexpr variant(T&& value) : _hold_index(unsuported_type_id)
     {
         this->emplace<U>(forward<T>(value));
     }
-    
+
     template<typename T, typename U = remove_reference_t<T>>
     constexpr auto operator=(T&& value) -> variant&
     {
@@ -178,20 +178,20 @@ class variant
             private_variant::destroyer<
                 0, T1, T2, T3, T4,T5, T6, T7, T8
                 >::destroy(this->_hold_index, this->_storage.data);
-                
+
             this->_hold_index = unsuported_type_id;
         }
     }
-    
-    
-    // Query 
-    
+
+
+    // Query
+
     constexpr auto index() const -> index_type { return this->_hold_index; }
     constexpr auto valueless_by_exception() const -> bool
     {
         return this->_hold_index == unsuported_type_id;
     }
-    
+
     template<typename T>
     constexpr auto holds_alternative() -> bool
     {
@@ -199,15 +199,15 @@ class variant
         return this->_hold_index == type_id_lookup<T>::value;
     }
 
-    
+
     // Access
-    
+
     template <typename T>
     constexpr auto get() -> T&
     {
         static_assert(is_suported_v<T>, "T is not a alternative to this variant");
-        constexpr index_type idx = type_id_lookup<T>::value;
-        
+        // constexpr index_type idx = type_id_lookup<T>::value;
+
         // Accept UB instead of exceptions
         return *reinterpret_cast<T*>(&this->_storage.data);
     }
@@ -216,23 +216,23 @@ class variant
     constexpr auto get() const -> const T&
     {
         static_assert(is_suported_v<T>, "T is not a alternative to this variant");
-        constexpr index_type idx = type_id_lookup<T>::value;
-        
+        // constexpr index_type idx = type_id_lookup<T>::value;
+
         // Accept UB instead of exceptions
         return *reinterpret_cast<const T*>(&this->_storage.data);
     }
-    
+
     private:
     index_type _hold_index = unsuported_type_id;
     storage_type _storage{};
 };
 
 template <typename T, typename... Ts>
-constexpr auto get_if(variant<Ts...>* v) -> T* 
+constexpr auto get_if(variant<Ts...>* v) -> T*
 {
     using variant_t = variant<Ts...>;
     constexpr typename variant_t::index_type idx = variant_t:: template type_id_lookup<T>::value;
-    
+
     if (!v) return nullptr;
     if (v->index() != idx) return nullptr;
 
