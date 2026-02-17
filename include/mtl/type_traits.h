@@ -84,6 +84,14 @@ struct is_void : is_same<void, remove_cv_t<T>> {};
 template<typename T> inline constexpr bool is_void_v = is_void<T>::value;
 
 // *****************************************
+// is_standard_layout
+template <class T>
+struct is_standard_layout : public integral_constant<bool, __is_standard_layout(T)> {};
+
+template <class T>
+inline constexpr bool is_standard_layout_v = is_standard_layout<T>::value;
+
+// *****************************************
 // enable_if
 template <bool B, typename T = void> struct enable_if {};
 template <typename T> struct enable_if<true, T> { using type = T; };
