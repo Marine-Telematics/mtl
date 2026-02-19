@@ -53,6 +53,45 @@ inline constexpr auto oneof(T &&val, Opts &&...opts) -> bool
 {
     return sizeof...(opts) == 0 ? false : (... || (val == opts));
 }
+
+template <typename T>
+constexpr bool in_range(const T value, const T desired, const T diff)
+{
+    return (desired - diff < value && desired + diff > value);
+};
+
+template<class InputIt, class T>
+inline constexpr auto find(InputIt first, InputIt last, const T& value) -> InputIt
+{
+    for (; first != last; ++first)
+    {
+        if (*first == value) { return first; }
+    }
+ 
+    return last;
+}
+
+template<class InputIt, class UnaryPred>
+inline constexpr auto find_if(InputIt first, InputIt last, UnaryPred p) -> InputIt
+{
+    for (; first != last; ++first)
+    {
+        if (p(*first)) return first;
+    }
+ 
+    return last;
+}
+
+template<class InputIt, class UnaryPred>
+inline constexpr auto find_if_not(InputIt first, InputIt last, UnaryPred q) -> InputIt
+{
+    for (; first != last; ++first)
+    {
+        if (!q(*first)) return first;
+    }
+ 
+    return last;
+}
 }
 
 #endif
