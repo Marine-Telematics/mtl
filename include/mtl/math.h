@@ -38,45 +38,6 @@ inline static auto exp(float x) -> float { return __builtin_expf(x); }
 
 inline static auto tan(double x) -> double { return __builtin_tan(x); }
 inline static auto tanf(float x) -> float { return __builtin_tanf(x); }
-
-inline static auto nan() -> double { return __builtin_nan("0x7fc000f0"); }
-inline static auto nanf() -> float { return __builtin_nanf("0x7fc000f0"); }
-
-inline static auto isnan(const double v) -> bool
-{
-#ifdef __ICCARM__
-    return __iar_isnan(v);
-#else
-    return __builtin_isnan(v);
-#endif
-}
-
-inline static auto isnan(const float v) -> bool
-{
-#ifdef __ICCARM__
-    return __iar_isnanf(v);
-#else
-    return __builtin_isnan(v);
-#endif
-}
-
-inline static auto is_finite(const double v) -> bool
-{
-    #ifdef __ICCARM__
-    return __iar_isfinite(v);
-#else
-    return __builtin_isfinite(v);
-#endif
-}
-
-inline static auto is_finite(const float v) -> bool
-{
-#ifdef __ICCARM__
-    return __iar_isfinitef(v);
-#else
-    return __builtin_isfinite(v);
-#endif
-}
 }
 
 #endif

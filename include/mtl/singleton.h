@@ -11,7 +11,8 @@
 #ifndef MTL_SINGLETON_H
 #define MTL_SINGLETON_H
 
-#include "new.h"
+#include <new>
+
 #include "utility.h"
 #include "aligned_storage.h"
 
