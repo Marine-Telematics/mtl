@@ -22,6 +22,20 @@ using addr_type = uint8_t;
 using data_type = uint8_t;
 using size_type = size_t;
 
+enum class mode : uint8_t
+{
+    master = 0,
+    slave  = 1,
+};
+
+enum class speed : uint8_t
+{
+    standard  = 0, // 100 kHz
+    fast      = 1, // 400 kHz
+    fast_plus = 2, // 1 MHz
+    high      = 3, // 3.4 MHz
+};
+
 template<size_type SZ> class message
 {
     addr_type _addr;
