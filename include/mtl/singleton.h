@@ -12,8 +12,8 @@
 #define MTL_SINGLETON_H
 
 #include <new>
+#include <utility>
 
-#include "utility.h"
 #include "aligned_storage.h"
 
 namespace mtl
@@ -30,7 +30,7 @@ template <typename T> class singleton
     {
         if (!constructed)
         {
-            new (buffer.data()) value_t(forward<Args>(args)...);
+            new (buffer.data()) value_t(std::forward<Args>(args)...);
             constructed = true;
         }
 

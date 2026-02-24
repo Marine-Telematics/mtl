@@ -11,13 +11,12 @@
 #ifndef MTL_INTERFACE_CAN_H
 #define MTL_INTERFACE_CAN_H
 
+#include <span>
+#include <array>
+#include <ranges>
 #include <cstdint>
 #include <cstddef>
-
-#include "../array.h"
-#include "../span.h"
-#include "../algorithm.h"
-#include "../ranges.h"
+#include <algorithm>
 
 namespace mtl::can
 {
@@ -69,13 +68,13 @@ struct message
     message(const id_type id, const bool ext, const size_t len, const data_type *payload)
         : _identifier(id), _extended(ext), _dlc(len)
     {
-        copy_n(payload, len, this->_data.data());
+        std::copy_n(payload, len, this->_data.data());
     }
 
-    message(const id_type id, const bool ext, const span<const data_type> payload)
+    message(const id_type id, const bool ext, const std::span<const data_type> payload)
         : _identifier(id), _extended(ext), _dlc(payload.size())
     {
-        ranges::copy(payload, this->_data);
+        std::ranges::copy(payload, this->_data);
     }
 };
 }; // namespace trait::can

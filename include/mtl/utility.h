@@ -11,62 +11,36 @@
 #ifndef MTL_UTILITY_H
 #define MTL_UTILITY_H
 
-#include "type_traits.h"
+#include <type_traits>
 
 namespace mtl
 {
-/// @brief Similar to std::forward<T>()
-template<typename T>
-constexpr auto forward(remove_reference_t<T>& t) -> T&&
+/// @brief Runs a callable object at the end of the scope.
+/// @note This class is menat to be used by `mtl::defer`
+template<typename Fn>
+    requires std::is_invocable_v<Fn>
+struct final_action
 {
-    return static_cast<T&&>(t);
-}
-
-/// @brief Similar to std::forward<T>()
-template <typename T>
-constexpr auto forward(remove_reference_t<T>&& t) -> T&&
-{
-    return static_cast<T&&>(t);
-}
-
-/// @brief Similar to std::move<T>()
-template<typename T>
-constexpr auto move(T&& t) -> remove_reference_t<T>&&
-{
-    return static_cast<remove_reference_t<T>&&>(t);
-}
-
-/// @brief Similar to std::declval()
-template <typename T> auto declval() -> add_rvalue_reference_t<T>;
-
-/// @brief Similar to std::to_underlying()
-template<typename E>
-constexpr auto to_underlying(E e)
-{
-    static_assert(__is_enum(E), "to_underlying requires an enum type");
-    return static_cast<__underlying_type(E)>(e);
-}
-
-template <typename T1, typename T2>
-struct pair
-{
-    T1 _first;
-    T2 _second;
-
-    constexpr pair() = default;
-
-    constexpr pair(const T1& a, const T2& b)
-        : _first(a), _second(b) {}
-
-    template <typename U1, typename U2>
-    constexpr pair(U1&& a, U2&& b)
-        : _first(static_cast<U1&&>(a)), _second(static_cast<U2&&>(b)) {}
+    Fn f;
+    ~final_action() { f(); }
 };
 
-template<typename T1, typename T2>
-constexpr auto make_pair(T1 &&t1, T2 &&t2) -> pair<remove_reference_t<T1>, remove_reference_t<T2>>
+/// @brief Runs a callable object at the end of the scope of the calle.
+///
+/// @code
+/// static mutex<int> _mutex_obj;
+/// void increment_mutex_val()
+/// {
+///     _mutex_obj.lock();
+///     auto _ = mtl::defer([&] { _mutex_obj.unlock(); })
+/// 
+///     return _mutex_obj.with_lock([](int &val) { return ++val; });
+/// }
+/// @endcode
+template<typename Fn, typename Ret = final_action<Fn>>
+[[nodiscard]] auto defer(Fn &&f) -> Ret
 {
-    return pair(move(t1), move(t2));
+    return {f};
 }
 }
 

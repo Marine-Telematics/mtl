@@ -11,13 +11,11 @@
 #ifndef MTL_FM24CL64B_H
 #define MTL_FM24CL64B_H
 
+#include <array>
 #include <cstddef>
 #include <cstdint>
+#include <algorithm>
 
-#include "../array.h"
-#include "../algorithm.h"
-#include "../type_traits.h"
-#include "../aligned_storage.h"
 #include "../interface/i2c.h"
 
 namespace mtl
@@ -58,12 +56,12 @@ class fm24cl64b_impl : public fm24cl64b
     template<typename T, typename Fn>
     auto write(const address addr, const T &obj, Fn &&sender)
     {
-        array<i2c::data_type, sizeof(T) + sizeof(address)> buffer{};
+        std::array<i2c::data_type, sizeof(T) + sizeof(address)> buffer{};
 
         buffer[0] = (addr >> 8u) & 0xffu;
         buffer[1] = addr & 0xffu;
 
-        copy_n(&obj, sizeof(T), buffer.data() + sizeof(address));
+        std::copy_n(&obj, sizeof(T), buffer.data() + sizeof(address));
 
         return sender(this->_i2c_addr, buffer.data(), buffer.size());
     }
@@ -77,7 +75,7 @@ class fm24cl64b_impl : public fm24cl64b
     template<typename Fn>
     auto point_to_addr(const address addr, Fn &&sender)
     {
-        array<i2c::data_type, sizeof(address)> buffer{};
+        std::array<i2c::data_type, sizeof(address)> buffer{};
 
         buffer[0] = (addr >> 8u) & 0xffu;
         buffer[1] = addr & 0xffu;
@@ -88,6 +86,6 @@ class fm24cl64b_impl : public fm24cl64b
     private:
     const i2c::addr_type _i2c_addr;
 };
-} // namespace mtl
+}
 
 #endif

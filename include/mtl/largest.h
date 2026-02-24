@@ -12,8 +12,7 @@
 #define MTL_LARGEST_H
 
 #include <cstddef>
-
-#include "type_traits.h"
+#include <type_traits>
 
 namespace mtl
 {

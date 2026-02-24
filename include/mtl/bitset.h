@@ -13,8 +13,7 @@
 
 #include <cstdint>
 #include <cstddef>
-
-#include "type_traits.h"
+#include <type_traits>
 
 namespace mtl
 {
@@ -84,7 +83,7 @@ template<size_t N = 0u> class bitset
     };
     
     /// @brief bit level proxy access, for assign operator.
-    constexpr auto operator[](std::size_t i) -> bit_ref
+    constexpr auto operator[](const size_t i) -> bit_ref
     {
         return bit_ref{this->_val, static_cast<value_type>(1u << i)};
     }

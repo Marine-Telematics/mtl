@@ -13,14 +13,14 @@
 #ifndef MTL_STATIC_LIST_H
 #define MTL_STATIC_LIST_H
 
+#include <array>
+#include <utility>
 #include <cstdint>
-
-#include "array.h"
-#include "type_traits.h"
+#include <type_traits>
 
 namespace mtl
 {
-template <typename T, std::size_t N> class static_list;
+template <typename T, size_t N> class static_list;
 
 namespace static_list_detail
 {
@@ -38,7 +38,7 @@ namespace static_list_detail
 
     // Iterator for this linked list.
     // Can be used to traverse forwards and reverse.
-    template <typename T, std::size_t N, bool Reverse = false> class static_list_iterator
+    template <typename T, size_t N, bool Reverse = false> class static_list_iterator
     {
         static_list_node<T> *_v{nullptr};
         friend static_list<T, N>;
@@ -81,15 +81,15 @@ namespace static_list_detail
 //
 // The list does not use C++ exceptions. Instead, errors will result
 // in operating system exceptions (SEGV) or hardware exceptions.
-template <typename T, std::size_t N> class static_list
+template <typename T, size_t N> class static_list
 {
     template <typename TT> using static_list_node = static_list_detail::static_list_node<TT>;
-    template <typename TT, std::size_t NN, bool Reverse>
+    template <typename TT, size_t NN, bool Reverse>
     using static_list_iterator = static_list_detail::static_list_iterator<TT, NN, Reverse>;
 
     //! Use and array to store all nodes in the same memory block as this data
     //! structure.
-    array<std::uint8_t, sizeof(static_list_node<T>) * N> _buffer;
+    std::array<uint8_t, sizeof(static_list_node<T>) * N> _buffer;
     //! The free elements. nullptr when all elements reserved.
     static_list_node<T> *_free = this->get_array_entry(0);
     //! Start of the list. nullptr when empty.
@@ -133,7 +133,7 @@ template <typename T, std::size_t N> class static_list
     }
 
     /// @brief Directly Access the array elements that store the nodes.
-    constexpr static_list_node<T> *get_array_entry(std::size_t i)
+    constexpr static_list_node<T> *get_array_entry(size_t i)
     {
         auto v = reinterpret_cast<static_list_node<T> *>(this->_buffer.data());
         return &v[i];
@@ -225,7 +225,7 @@ template <typename T, std::size_t N> class static_list
         if (auto elem = this->get_free_elem())
         {
             // Allocate in place
-            (void)new (reinterpret_cast<unsigned char *>(&elem->value)) T(forward<Args>(args)...);
+            (void)new (reinterpret_cast<unsigned char *>(&elem->value)) T(std::forward<Args>(args)...);
 
             // Insert
             if (i == this->end())
@@ -280,7 +280,7 @@ template <typename T, std::size_t N> class static_list
         if (auto elem = this->get_free_elem())
         {
             // Allocate in place
-            (void)new (reinterpret_cast<std::uint8_t *>(&elem->value)) T(forward<Args>(args)...);
+            (void)new (reinterpret_cast<uint8_t *>(&elem->value)) T(std::forward<Args>(args)...);
 
             // Insert
             elem->prev = this->_last;
@@ -340,7 +340,7 @@ template <typename T, std::size_t N> class static_list
         static_list_node<T> *this_node = this->get_array_entry(0);
 
         // Iterate over each element and ensure next and prev are set.
-        for (std::size_t i = 0u; i < N; ++i)
+        for (size_t i = 0u; i < N; ++i)
         {
             this_node->prev = prev;
             if (prev)
