@@ -1,0 +1,4 @@
+uses: dreygur/doxygen@latest
+with:
+  doxyfile-path: './'
+  enable-latex: true
