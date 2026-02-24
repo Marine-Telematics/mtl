@@ -2,6 +2,8 @@ DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = "MarineTelematics Template Library"
 PROJECT_BRIEF          = "mtl (MarineTelematics Template Library) is a reusable C++ utility library."
 
+HTML_EXTRA_STYLESHEET  = ./docs/doxygen-awesome.css
+
 OUTPUT_DIRECTORY       = ./docs
 
 CREATE_SUBDIRS         = NO
