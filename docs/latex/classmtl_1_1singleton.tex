@@ -1,0 +1,126 @@
+\doxysection{mtl\+::singleton\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmtl_1_1singleton}{}\label{classmtl_1_1singleton}\index{mtl::singleton$<$ T $>$@{mtl::singleton$<$ T $>$}}
+
+
+{\ttfamily \#include $<$singleton.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classmtl_1_1singleton_a6b92106d83078401fd23653bbed53dfd}{value\+\_\+t}} = T
+\item 
+using \mbox{\hyperlink{classmtl_1_1singleton_a9fb47b87bdf1fedb71e67646d876c5b7}{reference}} = T \&
+\item 
+using \mbox{\hyperlink{classmtl_1_1singleton_a33a12b9d0c07af54ca35f0b3a21ecaec}{pointer}} = T \texorpdfstring{$\ast$}{*}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmtl_1_1singleton_a80a257c665cdddbe04a6ca67899c93f8}{singleton}} ()=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\static auto \mbox{\hyperlink{classmtl_1_1singleton_a5660ae8a5ca83a232d0bb60d2702f50c}{create}} (Args \&\&... args) -\/$>$ \mbox{\hyperlink{classmtl_1_1singleton_a9fb47b87bdf1fedb71e67646d876c5b7}{reference}}
+\item 
+static auto \mbox{\hyperlink{classmtl_1_1singleton_a3ca62b643705f8981dd5f2e1eb047b31}{instance}} () -\/$>$ \mbox{\hyperlink{classmtl_1_1singleton_a9fb47b87bdf1fedb71e67646d876c5b7}{reference}}
+\item 
+static void \mbox{\hyperlink{classmtl_1_1singleton_af4fd173eeabacefb5e606a39a241b84b}{destroy}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class mtl\+::singleton$<$ T $>$}
+
+
+Definition at line \mbox{\hyperlink{singleton_8h_source_l00021}{21}} of file \mbox{\hyperlink{singleton_8h_source}{singleton.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classmtl_1_1singleton_a33a12b9d0c07af54ca35f0b3a21ecaec}\label{classmtl_1_1singleton_a33a12b9d0c07af54ca35f0b3a21ecaec} 
+\index{mtl::singleton$<$ T $>$@{mtl::singleton$<$ T $>$}!pointer@{pointer}}
+\index{pointer@{pointer}!mtl::singleton$<$ T $>$@{mtl::singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{classmtl_1_1singleton}{mtl\+::singleton}}$<$ T $>$\+::pointer =  T\texorpdfstring{$\ast$}{*}}
+
+
+
+Definition at line \mbox{\hyperlink{singleton_8h_source_l00026}{26}} of file \mbox{\hyperlink{singleton_8h_source}{singleton.\+h}}.
+
+\Hypertarget{classmtl_1_1singleton_a9fb47b87bdf1fedb71e67646d876c5b7}\label{classmtl_1_1singleton_a9fb47b87bdf1fedb71e67646d876c5b7} 
+\index{mtl::singleton$<$ T $>$@{mtl::singleton$<$ T $>$}!reference@{reference}}
+\index{reference@{reference}!mtl::singleton$<$ T $>$@{mtl::singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{classmtl_1_1singleton}{mtl\+::singleton}}$<$ T $>$\+::reference =  T\&}
+
+
+
+Definition at line \mbox{\hyperlink{singleton_8h_source_l00025}{25}} of file \mbox{\hyperlink{singleton_8h_source}{singleton.\+h}}.
+
+\Hypertarget{classmtl_1_1singleton_a6b92106d83078401fd23653bbed53dfd}\label{classmtl_1_1singleton_a6b92106d83078401fd23653bbed53dfd} 
+\index{mtl::singleton$<$ T $>$@{mtl::singleton$<$ T $>$}!value\_t@{value\_t}}
+\index{value\_t@{value\_t}!mtl::singleton$<$ T $>$@{mtl::singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{value\_t}{value\_t}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{classmtl_1_1singleton}{mtl\+::singleton}}$<$ T $>$\+::value\+\_\+t =  T}
+
+
+
+Definition at line \mbox{\hyperlink{singleton_8h_source_l00024}{24}} of file \mbox{\hyperlink{singleton_8h_source}{singleton.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmtl_1_1singleton_a80a257c665cdddbe04a6ca67899c93f8}\label{classmtl_1_1singleton_a80a257c665cdddbe04a6ca67899c93f8} 
+\index{mtl::singleton$<$ T $>$@{mtl::singleton$<$ T $>$}!singleton@{singleton}}
+\index{singleton@{singleton}!mtl::singleton$<$ T $>$@{mtl::singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{singleton()}{singleton()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classmtl_1_1singleton}{mtl\+::singleton}}$<$ T $>$\+::singleton (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmtl_1_1singleton_a5660ae8a5ca83a232d0bb60d2702f50c}\label{classmtl_1_1singleton_a5660ae8a5ca83a232d0bb60d2702f50c} 
+\index{mtl::singleton$<$ T $>$@{mtl::singleton$<$ T $>$}!create@{create}}
+\index{create@{create}!mtl::singleton$<$ T $>$@{mtl::singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename... Args$>$ \\
+static auto \mbox{\hyperlink{classmtl_1_1singleton}{mtl\+::singleton}}$<$ T $>$\+::create (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classmtl_1_1singleton_a9fb47b87bdf1fedb71e67646d876c5b7}{reference}}     \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{singleton_8h_source_l00029}{29}} of file \mbox{\hyperlink{singleton_8h_source}{singleton.\+h}}.
+
+\Hypertarget{classmtl_1_1singleton_af4fd173eeabacefb5e606a39a241b84b}\label{classmtl_1_1singleton_af4fd173eeabacefb5e606a39a241b84b} 
+\index{mtl::singleton$<$ T $>$@{mtl::singleton$<$ T $>$}!destroy@{destroy}}
+\index{destroy@{destroy}!mtl::singleton$<$ T $>$@{mtl::singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{classmtl_1_1singleton}{mtl\+::singleton}}$<$ T $>$\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{singleton_8h_source_l00042}{42}} of file \mbox{\hyperlink{singleton_8h_source}{singleton.\+h}}.
+
+\Hypertarget{classmtl_1_1singleton_a3ca62b643705f8981dd5f2e1eb047b31}\label{classmtl_1_1singleton_a3ca62b643705f8981dd5f2e1eb047b31} 
+\index{mtl::singleton$<$ T $>$@{mtl::singleton$<$ T $>$}!instance@{instance}}
+\index{instance@{instance}!mtl::singleton$<$ T $>$@{mtl::singleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static auto \mbox{\hyperlink{classmtl_1_1singleton}{mtl\+::singleton}}$<$ T $>$\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classmtl_1_1singleton_a9fb47b87bdf1fedb71e67646d876c5b7}{reference}} \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{singleton_8h_source_l00040}{40}} of file \mbox{\hyperlink{singleton_8h_source}{singleton.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mtl/\mbox{\hyperlink{singleton_8h}{singleton.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+\doxysection{mtl\+::aligned\+\_\+storage\texorpdfstring{$<$}{<} T, B \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmtl_1_1aligned__storage}{}\label{classmtl_1_1aligned__storage}\index{mtl::aligned\_storage$<$ T, B $>$@{mtl::aligned\_storage$<$ T, B $>$}}
+
+
+Creates a buffer of type {\ttfamily B} using the size and alignment of {\ttfamily T}.  
+
+
+
+
+{\ttfamily \#include $<$aligned\+\_\+storage.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classmtl_1_1aligned__storage_ac791a940b3dfd92570bddbd75f57878c}{pointer}} = T \texorpdfstring{$\ast$}{*}
+\item 
+using \mbox{\hyperlink{classmtl_1_1aligned__storage_af141e842c328dcba9989d3a19bb02b4d}{const\+\_\+pointer}} = const T \texorpdfstring{$\ast$}{*}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classmtl_1_1aligned__storage_ae70e59c5ff42f7613784994320b8b8ed}{data}} () -\/$>$ \mbox{\hyperlink{classmtl_1_1aligned__storage_ac791a940b3dfd92570bddbd75f57878c}{pointer}}
+\item 
+auto \mbox{\hyperlink{classmtl_1_1aligned__storage_a8ff8e3a54ce6650b3b7bb7d60732d4cd}{data}} () const -\/$>$ \mbox{\hyperlink{classmtl_1_1aligned__storage_af141e842c328dcba9989d3a19bb02b4d}{const\+\_\+pointer}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+B \mbox{\hyperlink{classmtl_1_1aligned__storage_a7f17a538d6f7438a78892a2556d1d9e5}{\+\_\+t\+\_\+buff}} \mbox{[}sizeof(T)\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, typename B = unsigned char$>$\newline
+class mtl\+::aligned\+\_\+storage$<$ T, B $>$}
+Creates a buffer of type {\ttfamily B} using the size and alignment of {\ttfamily T}. 
+
+Definition at line \mbox{\hyperlink{aligned__storage_8h_source_l00020}{20}} of file \mbox{\hyperlink{aligned__storage_8h_source}{aligned\+\_\+storage.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classmtl_1_1aligned__storage_af141e842c328dcba9989d3a19bb02b4d}\label{classmtl_1_1aligned__storage_af141e842c328dcba9989d3a19bb02b4d} 
+\index{mtl::aligned\_storage$<$ T, B $>$@{mtl::aligned\_storage$<$ T, B $>$}!const\_pointer@{const\_pointer}}
+\index{const\_pointer@{const\_pointer}!mtl::aligned\_storage$<$ T, B $>$@{mtl::aligned\_storage$<$ T, B $>$}}
+\doxysubsubsection{\texorpdfstring{const\_pointer}{const\_pointer}}
+{\footnotesize\ttfamily template$<$typename T , typename B  = unsigned char$>$ \\
+using \mbox{\hyperlink{classmtl_1_1aligned__storage}{mtl\+::aligned\+\_\+storage}}$<$ T, B $>$\+::const\+\_\+pointer =  const T \texorpdfstring{$\ast$}{*}}
+
+
+
+Definition at line \mbox{\hyperlink{aligned__storage_8h_source_l00024}{24}} of file \mbox{\hyperlink{aligned__storage_8h_source}{aligned\+\_\+storage.\+h}}.
+
+\Hypertarget{classmtl_1_1aligned__storage_ac791a940b3dfd92570bddbd75f57878c}\label{classmtl_1_1aligned__storage_ac791a940b3dfd92570bddbd75f57878c} 
+\index{mtl::aligned\_storage$<$ T, B $>$@{mtl::aligned\_storage$<$ T, B $>$}!pointer@{pointer}}
+\index{pointer@{pointer}!mtl::aligned\_storage$<$ T, B $>$@{mtl::aligned\_storage$<$ T, B $>$}}
+\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
+{\footnotesize\ttfamily template$<$typename T , typename B  = unsigned char$>$ \\
+using \mbox{\hyperlink{classmtl_1_1aligned__storage}{mtl\+::aligned\+\_\+storage}}$<$ T, B $>$\+::pointer =  T \texorpdfstring{$\ast$}{*}}
+
+
+
+Definition at line \mbox{\hyperlink{aligned__storage_8h_source_l00023}{23}} of file \mbox{\hyperlink{aligned__storage_8h_source}{aligned\+\_\+storage.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmtl_1_1aligned__storage_ae70e59c5ff42f7613784994320b8b8ed}\label{classmtl_1_1aligned__storage_ae70e59c5ff42f7613784994320b8b8ed} 
+\index{mtl::aligned\_storage$<$ T, B $>$@{mtl::aligned\_storage$<$ T, B $>$}!data@{data}}
+\index{data@{data}!mtl::aligned\_storage$<$ T, B $>$@{mtl::aligned\_storage$<$ T, B $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename B  = unsigned char$>$ \\
+auto \mbox{\hyperlink{classmtl_1_1aligned__storage}{mtl\+::aligned\+\_\+storage}}$<$ T, B $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classmtl_1_1aligned__storage_ac791a940b3dfd92570bddbd75f57878c}{pointer}} \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{aligned__storage_8h_source_l00026}{26}} of file \mbox{\hyperlink{aligned__storage_8h_source}{aligned\+\_\+storage.\+h}}.
+
+\Hypertarget{classmtl_1_1aligned__storage_a8ff8e3a54ce6650b3b7bb7d60732d4cd}\label{classmtl_1_1aligned__storage_a8ff8e3a54ce6650b3b7bb7d60732d4cd} 
+\index{mtl::aligned\_storage$<$ T, B $>$@{mtl::aligned\_storage$<$ T, B $>$}!data@{data}}
+\index{data@{data}!mtl::aligned\_storage$<$ T, B $>$@{mtl::aligned\_storage$<$ T, B $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename B  = unsigned char$>$ \\
+auto \mbox{\hyperlink{classmtl_1_1aligned__storage}{mtl\+::aligned\+\_\+storage}}$<$ T, B $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classmtl_1_1aligned__storage_af141e842c328dcba9989d3a19bb02b4d}{const\+\_\+pointer}} \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{aligned__storage_8h_source_l00027}{27}} of file \mbox{\hyperlink{aligned__storage_8h_source}{aligned\+\_\+storage.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmtl_1_1aligned__storage_a7f17a538d6f7438a78892a2556d1d9e5}\label{classmtl_1_1aligned__storage_a7f17a538d6f7438a78892a2556d1d9e5} 
+\index{mtl::aligned\_storage$<$ T, B $>$@{mtl::aligned\_storage$<$ T, B $>$}!\_t\_buff@{\_t\_buff}}
+\index{\_t\_buff@{\_t\_buff}!mtl::aligned\_storage$<$ T, B $>$@{mtl::aligned\_storage$<$ T, B $>$}}
+\doxysubsubsection{\texorpdfstring{\_t\_buff}{\_t\_buff}}
+{\footnotesize\ttfamily template$<$typename T , typename B  = unsigned char$>$ \\
+B \mbox{\hyperlink{classmtl_1_1aligned__storage}{mtl\+::aligned\+\_\+storage}}$<$ T, B $>$\+::\+\_\+t\+\_\+buff\mbox{[}sizeof(T)\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{aligned__storage_8h_source_l00030}{30}} of file \mbox{\hyperlink{aligned__storage_8h_source}{aligned\+\_\+storage.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mtl/\mbox{\hyperlink{aligned__storage_8h}{aligned\+\_\+storage.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,39 @@
+\doxysection{mtl\+::detail\+\_\+fnv1a Namespace Reference}
+\hypertarget{namespacemtl_1_1detail__fnv1a}{}\label{namespacemtl_1_1detail__fnv1a}\index{mtl::detail\_fnv1a@{mtl::detail\_fnv1a}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , T Basis, T Prime$>$ }\\constexpr T \mbox{\hyperlink{namespacemtl_1_1detail__fnv1a_a2a2649573fbc471a827a2e6d4ab72705}{fnv1a}} (const \mbox{\hyperlink{namespacemtl_acb2e27d832622b8b104e130739e5519a}{mtl\+::string\+\_\+view}} s)
+\begin{DoxyCompactList}\small\item\em Computes the FNV-\/1a hash of a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacemtl_1_1detail__fnv1a_a2a2649573fbc471a827a2e6d4ab72705}\label{namespacemtl_1_1detail__fnv1a_a2a2649573fbc471a827a2e6d4ab72705} 
+\index{mtl::detail\_fnv1a@{mtl::detail\_fnv1a}!fnv1a@{fnv1a}}
+\index{fnv1a@{fnv1a}!mtl::detail\_fnv1a@{mtl::detail\_fnv1a}}
+\doxysubsubsection{\texorpdfstring{fnv1a()}{fnv1a()}}
+{\footnotesize\ttfamily template$<$typename T , T Basis, T Prime$>$ \\
+constexpr T mtl\+::detail\+\_\+fnv1a\+::fnv1a (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemtl_acb2e27d832622b8b104e130739e5519a}{mtl\+::string\+\_\+view}}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Computes the FNV-\/1a hash of a string. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the hash value (e.\+g., std\+::uint32\+\_\+t, std\+::uint64\+\_\+t). \\
+\hline
+{\em Basis} & The FNV offset basis. \\
+\hline
+{\em Prime} & The FNV prime.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The input string to hash. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{hash_8h_source_l00033}{33}} of file \mbox{\hyperlink{hash_8h_source}{hash.\+h}}.
+

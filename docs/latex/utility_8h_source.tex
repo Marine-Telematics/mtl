@@ -1,0 +1,31 @@
+\doxysection{utility.\+h}
+\hypertarget{utility_8h_source}{}\label{utility_8h_source}\index{include/mtl/utility.h@{include/mtl/utility.h}}
+\mbox{\hyperlink{utility_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_UTILITY\_H}}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ MTL\_UTILITY\_H}}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00016}00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemtl}{mtl}}}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00020}00020\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Fn>}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00021}00021\ \ \ \ \ \textcolor{keyword}{requires}\ std::is\_invocable\_v<Fn>}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00022}\mbox{\hyperlink{structmtl_1_1final__action}{00022}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1final__action}{final\_action}}}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00023}00023\ \{}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00024}\mbox{\hyperlink{structmtl_1_1final__action_afff55a36b93f3465ab1737cbee0283fc}{00024}}\ \ \ \ \ Fn\ \mbox{\hyperlink{structmtl_1_1final__action_afff55a36b93f3465ab1737cbee0283fc}{f}};}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00025}\mbox{\hyperlink{structmtl_1_1final__action_a40520598dfa76d755a3b52ad332e2681}{00025}}\ \ \ \ \ \mbox{\hyperlink{structmtl_1_1final__action_a40520598dfa76d755a3b52ad332e2681}{\string~final\_action}}()\ \{\ \mbox{\hyperlink{structmtl_1_1final__action_afff55a36b93f3465ab1737cbee0283fc}{f}}();\ \}}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00026}00026\ \};}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00040}00040\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Fn,\ \textcolor{keyword}{typename}\ Ret\ =\ final\_action<Fn>>}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00041}\mbox{\hyperlink{namespacemtl_a5e14ed377b76d2207590be48823fe80d}{00041}}\ [[nodiscard]]\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{namespacemtl_a5e14ed377b76d2207590be48823fe80d}{defer}}(Fn\ \&\&f)\ -\/>\ Ret}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00042}00042\ \{}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{return}\ \{f\};}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00044}00044\ \}}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{utility_8h_source_l00047}00047\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

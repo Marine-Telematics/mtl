@@ -1,0 +1,86 @@
+\doxysection{fm24cl64b.\+h}
+\hypertarget{fm24cl64b_8h_source}{}\label{fm24cl64b_8h_source}\index{include/mtl/periph/fm24cl64b.h@{include/mtl/periph/fm24cl64b.h}}
+\mbox{\hyperlink{fm24cl64b_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_FM24CL64B\_H}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ MTL\_FM24CL64B\_H}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}../interface/i2c.h"{}}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00021}00021\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemtl}{mtl}}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00022}00022\ \{}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00023}\mbox{\hyperlink{structmtl_1_1fm24cl64b}{00023}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1fm24cl64b}{fm24cl64b}}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00024}00024\ \{}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00025}\mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{00025}}\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{address}}\ =\ uint16\_t;}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00027}\mbox{\hyperlink{structmtl_1_1fm24cl64b_aedf1f9ceb76633689127450b35e1468a}{00027}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{address}}\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_aedf1f9ceb76633689127450b35e1468a}{START\_ADDR}}\ =\ 0x0000u;}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00028}\mbox{\hyperlink{structmtl_1_1fm24cl64b_a09a27fb376402d2a95e9481777b5e344}{00028}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{address}}\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_a09a27fb376402d2a95e9481777b5e344}{END\_ADDR}}\ \ \ =\ 0x1fffu;}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00030}\mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select}{00030}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select}{device\_select}}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00031}00031\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00032}\mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select_a2e2d60621d052957b69b609b294f975c}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select_a098c425db176b205c622b319548a2102}{\_a2}},\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select_a5ce1ce373730c4714173a7c47c987a05}{\_a1}},\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select_a2e2d60621d052957b69b609b294f975c}{\_a0}};}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00033}\mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select_ac72a962ff79a77cf435ded717be4d30d}{00033}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select_ac72a962ff79a77cf435ded717be4d30d}{device\_select}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespacemtl_1_1i2c_a13dc2887866a1616137cc96c9baa224c}{i2c::addr\_type}}\ bin)}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select_a098c425db176b205c622b319548a2102}{\_a2}}(bin\ \&\ 0b100),\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select_a5ce1ce373730c4714173a7c47c987a05}{\_a1}}(bin\ \&\ 0b010),\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select_a2e2d60621d052957b69b609b294f975c}{\_a0}}(bin\ \&\ 0b001)}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00035}00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00037}00037\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00039}\mbox{\hyperlink{structmtl_1_1fm24cl64b_aa83014e222f99cf3099a6927f11d5088}{00039}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{namespacemtl_1_1i2c_a13dc2887866a1616137cc96c9baa224c}{i2c::addr\_type}}\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_aa83014e222f99cf3099a6927f11d5088}{BASE\_ADDR}}\ =\ 0b1010000u;}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00041}\mbox{\hyperlink{structmtl_1_1fm24cl64b_a84b6f7610e8e29dc1c1ef5c3f0927bfa}{00041}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_a84b6f7610e8e29dc1c1ef5c3f0927bfa}{get\_addr}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select}{device\_select}}\ sel)\ -\/>\ \mbox{\hyperlink{namespacemtl_1_1i2c_a13dc2887866a1616137cc96c9baa224c}{i2c::addr\_type}}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00042}00042\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_aa83014e222f99cf3099a6927f11d5088}{BASE\_ADDR}}\ |\ (sel.\_a2\ ?\ 0b100\ :\ 0)\ |\ (sel.\_a1\ ?\ 0b010\ :\ 0)\ |\ (sel.\_a0\ ?\ 0b001\ :\ 0);}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00045}00045\ \};}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00049}\mbox{\hyperlink{classmtl_1_1fm24cl64b__impl}{00049}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1fm24cl64b__impl}{fm24cl64b\_impl}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structmtl_1_1fm24cl64b}{fm24cl64b}}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00050}00050\ \{\ \ \ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00051}00051\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00052}\mbox{\hyperlink{classmtl_1_1fm24cl64b__impl_aa5f17065c958df0b4237d07301674e01}{00052}}\ \ \ \ \ \mbox{\hyperlink{classmtl_1_1fm24cl64b__impl_aa5f17065c958df0b4237d07301674e01}{fm24cl64b\_impl}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select}{device\_select}}\ sel)\ :\ \_i2c\_addr(\mbox{\hyperlink{structmtl_1_1fm24cl64b_a84b6f7610e8e29dc1c1ef5c3f0927bfa}{get\_addr}}(sel))\ \{\}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00056}00056\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ Fn>}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00057}\mbox{\hyperlink{classmtl_1_1fm24cl64b__impl_a390dc9e2b348cd397fbcb83469b9c45b}{00057}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1fm24cl64b__impl_a390dc9e2b348cd397fbcb83469b9c45b}{write}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{address}}\ addr,\ \textcolor{keyword}{const}\ T\ \&obj,\ Fn\ \&\&sender)}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00058}00058\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00059}00059\ \ \ \ \ \ \ \ \ std::array<\mbox{\hyperlink{namespacemtl_1_1i2c_ab7cc2bba7d82f272df4d004a88e65353}{i2c::data\_type}},\ \textcolor{keyword}{sizeof}(T)\ +\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{address}})>\ buffer\{\};}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00061}00061\ \ \ \ \ \ \ \ \ buffer[0]\ =\ (addr\ >>\ 8u)\ \&\ 0xffu;}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00062}00062\ \ \ \ \ \ \ \ \ buffer[1]\ =\ addr\ \&\ 0xffu;}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00064}00064\ \ \ \ \ \ \ \ \ std::copy\_n(\&obj,\ \textcolor{keyword}{sizeof}(T),\ buffer.data()\ +\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{address}}));}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sender(this-\/>\_i2c\_addr,\ buffer.data(),\ buffer.size());}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00069}00069\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ Fn>}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00070}\mbox{\hyperlink{classmtl_1_1fm24cl64b__impl_a40ab19c2b768477b23278bbe50f7bbcc}{00070}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1fm24cl64b__impl_a40ab19c2b768477b23278bbe50f7bbcc}{read}}(T\ \&obj\_out,\ Fn\ \&\&reader)}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00071}00071\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ reader(this-\/>\_i2c\_addr,\ \&obj\_out,\ \textcolor{keyword}{sizeof}(T));}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00075}00075\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Fn>}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00076}\mbox{\hyperlink{classmtl_1_1fm24cl64b__impl_a1f7b5f9f55436cb3fb68e41799a2c829}{00076}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1fm24cl64b__impl_a1f7b5f9f55436cb3fb68e41799a2c829}{point\_to\_addr}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{address}}\ addr,\ Fn\ \&\&sender)}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00077}00077\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00078}00078\ \ \ \ \ \ \ \ \ std::array<\mbox{\hyperlink{namespacemtl_1_1i2c_ab7cc2bba7d82f272df4d004a88e65353}{i2c::data\_type}},\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{address}})>\ buffer\{\};}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00080}00080\ \ \ \ \ \ \ \ \ buffer[0]\ =\ (addr\ >>\ 8u)\ \&\ 0xffu;}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00081}00081\ \ \ \ \ \ \ \ \ buffer[1]\ =\ addr\ \&\ 0xffu;}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sender(this-\/>\_i2c\_addr,\ buffer.data(),\ buffer.size());}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00086}00086\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00087}00087\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacemtl_1_1i2c_a13dc2887866a1616137cc96c9baa224c}{i2c::addr\_type}}\ \_i2c\_addr;}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00088}00088\ \};}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00089}00089\ \}}
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{fm24cl64b_8h_source_l00091}00091\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

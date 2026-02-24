@@ -1,0 +1,27 @@
+\doxysection{algorithm.\+h}
+\hypertarget{algorithm_8h_source}{}\label{algorithm_8h_source}\index{include/mtl/algorithm.h@{include/mtl/algorithm.h}}
+\mbox{\hyperlink{algorithm_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_ALGORITHM\_H}}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ MTL\_ALGORITHM\_H}}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00014}\mbox{\hyperlink{namespacemtl}{00014}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemtl}{mtl}}}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00017}00017\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Opts>}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00018}\mbox{\hyperlink{namespacemtl_a3e68bb435f1c78c81b2cd03dab8f5fa5}{00018}}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{namespacemtl_a3e68bb435f1c78c81b2cd03dab8f5fa5}{oneof}}(T\ \&\&val,\ Opts\ \&\&...opts)\ -\/>\ \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{sizeof}...(opts)\ ==\ 0\ ?\ \textcolor{keyword}{false}\ :\ (...\ ||\ (val\ ==\ opts));}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00023}00023\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00024}\mbox{\hyperlink{namespacemtl_ad10c339e6ae595a7c2ad7f08e4bb62a1}{00024}}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespacemtl_ad10c339e6ae595a7c2ad7f08e4bb62a1}{in\_range}}(\textcolor{keyword}{const}\ T\ value,\ \textcolor{keyword}{const}\ T\ desired,\ \textcolor{keyword}{const}\ T\ diff)}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00025}00025\ \{}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{return}\ (desired\ -\/\ diff\ <\ value\ \&\&\ desired\ +\ diff\ >\ value);}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00027}00027\ \};}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{algorithm_8h_source_l00030}00030\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

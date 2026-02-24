@@ -1,0 +1,31 @@
+\doxysection{aligned\+\_\+storage.\+h}
+\hypertarget{aligned__storage_8h_source}{}\label{aligned__storage_8h_source}\index{include/mtl/aligned\_storage.h@{include/mtl/aligned\_storage.h}}
+\mbox{\hyperlink{aligned__storage_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_ALIGNED\_STORAGE\_H}}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ MTL\_ALIGNED\_STORAGE\_H}}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00017}00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemtl}{mtl}}}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00020}\mbox{\hyperlink{classmtl_1_1aligned__storage}{00020}}\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ B\ =\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1aligned__storage}{aligned\_storage}}}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00023}\mbox{\hyperlink{classmtl_1_1aligned__storage_ac791a940b3dfd92570bddbd75f57878c}{00023}}\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1aligned__storage_ac791a940b3dfd92570bddbd75f57878c}{pointer}}\ \ \ \ \ \ \ =\ T\ *;}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00024}\mbox{\hyperlink{classmtl_1_1aligned__storage_af141e842c328dcba9989d3a19bb02b4d}{00024}}\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1aligned__storage_af141e842c328dcba9989d3a19bb02b4d}{const\_pointer}}\ =\ \textcolor{keyword}{const}\ T\ *;}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00026}\mbox{\hyperlink{classmtl_1_1aligned__storage_ae70e59c5ff42f7613784994320b8b8ed}{00026}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1aligned__storage_ae70e59c5ff42f7613784994320b8b8ed}{data}}()\ -\/>\ \mbox{\hyperlink{classmtl_1_1aligned__storage_ac791a940b3dfd92570bddbd75f57878c}{pointer}}\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{classmtl_1_1aligned__storage_ac791a940b3dfd92570bddbd75f57878c}{pointer}}\textcolor{keyword}{>}(this-\/>\mbox{\hyperlink{classmtl_1_1aligned__storage_a7f17a538d6f7438a78892a2556d1d9e5}{\_t\_buff}});\ \}}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00027}\mbox{\hyperlink{classmtl_1_1aligned__storage_a8ff8e3a54ce6650b3b7bb7d60732d4cd}{00027}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1aligned__storage_a8ff8e3a54ce6650b3b7bb7d60732d4cd}{data}}()\ const\ -\/>\ \mbox{\hyperlink{classmtl_1_1aligned__storage_af141e842c328dcba9989d3a19bb02b4d}{const\_pointer}}\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{reinterpret\_cast<}\mbox{\hyperlink{classmtl_1_1aligned__storage_af141e842c328dcba9989d3a19bb02b4d}{const\_pointer}}\textcolor{keyword}{>}(this-\/>\mbox{\hyperlink{classmtl_1_1aligned__storage_a7f17a538d6f7438a78892a2556d1d9e5}{\_t\_buff}});\ \}}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00029}00029\ \ \ \ \ \textcolor{comment}{//\ std::aligned\_storage\_t<sizeof(T),\ alignof(T)>\ t\_buff;}}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00030}\mbox{\hyperlink{classmtl_1_1aligned__storage_a7f17a538d6f7438a78892a2556d1d9e5}{00030}}\ \ \ \ \ \textcolor{keyword}{alignas}(T)\ B\ \mbox{\hyperlink{classmtl_1_1aligned__storage_a7f17a538d6f7438a78892a2556d1d9e5}{\_t\_buff}}[\textcolor{keyword}{sizeof}(T)];}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00031}00031\ \};}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00032}00032\ \}\ \textcolor{comment}{//\ namespace\ mtl}}
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{aligned__storage_8h_source_l00034}00034\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

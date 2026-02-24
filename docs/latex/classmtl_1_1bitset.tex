@@ -1,0 +1,117 @@
+\doxysection{mtl\+::bitset\texorpdfstring{$<$}{<} N \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmtl_1_1bitset}{}\label{classmtl_1_1bitset}\index{mtl::bitset$<$ N $>$@{mtl::bitset$<$ N $>$}}
+
+
+{\ttfamily \#include $<$bitset.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmtl_1_1bitset_1_1bit__ref}{bit\+\_\+ref}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classmtl_1_1bitset_a8efbbcfdae623004efb68c190c376792}{value\+\_\+type}} = conditional\+\_\+t$<$ N$<$=8u, uint8\+\_\+t, conditional\+\_\+t$<$ N$<$=16u, uint16\+\_\+t, conditional\+\_\+t$<$ N$<$=32u, uint32\+\_\+t, uint64\+\_\+t $>$ $>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+constexpr \mbox{\hyperlink{classmtl_1_1bitset_a474b956221eb46e35231a0170184f631}{bitset}} (const char \texorpdfstring{$\ast$}{*}bitstring)
+\item 
+constexpr auto \mbox{\hyperlink{classmtl_1_1bitset_aafa7efd0520c87d529006cdb5f941b2d}{value}} () const -\/$>$ \mbox{\hyperlink{classmtl_1_1bitset_a8efbbcfdae623004efb68c190c376792}{value\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Gets the equivalent numbers of this bitset. \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{classmtl_1_1bitset_aad5245b2bf25db294d2bed6c612096f7}{operator\mbox{[}$\,$\mbox{]}}} (const size\+\_\+t i) -\/$>$ \mbox{\hyperlink{structmtl_1_1bitset_1_1bit__ref}{bit\+\_\+ref}}
+\begin{DoxyCompactList}\small\item\em bit level proxy access, for assign operator. \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{classmtl_1_1bitset_a7c95b0cdf5690ef847f0cabe4d98d651}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t i) const -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Gets the value of a single bit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$size\+\_\+t N = 0u$>$\newline
+class mtl\+::bitset$<$ N $>$}
+
+
+Definition at line \mbox{\hyperlink{bitset_8h_source_l00020}{20}} of file \mbox{\hyperlink{bitset_8h_source}{bitset.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classmtl_1_1bitset_a8efbbcfdae623004efb68c190c376792}\label{classmtl_1_1bitset_a8efbbcfdae623004efb68c190c376792} 
+\index{mtl::bitset$<$ N $>$@{mtl::bitset$<$ N $>$}!value\_type@{value\_type}}
+\index{value\_type@{value\_type}!mtl::bitset$<$ N $>$@{mtl::bitset$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{value\_type}{value\_type}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N = 0u$>$ \\
+using \mbox{\hyperlink{classmtl_1_1bitset}{mtl\+::bitset}}$<$ N $>$\+::value\+\_\+type =  conditional\+\_\+t$<$N $<$= 8u, uint8\+\_\+t, conditional\+\_\+t$<$N $<$= 16u, uint16\+\_\+t, conditional\+\_\+t$<$N $<$= 32u, uint32\+\_\+t, uint64\+\_\+t$>$ $>$$>$}
+
+
+
+Definition at line \mbox{\hyperlink{bitset_8h_source_l00023}{23}} of file \mbox{\hyperlink{bitset_8h_source}{bitset.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmtl_1_1bitset_a474b956221eb46e35231a0170184f631}\label{classmtl_1_1bitset_a474b956221eb46e35231a0170184f631} 
+\index{mtl::bitset$<$ N $>$@{mtl::bitset$<$ N $>$}!bitset@{bitset}}
+\index{bitset@{bitset}!mtl::bitset$<$ N $>$@{mtl::bitset$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{bitset()}{bitset()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N = 0u$>$ \\
+constexpr \mbox{\hyperlink{classmtl_1_1bitset}{mtl\+::bitset}}$<$ N $>$\+::bitset (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{bitstring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{bitset_8h_source_l00032}{32}} of file \mbox{\hyperlink{bitset_8h_source}{bitset.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmtl_1_1bitset_aad5245b2bf25db294d2bed6c612096f7}\label{classmtl_1_1bitset_aad5245b2bf25db294d2bed6c612096f7} 
+\index{mtl::bitset$<$ N $>$@{mtl::bitset$<$ N $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!mtl::bitset$<$ N $>$@{mtl::bitset$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N = 0u$>$ \\
+constexpr auto \mbox{\hyperlink{classmtl_1_1bitset}{mtl\+::bitset}}$<$ N $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{i }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{structmtl_1_1bitset_1_1bit__ref}{bit\+\_\+ref}}     \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+bit level proxy access, for assign operator. 
+
+
+
+Definition at line \mbox{\hyperlink{bitset_8h_source_l00086}{86}} of file \mbox{\hyperlink{bitset_8h_source}{bitset.\+h}}.
+
+\Hypertarget{classmtl_1_1bitset_a7c95b0cdf5690ef847f0cabe4d98d651}\label{classmtl_1_1bitset_a7c95b0cdf5690ef847f0cabe4d98d651} 
+\index{mtl::bitset$<$ N $>$@{mtl::bitset$<$ N $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!mtl::bitset$<$ N $>$@{mtl::bitset$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N = 0u$>$ \\
+constexpr auto \mbox{\hyperlink{classmtl_1_1bitset}{mtl\+::bitset}}$<$ N $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption}) const -\/$>$ bool     \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Gets the value of a single bit. 
+
+
+
+Definition at line \mbox{\hyperlink{bitset_8h_source_l00092}{92}} of file \mbox{\hyperlink{bitset_8h_source}{bitset.\+h}}.
+
+\Hypertarget{classmtl_1_1bitset_aafa7efd0520c87d529006cdb5f941b2d}\label{classmtl_1_1bitset_aafa7efd0520c87d529006cdb5f941b2d} 
+\index{mtl::bitset$<$ N $>$@{mtl::bitset$<$ N $>$}!value@{value}}
+\index{value@{value}!mtl::bitset$<$ N $>$@{mtl::bitset$<$ N $>$}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t N = 0u$>$ \\
+constexpr auto \mbox{\hyperlink{classmtl_1_1bitset}{mtl\+::bitset}}$<$ N $>$\+::value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classmtl_1_1bitset_a8efbbcfdae623004efb68c190c376792}{value\+\_\+type}} \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Gets the equivalent numbers of this bitset. 
+
+
+
+Definition at line \mbox{\hyperlink{bitset_8h_source_l00059}{59}} of file \mbox{\hyperlink{bitset_8h_source}{bitset.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mtl/\mbox{\hyperlink{bitset_8h}{bitset.\+h}}\end{DoxyCompactItemize}

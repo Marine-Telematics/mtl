@@ -1,0 +1,110 @@
+\doxysection{mtl\+::can\+::message Struct Reference}
+\hypertarget{structmtl_1_1can_1_1message}{}\label{structmtl_1_1can_1_1message}\index{mtl::can::message@{mtl::can::message}}
+
+
+{\ttfamily \#include $<$can.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmtl_1_1can_1_1message_aba9f219dd3b1daa5a2bdd6d882d1f79d}{message}} ()=default
+\item 
+\mbox{\hyperlink{structmtl_1_1can_1_1message_a7ab35a6bf1e13c8260c16dfbc6f44f6c}{message}} (const \mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\+\_\+type}} id, const bool ext, const size\+\_\+t len, const \mbox{\hyperlink{namespacemtl_1_1can_ab40e707b7804ed2bb1d7f94f3fb8ed81}{data\+\_\+type}} \texorpdfstring{$\ast$}{*}payload)
+\item 
+\mbox{\hyperlink{structmtl_1_1can_1_1message_a3920374c52de3de019278ba5f369a919}{message}} (const \mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\+\_\+type}} id, const bool ext, const std\+::span$<$ const \mbox{\hyperlink{namespacemtl_1_1can_ab40e707b7804ed2bb1d7f94f3fb8ed81}{data\+\_\+type}} $>$ payload)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\+\_\+type}} \mbox{\hyperlink{structmtl_1_1can_1_1message_a4e2ed57e9208d6e0d78853a6b32aca00}{\+\_\+identifier}} = 0x00
+\item 
+bool \mbox{\hyperlink{structmtl_1_1can_1_1message_ab17eb186fe8201e636bf5ffb23014e5c}{\+\_\+extended}} = true
+\item 
+\mbox{\hyperlink{namespacemtl_1_1can_a572f08e42e525d1008f796e95ad7588f}{size\+\_\+type}} \mbox{\hyperlink{structmtl_1_1can_1_1message_af3a127a95240e9a9383d14c612e33f24}{\+\_\+dlc}} = 0u
+\item 
+array$<$ \mbox{\hyperlink{namespacemtl_1_1can_ab40e707b7804ed2bb1d7f94f3fb8ed81}{data\+\_\+type}}, max\+\_\+dlc $>$ \mbox{\hyperlink{structmtl_1_1can_1_1message_aea12e0691ba1779201ed2db2ac0d526c}{\+\_\+data}} \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{can_8h_source_l00057}{57}} of file \mbox{\hyperlink{can_8h_source}{can.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structmtl_1_1can_1_1message_aba9f219dd3b1daa5a2bdd6d882d1f79d}\label{structmtl_1_1can_1_1message_aba9f219dd3b1daa5a2bdd6d882d1f79d} 
+\index{mtl::can::message@{mtl::can::message}!message@{message}}
+\index{message@{message}!mtl::can::message@{mtl::can::message}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily mtl\+::can\+::message\+::message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{structmtl_1_1can_1_1message_a7ab35a6bf1e13c8260c16dfbc6f44f6c}\label{structmtl_1_1can_1_1message_a7ab35a6bf1e13c8260c16dfbc6f44f6c} 
+\index{mtl::can::message@{mtl::can::message}!message@{message}}
+\index{message@{message}!mtl::can::message@{mtl::can::message}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily mtl\+::can\+::message\+::message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\+\_\+type}}}]{id,  }\item[{const bool}]{ext,  }\item[{const size\+\_\+t}]{len,  }\item[{const \mbox{\hyperlink{namespacemtl_1_1can_ab40e707b7804ed2bb1d7f94f3fb8ed81}{data\+\_\+type}} \texorpdfstring{$\ast$}{*}}]{payload }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{can_8h_source_l00068}{68}} of file \mbox{\hyperlink{can_8h_source}{can.\+h}}.
+
+\Hypertarget{structmtl_1_1can_1_1message_a3920374c52de3de019278ba5f369a919}\label{structmtl_1_1can_1_1message_a3920374c52de3de019278ba5f369a919} 
+\index{mtl::can::message@{mtl::can::message}!message@{message}}
+\index{message@{message}!mtl::can::message@{mtl::can::message}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily mtl\+::can\+::message\+::message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\+\_\+type}}}]{id,  }\item[{const bool}]{ext,  }\item[{const std\+::span$<$ const \mbox{\hyperlink{namespacemtl_1_1can_ab40e707b7804ed2bb1d7f94f3fb8ed81}{data\+\_\+type}} $>$}]{payload }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{can_8h_source_l00074}{74}} of file \mbox{\hyperlink{can_8h_source}{can.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structmtl_1_1can_1_1message_aea12e0691ba1779201ed2db2ac0d526c}\label{structmtl_1_1can_1_1message_aea12e0691ba1779201ed2db2ac0d526c} 
+\index{mtl::can::message@{mtl::can::message}!\_data@{\_data}}
+\index{\_data@{\_data}!mtl::can::message@{mtl::can::message}}
+\doxysubsubsection{\texorpdfstring{\_data}{\_data}}
+{\footnotesize\ttfamily array$<$\mbox{\hyperlink{namespacemtl_1_1can_ab40e707b7804ed2bb1d7f94f3fb8ed81}{data\+\_\+type}}, max\+\_\+dlc$>$ mtl\+::can\+::message\+::\+\_\+data \{\}}
+
+
+
+Definition at line \mbox{\hyperlink{can_8h_source_l00064}{64}} of file \mbox{\hyperlink{can_8h_source}{can.\+h}}.
+
+\Hypertarget{structmtl_1_1can_1_1message_af3a127a95240e9a9383d14c612e33f24}\label{structmtl_1_1can_1_1message_af3a127a95240e9a9383d14c612e33f24} 
+\index{mtl::can::message@{mtl::can::message}!\_dlc@{\_dlc}}
+\index{\_dlc@{\_dlc}!mtl::can::message@{mtl::can::message}}
+\doxysubsubsection{\texorpdfstring{\_dlc}{\_dlc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemtl_1_1can_a572f08e42e525d1008f796e95ad7588f}{size\+\_\+type}} mtl\+::can\+::message\+::\+\_\+dlc = 0u}
+
+
+
+Definition at line \mbox{\hyperlink{can_8h_source_l00063}{63}} of file \mbox{\hyperlink{can_8h_source}{can.\+h}}.
+
+\Hypertarget{structmtl_1_1can_1_1message_ab17eb186fe8201e636bf5ffb23014e5c}\label{structmtl_1_1can_1_1message_ab17eb186fe8201e636bf5ffb23014e5c} 
+\index{mtl::can::message@{mtl::can::message}!\_extended@{\_extended}}
+\index{\_extended@{\_extended}!mtl::can::message@{mtl::can::message}}
+\doxysubsubsection{\texorpdfstring{\_extended}{\_extended}}
+{\footnotesize\ttfamily bool mtl\+::can\+::message\+::\+\_\+extended = true}
+
+
+
+Definition at line \mbox{\hyperlink{can_8h_source_l00061}{61}} of file \mbox{\hyperlink{can_8h_source}{can.\+h}}.
+
+\Hypertarget{structmtl_1_1can_1_1message_a4e2ed57e9208d6e0d78853a6b32aca00}\label{structmtl_1_1can_1_1message_a4e2ed57e9208d6e0d78853a6b32aca00} 
+\index{mtl::can::message@{mtl::can::message}!\_identifier@{\_identifier}}
+\index{\_identifier@{\_identifier}!mtl::can::message@{mtl::can::message}}
+\doxysubsubsection{\texorpdfstring{\_identifier}{\_identifier}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\+\_\+type}} mtl\+::can\+::message\+::\+\_\+identifier = 0x00}
+
+
+
+Definition at line \mbox{\hyperlink{can_8h_source_l00059}{59}} of file \mbox{\hyperlink{can_8h_source}{can.\+h}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mtl/interface/\mbox{\hyperlink{can_8h}{can.\+h}}\end{DoxyCompactItemize}

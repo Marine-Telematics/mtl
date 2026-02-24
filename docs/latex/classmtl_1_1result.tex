@@ -1,0 +1,217 @@
+\doxysection{mtl\+::result\texorpdfstring{$<$}{<} T, E \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmtl_1_1result}{}\label{classmtl_1_1result}\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+
+
+{\ttfamily \#include $<$result.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}{ok\+\_\+type}} = T
+\item 
+using \mbox{\hyperlink{classmtl_1_1result_aad12e034f1f9acb9aeeee1d96fc04d3f}{err\+\_\+type}} = \mbox{\hyperlink{structmtl_1_1err}{mtl\+::err}}$<$ E $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class ... Args$>$ }\\constexpr \mbox{\hyperlink{classmtl_1_1result_a53a901e7295cfbd88065a34e4646cc07}{result}} (Args \&\&...args)
+\item 
+constexpr \mbox{\hyperlink{classmtl_1_1result_aea95c528c4fdc964b0aa45e6659d7059}{result}} (\mbox{\hyperlink{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}{ok\+\_\+type}} \&\&val)
+\item 
+constexpr \mbox{\hyperlink{classmtl_1_1result_a9097a008e32c26189f1a502f9b5fb0fa}{result}} (const \mbox{\hyperlink{classmtl_1_1result_aad12e034f1f9acb9aeeee1d96fc04d3f}{err\+\_\+type}} \&e)
+\item 
+constexpr \mbox{\hyperlink{classmtl_1_1result_a495e89363d52f22fc241efc63825100c}{result}} (\mbox{\hyperlink{classmtl_1_1result_aad12e034f1f9acb9aeeee1d96fc04d3f}{err\+\_\+type}} \&\&e)
+\item 
+constexpr auto \mbox{\hyperlink{classmtl_1_1result_af8b6bbf4f6df6019658e4bece206a00c}{is\+\_\+ok}} () const -\/$>$ bool
+\item 
+constexpr auto \mbox{\hyperlink{classmtl_1_1result_aa54b17c7ce7eafa2c3e7be2847816bd1}{is\+\_\+err}} () const -\/$>$ bool
+\item 
+constexpr auto \mbox{\hyperlink{classmtl_1_1result_a5fccf8151b98c3e1eb13e138191f2dda}{ok}} () -\/$>$ \mbox{\hyperlink{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}{ok\+\_\+type}} \&
+\item 
+constexpr auto \mbox{\hyperlink{classmtl_1_1result_a86723558f592c017c561adcc086373d1}{ok}} () const -\/$>$ const \mbox{\hyperlink{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}{ok\+\_\+type}} \&
+\item 
+constexpr auto \mbox{\hyperlink{classmtl_1_1result_a1607f7130df4aac34c9f992d64676112}{err}} () -\/$>$ \mbox{\hyperlink{classmtl_1_1result_aad12e034f1f9acb9aeeee1d96fc04d3f}{err\+\_\+type}} \&
+\item 
+constexpr auto \mbox{\hyperlink{classmtl_1_1result_a83a782888f5af1a3ea8a2976e5399214}{err}} () const -\/$>$ const \mbox{\hyperlink{classmtl_1_1result_aad12e034f1f9acb9aeeee1d96fc04d3f}{err\+\_\+type}} \&
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, typename E$>$\newline
+class mtl\+::result$<$ T, E $>$}
+
+
+Definition at line \mbox{\hyperlink{result_8h_source_l00031}{31}} of file \mbox{\hyperlink{result_8h_source}{result.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classmtl_1_1result_aad12e034f1f9acb9aeeee1d96fc04d3f}\label{classmtl_1_1result_aad12e034f1f9acb9aeeee1d96fc04d3f} 
+\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}!err\_type@{err\_type}}
+\index{err\_type@{err\_type}!mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+\doxysubsubsection{\texorpdfstring{err\_type}{err\_type}}
+{\footnotesize\ttfamily template$<$typename T , typename E $>$ \\
+using \mbox{\hyperlink{classmtl_1_1result}{mtl\+::result}}$<$ T, E $>$\+::err\+\_\+type =  \mbox{\hyperlink{structmtl_1_1err}{mtl\+::err}}$<$E$>$}
+
+
+
+Definition at line \mbox{\hyperlink{result_8h_source_l00035}{35}} of file \mbox{\hyperlink{result_8h_source}{result.\+h}}.
+
+\Hypertarget{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}\label{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221} 
+\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}!ok\_type@{ok\_type}}
+\index{ok\_type@{ok\_type}!mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+\doxysubsubsection{\texorpdfstring{ok\_type}{ok\_type}}
+{\footnotesize\ttfamily template$<$typename T , typename E $>$ \\
+using \mbox{\hyperlink{classmtl_1_1result}{mtl\+::result}}$<$ T, E $>$\+::ok\+\_\+type =  T}
+
+
+
+Definition at line \mbox{\hyperlink{result_8h_source_l00034}{34}} of file \mbox{\hyperlink{result_8h_source}{result.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmtl_1_1result_a53a901e7295cfbd88065a34e4646cc07}\label{classmtl_1_1result_a53a901e7295cfbd88065a34e4646cc07} 
+\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}!result@{result}}
+\index{result@{result}!mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+\doxysubsubsection{\texorpdfstring{result()}{result()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename E $>$ \\
+template$<$class ... Args$>$ \\
+constexpr \mbox{\hyperlink{classmtl_1_1result}{mtl\+::result}}$<$ T, E $>$\+::result (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{result_8h_source_l00038}{38}} of file \mbox{\hyperlink{result_8h_source}{result.\+h}}.
+
+\Hypertarget{classmtl_1_1result_aea95c528c4fdc964b0aa45e6659d7059}\label{classmtl_1_1result_aea95c528c4fdc964b0aa45e6659d7059} 
+\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}!result@{result}}
+\index{result@{result}!mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+\doxysubsubsection{\texorpdfstring{result()}{result()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename E $>$ \\
+constexpr \mbox{\hyperlink{classmtl_1_1result}{mtl\+::result}}$<$ T, E $>$\+::result (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}{ok\+\_\+type}} \&\&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{result_8h_source_l00044}{44}} of file \mbox{\hyperlink{result_8h_source}{result.\+h}}.
+
+\Hypertarget{classmtl_1_1result_a9097a008e32c26189f1a502f9b5fb0fa}\label{classmtl_1_1result_a9097a008e32c26189f1a502f9b5fb0fa} 
+\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}!result@{result}}
+\index{result@{result}!mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+\doxysubsubsection{\texorpdfstring{result()}{result()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename E $>$ \\
+constexpr \mbox{\hyperlink{classmtl_1_1result}{mtl\+::result}}$<$ T, E $>$\+::result (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtl_1_1result_aad12e034f1f9acb9aeeee1d96fc04d3f}{err\+\_\+type}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{result_8h_source_l00050}{50}} of file \mbox{\hyperlink{result_8h_source}{result.\+h}}.
+
+\Hypertarget{classmtl_1_1result_a495e89363d52f22fc241efc63825100c}\label{classmtl_1_1result_a495e89363d52f22fc241efc63825100c} 
+\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}!result@{result}}
+\index{result@{result}!mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+\doxysubsubsection{\texorpdfstring{result()}{result()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename E $>$ \\
+constexpr \mbox{\hyperlink{classmtl_1_1result}{mtl\+::result}}$<$ T, E $>$\+::result (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtl_1_1result_aad12e034f1f9acb9aeeee1d96fc04d3f}{err\+\_\+type}} \&\&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{result_8h_source_l00056}{56}} of file \mbox{\hyperlink{result_8h_source}{result.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmtl_1_1result_a1607f7130df4aac34c9f992d64676112}\label{classmtl_1_1result_a1607f7130df4aac34c9f992d64676112} 
+\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}!err@{err}}
+\index{err@{err}!mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+\doxysubsubsection{\texorpdfstring{err()}{err()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename E $>$ \\
+constexpr auto \mbox{\hyperlink{classmtl_1_1result}{mtl\+::result}}$<$ T, E $>$\+::err (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classmtl_1_1result_aad12e034f1f9acb9aeeee1d96fc04d3f}{err\+\_\+type}}\& \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{result_8h_source_l00068}{68}} of file \mbox{\hyperlink{result_8h_source}{result.\+h}}.
+
+\Hypertarget{classmtl_1_1result_a83a782888f5af1a3ea8a2976e5399214}\label{classmtl_1_1result_a83a782888f5af1a3ea8a2976e5399214} 
+\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}!err@{err}}
+\index{err@{err}!mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+\doxysubsubsection{\texorpdfstring{err()}{err()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename E $>$ \\
+constexpr auto \mbox{\hyperlink{classmtl_1_1result}{mtl\+::result}}$<$ T, E $>$\+::err (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classmtl_1_1result_aad12e034f1f9acb9aeeee1d96fc04d3f}{err\+\_\+type}}\& \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{result_8h_source_l00069}{69}} of file \mbox{\hyperlink{result_8h_source}{result.\+h}}.
+
+\Hypertarget{classmtl_1_1result_aa54b17c7ce7eafa2c3e7be2847816bd1}\label{classmtl_1_1result_aa54b17c7ce7eafa2c3e7be2847816bd1} 
+\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}!is\_err@{is\_err}}
+\index{is\_err@{is\_err}!mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+\doxysubsubsection{\texorpdfstring{is\_err()}{is\_err()}}
+{\footnotesize\ttfamily template$<$typename T , typename E $>$ \\
+constexpr auto \mbox{\hyperlink{classmtl_1_1result}{mtl\+::result}}$<$ T, E $>$\+::is\+\_\+err (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ bool \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{result_8h_source_l00063}{63}} of file \mbox{\hyperlink{result_8h_source}{result.\+h}}.
+
+\Hypertarget{classmtl_1_1result_af8b6bbf4f6df6019658e4bece206a00c}\label{classmtl_1_1result_af8b6bbf4f6df6019658e4bece206a00c} 
+\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}!is\_ok@{is\_ok}}
+\index{is\_ok@{is\_ok}!mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+\doxysubsubsection{\texorpdfstring{is\_ok()}{is\_ok()}}
+{\footnotesize\ttfamily template$<$typename T , typename E $>$ \\
+constexpr auto \mbox{\hyperlink{classmtl_1_1result}{mtl\+::result}}$<$ T, E $>$\+::is\+\_\+ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ bool \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{result_8h_source_l00062}{62}} of file \mbox{\hyperlink{result_8h_source}{result.\+h}}.
+
+\Hypertarget{classmtl_1_1result_a5fccf8151b98c3e1eb13e138191f2dda}\label{classmtl_1_1result_a5fccf8151b98c3e1eb13e138191f2dda} 
+\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}!ok@{ok}}
+\index{ok@{ok}!mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+\doxysubsubsection{\texorpdfstring{ok()}{ok()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename E $>$ \\
+constexpr auto \mbox{\hyperlink{classmtl_1_1result}{mtl\+::result}}$<$ T, E $>$\+::ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}{ok\+\_\+type}}\& \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{result_8h_source_l00065}{65}} of file \mbox{\hyperlink{result_8h_source}{result.\+h}}.
+
+\Hypertarget{classmtl_1_1result_a86723558f592c017c561adcc086373d1}\label{classmtl_1_1result_a86723558f592c017c561adcc086373d1} 
+\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}!ok@{ok}}
+\index{ok@{ok}!mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+\doxysubsubsection{\texorpdfstring{ok()}{ok()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename E $>$ \\
+constexpr auto \mbox{\hyperlink{classmtl_1_1result}{mtl\+::result}}$<$ T, E $>$\+::ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ const \mbox{\hyperlink{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}{ok\+\_\+type}}\& \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{result_8h_source_l00066}{66}} of file \mbox{\hyperlink{result_8h_source}{result.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmtl_1_1result_a2ab00535530aea09192a8d80e1b7421b}\label{classmtl_1_1result_a2ab00535530aea09192a8d80e1b7421b} 
+\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}!\_err@{\_err}}
+\index{\_err@{\_err}!mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+\doxysubsubsection{\texorpdfstring{\_err}{\_err}}
+{\footnotesize\ttfamily template$<$typename T , typename E $>$ \\
+\mbox{\hyperlink{classmtl_1_1result_aad12e034f1f9acb9aeeee1d96fc04d3f}{err\+\_\+type}} \mbox{\hyperlink{classmtl_1_1result}{mtl\+::result}}$<$ T, E $>$\+::\+\_\+err}
+
+
+
+Definition at line \mbox{\hyperlink{result_8h_source_l00076}{76}} of file \mbox{\hyperlink{result_8h_source}{result.\+h}}.
+
+\Hypertarget{classmtl_1_1result_ab98963e740c07736d4a0e3933e1b0f2e}\label{classmtl_1_1result_ab98963e740c07736d4a0e3933e1b0f2e} 
+\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}!\_ok@{\_ok}}
+\index{\_ok@{\_ok}!mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+\doxysubsubsection{\texorpdfstring{\_ok}{\_ok}}
+{\footnotesize\ttfamily template$<$typename T , typename E $>$ \\
+\mbox{\hyperlink{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}{ok\+\_\+type}} \mbox{\hyperlink{classmtl_1_1result}{mtl\+::result}}$<$ T, E $>$\+::\+\_\+ok}
+
+
+
+Definition at line \mbox{\hyperlink{result_8h_source_l00077}{77}} of file \mbox{\hyperlink{result_8h_source}{result.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mtl/\mbox{\hyperlink{result_8h}{result.\+h}}\end{DoxyCompactItemize}

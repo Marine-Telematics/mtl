@@ -1,0 +1,46 @@
+\doxysection{hash.\+h}
+\hypertarget{hash_8h_source}{}\label{hash_8h_source}\index{include/mtl/hash.h@{include/mtl/hash.h}}
+\mbox{\hyperlink{hash_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00014}00014\ \textcolor{preprocessor}{\#ifndef\ MTL\_HASH\_H}}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00015}00015\ \textcolor{preprocessor}{\#define\ MTL\_HASH\_H}}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{string__view_8h}{string\_view.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00022}00022\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemtl}{mtl}}}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00023}00023\ \{}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00024}\mbox{\hyperlink{namespacemtl_1_1detail__fnv1a}{00024}}\ \textcolor{keyword}{namespace\ }detail\_fnv1a}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00025}00025\ \{}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00033}\mbox{\hyperlink{namespacemtl_1_1detail__fnv1a_a2a2649573fbc471a827a2e6d4ab72705}{00033}}\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ T\ Basis,\ T\ Prime>\ \textcolor{keyword}{constexpr}\ T\ \mbox{\hyperlink{namespacemtl_1_1detail__fnv1a_a2a2649573fbc471a827a2e6d4ab72705}{fnv1a}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl::string\_view}}\ s)}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00034}00034\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00035}00035\ \ \ \ \ \ \ \ \ T\ hash\ =\ Basis;\ \textcolor{comment}{//\ offset\ basis}}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ c\ :\ s)}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ FNV-\/1a\ algorithm:\ XOR\ byte\ into\ the\ least\ significant\ byte\ of}}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ hash\ then\ multiply\ by\ the\ FNV\ prime.}}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ hash\ =\ (hash\ \string^\ \textcolor{keyword}{static\_cast<}uint8\_t\textcolor{keyword}{>}(c))\ *\ Prime;}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ hash;}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00048}\mbox{\hyperlink{namespacemtl_ab77378575eeb38bd160e2a077504e688}{00048}}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{namespacemtl_ab77378575eeb38bd160e2a077504e688}{fnv1a\_32}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl::string\_view}}\ s)\ -\/>\ uint32\_t}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00049}00049\ \{}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacemtl_1_1detail__fnv1a_a2a2649573fbc471a827a2e6d4ab72705}{detail\_fnv1a::fnv1a<uint32\_t,\ 0x811c9dc5u,\ 0x01000193u>}}(s);}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00054}\mbox{\hyperlink{namespacemtl_a274176992794c10e24ddb0b36fc74237}{00054}}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{namespacemtl_a274176992794c10e24ddb0b36fc74237}{fnv1a\_64}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl::string\_view}}\ s)\ -\/>\ uint64\_t}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00055}00055\ \{}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{namespacemtl_1_1detail__fnv1a_a2a2649573fbc471a827a2e6d4ab72705}{detail\_fnv1a::fnv1a<uint64\_t,\ 0xcbf29ce484222325ull,\ 0x00000100000001b3ull>}}(s);}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00058}00058\ \}}
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{hash_8h_source_l00060}00060\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

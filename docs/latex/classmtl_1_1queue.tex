@@ -1,0 +1,136 @@
+\doxysection{mtl\+::queue\texorpdfstring{$<$}{<} T, LEN \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmtl_1_1queue}{}\label{classmtl_1_1queue}\index{mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}}
+
+
+{\ttfamily \#include $<$queue.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{classmtl_1_1queue_aeb8f0e14fbc83a77f3449e14deebc863}{storage\+\_\+type}} = \mbox{\hyperlink{classmtl_1_1ring__buffer}{ring\+\_\+buffer}}$<$ T, LEN $>$
+\item 
+using \mbox{\hyperlink{classmtl_1_1queue_a83487a3b717dfa74c6276b82f4b62ec5}{reference}} = typename \mbox{\hyperlink{classmtl_1_1ring__buffer_a7d824e902fab3936563db0d27aa40482}{storage\+\_\+type\+::reference}}
+\item 
+using \mbox{\hyperlink{classmtl_1_1queue_abf1096ef09f0c28c079749f5fa3a6a8e}{const\+\_\+reference}} = typename \mbox{\hyperlink{classmtl_1_1ring__buffer_aa9ec0e52a3f9fc5cd5c488ab2a18a1f6}{storage\+\_\+type\+::const\+\_\+reference}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+auto \mbox{\hyperlink{classmtl_1_1queue_a3f419fead1f230e7e9e752eb18f54876}{is\+\_\+empty}} () const -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classmtl_1_1queue_a3abd7e5fd4c549cf1662590fb839f2c7}{is\+\_\+full}} () const -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classmtl_1_1queue_af94102cc53fe903d79dabe449c660e14}{enqueue}} (\mbox{\hyperlink{classmtl_1_1queue_abf1096ef09f0c28c079749f5fa3a6a8e}{const\+\_\+reference}} data) -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classmtl_1_1queue_a5c3db5dbfad1a0ec362b0da91db47f1c}{dequeue}} (\mbox{\hyperlink{classmtl_1_1queue_a83487a3b717dfa74c6276b82f4b62ec5}{reference}} data) -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{classmtl_1_1queue_a72914937f7eb9a9a25c72b6fe0cfe62b}{dequeue}} () -\/$>$ \mbox{\hyperlink{classmtl_1_1option}{option}}$<$ T $>$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, size\+\_\+t LEN$>$\newline
+class mtl\+::queue$<$ T, LEN $>$}
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00021}{21}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classmtl_1_1queue_abf1096ef09f0c28c079749f5fa3a6a8e}\label{classmtl_1_1queue_abf1096ef09f0c28c079749f5fa3a6a8e} 
+\index{mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}!const\_reference@{const\_reference}}
+\index{const\_reference@{const\_reference}!mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}}
+\doxysubsubsection{\texorpdfstring{const\_reference}{const\_reference}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t LEN$>$ \\
+using \mbox{\hyperlink{classmtl_1_1queue}{mtl\+::queue}}$<$ T, LEN $>$\+::const\+\_\+reference =  typename \mbox{\hyperlink{classmtl_1_1ring__buffer_aa9ec0e52a3f9fc5cd5c488ab2a18a1f6}{storage\+\_\+type\+::const\+\_\+reference}}}
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00026}{26}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+\Hypertarget{classmtl_1_1queue_a83487a3b717dfa74c6276b82f4b62ec5}\label{classmtl_1_1queue_a83487a3b717dfa74c6276b82f4b62ec5} 
+\index{mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}!reference@{reference}}
+\index{reference@{reference}!mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}}
+\doxysubsubsection{\texorpdfstring{reference}{reference}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t LEN$>$ \\
+using \mbox{\hyperlink{classmtl_1_1queue}{mtl\+::queue}}$<$ T, LEN $>$\+::reference =  typename \mbox{\hyperlink{classmtl_1_1ring__buffer_a7d824e902fab3936563db0d27aa40482}{storage\+\_\+type\+::reference}}}
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00025}{25}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+\Hypertarget{classmtl_1_1queue_aeb8f0e14fbc83a77f3449e14deebc863}\label{classmtl_1_1queue_aeb8f0e14fbc83a77f3449e14deebc863} 
+\index{mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}!storage\_type@{storage\_type}}
+\index{storage\_type@{storage\_type}!mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}}
+\doxysubsubsection{\texorpdfstring{storage\_type}{storage\_type}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t LEN$>$ \\
+using \mbox{\hyperlink{classmtl_1_1queue}{mtl\+::queue}}$<$ T, LEN $>$\+::storage\+\_\+type =  \mbox{\hyperlink{classmtl_1_1ring__buffer}{ring\+\_\+buffer}}$<$T, LEN$>$}
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00024}{24}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmtl_1_1queue_a72914937f7eb9a9a25c72b6fe0cfe62b}\label{classmtl_1_1queue_a72914937f7eb9a9a25c72b6fe0cfe62b} 
+\index{mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}}
+\doxysubsubsection{\texorpdfstring{dequeue()}{dequeue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t LEN$>$ \\
+auto \mbox{\hyperlink{classmtl_1_1queue}{mtl\+::queue}}$<$ T, LEN $>$\+::dequeue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classmtl_1_1option}{option}}$<$T$>$     \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00051}{51}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+\Hypertarget{classmtl_1_1queue_a5c3db5dbfad1a0ec362b0da91db47f1c}\label{classmtl_1_1queue_a5c3db5dbfad1a0ec362b0da91db47f1c} 
+\index{mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}}
+\doxysubsubsection{\texorpdfstring{dequeue()}{dequeue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t LEN$>$ \\
+auto \mbox{\hyperlink{classmtl_1_1queue}{mtl\+::queue}}$<$ T, LEN $>$\+::dequeue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtl_1_1queue_a83487a3b717dfa74c6276b82f4b62ec5}{reference}}}]{data }\end{DoxyParamCaption}) -\/$>$ bool     \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00041}{41}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+\Hypertarget{classmtl_1_1queue_af94102cc53fe903d79dabe449c660e14}\label{classmtl_1_1queue_af94102cc53fe903d79dabe449c660e14} 
+\index{mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t LEN$>$ \\
+auto \mbox{\hyperlink{classmtl_1_1queue}{mtl\+::queue}}$<$ T, LEN $>$\+::enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtl_1_1queue_abf1096ef09f0c28c079749f5fa3a6a8e}{const\+\_\+reference}}}]{data }\end{DoxyParamCaption}) -\/$>$ bool     \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00031}{31}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+\Hypertarget{classmtl_1_1queue_a3f419fead1f230e7e9e752eb18f54876}\label{classmtl_1_1queue_a3f419fead1f230e7e9e752eb18f54876} 
+\index{mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}!is\_empty@{is\_empty}}
+\index{is\_empty@{is\_empty}!mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}}
+\doxysubsubsection{\texorpdfstring{is\_empty()}{is\_empty()}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t LEN$>$ \\
+auto \mbox{\hyperlink{classmtl_1_1queue}{mtl\+::queue}}$<$ T, LEN $>$\+::is\+\_\+empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ bool \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00028}{28}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+\Hypertarget{classmtl_1_1queue_a3abd7e5fd4c549cf1662590fb839f2c7}\label{classmtl_1_1queue_a3abd7e5fd4c549cf1662590fb839f2c7} 
+\index{mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}!is\_full@{is\_full}}
+\index{is\_full@{is\_full}!mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}}
+\doxysubsubsection{\texorpdfstring{is\_full()}{is\_full()}}
+{\footnotesize\ttfamily template$<$typename T , size\+\_\+t LEN$>$ \\
+auto \mbox{\hyperlink{classmtl_1_1queue}{mtl\+::queue}}$<$ T, LEN $>$\+::is\+\_\+full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ bool \hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{queue_8h_source_l00029}{29}} of file \mbox{\hyperlink{queue_8h_source}{queue.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mtl/\mbox{\hyperlink{queue_8h}{queue.\+h}}\end{DoxyCompactItemize}
