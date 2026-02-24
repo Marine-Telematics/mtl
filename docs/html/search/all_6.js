@@ -1,16 +1,13 @@
 var searchData=
 [
-  ['e_0',['e',['../structmtl_1_1math__constants.html#a5c70fe49922781df96b4a5cac31fb276',1,'mtl::math_constants']]],
-  ['e_5freciprocal_1',['e_reciprocal',['../structmtl_1_1math__constants.html#a0ce2e875c591c64d0673118e15d21f44',1,'mtl::math_constants']]],
-  ['e_5fsquared_2',['e_squared',['../structmtl_1_1math__constants.html#a19c475a779c6e547adfe9c7d79517a38',1,'mtl::math_constants']]],
-  ['emplace_3',['emplace',['../classmtl_1_1static__list.html#a0c6006582948e2dfd60f1c7ae5b2275f',1,'mtl::static_list']]],
-  ['emplace_5fback_4',['emplace_back',['../classmtl_1_1static__list.html#ad5382feda350a853342eed6900071b6a',1,'mtl::static_list']]],
-  ['empty_5',['empty',['../classmtl_1_1static__list.html#a9a8191f663d14a231d2da1e3f0878efb',1,'mtl::static_list']]],
-  ['end_6',['end',['../classmtl_1_1detail__string__view_1_1basic__string__view.html#aca7f06a8dd12c4179e381981b6b435fb',1,'mtl::detail_string_view::basic_string_view::end() const -&gt; pointer'],['../classmtl_1_1detail__string__view_1_1basic__string__view.html#a70be7aa4ebcdd417372c43eb5ac5024d',1,'mtl::detail_string_view::basic_string_view::end() -&gt; pointer'],['../classmtl_1_1static__list.html#ac668f787f519a5bd4dd5bcb3b44655d9',1,'mtl::static_list::end()']]],
-  ['end_5faddr_7',['END_ADDR',['../structmtl_1_1fm24cl64b.html#a09a27fb376402d2a95e9481777b5e344',1,'mtl::fm24cl64b']]],
-  ['enqueue_8',['enqueue',['../classmtl_1_1queue.html#af94102cc53fe903d79dabe449c660e14',1,'mtl::queue']]],
-  ['erase_9',['erase',['../classmtl_1_1static__list.html#abcac9f7cb239fffa18d0fe7c435d96ac',1,'mtl::static_list']]],
-  ['err_10',['err',['../structmtl_1_1err.html',1,'mtl::err&lt; E &gt;'],['../structmtl_1_1err.html#aefb67fd8fd04a5a753df0fca2b75c6bd',1,'mtl::err::err()=default'],['../structmtl_1_1err.html#a1e00438baa10affeecc2cd534c815c0a',1,'mtl::err::err(E &amp;&amp;e)'],['../classmtl_1_1result.html#a1607f7130df4aac34c9f992d64676112',1,'mtl::result::err() -&gt; err_type &amp;'],['../classmtl_1_1result.html#a83a782888f5af1a3ea8a2976e5399214',1,'mtl::result::err() const -&gt; const err_type &amp;']]],
-  ['err_5ftype_11',['err_type',['../classmtl_1_1result.html#aad12e034f1f9acb9aeeee1d96fc04d3f',1,'mtl::result']]],
-  ['euler_12',['euler',['../structmtl_1_1math__constants.html#a560b0d98d996fd9ae3c85751b8724cad',1,'mtl::math_constants']]]
+  ['filter_20c_202025_20marine_20telematics_0',['Butterworth Low Pass Filter - (c) 2025 marine telematics',['../butterworth__lpf_8h.html#autotoc_md8',1,'']]],
+  ['filter_20definitions_20c_202025_20marine_20telematics_1',['Filter Definitions - (c) 2025 marine telematics',['../defs_8h.html#autotoc_md10',1,'']]],
+  ['filter_20order_2',['However, attenuation slope is n * (-20dB/dec), where n is the filter order.',['../butterworth__lpf_8h.html#autotoc_md9',1,'']]],
+  ['final_5faction_3',['final_action',['../structmtl_1_1final__action.html',1,'mtl']]],
+  ['fm24cl64b_4',['fm24cl64b',['../structmtl_1_1fm24cl64b.html',1,'mtl']]],
+  ['fm24cl64b_5fimpl_5',['fm24cl64b_impl',['../classmtl_1_1fm24cl64b__impl.html',1,'mtl']]],
+  ['fnv1a_6',['fnv1a',['../hash_8h.html#a2a2649573fbc471a827a2e6d4ab72705',1,'mtl::detail_fnv1a']]],
+  ['fnv1a_5f32_7',['fnv1a_32',['../hash_8h.html#ab77378575eeb38bd160e2a077504e688',1,'mtl']]],
+  ['fnv1a_5f64_8',['fnv1a_64',['../hash_8h.html#a274176992794c10e24ddb0b36fc74237',1,'mtl']]],
+  ['front_9',['front',['../classmtl_1_1static__list.html#a9a2943da8c3a7deffe230b8640c0cd0e',1,'mtl::static_list']]]
 ];

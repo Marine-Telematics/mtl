@@ -2,79 +2,79 @@
 \hypertarget{can_8h_source}{}\label{can_8h_source}\index{include/mtl/interface/can.h@{include/mtl/interface/can.h}}
 \mbox{\hyperlink{can_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_INTERFACE\_CAN\_H}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ MTL\_INTERFACE\_CAN\_H}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <span>}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <array>}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <ranges>}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <cstdint>}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <cstddef>}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <algorithm>}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00020}00020\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00021}\mbox{\hyperlink{namespacemtl_1_1can}{00021}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemtl_1_1can}{mtl::can}}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00022}00022\ \{}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00023}\mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{00023}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\_type}}\ \ \ =\ uint32\_t;}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00024}\mbox{\hyperlink{namespacemtl_1_1can_ab40e707b7804ed2bb1d7f94f3fb8ed81}{00024}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacemtl_1_1can_ab40e707b7804ed2bb1d7f94f3fb8ed81}{data\_type}}\ =\ uint8\_t;}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00025}\mbox{\hyperlink{namespacemtl_1_1can_a572f08e42e525d1008f796e95ad7588f}{00025}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacemtl_1_1can_a572f08e42e525d1008f796e95ad7588f}{size\_type}}\ =\ size\_t;}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00028}00028\ \textcolor{comment}{//\ special\ address\ description\ flags\ for\ the\ CAN\_ID:}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00030}00030\ \textcolor{comment}{//\ EFF/SFF\ is\ set\ in\ the\ MSB}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00031}00031\ [[maybe\_unused]]\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\_type}}\ eff\_flag\ =\ 0x80000000UL;}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00032}00032\ \textcolor{comment}{//\ remote\ transmission\ request}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00033}00033\ [[maybe\_unused]]\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\_type}}\ rtr\_flag\ =\ 0x40000000UL;}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00034}00034\ \textcolor{comment}{//\ error\ message\ frame}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00035}00035\ [[maybe\_unused]]\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\_type}}\ err\_flag\ =\ 0x20000000UL;}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00036}00036\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00037}00037\ \textcolor{comment}{//\ valid\ bits\ in\ CAN\ ID\ for\ frame\ formats:}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00039}00039\ \textcolor{comment}{//\ standard\ frame\ format\ (SFF)}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00040}00040\ [[maybe\_unused]]\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\_type}}\ sff\_mask\ =\ 0x000007FFUL;}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00041}00041\ \textcolor{comment}{//\ extended\ frame\ format\ (EFF)}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00042}00042\ [[maybe\_unused]]\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\_type}}\ eff\_mask\ =\ 0x1FFFFFFFUL;}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00043}00043\ \textcolor{comment}{//\ omit\ EFF,\ RTR,\ ERR\ flags}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00044}00044\ [[maybe\_unused]]\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\_type}}\ err\_mask\ =\ 0x1FFFFFFFUL;}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00045}00045\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00046}\mbox{\hyperlink{namespacemtl_1_1can_a754e1970301986398c341492b7359d9e}{00046}}\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespacemtl_1_1can_a754e1970301986398c341492b7359d9e}{speed}}\ :\ uint8\_t}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00047}00047\ \{}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00048}00048\ \ \ \ \ \mbox{\hyperlink{namespacemtl_1_1can_a754e1970301986398c341492b7359d9ea5b0993b223fe2ea3b39bfec6c4e95048}{can125\_kbps}},}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00049}00049\ \ \ \ \ \mbox{\hyperlink{namespacemtl_1_1can_a754e1970301986398c341492b7359d9ea66c0bc85e79218df8705039e84865ba7}{can200\_kbps}},}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00050}00050\ \ \ \ \ \mbox{\hyperlink{namespacemtl_1_1can_a754e1970301986398c341492b7359d9ea3659e7845f3a5b2fe2c989428a5b43d6}{can250\_kbps}},}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00051}00051\ \ \ \ \ \mbox{\hyperlink{namespacemtl_1_1can_a754e1970301986398c341492b7359d9ea66e4e1f2f137553e10f1c0a26c4334f6}{can500\_kbps}},}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00052}00052\ \};}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00054}00054\ \textcolor{comment}{//\ Data\ Length\ Code(DLC)\ is\ the\ standard\ term\ for\ CAN\ \_data\ length.}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00055}00055\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{namespacemtl_1_1can_a572f08e42e525d1008f796e95ad7588f}{size\_type}}\ max\_dlc\ =\ 8u;}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00056}00056\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00057}\mbox{\hyperlink{structmtl_1_1can_1_1message}{00057}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1can_1_1message}{message}}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00058}00058\ \{}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00059}\mbox{\hyperlink{structmtl_1_1can_1_1message_a4e2ed57e9208d6e0d78853a6b32aca00}{00059}}\ \ \ \ \ \mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\_type}}\ \mbox{\hyperlink{structmtl_1_1can_1_1message_a4e2ed57e9208d6e0d78853a6b32aca00}{\_identifier}}\ =\ 0x00;}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00060}00060\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00061}\mbox{\hyperlink{structmtl_1_1can_1_1message_ab17eb186fe8201e636bf5ffb23014e5c}{00061}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structmtl_1_1can_1_1message_ab17eb186fe8201e636bf5ffb23014e5c}{\_extended}}\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00062}00062\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00063}\mbox{\hyperlink{structmtl_1_1can_1_1message_af3a127a95240e9a9383d14c612e33f24}{00063}}\ \ \ \ \ \mbox{\hyperlink{namespacemtl_1_1can_a572f08e42e525d1008f796e95ad7588f}{size\_type}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structmtl_1_1can_1_1message_af3a127a95240e9a9383d14c612e33f24}{\_dlc}}\ =\ 0u;}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00064}\mbox{\hyperlink{structmtl_1_1can_1_1message_aea12e0691ba1779201ed2db2ac0d526c}{00064}}\ \ \ \ \ array<data\_type,\ max\_dlc>\ \mbox{\hyperlink{structmtl_1_1can_1_1message_aea12e0691ba1779201ed2db2ac0d526c}{\_data}}\{\};}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00065}00065\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00066}\mbox{\hyperlink{structmtl_1_1can_1_1message_aba9f219dd3b1daa5a2bdd6d882d1f79d}{00066}}\ \ \ \ \ \mbox{\hyperlink{structmtl_1_1can_1_1message_aba9f219dd3b1daa5a2bdd6d882d1f79d}{message}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00067}00067\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00068}\mbox{\hyperlink{structmtl_1_1can_1_1message_a7ab35a6bf1e13c8260c16dfbc6f44f6c}{00068}}\ \ \ \ \ \mbox{\hyperlink{structmtl_1_1can_1_1message_a7ab35a6bf1e13c8260c16dfbc6f44f6c}{message}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\_type}}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ ext,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ len,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{namespacemtl_1_1can_ab40e707b7804ed2bb1d7f94f3fb8ed81}{data\_type}}\ *payload)}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00069}00069\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{structmtl_1_1can_1_1message_a4e2ed57e9208d6e0d78853a6b32aca00}{\_identifier}}(id),\ \mbox{\hyperlink{structmtl_1_1can_1_1message_ab17eb186fe8201e636bf5ffb23014e5c}{\_extended}}(ext),\ \mbox{\hyperlink{structmtl_1_1can_1_1message_af3a127a95240e9a9383d14c612e33f24}{\_dlc}}(len)}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00070}00070\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00071}00071\ \ \ \ \ \ \ \ \ std::copy\_n(payload,\ len,\ this-\/>\mbox{\hyperlink{structmtl_1_1can_1_1message_aea12e0691ba1779201ed2db2ac0d526c}{\_data}}.data());}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00072}00072\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00073}00073\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00074}\mbox{\hyperlink{structmtl_1_1can_1_1message_a3920374c52de3de019278ba5f369a919}{00074}}\ \ \ \ \ \mbox{\hyperlink{structmtl_1_1can_1_1message_a3920374c52de3de019278ba5f369a919}{message}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{namespacemtl_1_1can_ade8bf7268019421f0c230dd073e1fa5d}{id\_type}}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ ext,\ \textcolor{keyword}{const}\ std::span<const\ data\_type>\ payload)}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00075}00075\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{structmtl_1_1can_1_1message_a4e2ed57e9208d6e0d78853a6b32aca00}{\_identifier}}(id),\ \mbox{\hyperlink{structmtl_1_1can_1_1message_ab17eb186fe8201e636bf5ffb23014e5c}{\_extended}}(ext),\ \mbox{\hyperlink{structmtl_1_1can_1_1message_af3a127a95240e9a9383d14c612e33f24}{\_dlc}}(payload.size())}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00076}00076\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00077}00077\ \ \ \ \ \ \ \ \ std::ranges::copy(payload,\ this-\/>\mbox{\hyperlink{structmtl_1_1can_1_1message_aea12e0691ba1779201ed2db2ac0d526c}{\_data}});}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00078}00078\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00079}00079\ \};}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00080}00080\ \};\ \textcolor{comment}{//\ namespace\ trait::can}}
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00081}00081\ }
-\DoxyCodeLine{\Hypertarget{can_8h_source_l00082}00082\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_INTERFACE\_CAN\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MTL\_INTERFACE\_CAN\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <span>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <ranges>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }mtl::can}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{using\ }id\_type\ \ \ =\ uint32\_t;}
+\DoxyCodeLine{00024\ \textcolor{keyword}{using\ }data\_type\ =\ uint8\_t;}
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ }size\_type\ =\ size\_t;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ special\ address\ description\ flags\ for\ the\ CAN\_ID:}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{comment}{//\ EFF/SFF\ is\ set\ in\ the\ MSB}}
+\DoxyCodeLine{00031\ [[maybe\_unused]]\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ id\_type\ eff\_flag\ =\ 0x80000000UL;}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ remote\ transmission\ request}}
+\DoxyCodeLine{00033\ [[maybe\_unused]]\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ id\_type\ rtr\_flag\ =\ 0x40000000UL;}
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ error\ message\ frame}}
+\DoxyCodeLine{00035\ [[maybe\_unused]]\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ id\_type\ err\_flag\ =\ 0x20000000UL;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ valid\ bits\ in\ CAN\ ID\ for\ frame\ formats:}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{//\ standard\ frame\ format\ (SFF)}}
+\DoxyCodeLine{00040\ [[maybe\_unused]]\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ id\_type\ sff\_mask\ =\ 0x000007FFUL;}
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ extended\ frame\ format\ (EFF)}}
+\DoxyCodeLine{00042\ [[maybe\_unused]]\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ id\_type\ eff\_mask\ =\ 0x1FFFFFFFUL;}
+\DoxyCodeLine{00043\ \textcolor{comment}{//\ omit\ EFF,\ RTR,\ ERR\ flags}}
+\DoxyCodeLine{00044\ [[maybe\_unused]]\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ id\_type\ err\_mask\ =\ 0x1FFFFFFFUL;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{enum\ class}\ speed\ :\ uint8\_t}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ can125\_kbps,}
+\DoxyCodeLine{00049\ \ \ \ \ can200\_kbps,}
+\DoxyCodeLine{00050\ \ \ \ \ can250\_kbps,}
+\DoxyCodeLine{00051\ \ \ \ \ can500\_kbps,}
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ Data\ Length\ Code(DLC)\ is\ the\ standard\ term\ for\ CAN\ \_data\ length.}}
+\DoxyCodeLine{00055\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ size\_type\ max\_dlc\ =\ 8u;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1can_1_1message}{message}}}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ id\_type\ \_identifier\ =\ 0x00;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_extended\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ size\_type\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_dlc\ =\ 0u;}
+\DoxyCodeLine{00064\ \ \ \ \ array<data\_type,\ max\_dlc>\ \_data\{\};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{structmtl_1_1can_1_1message}{message}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{structmtl_1_1can_1_1message}{message}}(\textcolor{keyword}{const}\ id\_type\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ ext,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ len,\ \textcolor{keyword}{const}\ data\_type\ *payload)}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ :\ \_identifier(\textcolor{keywordtype}{id}),\ \_extended(ext),\ \_dlc(len)}
+\DoxyCodeLine{00070\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ std::copy\_n(payload,\ len,\ this-\/>\_data.data());}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{structmtl_1_1can_1_1message}{message}}(\textcolor{keyword}{const}\ id\_type\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ ext,\ \textcolor{keyword}{const}\ std::span<const\ data\_type>\ payload)}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ :\ \_identifier(\textcolor{keywordtype}{id}),\ \_extended(ext),\ \_dlc(payload.size())}
+\DoxyCodeLine{00076\ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ std::ranges::copy(payload,\ this-\/>\_data);}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \};}
+\DoxyCodeLine{00080\ \};\ \textcolor{comment}{//\ namespace\ trait::can}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

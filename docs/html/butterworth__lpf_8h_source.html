@@ -5,14 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: include/mtl/filter/butterworth_lpf.h Source File</title>
+<title>MarineTelematics Template Library: include/mtl/filter/butterworth_lpf.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,8 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">MarineTelematics Template Library
    </div>
+   <div id="projectbrief">mtl (MarineTelematics Template Library) is a reusable C++ utility library.</div>
   </td>
  </tr>
  </tbody>
@@ -55,23 +52,6 @@ $(function() {
 $(document).ready(function() { init_codefold(0); });
 /* @license-end */
 </script>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('butterworth__lpf_8h_source.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -93,6 +73,11 @@ $(document).ready(function(){initNavTree('butterworth__lpf_8h_source.html',''); 
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_353658666281c83a21b12c0bed9a5b33.html">mtl</a></li><li class="navelem"><a class="el" href="dir_b7e463567277057a82b5f79782c58760.html">filter</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">butterworth_lpf.h</div></div>
 </div><!--header-->
@@ -111,8 +96,7 @@ $(document).ready(function(){initNavTree('butterworth__lpf_8h_source.html',''); 
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;../type_traits.h&quot;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="defs_8h.html">defs.h</a>&quot;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="namespacemtl_1_1filter.html">   34</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemtl_1_1filter.html">mtl::filter</a></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">namespace </span>mtl::filter</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// Butterworth Low Pass Filter (LPF) class template</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">// Order: 1 to 4</span></div>
@@ -120,7 +104,7 @@ $(document).ready(function(){initNavTree('butterworth__lpf_8h_source.html',''); 
 <div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classmtl_1_1filter_1_1butterworth__lpf.html">   39</a></span><span class="keyword">class </span><a class="code hl_class" href="classmtl_1_1filter_1_1butterworth__lpf.html">butterworth_lpf</a></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_enumeration" href="namespacemtl_1_1filter.html#a15a13dc5888636dcd61e01e9313a0d71">order</a> ORDER = Order;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> order ORDER = Order;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">float</span> PI = <a class="code hl_struct" href="structmtl_1_1math__constants.html">math_constants&lt;T&gt;::pi</a>;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
@@ -215,7 +199,7 @@ $(document).ready(function(){initNavTree('butterworth__lpf_8h_source.html',''); 
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="comment">// Pre-warped cut-off frequency to the fourth power</span></div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> wc_tfo = wc_tsq * wc_tsq;</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ORDER == <a class="code hl_enumvalue" href="namespacemtl_1_1filter.html#a15a13dc5888636dcd61e01e9313a0d71a8b04d5e3775d298e78455efc5ca404d5">order::first</a>)</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ORDER == order::first)</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        {</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            this-&gt;_num[0] = wc_t;</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            this-&gt;_num[1] = wc_t;</div>
@@ -223,7 +207,7 @@ $(document).ready(function(){initNavTree('butterworth__lpf_8h_source.html',''); 
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            this-&gt;_den[0] = 2 + wc_t;</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            this-&gt;_den[1] = -2 + wc_t;</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        }</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ORDER == <a class="code hl_enumvalue" href="namespacemtl_1_1filter.html#a15a13dc5888636dcd61e01e9313a0d71aa9f0e61a137d86aa9db53465e0801612">order::second</a>)</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ORDER == order::second)</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        {</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            this-&gt;_num[0] = wc_tsq;</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            this-&gt;_num[1] = 2 * wc_tsq;</div>
@@ -233,7 +217,7 @@ $(document).ready(function(){initNavTree('butterworth__lpf_8h_source.html',''); 
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            this-&gt;_den[1] = -8 + 2 * wc_tsq;</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            this-&gt;_den[2] = 4 - 2.8284 * wc_t + wc_tsq;</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        }</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ORDER == <a class="code hl_enumvalue" href="namespacemtl_1_1filter.html#a15a13dc5888636dcd61e01e9313a0d71add5c8bf51558ffcbe5007071908e9524">order::third</a>)</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ORDER == order::third)</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        {</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            this-&gt;_num[0] = wc_tcu;</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            this-&gt;_num[1] = 3 * wc_tcu;</div>
@@ -245,7 +229,7 @@ $(document).ready(function(){initNavTree('butterworth__lpf_8h_source.html',''); 
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            this-&gt;_den[2] = 24 - 8 * wc_t - 4 * wc_tsq + 3 * wc_tcu;</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            this-&gt;_den[3] = -8 + 8 * wc_t - 4 * wc_tsq + wc_tcu;</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        }</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ORDER == <a class="code hl_enumvalue" href="namespacemtl_1_1filter.html#a15a13dc5888636dcd61e01e9313a0d71ac0759f2416498708841e7975566360ce">order::fourth</a>)</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (ORDER == order::fourth)</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        {</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            this-&gt;_num[0] = wc_tfo;</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            this-&gt;_num[1] = 4 * wc_tfo;</div>
@@ -271,30 +255,19 @@ $(document).ready(function(){initNavTree('butterworth__lpf_8h_source.html',''); 
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>};</div>
 </div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>} <span class="comment">// namespace filter</span></div>
-</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassmtl_1_1filter_1_1butterworth__lpf_html"><div class="ttname"><a href="classmtl_1_1filter_1_1butterworth__lpf.html">mtl::filter::butterworth_lpf</a></div><div class="ttdef"><b>Definition</b> <a href="butterworth__lpf_8h_source.html#l00039">butterworth_lpf.h:40</a></div></div>
-<div class="ttc" id="aclassmtl_1_1filter_1_1butterworth__lpf_html_a297e5eaf61e8d361b2a05b179a11eb1d"><div class="ttname"><a href="classmtl_1_1filter_1_1butterworth__lpf.html#a297e5eaf61e8d361b2a05b179a11eb1d">mtl::filter::butterworth_lpf::update</a></div><div class="ttdeci">constexpr auto update(const T val) -&gt; T</div><div class="ttdoc">Updates the filter state with a new input value and computes the output.</div><div class="ttdef"><b>Definition</b> <a href="butterworth__lpf_8h_source.html#l00087">butterworth_lpf.h:87</a></div></div>
-<div class="ttc" id="aclassmtl_1_1filter_1_1butterworth__lpf_html_a850f4e55966b287cdd9155961fcd05fe"><div class="ttname"><a href="classmtl_1_1filter_1_1butterworth__lpf.html#a850f4e55966b287cdd9155961fcd05fe">mtl::filter::butterworth_lpf::reset</a></div><div class="ttdeci">constexpr void reset()</div><div class="ttdoc">Resets the filter state to its initial condition.</div><div class="ttdef"><b>Definition</b> <a href="butterworth__lpf_8h_source.html#l00079">butterworth_lpf.h:79</a></div></div>
-<div class="ttc" id="aclassmtl_1_1filter_1_1butterworth__lpf_html_acef46e02d969bf8c18eb095cb2e6638e"><div class="ttname"><a href="classmtl_1_1filter_1_1butterworth__lpf.html#acef46e02d969bf8c18eb095cb2e6638e">mtl::filter::butterworth_lpf::butterworth_lpf</a></div><div class="ttdeci">constexpr butterworth_lpf(T fc, T fs)</div><div class="ttdoc">Constructor for Butterworth Low Pass Filter.</div><div class="ttdef"><b>Definition</b> <a href="butterworth__lpf_8h_source.html#l00129">butterworth_lpf.h:129</a></div></div>
-<div class="ttc" id="aclassmtl_1_1filter_1_1butterworth__lpf_html_ad74f1a4e17765ecf19251ce0db5cb1e1"><div class="ttname"><a href="classmtl_1_1filter_1_1butterworth__lpf.html#ad74f1a4e17765ecf19251ce0db5cb1e1">mtl::filter::butterworth_lpf::value</a></div><div class="ttdeci">constexpr auto value() const -&gt; T</div><div class="ttdoc">Retrieves the current output value of the filter.</div><div class="ttdef"><b>Definition</b> <a href="butterworth__lpf_8h_source.html#l00076">butterworth_lpf.h:76</a></div></div>
+<div class="ttc" id="aclassmtl_1_1filter_1_1butterworth__lpf_html"><div class="ttname"><a href="classmtl_1_1filter_1_1butterworth__lpf.html">mtl::filter::butterworth_lpf</a></div><div class="ttdef"><b>Definition</b> butterworth_lpf.h:40</div></div>
+<div class="ttc" id="aclassmtl_1_1filter_1_1butterworth__lpf_html_a297e5eaf61e8d361b2a05b179a11eb1d"><div class="ttname"><a href="classmtl_1_1filter_1_1butterworth__lpf.html#a297e5eaf61e8d361b2a05b179a11eb1d">mtl::filter::butterworth_lpf::update</a></div><div class="ttdeci">constexpr auto update(const T val) -&gt; T</div><div class="ttdoc">Updates the filter state with a new input value and computes the output.</div><div class="ttdef"><b>Definition</b> butterworth_lpf.h:87</div></div>
+<div class="ttc" id="aclassmtl_1_1filter_1_1butterworth__lpf_html_a850f4e55966b287cdd9155961fcd05fe"><div class="ttname"><a href="classmtl_1_1filter_1_1butterworth__lpf.html#a850f4e55966b287cdd9155961fcd05fe">mtl::filter::butterworth_lpf::reset</a></div><div class="ttdeci">constexpr void reset()</div><div class="ttdoc">Resets the filter state to its initial condition.</div><div class="ttdef"><b>Definition</b> butterworth_lpf.h:79</div></div>
+<div class="ttc" id="aclassmtl_1_1filter_1_1butterworth__lpf_html_acef46e02d969bf8c18eb095cb2e6638e"><div class="ttname"><a href="classmtl_1_1filter_1_1butterworth__lpf.html#acef46e02d969bf8c18eb095cb2e6638e">mtl::filter::butterworth_lpf::butterworth_lpf</a></div><div class="ttdeci">constexpr butterworth_lpf(T fc, T fs)</div><div class="ttdoc">Constructor for Butterworth Low Pass Filter.</div><div class="ttdef"><b>Definition</b> butterworth_lpf.h:129</div></div>
+<div class="ttc" id="aclassmtl_1_1filter_1_1butterworth__lpf_html_ad74f1a4e17765ecf19251ce0db5cb1e1"><div class="ttname"><a href="classmtl_1_1filter_1_1butterworth__lpf.html#ad74f1a4e17765ecf19251ce0db5cb1e1">mtl::filter::butterworth_lpf::value</a></div><div class="ttdeci">constexpr auto value() const -&gt; T</div><div class="ttdoc">Retrieves the current output value of the filter.</div><div class="ttdef"><b>Definition</b> butterworth_lpf.h:76</div></div>
 <div class="ttc" id="adefs_8h_html"><div class="ttname"><a href="defs_8h.html">defs.h</a></div></div>
-<div class="ttc" id="anamespacemtl_1_1filter_html"><div class="ttname"><a href="namespacemtl_1_1filter.html">mtl::filter</a></div><div class="ttdef"><b>Definition</b> <a href="butterworth__lpf_8h_source.html#l00034">butterworth_lpf.h:35</a></div></div>
-<div class="ttc" id="anamespacemtl_1_1filter_html_a15a13dc5888636dcd61e01e9313a0d71"><div class="ttname"><a href="namespacemtl_1_1filter.html#a15a13dc5888636dcd61e01e9313a0d71">mtl::filter::order</a></div><div class="ttdeci">order</div><div class="ttdef"><b>Definition</b> <a href="defs_8h_source.html#l00016">defs.h:17</a></div></div>
-<div class="ttc" id="anamespacemtl_1_1filter_html_a15a13dc5888636dcd61e01e9313a0d71a8b04d5e3775d298e78455efc5ca404d5"><div class="ttname"><a href="namespacemtl_1_1filter.html#a15a13dc5888636dcd61e01e9313a0d71a8b04d5e3775d298e78455efc5ca404d5">mtl::filter::order::first</a></div><div class="ttdeci">@ first</div></div>
-<div class="ttc" id="anamespacemtl_1_1filter_html_a15a13dc5888636dcd61e01e9313a0d71aa9f0e61a137d86aa9db53465e0801612"><div class="ttname"><a href="namespacemtl_1_1filter.html#a15a13dc5888636dcd61e01e9313a0d71aa9f0e61a137d86aa9db53465e0801612">mtl::filter::order::second</a></div><div class="ttdeci">@ second</div></div>
-<div class="ttc" id="anamespacemtl_1_1filter_html_a15a13dc5888636dcd61e01e9313a0d71ac0759f2416498708841e7975566360ce"><div class="ttname"><a href="namespacemtl_1_1filter.html#a15a13dc5888636dcd61e01e9313a0d71ac0759f2416498708841e7975566360ce">mtl::filter::order::fourth</a></div><div class="ttdeci">@ fourth</div></div>
-<div class="ttc" id="anamespacemtl_1_1filter_html_a15a13dc5888636dcd61e01e9313a0d71add5c8bf51558ffcbe5007071908e9524"><div class="ttname"><a href="namespacemtl_1_1filter.html#a15a13dc5888636dcd61e01e9313a0d71add5c8bf51558ffcbe5007071908e9524">mtl::filter::order::third</a></div><div class="ttdeci">@ third</div></div>
-<div class="ttc" id="astructmtl_1_1math__constants_html"><div class="ttname"><a href="structmtl_1_1math__constants.html">mtl::math_constants</a></div><div class="ttdef"><b>Definition</b> <a href="math__constants_8h_source.html#l00017">math_constants.h:18</a></div></div>
+<div class="ttc" id="astructmtl_1_1math__constants_html"><div class="ttname"><a href="structmtl_1_1math__constants.html">mtl::math_constants</a></div><div class="ttdef"><b>Definition</b> math_constants.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_353658666281c83a21b12c0bed9a5b33.html">mtl</a></li><li class="navelem"><a class="el" href="dir_b7e463567277057a82b5f79782c58760.html">filter</a></li><li class="navelem"><a class="el" href="butterworth__lpf_8h.html">butterworth_lpf.h</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
 </body>
 </html>

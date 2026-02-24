@@ -1,177 +1,44 @@
 \doxysection{mtl\+::detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view\texorpdfstring{$<$}{<} CharT \texorpdfstring{$>$}{>} Class Template Reference}
 \hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view}{}\label{classmtl_1_1detail__string__view_1_1basic__string__view}\index{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}}
-
-
-{\ttfamily \#include $<$string\+\_\+view.\+h$>$}
-
 \doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a54f32f77bf5a37e862cea2fb73adf280}{char\+\_\+type}} = CharT
+\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_a54f32f77bf5a37e862cea2fb73adf280}\label{classmtl_1_1detail__string__view_1_1basic__string__view_a54f32f77bf5a37e862cea2fb73adf280} 
+using {\bfseries char\+\_\+type} = CharT
 \item 
-using \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{pointer}} = CharT \texorpdfstring{$\ast$}{*}
+\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}\label{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e} 
+using {\bfseries pointer} = CharT \texorpdfstring{$\ast$}{*}
 \item 
-using \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_ab0d66321c1e593345ac4de728fd99ef1}{const\+\_\+pointer}} = const CharT \texorpdfstring{$\ast$}{*}
+\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_ab0d66321c1e593345ac4de728fd99ef1}\label{classmtl_1_1detail__string__view_1_1basic__string__view_ab0d66321c1e593345ac4de728fd99ef1} 
+using {\bfseries const\+\_\+pointer} = const CharT \texorpdfstring{$\ast$}{*}
 \item 
-using \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985}{size\+\_\+type}} = size\+\_\+t
+\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985}\label{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985} 
+using {\bfseries size\+\_\+type} = size\+\_\+t
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985}{size\+\_\+type}} N$>$ }\\constexpr \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_ad2ac6e3c4a724483d406801078d501f2}{basic\+\_\+string\+\_\+view}} (CharT(\&a)\mbox{[}N\mbox{]})
-\item 
-constexpr auto \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a6736b40a6872c3a41c29d47854ff5375}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985}{size\+\_\+type}} n) const -\/$>$ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a54f32f77bf5a37e862cea2fb73adf280}{char\+\_\+type}}
-\item 
-constexpr auto \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a20a1023e000017e38f87316d15fd461e}{size}} () const -\/$>$ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985}{size\+\_\+type}}
-\item 
-constexpr auto \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a263f86295e0118d993bbbe6e7eb41b7d}{begin}} () -\/$>$ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{pointer}}
-\item 
-constexpr auto \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a70be7aa4ebcdd417372c43eb5ac5024d}{end}} () -\/$>$ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{pointer}}
-\item 
-constexpr auto \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_afdd372901e355f836828eb2ef23bcb48}{begin}} () const -\/$>$ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{pointer}}
-\item 
-constexpr auto \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_aca7f06a8dd12c4179e381981b6b435fb}{end}} () const -\/$>$ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{pointer}}
-\end{DoxyCompactItemize}
-
-
-\doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename CharT$>$\newline
-class mtl\+::detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view$<$ Char\+T $>$}
-
-
-Definition at line \mbox{\hyperlink{string__view_8h_source_l00019}{19}} of file \mbox{\hyperlink{string__view_8h_source}{string\+\_\+view.\+h}}.
-
-
-
-\doxysubsection{Member Typedef Documentation}
-\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_a54f32f77bf5a37e862cea2fb73adf280}\label{classmtl_1_1detail__string__view_1_1basic__string__view_a54f32f77bf5a37e862cea2fb73adf280} 
-\index{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}!char\_type@{char\_type}}
-\index{char\_type@{char\_type}!mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}}
-\doxysubsubsection{\texorpdfstring{char\_type}{char\_type}}
-{\footnotesize\ttfamily template$<$typename CharT $>$ \\
-using \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl\+::detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view}}$<$ CharT $>$\+::char\+\_\+type =  CharT}
-
-
-
-Definition at line \mbox{\hyperlink{string__view_8h_source_l00022}{22}} of file \mbox{\hyperlink{string__view_8h_source}{string\+\_\+view.\+h}}.
-
-\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_ab0d66321c1e593345ac4de728fd99ef1}\label{classmtl_1_1detail__string__view_1_1basic__string__view_ab0d66321c1e593345ac4de728fd99ef1} 
-\index{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}!const\_pointer@{const\_pointer}}
-\index{const\_pointer@{const\_pointer}!mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}}
-\doxysubsubsection{\texorpdfstring{const\_pointer}{const\_pointer}}
-{\footnotesize\ttfamily template$<$typename CharT $>$ \\
-using \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl\+::detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view}}$<$ CharT $>$\+::const\+\_\+pointer =  const CharT\texorpdfstring{$\ast$}{*}}
-
-
-
-Definition at line \mbox{\hyperlink{string__view_8h_source_l00024}{24}} of file \mbox{\hyperlink{string__view_8h_source}{string\+\_\+view.\+h}}.
-
-\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}\label{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e} 
-\index{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}!pointer@{pointer}}
-\index{pointer@{pointer}!mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}}
-\doxysubsubsection{\texorpdfstring{pointer}{pointer}}
-{\footnotesize\ttfamily template$<$typename CharT $>$ \\
-using \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl\+::detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view}}$<$ CharT $>$\+::pointer =  CharT\texorpdfstring{$\ast$}{*}}
-
-
-
-Definition at line \mbox{\hyperlink{string__view_8h_source_l00023}{23}} of file \mbox{\hyperlink{string__view_8h_source}{string\+\_\+view.\+h}}.
-
-\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985}\label{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985} 
-\index{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}!size\_type@{size\_type}}
-\index{size\_type@{size\_type}!mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}}
-\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
-{\footnotesize\ttfamily template$<$typename CharT $>$ \\
-using \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl\+::detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view}}$<$ CharT $>$\+::size\+\_\+type =  size\+\_\+t}
-
-
-
-Definition at line \mbox{\hyperlink{string__view_8h_source_l00025}{25}} of file \mbox{\hyperlink{string__view_8h_source}{string\+\_\+view.\+h}}.
-
-
-
-\doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_ad2ac6e3c4a724483d406801078d501f2}\label{classmtl_1_1detail__string__view_1_1basic__string__view_ad2ac6e3c4a724483d406801078d501f2} 
-\index{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}!basic\_string\_view@{basic\_string\_view}}
-\index{basic\_string\_view@{basic\_string\_view}!mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}}
-\doxysubsubsection{\texorpdfstring{basic\_string\_view()}{basic\_string\_view()}}
-{\footnotesize\ttfamily template$<$typename CharT $>$ \\
-template$<$\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985}{size\+\_\+type}} N$>$ \\
-constexpr \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl\+::detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view}}$<$ CharT $>$\+::basic\+\_\+string\+\_\+view (\begin{DoxyParamCaption}\item[{CharT(\&)}]{a\mbox{[}\+N\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
-
-
-
-Definition at line \mbox{\hyperlink{string__view_8h_source_l00028}{28}} of file \mbox{\hyperlink{string__view_8h_source}{string\+\_\+view.\+h}}.
-
-
-
-\doxysubsection{Member Function Documentation}
-\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_a263f86295e0118d993bbbe6e7eb41b7d}\label{classmtl_1_1detail__string__view_1_1basic__string__view_a263f86295e0118d993bbbe6e7eb41b7d} 
-\index{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}!begin@{begin}}
-\index{begin@{begin}!mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}}
-\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename CharT $>$ \\
-constexpr auto \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl\+::detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view}}$<$ CharT $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{pointer}} \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
-
-
-
-Definition at line \mbox{\hyperlink{string__view_8h_source_l00038}{38}} of file \mbox{\hyperlink{string__view_8h_source}{string\+\_\+view.\+h}}.
-
-\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_afdd372901e355f836828eb2ef23bcb48}\label{classmtl_1_1detail__string__view_1_1basic__string__view_afdd372901e355f836828eb2ef23bcb48} 
-\index{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}!begin@{begin}}
-\index{begin@{begin}!mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}}
-\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename CharT $>$ \\
-constexpr auto \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl\+::detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view}}$<$ CharT $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{pointer}} \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
-
-
-
-Definition at line \mbox{\hyperlink{string__view_8h_source_l00041}{41}} of file \mbox{\hyperlink{string__view_8h_source}{string\+\_\+view.\+h}}.
-
-\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_a70be7aa4ebcdd417372c43eb5ac5024d}\label{classmtl_1_1detail__string__view_1_1basic__string__view_a70be7aa4ebcdd417372c43eb5ac5024d} 
-\index{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}!end@{end}}
-\index{end@{end}!mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}}
-\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename CharT $>$ \\
-constexpr auto \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl\+::detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view}}$<$ CharT $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{pointer}} \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
-
-
-
-Definition at line \mbox{\hyperlink{string__view_8h_source_l00039}{39}} of file \mbox{\hyperlink{string__view_8h_source}{string\+\_\+view.\+h}}.
-
-\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_aca7f06a8dd12c4179e381981b6b435fb}\label{classmtl_1_1detail__string__view_1_1basic__string__view_aca7f06a8dd12c4179e381981b6b435fb} 
-\index{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}!end@{end}}
-\index{end@{end}!mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}}
-\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename CharT $>$ \\
-constexpr auto \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl\+::detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view}}$<$ CharT $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{pointer}} \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
-
-
-
-Definition at line \mbox{\hyperlink{string__view_8h_source_l00042}{42}} of file \mbox{\hyperlink{string__view_8h_source}{string\+\_\+view.\+h}}.
-
+{\footnotesize template$<$size\+\_\+type N$>$ }\\constexpr {\bfseries basic\+\_\+string\+\_\+view} (CharT(\&a)\mbox{[}N\mbox{]})
+\item 
 \Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_a6736b40a6872c3a41c29d47854ff5375}\label{classmtl_1_1detail__string__view_1_1basic__string__view_a6736b40a6872c3a41c29d47854ff5375} 
-\index{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
-\index{operator\mbox{[}\mbox{]}@{operator[]}!mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}}
-\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
-{\footnotesize\ttfamily template$<$typename CharT $>$ \\
-constexpr auto \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl\+::detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view}}$<$ CharT $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985}{size\+\_\+type}}}]{n }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a54f32f77bf5a37e862cea2fb73adf280}{char\+\_\+type}}         \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
-
-
-
-Definition at line \mbox{\hyperlink{string__view_8h_source_l00031}{31}} of file \mbox{\hyperlink{string__view_8h_source}{string\+\_\+view.\+h}}.
-
+constexpr auto {\bfseries operator\mbox{[}$\,$\mbox{]}} (const size\+\_\+type n) const -\/$>$ char\+\_\+type
+\item 
 \Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_a20a1023e000017e38f87316d15fd461e}\label{classmtl_1_1detail__string__view_1_1basic__string__view_a20a1023e000017e38f87316d15fd461e} 
-\index{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}!size@{size}}
-\index{size@{size}!mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$@{mtl::detail\_string\_view::basic\_string\_view$<$ CharT $>$}}
-\doxysubsubsection{\texorpdfstring{size()}{size()}}
-{\footnotesize\ttfamily template$<$typename CharT $>$ \\
-constexpr auto \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl\+::detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view}}$<$ CharT $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985}{size\+\_\+type}} \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
-
-
-
-Definition at line \mbox{\hyperlink{string__view_8h_source_l00036}{36}} of file \mbox{\hyperlink{string__view_8h_source}{string\+\_\+view.\+h}}.
-
+constexpr auto {\bfseries size} () const -\/$>$ size\+\_\+type
+\item 
+\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_a263f86295e0118d993bbbe6e7eb41b7d}\label{classmtl_1_1detail__string__view_1_1basic__string__view_a263f86295e0118d993bbbe6e7eb41b7d} 
+constexpr auto {\bfseries begin} () -\/$>$ pointer
+\item 
+\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_a70be7aa4ebcdd417372c43eb5ac5024d}\label{classmtl_1_1detail__string__view_1_1basic__string__view_a70be7aa4ebcdd417372c43eb5ac5024d} 
+constexpr auto {\bfseries end} () -\/$>$ pointer
+\item 
+\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_afdd372901e355f836828eb2ef23bcb48}\label{classmtl_1_1detail__string__view_1_1basic__string__view_afdd372901e355f836828eb2ef23bcb48} 
+constexpr auto {\bfseries begin} () const -\/$>$ pointer
+\item 
+\Hypertarget{classmtl_1_1detail__string__view_1_1basic__string__view_aca7f06a8dd12c4179e381981b6b435fb}\label{classmtl_1_1detail__string__view_1_1basic__string__view_aca7f06a8dd12c4179e381981b6b435fb} 
+constexpr auto {\bfseries end} () const -\/$>$ pointer
+\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

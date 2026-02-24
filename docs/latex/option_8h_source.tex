@@ -2,38 +2,38 @@
 \hypertarget{option_8h_source}{}\label{option_8h_source}\index{include/mtl/option.h@{include/mtl/option.h}}
 \mbox{\hyperlink{option_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_OPTION\_H}}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ MTL\_OPTION\_H}}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <cstddef>}}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <cassert>}}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <optional>}}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00017}00017\ }
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00018}00018\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemtl}{mtl}}}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00019}00019\ \{}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00020}00020\ [[maybe\_unused]]\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ std::nullopt\_t\ none\ =\ std::nullopt;}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00022}00022\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00023}\mbox{\hyperlink{classmtl_1_1option}{00023}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1option}{option}}\ :\ \textcolor{keyword}{public}\ std::optional<T>}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00024}00024\ \{}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{using\ }std::optional<T>::optional;}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00028}\mbox{\hyperlink{classmtl_1_1option_a1c29cf45efb80749b494631fcdbe28b4}{00028}}\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1option_a1c29cf45efb80749b494631fcdbe28b4}{is\_some}}()\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ this-\/>has\_value();\ \}}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00029}\mbox{\hyperlink{classmtl_1_1option_ac5a3b7ab8228b1904b8a93b1c5f29099}{00029}}\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1option_ac5a3b7ab8228b1904b8a93b1c5f29099}{is\_none}}()\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ !(this-\/>\mbox{\hyperlink{classmtl_1_1option_a1c29cf45efb80749b494631fcdbe28b4}{is\_some}}());\ \}}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00030}00030\ }
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00031}\mbox{\hyperlink{classmtl_1_1option_a0433191117fa12f2ebd766e624050506}{00031}}\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1option_a0433191117fa12f2ebd766e624050506}{some}}()\ -\/>\ T\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>value();\ \}}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00032}00032\ \};}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00033}00033\ }
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00034}00034\ \textcolor{keyword}{template}<\textcolor{keyword}{class\ }T,\ \textcolor{keyword}{class}...\ Args>}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00035}\mbox{\hyperlink{namespacemtl_a88c9185857e1d6d1169d9f70e0a3c9e5}{00035}}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{namespacemtl_a88c9185857e1d6d1169d9f70e0a3c9e5}{make\_optional}}(Args\&\&...\ args)\ -\/>\ \mbox{\hyperlink{classmtl_1_1option}{option<T>}}}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00036}00036\ \{}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_optional<T>(forward<Args>(args)...);}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00038}00038\ \}}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00039}00039\ \}}
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{option_8h_source_l00041}00041\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_OPTION\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MTL\_OPTION\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }mtl}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ [[maybe\_unused]]\ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ std::nullopt\_t\ none\ =\ std::nullopt;}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1option}{option}}\ :\ \textcolor{keyword}{public}\ std::optional<T>}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{using\ }std::optional<T>::optional;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ is\_some()\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ this-\/>has\_value();\ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ is\_none()\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ !(this-\/>is\_some());\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ some()\ -\/>\ T\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>value();\ \}}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{template}<\textcolor{keyword}{class\ }T,\ \textcolor{keyword}{class}...\ Args>}
+\DoxyCodeLine{00035\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ make\_optional(Args\&\&...\ args)\ -\/>\ \mbox{\hyperlink{classmtl_1_1option}{option<T>}}}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_optional<T>(forward<Args>(args)...);}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

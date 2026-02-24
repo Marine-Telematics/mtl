@@ -2,70 +2,70 @@
 \hypertarget{largest_8h_source}{}\label{largest_8h_source}\index{include/mtl/largest.h@{include/mtl/largest.h}}
 \mbox{\hyperlink{largest_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_LARGEST\_H}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ MTL\_LARGEST\_H}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <cstddef>}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00017}00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemtl}{mtl}}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00018}00018\ \{}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00019}00019\ \textcolor{comment}{//***************************************************************************}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00020}00020\ \textcolor{comment}{//\ largest\_type}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00021}00021\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}...\ TRest>}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00022}\mbox{\hyperlink{structmtl_1_1largest__type}{00022}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1largest__type}{largest\_type}}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00023}00023\ \{}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00024}00024\ \textcolor{comment}{//\ Define\ 'largest\_other'\ as\ 'largest\_type'\ with\ all\ but\ the\ first\ parameter.\ }}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00025}\mbox{\hyperlink{structmtl_1_1largest__type_a2ad6625ae3f85ffc59abb8fba4f50a45}{00025}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{structmtl_1_1largest__type_a2ad6625ae3f85ffc59abb8fba4f50a45}{largest\_other}}\ =\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{structmtl_1_1largest__type}{largest\_type}}<TRest...>\mbox{\hyperlink{structmtl_1_1largest__type_abd00069e899f589bdbb5d8376c1cb2ed}{::type}};}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00027}00027\ \textcolor{comment}{//\ Set\ 'type'\ to\ be\ the\ largest\ of\ the\ first\ parameter\ and\ any\ of\ the\ others.}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00028}00028\ \textcolor{comment}{//\ This\ is\ recursive.}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00029}\mbox{\hyperlink{structmtl_1_1largest__type_abd00069e899f589bdbb5d8376c1cb2ed}{00029}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{structmtl_1_1largest__type_abd00069e899f589bdbb5d8376c1cb2ed}{type}}\ =\ conditional\_t<}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00030}00030\ \ \ \ \ (\textcolor{keyword}{sizeof}(T1)\ >\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structmtl_1_1largest__type_a2ad6625ae3f85ffc59abb8fba4f50a45}{largest\_other}})),\ T1,\ \mbox{\hyperlink{structmtl_1_1largest__type_a2ad6625ae3f85ffc59abb8fba4f50a45}{largest\_other}}>;}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00031}00031\ }
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00032}00032\ \textcolor{comment}{//\ The\ size\ of\ the\ largest\ type.}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00033}\mbox{\hyperlink{structmtl_1_1largest__type_a026c38248435bc97ea8213b2894dd400}{00033}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structmtl_1_1largest__type_a026c38248435bc97ea8213b2894dd400}{size}}\ =\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structmtl_1_1largest__type_abd00069e899f589bdbb5d8376c1cb2ed}{type}});}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00034}00034\ \};}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00036}00036\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1>}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00037}\mbox{\hyperlink{structmtl_1_1largest__type_3_01T1_01_4}{00037}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1largest__type}{largest\_type}}<T1>}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00038}00038\ \{}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00039}\mbox{\hyperlink{structmtl_1_1largest__type_3_01T1_01_4_a60c991d06a96a59667e50f6f4799b29e}{00039}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{structmtl_1_1largest__type_3_01T1_01_4_a60c991d06a96a59667e50f6f4799b29e}{type}}\ =\ T1;}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00040}\mbox{\hyperlink{structmtl_1_1largest__type_3_01T1_01_4_aebbcdc218c5b32d9541bc95c9d7b63ec}{00040}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structmtl_1_1largest__type_a026c38248435bc97ea8213b2894dd400}{size}}\ =\ \textcolor{keyword}{sizeof}(T1);}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00041}00041\ \};}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00042}00042\ }
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00043}00043\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}\ ...TRest>}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00044}\mbox{\hyperlink{namespacemtl_a8b8c69ad2b25261f4c33a2ef8784ab99}{00044}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacemtl_a8b8c69ad2b25261f4c33a2ef8784ab99}{largest\_type\_t}}\ =\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{structmtl_1_1largest__type}{largest\_type}}<T1,\ TRest...>::type;}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00045}00045\ }
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00046}00046\ \textcolor{comment}{//***************************************************************************}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00047}00047\ \textcolor{comment}{//\ largest\_alignment}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00048}00048\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}...\ TRest>}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00049}\mbox{\hyperlink{structmtl_1_1largest__alignment}{00049}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\_alignment}}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00050}00050\ \{}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00051}00051\ \textcolor{comment}{//\ Define\ 'largest\_other'\ as\ 'largest\_type'\ with\ all\ but\ the\ first\ parameter.}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00052}\mbox{\hyperlink{structmtl_1_1largest__alignment_a0c2e6ce277d3d30737c139c48e2fe083}{00052}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{structmtl_1_1largest__alignment_a0c2e6ce277d3d30737c139c48e2fe083}{largest\_other}}\ =\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\_alignment}}<TRest...>\mbox{\hyperlink{structmtl_1_1largest__alignment_a4adb84b20ddb3f8d5863caf42f5d1af9}{::type}};}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00054}00054\ \textcolor{comment}{//\ Set\ 'type'\ to\ be\ the\ largest\ of\ the\ first\ parameter\ and\ any\ of\ the\ others.}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00055}00055\ \textcolor{comment}{//\ This\ is\ recursive.}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00056}\mbox{\hyperlink{structmtl_1_1largest__alignment_a4adb84b20ddb3f8d5863caf42f5d1af9}{00056}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{structmtl_1_1largest__alignment_a4adb84b20ddb3f8d5863caf42f5d1af9}{type}}\ =\ conditional\_t<}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00057}00057\ \ \ \ \ (alignment\_of\_v<T1>\ >\ alignment\_of\_v<largest\_other>),\ T1,\ \mbox{\hyperlink{structmtl_1_1largest__alignment_a0c2e6ce277d3d30737c139c48e2fe083}{largest\_other}}>;}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00059}\mbox{\hyperlink{structmtl_1_1largest__alignment_a344e543e91e59e6b2d0fdbfa71ccdaa6}{00059}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structmtl_1_1largest__alignment_a344e543e91e59e6b2d0fdbfa71ccdaa6}{value}}\ =\ alignment\_of\_v<type>;}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00060}00060\ \};}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00061}00061\ }
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00062}00062\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1>}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00063}\mbox{\hyperlink{structmtl_1_1largest__alignment_3_01T1_01_4}{00063}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\_alignment}}<T1>}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00064}00064\ \{}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00065}\mbox{\hyperlink{structmtl_1_1largest__alignment_3_01T1_01_4_a4ab116547bca62c1095054b8e71a8118}{00065}}\ \textcolor{keyword}{typedef}\ T1\ \mbox{\hyperlink{structmtl_1_1largest__alignment_3_01T1_01_4_a4ab116547bca62c1095054b8e71a8118}{type}};}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00066}\mbox{\hyperlink{structmtl_1_1largest__alignment_3_01T1_01_4_a8da440fb45a3110414ddd6d2cba89ca7}{00066}}\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structmtl_1_1largest__alignment_a344e543e91e59e6b2d0fdbfa71ccdaa6}{value}}\ =\ alignment\_of\_v<type>;}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00067}00067\ \};}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00068}00068\ }
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00069}00069\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}...\ TRest>}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00070}\mbox{\hyperlink{namespacemtl_a5ddc91f359e047de1484b30b8ada5c3e}{00070}}\ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{namespacemtl_a5ddc91f359e047de1484b30b8ada5c3e}{largest\_alignment\_v}}\ =\ \mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\_alignment}}<T1,\ TRest...>::value;}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00071}00071\ \}}
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00072}00072\ }
-\DoxyCodeLine{\Hypertarget{largest_8h_source_l00073}00073\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_LARGEST\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MTL\_LARGEST\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }mtl}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{comment}{//***************************************************************************}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ largest\_type}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}...\ TRest>}
+\DoxyCodeLine{00022\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1largest__type}{largest\_type}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ Define\ 'largest\_other'\ as\ 'largest\_type'\ with\ all\ but\ the\ first\ parameter.\ }}
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ }largest\_other\ =\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{structmtl_1_1largest__type}{largest\_type}}<TRest...>::type;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ Set\ 'type'\ to\ be\ the\ largest\ of\ the\ first\ parameter\ and\ any\ of\ the\ others.}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ This\ is\ recursive.}}
+\DoxyCodeLine{00029\ \textcolor{keyword}{using\ }type\ =\ conditional\_t<}
+\DoxyCodeLine{00030\ \ \ \ \ (\textcolor{keyword}{sizeof}(T1)\ >\ \textcolor{keyword}{sizeof}(largest\_other)),\ T1,\ largest\_other>;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ The\ size\ of\ the\ largest\ type.}}
+\DoxyCodeLine{00033\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ size\ =\ \textcolor{keyword}{sizeof}(type);}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1>}
+\DoxyCodeLine{00037\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1largest__type}{largest\_type}}<T1>}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \textcolor{keyword}{using\ }type\ =\ T1;}
+\DoxyCodeLine{00040\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ size\ =\ \textcolor{keyword}{sizeof}(T1);}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}\ ...TRest>}
+\DoxyCodeLine{00044\ \textcolor{keyword}{using\ }largest\_type\_t\ =\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{structmtl_1_1largest__type}{largest\_type}}<T1,\ TRest...>::type;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{comment}{//***************************************************************************}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ largest\_alignment}}
+\DoxyCodeLine{00048\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}...\ TRest>}
+\DoxyCodeLine{00049\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\_alignment}}}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \textcolor{comment}{//\ Define\ 'largest\_other'\ as\ 'largest\_type'\ with\ all\ but\ the\ first\ parameter.}}
+\DoxyCodeLine{00052\ \textcolor{keyword}{using\ }largest\_other\ =\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\_alignment}}<TRest...>::type;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ Set\ 'type'\ to\ be\ the\ largest\ of\ the\ first\ parameter\ and\ any\ of\ the\ others.}}
+\DoxyCodeLine{00055\ \textcolor{comment}{//\ This\ is\ recursive.}}
+\DoxyCodeLine{00056\ \textcolor{keyword}{using\ }type\ =\ conditional\_t<}
+\DoxyCodeLine{00057\ \ \ \ \ (alignment\_of\_v<T1>\ >\ alignment\_of\_v<largest\_other>),\ T1,\ largest\_other>;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ value\ =\ alignment\_of\_v<type>;}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1>}
+\DoxyCodeLine{00063\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\_alignment}}<T1>}
+\DoxyCodeLine{00064\ \{}
+\DoxyCodeLine{00065\ \textcolor{keyword}{typedef}\ T1\ type;}
+\DoxyCodeLine{00066\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ value\ =\ alignment\_of\_v<type>;}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}...\ TRest>}
+\DoxyCodeLine{00070\ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ largest\_alignment\_v\ =\ \mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\_alignment}}<T1,\ TRest...>::value;}
+\DoxyCodeLine{00071\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

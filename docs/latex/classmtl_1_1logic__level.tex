@@ -1,152 +1,38 @@
 \doxysection{mtl\+::logic\+\_\+level Class Reference}
 \hypertarget{classmtl_1_1logic__level}{}\label{classmtl_1_1logic__level}\index{mtl::logic\_level@{mtl::logic\_level}}
-
-
-{\ttfamily \#include $<$ll.\+h$>$}
-
 \doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \mbox{\hyperlink{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7ba}{value}} \{ \mbox{\hyperlink{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7baa7e62c44c6076fb5b880b030c797fb0f1}{low}} = 0
-, \mbox{\hyperlink{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7baa06ed88a6bed23ab752481dfb910f163f}{high}} = 1
-, \mbox{\hyperlink{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7baaa26e8f185a2480b8c81d18e6b80cf857}{tristate}} = 3
+\Hypertarget{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7ba}\label{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7ba} 
+enum {\bfseries value} \{ {\bfseries low} = 0
+, {\bfseries high} = 1
+, {\bfseries tristate} = 3
  \}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-constexpr auto \mbox{\hyperlink{classmtl_1_1logic__level_a5de653682b8259df77328cc6dce87061}{operator==}} (const \mbox{\hyperlink{classmtl_1_1logic__level}{logic\+\_\+level}} \&other) const -\/$>$ bool
-\item 
-constexpr auto \mbox{\hyperlink{classmtl_1_1logic__level_a5635d78512316e2e71c730ea193a9181}{operator==}} (const \mbox{\hyperlink{classmtl_1_1logic__level}{logic\+\_\+level}} \&\&other) const -\/$>$ bool
-\item 
-constexpr auto \mbox{\hyperlink{classmtl_1_1logic__level_a2adac5e7f5eaaad538c33c2a53c0fe0a}{operator==}} (const \mbox{\hyperlink{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7ba}{value}} other) const -\/$>$ bool
-\item 
-constexpr auto \mbox{\hyperlink{classmtl_1_1logic__level_ad3eaa27b3fa3f1a02feddc81597e74ab}{operator=}} (const \mbox{\hyperlink{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7ba}{value}} other) -\/$>$ \mbox{\hyperlink{classmtl_1_1logic__level}{logic\+\_\+level}} \&
-\item 
-constexpr \mbox{\hyperlink{classmtl_1_1logic__level_a94efc8504308afc6f48c9c1e59a9d64c}{operator bool}} () const
-\item 
-constexpr \mbox{\hyperlink{classmtl_1_1logic__level_ab0163fd88039178f82a2aa41fe9b381d}{logic\+\_\+level}} (const bool state)
-\item 
-constexpr \mbox{\hyperlink{classmtl_1_1logic__level_a874023729fb9f7d4cf3a92f546b36408}{logic\+\_\+level}} (const \mbox{\hyperlink{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7ba}{value}} \mbox{\hyperlink{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7ba}{value}})
-\item 
-constexpr \mbox{\hyperlink{classmtl_1_1logic__level_a272b9efc299ba92cf72898945a60dc2d}{logic\+\_\+level}} ()=default
-\end{DoxyCompactItemize}
-
-
-\doxysubsection{Detailed Description}
-
-
-Definition at line \mbox{\hyperlink{ll_8h_source_l00016}{16}} of file \mbox{\hyperlink{ll_8h_source}{ll.\+h}}.
-
-
-
-\doxysubsection{Member Enumeration Documentation}
-\Hypertarget{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7ba}\label{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7ba} 
-\index{mtl::logic\_level@{mtl::logic\_level}!value@{value}}
-\index{value@{value}!mtl::logic\_level@{mtl::logic\_level}}
-\doxysubsubsection{\texorpdfstring{value}{value}}
-{\footnotesize\ttfamily enum \mbox{\hyperlink{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7ba}{mtl\+::logic\+\_\+level\+::value}}}
-
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{low@{low}!mtl::logic\_level@{mtl::logic\_level}}\index{mtl::logic\_level@{mtl::logic\_level}!low@{low}}}\Hypertarget{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7baa7e62c44c6076fb5b880b030c797fb0f1}\label{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7baa7e62c44c6076fb5b880b030c797fb0f1} 
-low&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{high@{high}!mtl::logic\_level@{mtl::logic\_level}}\index{mtl::logic\_level@{mtl::logic\_level}!high@{high}}}\Hypertarget{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7baa06ed88a6bed23ab752481dfb910f163f}\label{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7baa06ed88a6bed23ab752481dfb910f163f} 
-high&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{tristate@{tristate}!mtl::logic\_level@{mtl::logic\_level}}\index{mtl::logic\_level@{mtl::logic\_level}!tristate@{tristate}}}\Hypertarget{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7baaa26e8f185a2480b8c81d18e6b80cf857}\label{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7baaa26e8f185a2480b8c81d18e6b80cf857} 
-tristate&\\
-\hline
-
-\end{DoxyEnumFields}
-
-
-Definition at line \mbox{\hyperlink{ll_8h_source_l00019}{19}} of file \mbox{\hyperlink{ll_8h_source}{ll.\+h}}.
-
-
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classmtl_1_1logic__level_ab0163fd88039178f82a2aa41fe9b381d}\label{classmtl_1_1logic__level_ab0163fd88039178f82a2aa41fe9b381d} 
-\index{mtl::logic\_level@{mtl::logic\_level}!logic\_level@{logic\_level}}
-\index{logic\_level@{logic\_level}!mtl::logic\_level@{mtl::logic\_level}}
-\doxysubsubsection{\texorpdfstring{logic\_level()}{logic\_level()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily constexpr mtl\+::logic\+\_\+level\+::logic\+\_\+level (\begin{DoxyParamCaption}\item[{const bool}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
-
-
-
-Definition at line \mbox{\hyperlink{ll_8h_source_l00049}{49}} of file \mbox{\hyperlink{ll_8h_source}{ll.\+h}}.
-
-\Hypertarget{classmtl_1_1logic__level_a874023729fb9f7d4cf3a92f546b36408}\label{classmtl_1_1logic__level_a874023729fb9f7d4cf3a92f546b36408} 
-\index{mtl::logic\_level@{mtl::logic\_level}!logic\_level@{logic\_level}}
-\index{logic\_level@{logic\_level}!mtl::logic\_level@{mtl::logic\_level}}
-\doxysubsubsection{\texorpdfstring{logic\_level()}{logic\_level()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily constexpr mtl\+::logic\+\_\+level\+::logic\+\_\+level (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7ba}{value}}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
-
-
-
-Definition at line \mbox{\hyperlink{ll_8h_source_l00050}{50}} of file \mbox{\hyperlink{ll_8h_source}{ll.\+h}}.
-
-\Hypertarget{classmtl_1_1logic__level_a272b9efc299ba92cf72898945a60dc2d}\label{classmtl_1_1logic__level_a272b9efc299ba92cf72898945a60dc2d} 
-\index{mtl::logic\_level@{mtl::logic\_level}!logic\_level@{logic\_level}}
-\index{logic\_level@{logic\_level}!mtl::logic\_level@{mtl::logic\_level}}
-\doxysubsubsection{\texorpdfstring{logic\_level()}{logic\_level()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily constexpr mtl\+::logic\+\_\+level\+::logic\+\_\+level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}, {\ttfamily [default]}}
-
-
-
-\doxysubsection{Member Function Documentation}
-\Hypertarget{classmtl_1_1logic__level_a94efc8504308afc6f48c9c1e59a9d64c}\label{classmtl_1_1logic__level_a94efc8504308afc6f48c9c1e59a9d64c} 
-\index{mtl::logic\_level@{mtl::logic\_level}!operator bool@{operator bool}}
-\index{operator bool@{operator bool}!mtl::logic\_level@{mtl::logic\_level}}
-\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
-{\footnotesize\ttfamily constexpr mtl\+::logic\+\_\+level\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
-
-
-
-Definition at line \mbox{\hyperlink{ll_8h_source_l00047}{47}} of file \mbox{\hyperlink{ll_8h_source}{ll.\+h}}.
-
-\Hypertarget{classmtl_1_1logic__level_ad3eaa27b3fa3f1a02feddc81597e74ab}\label{classmtl_1_1logic__level_ad3eaa27b3fa3f1a02feddc81597e74ab} 
-\index{mtl::logic\_level@{mtl::logic\_level}!operator=@{operator=}}
-\index{operator=@{operator=}!mtl::logic\_level@{mtl::logic\_level}}
-\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
-{\footnotesize\ttfamily constexpr auto mtl\+::logic\+\_\+level\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7ba}{value}}}]{other }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classmtl_1_1logic__level}{logic\+\_\+level}}\&     \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
-
-
-
-Definition at line \mbox{\hyperlink{ll_8h_source_l00041}{41}} of file \mbox{\hyperlink{ll_8h_source}{ll.\+h}}.
-
-\Hypertarget{classmtl_1_1logic__level_a5635d78512316e2e71c730ea193a9181}\label{classmtl_1_1logic__level_a5635d78512316e2e71c730ea193a9181} 
-\index{mtl::logic\_level@{mtl::logic\_level}!operator==@{operator==}}
-\index{operator==@{operator==}!mtl::logic\_level@{mtl::logic\_level}}
-\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily constexpr auto mtl\+::logic\+\_\+level\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtl_1_1logic__level}{logic\+\_\+level}} \&\&}]{other }\end{DoxyParamCaption}) const -\/$>$ bool     \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
-
-
-
-Definition at line \mbox{\hyperlink{ll_8h_source_l00031}{31}} of file \mbox{\hyperlink{ll_8h_source}{ll.\+h}}.
-
 \Hypertarget{classmtl_1_1logic__level_a5de653682b8259df77328cc6dce87061}\label{classmtl_1_1logic__level_a5de653682b8259df77328cc6dce87061} 
-\index{mtl::logic\_level@{mtl::logic\_level}!operator==@{operator==}}
-\index{operator==@{operator==}!mtl::logic\_level@{mtl::logic\_level}}
-\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily constexpr auto mtl\+::logic\+\_\+level\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtl_1_1logic__level}{logic\+\_\+level}} \&}]{other }\end{DoxyParamCaption}) const -\/$>$ bool     \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
-
-
-
-Definition at line \mbox{\hyperlink{ll_8h_source_l00026}{26}} of file \mbox{\hyperlink{ll_8h_source}{ll.\+h}}.
-
+constexpr auto {\bfseries operator==} (const \mbox{\hyperlink{classmtl_1_1logic__level}{logic\+\_\+level}} \&other) const -\/$>$ bool
+\item 
+\Hypertarget{classmtl_1_1logic__level_a5635d78512316e2e71c730ea193a9181}\label{classmtl_1_1logic__level_a5635d78512316e2e71c730ea193a9181} 
+constexpr auto {\bfseries operator==} (const \mbox{\hyperlink{classmtl_1_1logic__level}{logic\+\_\+level}} \&\&other) const -\/$>$ bool
+\item 
 \Hypertarget{classmtl_1_1logic__level_a2adac5e7f5eaaad538c33c2a53c0fe0a}\label{classmtl_1_1logic__level_a2adac5e7f5eaaad538c33c2a53c0fe0a} 
-\index{mtl::logic\_level@{mtl::logic\_level}!operator==@{operator==}}
-\index{operator==@{operator==}!mtl::logic\_level@{mtl::logic\_level}}
-\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily constexpr auto mtl\+::logic\+\_\+level\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtl_1_1logic__level_a429656f88906da77352d54cc5275b7ba}{value}}}]{other }\end{DoxyParamCaption}) const -\/$>$ bool     \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
-
-
-
-Definition at line \mbox{\hyperlink{ll_8h_source_l00036}{36}} of file \mbox{\hyperlink{ll_8h_source}{ll.\+h}}.
-
+constexpr auto {\bfseries operator==} (const value other) const -\/$>$ bool
+\item 
+\Hypertarget{classmtl_1_1logic__level_ad3eaa27b3fa3f1a02feddc81597e74ab}\label{classmtl_1_1logic__level_ad3eaa27b3fa3f1a02feddc81597e74ab} 
+constexpr auto {\bfseries operator=} (const value other) -\/$>$ \mbox{\hyperlink{classmtl_1_1logic__level}{logic\+\_\+level}} \&
+\item 
+\Hypertarget{classmtl_1_1logic__level_a94efc8504308afc6f48c9c1e59a9d64c}\label{classmtl_1_1logic__level_a94efc8504308afc6f48c9c1e59a9d64c} 
+constexpr {\bfseries operator bool} () const
+\item 
+\Hypertarget{classmtl_1_1logic__level_ab0163fd88039178f82a2aa41fe9b381d}\label{classmtl_1_1logic__level_ab0163fd88039178f82a2aa41fe9b381d} 
+constexpr {\bfseries logic\+\_\+level} (const bool state)
+\item 
+\Hypertarget{classmtl_1_1logic__level_a874023729fb9f7d4cf3a92f546b36408}\label{classmtl_1_1logic__level_a874023729fb9f7d4cf3a92f546b36408} 
+constexpr {\bfseries logic\+\_\+level} (const value value)
+\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

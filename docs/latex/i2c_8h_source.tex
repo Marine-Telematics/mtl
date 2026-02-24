@@ -2,42 +2,42 @@
 \hypertarget{i2c_8h_source}{}\label{i2c_8h_source}\index{include/mtl/interface/i2c.h@{include/mtl/interface/i2c.h}}
 \mbox{\hyperlink{i2c_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_INTERFACE\_I2C\_H}}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ MTL\_INTERFACE\_I2C\_H}}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <array>}}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <cstdint>}}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <cstddef>}}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00017}00017\ }
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00018}\mbox{\hyperlink{namespacemtl_1_1i2c}{00018}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemtl_1_1i2c}{mtl::i2c}}}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00019}00019\ \{}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00020}\mbox{\hyperlink{namespacemtl_1_1i2c_a13dc2887866a1616137cc96c9baa224c}{00020}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacemtl_1_1i2c_a13dc2887866a1616137cc96c9baa224c}{addr\_type}}\ =\ uint8\_t;}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00021}\mbox{\hyperlink{namespacemtl_1_1i2c_ab7cc2bba7d82f272df4d004a88e65353}{00021}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacemtl_1_1i2c_ab7cc2bba7d82f272df4d004a88e65353}{data\_type}}\ =\ uint8\_t;}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00022}\mbox{\hyperlink{namespacemtl_1_1i2c_a2b7df74148000e1337bd08e61a9db95a}{00022}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespacemtl_1_1i2c_a2b7df74148000e1337bd08e61a9db95a}{size\_type}}\ =\ size\_t;}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00024}\mbox{\hyperlink{namespacemtl_1_1i2c_a262b40f37e9319dd0c1f3b9d1bc8d5ec}{00024}}\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespacemtl_1_1i2c_a262b40f37e9319dd0c1f3b9d1bc8d5ec}{mode}}\ :\ uint8\_t}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00025}00025\ \{}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{namespacemtl_1_1i2c_a262b40f37e9319dd0c1f3b9d1bc8d5ecaeb0a191797624dd3a48fa681d3061212}{master}}\ =\ 0,}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{namespacemtl_1_1i2c_a262b40f37e9319dd0c1f3b9d1bc8d5eca03158cf39c6f316f9ce98a4e034cdc28}{slave}}\ \ =\ 1,}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00028}00028\ \};}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00030}\mbox{\hyperlink{namespacemtl_1_1i2c_a3867a492653b0e3129f2d2d1479370d7}{00030}}\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespacemtl_1_1i2c_a3867a492653b0e3129f2d2d1479370d7}{speed}}\ :\ uint8\_t}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00031}00031\ \{}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{namespacemtl_1_1i2c_a3867a492653b0e3129f2d2d1479370d7ac00f0c4675b91fb8b918e4079a0b1bac}{standard}}\ \ =\ 0,\ \textcolor{comment}{//\ 100\ kHz}}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{namespacemtl_1_1i2c_a3867a492653b0e3129f2d2d1479370d7a31d4541b8e926a24f0c9b835b68cfdf3}{fast}}\ \ \ \ \ \ =\ 1,\ \textcolor{comment}{//\ 400\ kHz}}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00034}00034\ \ \ \ \ \mbox{\hyperlink{namespacemtl_1_1i2c_a3867a492653b0e3129f2d2d1479370d7acd9ac1601cb9c18d2d8f5c4d6a411044}{fast\_plus}}\ =\ 2,\ \textcolor{comment}{//\ 1\ MHz}}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{namespacemtl_1_1i2c_a3867a492653b0e3129f2d2d1479370d7a8d966b2253a917086c8604959e152243}{high}}\ \ \ \ \ \ =\ 3,\ \textcolor{comment}{//\ 3.4\ MHz}}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00036}00036\ \};}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00037}00037\ }
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00038}\mbox{\hyperlink{classmtl_1_1i2c_1_1message}{00038}}\ \textcolor{keyword}{template}<\textcolor{keywordtype}{size\_t}ype\ SZ>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1i2c_1_1message}{message}}}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00039}00039\ \{}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{namespacemtl_1_1i2c_a13dc2887866a1616137cc96c9baa224c}{addr\_type}}\ \_addr;}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00041}00041\ \ \ \ \ std::array<data\_type,\ SZ>\ \_data\{\};}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00042}00042\ \};}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00043}00043\ \}}
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00044}00044\ }
-\DoxyCodeLine{\Hypertarget{i2c_8h_source_l00045}00045\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_INTERFACE\_I2C\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MTL\_INTERFACE\_I2C\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }mtl::i2c}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{using\ }addr\_type\ =\ uint8\_t;}
+\DoxyCodeLine{00021\ \textcolor{keyword}{using\ }data\_type\ =\ uint8\_t;}
+\DoxyCodeLine{00022\ \textcolor{keyword}{using\ }size\_type\ =\ size\_t;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{enum\ class}\ mode\ :\ uint8\_t}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ master\ =\ 0,}
+\DoxyCodeLine{00027\ \ \ \ \ slave\ \ =\ 1,}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{enum\ class}\ speed\ :\ uint8\_t}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ standard\ \ =\ 0,\ \textcolor{comment}{//\ 100\ kHz}}
+\DoxyCodeLine{00033\ \ \ \ \ fast\ \ \ \ \ \ =\ 1,\ \textcolor{comment}{//\ 400\ kHz}}
+\DoxyCodeLine{00034\ \ \ \ \ fast\_plus\ =\ 2,\ \textcolor{comment}{//\ 1\ MHz}}
+\DoxyCodeLine{00035\ \ \ \ \ high\ \ \ \ \ \ =\ 3,\ \textcolor{comment}{//\ 3.4\ MHz}}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{template}<\textcolor{keywordtype}{size\_t}ype\ SZ>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1i2c_1_1message}{message}}}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ addr\_type\ \_addr;}
+\DoxyCodeLine{00041\ \ \ \ \ std::array<data\_type,\ SZ>\ \_data\{\};}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

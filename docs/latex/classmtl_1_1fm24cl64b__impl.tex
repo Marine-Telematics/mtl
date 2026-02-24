@@ -4,105 +4,66 @@
 
 {\ttfamily \#include $<$fm24cl64b.\+h$>$}
 
-Inheritance diagram for mtl\+::fm24cl64b\+\_\+impl\+:\begin{figure}[H]
+
+
+Inheritance diagram for mtl\+::fm24cl64b\+\_\+impl\+:
+\nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classmtl_1_1fm24cl64b__impl}
+\includegraphics[width=198pt]{classmtl_1_1fm24cl64b__impl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for mtl\+::fm24cl64b\+\_\+impl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classmtl_1_1fm24cl64b__impl__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classmtl_1_1fm24cl64b__impl_aa5f17065c958df0b4237d07301674e01}{fm24cl64b\+\_\+impl}} (const \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select}{device\+\_\+select}} sel)
+\Hypertarget{classmtl_1_1fm24cl64b__impl_aa5f17065c958df0b4237d07301674e01}\label{classmtl_1_1fm24cl64b__impl_aa5f17065c958df0b4237d07301674e01} 
+{\bfseries fm24cl64b\+\_\+impl} (const \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select}{device\+\_\+select}} sel)
 \item 
-{\footnotesize template$<$typename T , typename Fn $>$ }\\auto \mbox{\hyperlink{classmtl_1_1fm24cl64b__impl_a390dc9e2b348cd397fbcb83469b9c45b}{write}} (const \mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{address}} addr, const T \&obj, Fn \&\&sender)
+\Hypertarget{classmtl_1_1fm24cl64b__impl_a390dc9e2b348cd397fbcb83469b9c45b}\label{classmtl_1_1fm24cl64b__impl_a390dc9e2b348cd397fbcb83469b9c45b} 
+{\footnotesize template$<$typename T , typename Fn $>$ }\\auto {\bfseries write} (const address addr, const T \&obj, Fn \&\&sender)
 \begin{DoxyCompactList}\small\item\em Bus agnostic implementations\+: \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename T , typename Fn $>$ }\\auto \mbox{\hyperlink{classmtl_1_1fm24cl64b__impl_a40ab19c2b768477b23278bbe50f7bbcc}{read}} (T \&obj\+\_\+out, Fn \&\&reader)
+\Hypertarget{classmtl_1_1fm24cl64b__impl_a40ab19c2b768477b23278bbe50f7bbcc}\label{classmtl_1_1fm24cl64b__impl_a40ab19c2b768477b23278bbe50f7bbcc} 
+{\footnotesize template$<$typename T , typename Fn $>$ }\\auto {\bfseries read} (T \&obj\+\_\+out, Fn \&\&reader)
 \item 
-{\footnotesize template$<$typename Fn $>$ }\\auto \mbox{\hyperlink{classmtl_1_1fm24cl64b__impl_a1f7b5f9f55436cb3fb68e41799a2c829}{point\+\_\+to\+\_\+addr}} (const \mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{address}} addr, Fn \&\&sender)
+\Hypertarget{classmtl_1_1fm24cl64b__impl_a1f7b5f9f55436cb3fb68e41799a2c829}\label{classmtl_1_1fm24cl64b__impl_a1f7b5f9f55436cb3fb68e41799a2c829} 
+{\footnotesize template$<$typename Fn $>$ }\\auto {\bfseries point\+\_\+to\+\_\+addr} (const address addr, Fn \&\&sender)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Public Types inherited from \mbox{\hyperlink{structmtl_1_1fm24cl64b}{mtl\+::fm24cl64b}}}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{address}} = uint16\+\_\+t
+using {\bfseries address} = uint16\+\_\+t
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{structmtl_1_1fm24cl64b}{mtl\+::fm24cl64b}}}
 \begin{DoxyCompactItemize}
 \item 
-static constexpr auto \mbox{\hyperlink{structmtl_1_1fm24cl64b_a84b6f7610e8e29dc1c1ef5c3f0927bfa}{get\+\_\+addr}} (const \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select}{device\+\_\+select}} sel) -\/$>$ \mbox{\hyperlink{namespacemtl_1_1i2c_a13dc2887866a1616137cc96c9baa224c}{i2c\+::addr\+\_\+type}}
+static constexpr auto {\bfseries get\+\_\+addr} (const \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select}{device\+\_\+select}} sel) -\/$>$ i2c\+::addr\+\_\+type
 \end{DoxyCompactItemize}
 \doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{structmtl_1_1fm24cl64b}{mtl\+::fm24cl64b}}}
 \begin{DoxyCompactItemize}
 \item 
-static constexpr \mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{address}} \mbox{\hyperlink{structmtl_1_1fm24cl64b_aedf1f9ceb76633689127450b35e1468a}{START\+\_\+\+ADDR}} = 0x0000u
+static constexpr address {\bfseries START\+\_\+\+ADDR} = 0x0000u
 \item 
-static constexpr \mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{address}} \mbox{\hyperlink{structmtl_1_1fm24cl64b_a09a27fb376402d2a95e9481777b5e344}{END\+\_\+\+ADDR}} = 0x1fffu
+static constexpr address {\bfseries END\+\_\+\+ADDR} = 0x1fffu
 \item 
-static constexpr \mbox{\hyperlink{namespacemtl_1_1i2c_a13dc2887866a1616137cc96c9baa224c}{i2c\+::addr\+\_\+type}} \mbox{\hyperlink{structmtl_1_1fm24cl64b_aa83014e222f99cf3099a6927f11d5088}{BASE\+\_\+\+ADDR}} = 0b1010000u
+static constexpr i2c\+::addr\+\_\+type {\bfseries BASE\+\_\+\+ADDR} = 0b1010000u
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 This interface provides a abstraction in the way the FM24\+C16B FRAM expects data. The implementation is Bus agnostic, user shall provide write and read functions. 
 
-Definition at line \mbox{\hyperlink{fm24cl64b_8h_source_l00049}{49}} of file \mbox{\hyperlink{fm24cl64b_8h_source}{fm24cl64b.\+h}}.
-
-
-
-\doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classmtl_1_1fm24cl64b__impl_aa5f17065c958df0b4237d07301674e01}\label{classmtl_1_1fm24cl64b__impl_aa5f17065c958df0b4237d07301674e01} 
-\index{mtl::fm24cl64b\_impl@{mtl::fm24cl64b\_impl}!fm24cl64b\_impl@{fm24cl64b\_impl}}
-\index{fm24cl64b\_impl@{fm24cl64b\_impl}!mtl::fm24cl64b\_impl@{mtl::fm24cl64b\_impl}}
-\doxysubsubsection{\texorpdfstring{fm24cl64b\_impl()}{fm24cl64b\_impl()}}
-{\footnotesize\ttfamily mtl\+::fm24cl64b\+\_\+impl\+::fm24cl64b\+\_\+impl (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select}{device\+\_\+select}}}]{sel }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Definition at line \mbox{\hyperlink{fm24cl64b_8h_source_l00052}{52}} of file \mbox{\hyperlink{fm24cl64b_8h_source}{fm24cl64b.\+h}}.
-
-
-
-\doxysubsection{Member Function Documentation}
-\Hypertarget{classmtl_1_1fm24cl64b__impl_a1f7b5f9f55436cb3fb68e41799a2c829}\label{classmtl_1_1fm24cl64b__impl_a1f7b5f9f55436cb3fb68e41799a2c829} 
-\index{mtl::fm24cl64b\_impl@{mtl::fm24cl64b\_impl}!point\_to\_addr@{point\_to\_addr}}
-\index{point\_to\_addr@{point\_to\_addr}!mtl::fm24cl64b\_impl@{mtl::fm24cl64b\_impl}}
-\doxysubsubsection{\texorpdfstring{point\_to\_addr()}{point\_to\_addr()}}
-{\footnotesize\ttfamily template$<$typename Fn $>$ \\
-auto mtl\+::fm24cl64b\+\_\+impl\+::point\+\_\+to\+\_\+addr (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{address}}}]{addr,  }\item[{Fn \&\&}]{sender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Definition at line \mbox{\hyperlink{fm24cl64b_8h_source_l00076}{76}} of file \mbox{\hyperlink{fm24cl64b_8h_source}{fm24cl64b.\+h}}.
-
-\Hypertarget{classmtl_1_1fm24cl64b__impl_a40ab19c2b768477b23278bbe50f7bbcc}\label{classmtl_1_1fm24cl64b__impl_a40ab19c2b768477b23278bbe50f7bbcc} 
-\index{mtl::fm24cl64b\_impl@{mtl::fm24cl64b\_impl}!read@{read}}
-\index{read@{read}!mtl::fm24cl64b\_impl@{mtl::fm24cl64b\_impl}}
-\doxysubsubsection{\texorpdfstring{read()}{read()}}
-{\footnotesize\ttfamily template$<$typename T , typename Fn $>$ \\
-auto mtl\+::fm24cl64b\+\_\+impl\+::read (\begin{DoxyParamCaption}\item[{T \&}]{obj\+\_\+out,  }\item[{Fn \&\&}]{reader }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Definition at line \mbox{\hyperlink{fm24cl64b_8h_source_l00070}{70}} of file \mbox{\hyperlink{fm24cl64b_8h_source}{fm24cl64b.\+h}}.
-
-\Hypertarget{classmtl_1_1fm24cl64b__impl_a390dc9e2b348cd397fbcb83469b9c45b}\label{classmtl_1_1fm24cl64b__impl_a390dc9e2b348cd397fbcb83469b9c45b} 
-\index{mtl::fm24cl64b\_impl@{mtl::fm24cl64b\_impl}!write@{write}}
-\index{write@{write}!mtl::fm24cl64b\_impl@{mtl::fm24cl64b\_impl}}
-\doxysubsubsection{\texorpdfstring{write()}{write()}}
-{\footnotesize\ttfamily template$<$typename T , typename Fn $>$ \\
-auto mtl\+::fm24cl64b\+\_\+impl\+::write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structmtl_1_1fm24cl64b_a594d4e745cdb446693397fe5b61fab06}{address}}}]{addr,  }\item[{const T \&}]{obj,  }\item[{Fn \&\&}]{sender }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Bus agnostic implementations\+: 
-
-
-
-Definition at line \mbox{\hyperlink{fm24cl64b_8h_source_l00057}{57}} of file \mbox{\hyperlink{fm24cl64b_8h_source}{fm24cl64b.\+h}}.
-
-
-
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/mtl/periph/\mbox{\hyperlink{fm24cl64b_8h}{fm24cl64b.\+h}}\end{DoxyCompactItemize}
+include/mtl/periph/fm24cl64b.\+h\end{DoxyCompactItemize}

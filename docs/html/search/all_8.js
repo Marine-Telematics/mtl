@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['get_5faddr_0',['get_addr',['../structmtl_1_1fm24cl64b.html#a84b6f7610e8e29dc1c1ef5c3f0927bfa',1,'mtl::fm24cl64b']]],
-  ['get_5ffree_1',['get_free',['../classmtl_1_1ring__buffer.html#a65b40dd4d8e6c175f6a59b195a1db58f',1,'mtl::ring_buffer']]],
-  ['get_5foccupied_2',['get_occupied',['../classmtl_1_1ring__buffer.html#a7b94d959d58c5671389bbb2f4518f5a5',1,'mtl::ring_buffer']]],
-  ['golden_5fratio_3',['golden_ratio',['../structmtl_1_1math__constants.html#a7059a7af68d716001737cb85c5549f2a',1,'mtl::math_constants']]]
+  ['i2c_2eh_0',['i2c.h',['../i2c_8h.html',1,'']]],
+  ['interface_20c_202025_20marine_20telematics_1',['MarineTelematics Template Library (Interface) - (c) 2025 Marine Telematics',['../can_8h.html#autotoc_md14',1,'']]],
+  ['interface_20c_202026_20marine_20telematics_2',['MarineTelematics Template Library (Interface) - (c) 2026 Marine Telematics',['../i2c_8h.html#autotoc_md16',1,'']]],
+  ['is_20n_2020db_20dec_20where_20n_20is_20the_20filter_20order_3',['However, attenuation slope is n * (-20dB/dec), where n is the filter order.',['../butterworth__lpf_8h.html#autotoc_md9',1,'']]]
 ];

@@ -2,51 +2,51 @@
 \hypertarget{string__view_8h_source}{}\label{string__view_8h_source}\index{include/mtl/string\_view.h@{include/mtl/string\_view.h}}
 \mbox{\hyperlink{string__view_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_STRING\_VIEW\_H}}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ MTL\_STRING\_VIEW\_H}}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00014}00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemtl}{mtl}}}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00015}00015\ \{}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00016}\mbox{\hyperlink{namespacemtl_1_1detail__string__view}{00016}}\ \textcolor{keyword}{namespace\ }detail\_string\_view}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00017}00017\ \{}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ CharT>}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00019}\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{00019}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{basic\_string\_view}}}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00020}00020\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00022}\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a54f32f77bf5a37e862cea2fb73adf280}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a54f32f77bf5a37e862cea2fb73adf280}{char\_type}}\ \ \ \ \ =\ CharT;}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00023}\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{pointer}}\ \ \ \ \ \ \ =\ CharT*;}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00024}\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_ab0d66321c1e593345ac4de728fd99ef1}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_ab0d66321c1e593345ac4de728fd99ef1}{const\_pointer}}\ =\ \textcolor{keyword}{const}\ CharT*;}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00025}\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985}{size\_type}}\ \ \ \ \ =\ size\_t;}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{size\_t}ype\ N>}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00028}\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_ad2ac6e3c4a724483d406801078d501f2}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_ad2ac6e3c4a724483d406801078d501f2}{basic\_string\_view}}(CharT\ (\&a)[N])}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \_p(a),\ \_sz(N\ -\/\ 1)\ \{\}}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00030}00030\ }
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00031}\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a6736b40a6872c3a41c29d47854ff5375}{00031}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a6736b40a6872c3a41c29d47854ff5375}{operator[]}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985}{size\_type}}\ n)\ \textcolor{keyword}{const}\ -\/>\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a54f32f77bf5a37e862cea2fb73adf280}{char\_type}}}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ n\ <\ \_sz\ ?\ \_p[n]\ :\ CharT\{\};}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00036}\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a20a1023e000017e38f87316d15fd461e}{00036}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a20a1023e000017e38f87316d15fd461e}{size}}()\ const\ -\/>\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985}{size\_type}}\ \{\ \textcolor{keywordflow}{return}\ \_sz;\ \}}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00037}00037\ }
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00038}\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a263f86295e0118d993bbbe6e7eb41b7d}{00038}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a263f86295e0118d993bbbe6e7eb41b7d}{begin}}()\ -\/>\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{pointer}}\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_p;\ \}}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00039}\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a70be7aa4ebcdd417372c43eb5ac5024d}{00039}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_a70be7aa4ebcdd417372c43eb5ac5024d}{end}}()\ -\/>\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{pointer}}\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_p\ +\ this-\/>\_sz;\ \}}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00041}\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_afdd372901e355f836828eb2ef23bcb48}{00041}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_afdd372901e355f836828eb2ef23bcb48}{begin}}()\ const\ -\/>\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{pointer}}\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_p;\ \}}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00042}\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_aca7f06a8dd12c4179e381981b6b435fb}{00042}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_aca7f06a8dd12c4179e381981b6b435fb}{end}}()\ const\ -\/>\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{pointer}}\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_p\ +\ this-\/>\_sz;\ \}}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00043}00043\ }
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_af7098882d052f5b611c5849071083d0e}{pointer}}\ \_p;}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view_aa39157b87324417b38e1c77fee64f985}{size\_type}}\ \_sz;}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00047}00047\ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00048}00048\ \}}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00050}\mbox{\hyperlink{namespacemtl_acb2e27d832622b8b104e130739e5519a}{00050}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{string\_view}}\ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{detail\_string\_view::basic\_string\_view<const\ char>}};}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00051}\mbox{\hyperlink{namespacemtl_a5e85f9c2a59f47dec3298153cd620e0b}{00051}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mutable\_string\_view}}\ =\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{detail\_string\_view::basic\_string\_view<char>}};}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00052}00052\ \}}
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{string__view_8h_source_l00054}00054\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_STRING\_VIEW\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MTL\_STRING\_VIEW\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }mtl}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }detail\_string\_view}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ CharT>}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{basic\_string\_view}}}
+\DoxyCodeLine{00020\ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }char\_type\ \ \ \ \ =\ CharT;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }pointer\ \ \ \ \ \ \ =\ CharT*;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }const\_pointer\ =\ \textcolor{keyword}{const}\ CharT*;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }size\_type\ \ \ \ \ =\ size\_t;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keywordtype}{size\_t}ype\ N>}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{basic\_string\_view}}(CharT\ (\&a)[N])}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \_p(a),\ \_sz(N\ -\/\ 1)\ \{\}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ operator[](\textcolor{keyword}{const}\ size\_type\ n)\ \textcolor{keyword}{const}\ -\/>\ char\_type}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ n\ <\ \_sz\ ?\ \_p[n]\ :\ CharT\{\};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ size()\ \textcolor{keyword}{const}\ -\/>\ size\_type\ \{\ \textcolor{keywordflow}{return}\ \_sz;\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ begin()\ -\/>\ pointer\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_p;\ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ end()\ -\/>\ pointer\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_p\ +\ this-\/>\_sz;\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ begin()\ \textcolor{keyword}{const}\ -\/>\ pointer\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_p;\ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ end()\ \textcolor{keyword}{const}\ -\/>\ pointer\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_p\ +\ this-\/>\_sz;\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ pointer\ \_p;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ size\_type\ \_sz;}
+\DoxyCodeLine{00047\ \ \ \ \ \};}
+\DoxyCodeLine{00048\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{string\_view}}\ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{detail\_string\_view::basic\_string\_view<const\ char>}};}
+\DoxyCodeLine{00051\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mutable\_string\_view}}\ =\ \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{detail\_string\_view::basic\_string\_view<char>}};}
+\DoxyCodeLine{00052\ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

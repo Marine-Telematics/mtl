@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['n_2020db_20dec_20where_20n_20is_20the_20filter_20order_0',['However, attenuation slope is n * (-20dB/dec), where n is the filter order.',['../butterworth__lpf_8h.html#autotoc_md9',1,'']]],
-  ['next_1',['next',['../structmtl_1_1static__list__detail_1_1static__list__node.html#ac25e7b3d53eefc636fcada84475ca1b3',1,'mtl::static_list_detail::static_list_node']]],
-  ['non_5fblocking_2',['non_blocking',['../namespacemtl_1_1bus.html#ab3d63c30df95e019e40266e203f395aaaacc1dd5e3a4019590a9bcc5639a49236',1,'mtl::bus']]]
+  ['pass_20filter_20c_202025_20marine_20telematics_0',['Butterworth Low Pass Filter - (c) 2025 marine telematics',['../butterworth__lpf_8h.html#autotoc_md8',1,'']]],
+  ['pop_5fback_1',['pop_back',['../classmtl_1_1static__list.html#ab2ae236ebd0c2bb96cab0f7a84b70826',1,'mtl::static_list']]],
+  ['pop_5ffront_2',['pop_front',['../classmtl_1_1static__list.html#a86f727d909b44478da4eb3f1ee3778aa',1,'mtl::static_list']]]
 ];

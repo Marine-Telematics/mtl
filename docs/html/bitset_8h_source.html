@@ -5,14 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: include/mtl/bitset.h Source File</title>
+<title>MarineTelematics Template Library: include/mtl/bitset.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -25,8 +21,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">MarineTelematics Template Library
    </div>
+   <div id="projectbrief">mtl (MarineTelematics Template Library) is a reusable C++ utility library.</div>
   </td>
  </tr>
  </tbody>
@@ -55,23 +52,6 @@ $(function() {
 $(document).ready(function() { init_codefold(0); });
 /* @license-end */
 </script>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('bitset_8h_source.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -93,6 +73,11 @@ $(document).ready(function(){initNavTree('bitset_8h_source.html',''); initResiza
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_353658666281c83a21b12c0bed9a5b33.html">mtl</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">bitset.h</div></div>
 </div><!--header-->
@@ -106,13 +91,13 @@ $(document).ready(function(){initNavTree('bitset_8h_source.html',''); initResiza
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemtl.html">mtl</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span>mtl</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
 <div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classmtl_1_1bitset.html">   20</a></span><span class="keyword">template</span>&lt;<span class="keywordtype">size_t</span> N = 0u&gt; <span class="keyword">class </span><a class="code hl_class" href="classmtl_1_1bitset.html">bitset</a></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classmtl_1_1bitset.html#a8efbbcfdae623004efb68c190c376792">   23</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="classmtl_1_1bitset.html#a8efbbcfdae623004efb68c190c376792">value_type</a> =</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">using </span>value_type =</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        conditional_t&lt;N &lt;= 8u,  uint8_t,</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        conditional_t&lt;N &lt;= 16u, uint16_t,</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        conditional_t&lt;N &lt;= 32u, uint32_t,</div>
@@ -121,8 +106,7 @@ $(document).ready(function(){initNavTree('bitset_8h_source.html',''); initResiza
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">static_assert</span>(N &gt; 0,   <span class="stringliteral">&quot;bitset&lt;N&gt;: N must be &gt; 0&quot;</span>);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">static_assert</span>(N &lt;= 64, <span class="stringliteral">&quot;bitset&lt;N&gt;: N &gt; 64u not supported&quot;</span>);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="foldopen" id="foldopen00032" data-start="{" data-end="}">
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classmtl_1_1bitset.html#a474b956221eb46e35231a0170184f631">   32</a></span>    <span class="keyword">constexpr</span> <a class="code hl_function" href="classmtl_1_1bitset.html#a474b956221eb46e35231a0170184f631">bitset</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* bitstring)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">constexpr</span> <a class="code hl_class" href="classmtl_1_1bitset.html">bitset</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* bitstring)</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">size_t</span> bit_index = 0;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
@@ -147,44 +131,39 @@ $(document).ready(function(){initNavTree('bitset_8h_source.html',''); initResiza
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            }</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
-</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classmtl_1_1bitset.html#aafa7efd0520c87d529006cdb5f941b2d">   59</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="classmtl_1_1bitset.html#aafa7efd0520c87d529006cdb5f941b2d">value</a>() const -&gt; <a class="code hl_typedef" href="classmtl_1_1bitset.html#a8efbbcfdae623004efb68c190c376792">value_type</a> { <span class="keywordflow">return</span> this-&gt;_val; }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classmtl_1_1bitset.html#aafa7efd0520c87d529006cdb5f941b2d">   59</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="classmtl_1_1bitset.html#aafa7efd0520c87d529006cdb5f941b2d">value</a>() const -&gt; value_type { <span class="keywordflow">return</span> this-&gt;_val; }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// proxy for bit assign operations `bitset[N] = true;`</span></div>
 <div class="foldopen" id="foldopen00062" data-start="{" data-end="};">
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structmtl_1_1bitset_1_1bit__ref.html">   62</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structmtl_1_1bitset_1_1bit__ref.html">bit_ref</a></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structmtl_1_1bitset_1_1bit__ref.html#a8cf0f8c446de5ce997b335dbd2e833e2">   64</a></span>        <a class="code hl_typedef" href="classmtl_1_1bitset.html#a8efbbcfdae623004efb68c190c376792">value_type</a>&amp; <a class="code hl_variable" href="structmtl_1_1bitset_1_1bit__ref.html#a8cf0f8c446de5ce997b335dbd2e833e2">_word</a>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structmtl_1_1bitset_1_1bit__ref.html#a29a92634dafdd49f4d9b029719171215">   65</a></span>        <a class="code hl_typedef" href="classmtl_1_1bitset.html#a8efbbcfdae623004efb68c190c376792">value_type</a>  <a class="code hl_variable" href="structmtl_1_1bitset_1_1bit__ref.html#a29a92634dafdd49f4d9b029719171215">_mask</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        value_type&amp; _word;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        value_type  _mask;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="structmtl_1_1bitset_1_1bit__ref.html#af9e9341b3f7649073897e7f90767cbb6">   67</a></span>        <span class="keyword">constexpr</span> <a class="code hl_function" href="structmtl_1_1bitset_1_1bit__ref.html#af9e9341b3f7649073897e7f90767cbb6">bit_ref</a>(<a class="code hl_typedef" href="classmtl_1_1bitset.html#a8efbbcfdae623004efb68c190c376792">value_type</a> &amp;w, <a class="code hl_typedef" href="classmtl_1_1bitset.html#a8efbbcfdae623004efb68c190c376792">value_type</a> m) : <a class="code hl_variable" href="structmtl_1_1bitset_1_1bit__ref.html#a8cf0f8c446de5ce997b335dbd2e833e2">_word</a>(w), <a class="code hl_variable" href="structmtl_1_1bitset_1_1bit__ref.html#a29a92634dafdd49f4d9b029719171215">_mask</a>(m) {}</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">constexpr</span> <a class="code hl_struct" href="structmtl_1_1bitset_1_1bit__ref.html">bit_ref</a>(value_type &amp;w, value_type m) : _word(w), _mask(m) {}</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        </div>
-<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structmtl_1_1bitset_1_1bit__ref.html#a09f4e96b35c58f2639b3de4079d88b92">   69</a></span>        <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="structmtl_1_1bitset_1_1bit__ref.html#a09f4e96b35c58f2639b3de4079d88b92">operator=</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structmtl_1_1bitset_1_1bit__ref.html">bit_ref</a>&amp; other) -&gt; <a class="code hl_struct" href="structmtl_1_1bitset_1_1bit__ref.html">bit_ref</a>&amp;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">constexpr</span> <span class="keyword">auto</span> operator=(<span class="keyword">const</span> <a class="code hl_struct" href="structmtl_1_1bitset_1_1bit__ref.html">bit_ref</a>&amp; other) -&gt; <a class="code hl_struct" href="structmtl_1_1bitset_1_1bit__ref.html">bit_ref</a>&amp;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        {</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>(other);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
-</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="structmtl_1_1bitset_1_1bit__ref.html#af2e58446dfbabffa1aff147fcfc19f62">   74</a></span>        <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="structmtl_1_1bitset_1_1bit__ref.html#af2e58446dfbabffa1aff147fcfc19f62">operator=</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmtl_1_1bitset.html#aafa7efd0520c87d529006cdb5f941b2d">value</a>) -&gt; <a class="code hl_struct" href="structmtl_1_1bitset_1_1bit__ref.html">bit_ref</a>&amp;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keyword">constexpr</span> <span class="keyword">auto</span> operator=(<span class="keyword">const</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classmtl_1_1bitset.html#aafa7efd0520c87d529006cdb5f941b2d">value</a>) -&gt; <a class="code hl_struct" href="structmtl_1_1bitset_1_1bit__ref.html">bit_ref</a>&amp;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classmtl_1_1bitset.html#aafa7efd0520c87d529006cdb5f941b2d">value</a>) this-&gt;_word |= this-&gt;<a class="code hl_variable" href="structmtl_1_1bitset_1_1bit__ref.html#a29a92634dafdd49f4d9b029719171215">_mask</a>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">else</span> this-&gt;_word &amp;= ~this-&gt;<a class="code hl_variable" href="structmtl_1_1bitset_1_1bit__ref.html#a29a92634dafdd49f4d9b029719171215">_mask</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="classmtl_1_1bitset.html#aafa7efd0520c87d529006cdb5f941b2d">value</a>) this-&gt;_word |= this-&gt;_mask;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">else</span> this-&gt;_word &amp;= ~this-&gt;_mask;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
-</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="structmtl_1_1bitset_1_1bit__ref.html#ab06fea350de90f326b6a15b199c703fc">   82</a></span>        <span class="keyword">constexpr</span> <span class="keyword">operator</span> bool()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;_word &amp; this-&gt;_mask) != 0u; }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keyword">constexpr</span> <span class="keyword">operator</span> bool()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> (this-&gt;_word &amp; this-&gt;_mask) != 0u; }</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    };</div>
 </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    </div>
 <div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classmtl_1_1bitset.html#aad5245b2bf25db294d2bed6c612096f7">   86</a></span>    <span class="keyword">constexpr</span> <span class="keyword">auto</span> <a class="code hl_function" href="classmtl_1_1bitset.html#aad5245b2bf25db294d2bed6c612096f7">operator[]</a>(<span class="keyword">const</span> <span class="keywordtype">size_t</span> i) -&gt; <a class="code hl_struct" href="structmtl_1_1bitset_1_1bit__ref.html">bit_ref</a></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="structmtl_1_1bitset_1_1bit__ref.html">bit_ref</a>{this-&gt;_val, <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="classmtl_1_1bitset.html#a8efbbcfdae623004efb68c190c376792">value_type</a><span class="keyword">&gt;</span>(1u &lt;&lt; i)};</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">return</span> <a class="code hl_struct" href="structmtl_1_1bitset_1_1bit__ref.html">bit_ref</a>{this-&gt;_val, <span class="keyword">static_cast&lt;</span>value_type<span class="keyword">&gt;</span>(1u &lt;&lt; i)};</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
 </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    </div>
@@ -196,33 +175,21 @@ $(document).ready(function(){initNavTree('bitset_8h_source.html',''); initResiza
 </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_typedef" href="classmtl_1_1bitset.html#a8efbbcfdae623004efb68c190c376792">value_type</a> _val = 0u;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    value_type _val = 0u;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>};</div>
 </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassmtl_1_1bitset_html"><div class="ttname"><a href="classmtl_1_1bitset.html">mtl::bitset</a></div><div class="ttdef"><b>Definition</b> <a href="bitset_8h_source.html#l00020">bitset.h:21</a></div></div>
-<div class="ttc" id="aclassmtl_1_1bitset_html_a474b956221eb46e35231a0170184f631"><div class="ttname"><a href="classmtl_1_1bitset.html#a474b956221eb46e35231a0170184f631">mtl::bitset::bitset</a></div><div class="ttdeci">constexpr bitset(const char *bitstring)</div><div class="ttdef"><b>Definition</b> <a href="bitset_8h_source.html#l00032">bitset.h:32</a></div></div>
-<div class="ttc" id="aclassmtl_1_1bitset_html_a7c95b0cdf5690ef847f0cabe4d98d651"><div class="ttname"><a href="classmtl_1_1bitset.html#a7c95b0cdf5690ef847f0cabe4d98d651">mtl::bitset::operator[]</a></div><div class="ttdeci">constexpr auto operator[](size_t i) const -&gt; bool</div><div class="ttdoc">Gets the value of a single bit.</div><div class="ttdef"><b>Definition</b> <a href="bitset_8h_source.html#l00092">bitset.h:92</a></div></div>
-<div class="ttc" id="aclassmtl_1_1bitset_html_a8efbbcfdae623004efb68c190c376792"><div class="ttname"><a href="classmtl_1_1bitset.html#a8efbbcfdae623004efb68c190c376792">mtl::bitset::value_type</a></div><div class="ttdeci">conditional_t&lt; N&lt;=8u, uint8_t, conditional_t&lt; N&lt;=16u, uint16_t, conditional_t&lt; N&lt;=32u, uint32_t, uint64_t &gt; &gt; &gt; value_type</div><div class="ttdef"><b>Definition</b> <a href="bitset_8h_source.html#l00023">bitset.h:27</a></div></div>
-<div class="ttc" id="aclassmtl_1_1bitset_html_aad5245b2bf25db294d2bed6c612096f7"><div class="ttname"><a href="classmtl_1_1bitset.html#aad5245b2bf25db294d2bed6c612096f7">mtl::bitset::operator[]</a></div><div class="ttdeci">constexpr auto operator[](const size_t i) -&gt; bit_ref</div><div class="ttdoc">bit level proxy access, for assign operator.</div><div class="ttdef"><b>Definition</b> <a href="bitset_8h_source.html#l00086">bitset.h:86</a></div></div>
-<div class="ttc" id="aclassmtl_1_1bitset_html_aafa7efd0520c87d529006cdb5f941b2d"><div class="ttname"><a href="classmtl_1_1bitset.html#aafa7efd0520c87d529006cdb5f941b2d">mtl::bitset::value</a></div><div class="ttdeci">constexpr auto value() const -&gt; value_type</div><div class="ttdoc">Gets the equivalent numbers of this bitset.</div><div class="ttdef"><b>Definition</b> <a href="bitset_8h_source.html#l00059">bitset.h:59</a></div></div>
-<div class="ttc" id="anamespacemtl_html"><div class="ttname"><a href="namespacemtl.html">mtl</a></div><div class="ttdef"><b>Definition</b> <a href="algorithm_8h_source.html#l00014">algorithm.h:15</a></div></div>
-<div class="ttc" id="astructmtl_1_1bitset_1_1bit__ref_html"><div class="ttname"><a href="structmtl_1_1bitset_1_1bit__ref.html">mtl::bitset::bit_ref</a></div><div class="ttdef"><b>Definition</b> <a href="bitset_8h_source.html#l00062">bitset.h:63</a></div></div>
-<div class="ttc" id="astructmtl_1_1bitset_1_1bit__ref_html_a09f4e96b35c58f2639b3de4079d88b92"><div class="ttname"><a href="structmtl_1_1bitset_1_1bit__ref.html#a09f4e96b35c58f2639b3de4079d88b92">mtl::bitset::bit_ref::operator=</a></div><div class="ttdeci">constexpr auto operator=(const bit_ref &amp;other) -&gt; bit_ref &amp;</div><div class="ttdef"><b>Definition</b> <a href="bitset_8h_source.html#l00069">bitset.h:69</a></div></div>
-<div class="ttc" id="astructmtl_1_1bitset_1_1bit__ref_html_a29a92634dafdd49f4d9b029719171215"><div class="ttname"><a href="structmtl_1_1bitset_1_1bit__ref.html#a29a92634dafdd49f4d9b029719171215">mtl::bitset::bit_ref::_mask</a></div><div class="ttdeci">value_type _mask</div><div class="ttdef"><b>Definition</b> <a href="bitset_8h_source.html#l00065">bitset.h:65</a></div></div>
-<div class="ttc" id="astructmtl_1_1bitset_1_1bit__ref_html_a8cf0f8c446de5ce997b335dbd2e833e2"><div class="ttname"><a href="structmtl_1_1bitset_1_1bit__ref.html#a8cf0f8c446de5ce997b335dbd2e833e2">mtl::bitset::bit_ref::_word</a></div><div class="ttdeci">value_type &amp; _word</div><div class="ttdef"><b>Definition</b> <a href="bitset_8h_source.html#l00064">bitset.h:64</a></div></div>
-<div class="ttc" id="astructmtl_1_1bitset_1_1bit__ref_html_af2e58446dfbabffa1aff147fcfc19f62"><div class="ttname"><a href="structmtl_1_1bitset_1_1bit__ref.html#af2e58446dfbabffa1aff147fcfc19f62">mtl::bitset::bit_ref::operator=</a></div><div class="ttdeci">constexpr auto operator=(const bool value) -&gt; bit_ref &amp;</div><div class="ttdef"><b>Definition</b> <a href="bitset_8h_source.html#l00074">bitset.h:74</a></div></div>
-<div class="ttc" id="astructmtl_1_1bitset_1_1bit__ref_html_af9e9341b3f7649073897e7f90767cbb6"><div class="ttname"><a href="structmtl_1_1bitset_1_1bit__ref.html#af9e9341b3f7649073897e7f90767cbb6">mtl::bitset::bit_ref::bit_ref</a></div><div class="ttdeci">constexpr bit_ref(value_type &amp;w, value_type m)</div><div class="ttdef"><b>Definition</b> <a href="bitset_8h_source.html#l00067">bitset.h:67</a></div></div>
+<div class="ttc" id="aclassmtl_1_1bitset_html"><div class="ttname"><a href="classmtl_1_1bitset.html">mtl::bitset</a></div><div class="ttdef"><b>Definition</b> bitset.h:21</div></div>
+<div class="ttc" id="aclassmtl_1_1bitset_html_a7c95b0cdf5690ef847f0cabe4d98d651"><div class="ttname"><a href="classmtl_1_1bitset.html#a7c95b0cdf5690ef847f0cabe4d98d651">mtl::bitset::operator[]</a></div><div class="ttdeci">constexpr auto operator[](size_t i) const -&gt; bool</div><div class="ttdoc">Gets the value of a single bit.</div><div class="ttdef"><b>Definition</b> bitset.h:92</div></div>
+<div class="ttc" id="aclassmtl_1_1bitset_html_aad5245b2bf25db294d2bed6c612096f7"><div class="ttname"><a href="classmtl_1_1bitset.html#aad5245b2bf25db294d2bed6c612096f7">mtl::bitset::operator[]</a></div><div class="ttdeci">constexpr auto operator[](const size_t i) -&gt; bit_ref</div><div class="ttdoc">bit level proxy access, for assign operator.</div><div class="ttdef"><b>Definition</b> bitset.h:86</div></div>
+<div class="ttc" id="aclassmtl_1_1bitset_html_aafa7efd0520c87d529006cdb5f941b2d"><div class="ttname"><a href="classmtl_1_1bitset.html#aafa7efd0520c87d529006cdb5f941b2d">mtl::bitset::value</a></div><div class="ttdeci">constexpr auto value() const -&gt; value_type</div><div class="ttdoc">Gets the equivalent numbers of this bitset.</div><div class="ttdef"><b>Definition</b> bitset.h:59</div></div>
+<div class="ttc" id="astructmtl_1_1bitset_1_1bit__ref_html"><div class="ttname"><a href="structmtl_1_1bitset_1_1bit__ref.html">mtl::bitset::bit_ref</a></div><div class="ttdef"><b>Definition</b> bitset.h:63</div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_353658666281c83a21b12c0bed9a5b33.html">mtl</a></li><li class="navelem"><a class="el" href="bitset_8h.html">bitset.h</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
 </body>
 </html>

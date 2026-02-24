@@ -1,17 +1,5 @@
 var searchData=
 [
-  ['ok_0',['ok',['../classmtl_1_1result.html#a5fccf8151b98c3e1eb13e138191f2dda',1,'mtl::result::ok() -&gt; ok_type &amp;'],['../classmtl_1_1result.html#a86723558f592c017c561adcc086373d1',1,'mtl::result::ok() const -&gt; const ok_type &amp;']]],
-  ['ok_5ftype_1',['ok_type',['../classmtl_1_1result.html#a45e4f00026a786c99dff5998f7eac221',1,'mtl::result']]],
-  ['oneof_2',['oneof',['../namespacemtl.html#a3e68bb435f1c78c81b2cd03dab8f5fa5',1,'mtl']]],
-  ['operator_20bool_3',['operator bool',['../structmtl_1_1bitset_1_1bit__ref.html#ab06fea350de90f326b6a15b199c703fc',1,'mtl::bitset::bit_ref::operator bool()'],['../classmtl_1_1logic__level.html#a94efc8504308afc6f48c9c1e59a9d64c',1,'mtl::logic_level::operator bool()']]],
-  ['operator_2a_4',['operator*',['../classmtl_1_1static__list__detail_1_1static__list__iterator.html#a7c607088873e0de77e667856494e5661',1,'mtl::static_list_detail::static_list_iterator']]],
-  ['operator_2b_2b_5',['operator++',['../classmtl_1_1static__list__detail_1_1static__list__iterator.html#aeead078650e5e7baea66318dc2748f99',1,'mtl::static_list_detail::static_list_iterator']]],
-  ['operator_2d_3e_6',['operator-&gt;',['../classmtl_1_1static__list__detail_1_1static__list__iterator.html#ab62a849b3b8700203caafc06b16a1e1c',1,'mtl::static_list_detail::static_list_iterator']]],
-  ['operator_3c_3d_3e_7',['operator&lt;=&gt;',['../classmtl_1_1static__list__detail_1_1static__list__iterator.html#ac20f300e9e550aa9c0ed9ac6264bd38d',1,'mtl::static_list_detail::static_list_iterator']]],
-  ['operator_3d_8',['operator=',['../structmtl_1_1bitset_1_1bit__ref.html#a09f4e96b35c58f2639b3de4079d88b92',1,'mtl::bitset::bit_ref::operator=()'],['../classmtl_1_1static__list.html#a33f35b1429d22c686fd66a4bbcc3f3da',1,'mtl::static_list::operator=(static_list &amp;&amp;)=delete'],['../classmtl_1_1static__list.html#a7ac6fddc9099b63a5ed39c0d857102a0',1,'mtl::static_list::operator=(const static_list &amp;)=delete'],['../classmtl_1_1logic__level.html#ad3eaa27b3fa3f1a02feddc81597e74ab',1,'mtl::logic_level::operator=()'],['../structmtl_1_1bitset_1_1bit__ref.html#af2e58446dfbabffa1aff147fcfc19f62',1,'mtl::bitset::bit_ref::operator=()']]],
-  ['operator_3d_3d_9',['operator==',['../classmtl_1_1logic__level.html#a5de653682b8259df77328cc6dce87061',1,'mtl::logic_level::operator==(const logic_level &amp;other) const -&gt; bool'],['../classmtl_1_1logic__level.html#a5635d78512316e2e71c730ea193a9181',1,'mtl::logic_level::operator==(const logic_level &amp;&amp;other) const -&gt; bool'],['../classmtl_1_1logic__level.html#a2adac5e7f5eaaad538c33c2a53c0fe0a',1,'mtl::logic_level::operator==(const value other) const -&gt; bool']]],
-  ['operator_5b_5d_10',['operator[]',['../classmtl_1_1bitset.html#aad5245b2bf25db294d2bed6c612096f7',1,'mtl::bitset::operator[](const size_t i) -&gt; bit_ref'],['../classmtl_1_1bitset.html#a7c95b0cdf5690ef847f0cabe4d98d651',1,'mtl::bitset::operator[](size_t i) const -&gt; bool'],['../classmtl_1_1detail__string__view_1_1basic__string__view.html#a6736b40a6872c3a41c29d47854ff5375',1,'mtl::detail_string_view::basic_string_view::operator[]()']]],
-  ['option_11',['option',['../classmtl_1_1option.html',1,'mtl']]],
-  ['option_2eh_12',['option.h',['../option_8h.html',1,'']]],
-  ['order_13',['order',['../butterworth__lpf_8h.html#autotoc_md9',1,'However, attenuation slope is n * (-20dB/dec), where n is the filter order.'],['../namespacemtl_1_1filter.html#a15a13dc5888636dcd61e01e9313a0d71',1,'mtl::filter::order']]]
+  ['queue_0',['queue',['../classmtl_1_1queue.html',1,'mtl']]],
+  ['queue_2eh_1',['queue.h',['../queue_8h.html',1,'']]]
 ];

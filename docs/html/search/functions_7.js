@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['logic_5flevel_0',['logic_level',['../classmtl_1_1logic__level.html#ab0163fd88039178f82a2aa41fe9b381d',1,'mtl::logic_level::logic_level(const bool state)'],['../classmtl_1_1logic__level.html#a874023729fb9f7d4cf3a92f546b36408',1,'mtl::logic_level::logic_level(const value value)'],['../classmtl_1_1logic__level.html#a272b9efc299ba92cf72898945a60dc2d',1,'mtl::logic_level::logic_level()=default']]]
+  ['rbegin_0',['rbegin',['../classmtl_1_1static__list.html#a39875f467bf070ffba2c6c54d6b39e74',1,'mtl::static_list']]],
+  ['rend_1',['rend',['../classmtl_1_1static__list.html#acfc8909139322cb7954d2fd2afa69e8d',1,'mtl::static_list']]],
+  ['reset_2',['reset',['../classmtl_1_1filter_1_1butterworth__lpf.html#a850f4e55966b287cdd9155961fcd05fe',1,'mtl::filter::butterworth_lpf']]]
 ];

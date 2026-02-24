@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['update_0',['update',['../classmtl_1_1filter_1_1butterworth__lpf.html#a297e5eaf61e8d361b2a05b179a11eb1d',1,'mtl::filter::butterworth_lpf']]],
-  ['utility_2eh_1',['utility.h',['../utility_8h.html',1,'']]]
+  ['where_20n_20is_20the_20filter_20order_0',['However, attenuation slope is n * (-20dB/dec), where n is the filter order.',['../butterworth__lpf_8h.html#autotoc_md9',1,'']]],
+  ['write_1',['write',['../classmtl_1_1fm24cl64b__impl.html#a390dc9e2b348cd397fbcb83469b9c45b',1,'mtl::fm24cl64b_impl']]]
 ];

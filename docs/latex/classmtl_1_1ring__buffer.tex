@@ -1,147 +1,38 @@
 \doxysection{mtl\+::ring\+\_\+buffer\texorpdfstring{$<$}{<} T, SIZE \texorpdfstring{$>$}{>} Class Template Reference}
 \hypertarget{classmtl_1_1ring__buffer}{}\label{classmtl_1_1ring__buffer}\index{mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}}
-
-
-{\ttfamily \#include $<$ringbuf.\+h$>$}
-
 \doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-using \mbox{\hyperlink{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}{size\+\_\+type}} = size\+\_\+t
+\Hypertarget{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}\label{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461} 
+using {\bfseries size\+\_\+type} = size\+\_\+t
 \item 
-using \mbox{\hyperlink{classmtl_1_1ring__buffer_a7d824e902fab3936563db0d27aa40482}{reference}} = T \&
+\Hypertarget{classmtl_1_1ring__buffer_a7d824e902fab3936563db0d27aa40482}\label{classmtl_1_1ring__buffer_a7d824e902fab3936563db0d27aa40482} 
+using {\bfseries reference} = T \&
 \item 
-using \mbox{\hyperlink{classmtl_1_1ring__buffer_aa9ec0e52a3f9fc5cd5c488ab2a18a1f6}{const\+\_\+reference}} = const T \&
+\Hypertarget{classmtl_1_1ring__buffer_aa9ec0e52a3f9fc5cd5c488ab2a18a1f6}\label{classmtl_1_1ring__buffer_aa9ec0e52a3f9fc5cd5c488ab2a18a1f6} 
+using {\bfseries const\+\_\+reference} = const T \&
 \item 
-using \mbox{\hyperlink{classmtl_1_1ring__buffer_ab37901ae18ffb8eae9ebc51cc8d946c9}{iterator}} = T \texorpdfstring{$\ast$}{*}
+\Hypertarget{classmtl_1_1ring__buffer_ab37901ae18ffb8eae9ebc51cc8d946c9}\label{classmtl_1_1ring__buffer_ab37901ae18ffb8eae9ebc51cc8d946c9} 
+using {\bfseries iterator} = T \texorpdfstring{$\ast$}{*}
 \item 
-using \mbox{\hyperlink{classmtl_1_1ring__buffer_a9f3720fd1a6429d34099671dbcb09008}{const\+\_\+iterator}} = const T \texorpdfstring{$\ast$}{*}
+\Hypertarget{classmtl_1_1ring__buffer_a9f3720fd1a6429d34099671dbcb09008}\label{classmtl_1_1ring__buffer_a9f3720fd1a6429d34099671dbcb09008} 
+using {\bfseries const\+\_\+iterator} = const T \texorpdfstring{$\ast$}{*}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-auto \mbox{\hyperlink{classmtl_1_1ring__buffer_a7e00b05f1ab035fa51c9fa487ae6483c}{write}} (\mbox{\hyperlink{classmtl_1_1ring__buffer_a9f3720fd1a6429d34099671dbcb09008}{const\+\_\+iterator}} data, \mbox{\hyperlink{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}{size\+\_\+type}} n) -\/$>$ \mbox{\hyperlink{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}{size\+\_\+type}}
-\item 
-auto \mbox{\hyperlink{classmtl_1_1ring__buffer_a5d6aad9ad3373a58621643859cc833b9}{read}} (\mbox{\hyperlink{classmtl_1_1ring__buffer_ab37901ae18ffb8eae9ebc51cc8d946c9}{iterator}} dest, \mbox{\hyperlink{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}{size\+\_\+type}} n) -\/$>$ \mbox{\hyperlink{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}{size\+\_\+type}}
-\item 
-auto \mbox{\hyperlink{classmtl_1_1ring__buffer_a7b94d959d58c5671389bbb2f4518f5a5}{get\+\_\+occupied}} () const -\/$>$ \mbox{\hyperlink{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}{size\+\_\+type}}
-\item 
-auto \mbox{\hyperlink{classmtl_1_1ring__buffer_a65b40dd4d8e6c175f6a59b195a1db58f}{get\+\_\+free}} () const -\/$>$ \mbox{\hyperlink{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}{size\+\_\+type}}
-\end{DoxyCompactItemize}
-
-
-\doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename T, size\+\_\+t SIZE$>$\newline
-class mtl\+::ring\+\_\+buffer$<$ T, SIZE $>$}
-
-
-Definition at line \mbox{\hyperlink{ringbuf_8h_source_l00020}{20}} of file \mbox{\hyperlink{ringbuf_8h_source}{ringbuf.\+h}}.
-
-
-
-\doxysubsection{Member Typedef Documentation}
-\Hypertarget{classmtl_1_1ring__buffer_a9f3720fd1a6429d34099671dbcb09008}\label{classmtl_1_1ring__buffer_a9f3720fd1a6429d34099671dbcb09008} 
-\index{mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}!const\_iterator@{const\_iterator}}
-\index{const\_iterator@{const\_iterator}!mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}}
-\doxysubsubsection{\texorpdfstring{const\_iterator}{const\_iterator}}
-{\footnotesize\ttfamily template$<$typename T , size\+\_\+t SIZE$>$ \\
-using \mbox{\hyperlink{classmtl_1_1ring__buffer}{mtl\+::ring\+\_\+buffer}}$<$ T, SIZE $>$\+::const\+\_\+iterator =  const T\texorpdfstring{$\ast$}{*}}
-
-
-
-Definition at line \mbox{\hyperlink{ringbuf_8h_source_l00027}{27}} of file \mbox{\hyperlink{ringbuf_8h_source}{ringbuf.\+h}}.
-
-\Hypertarget{classmtl_1_1ring__buffer_aa9ec0e52a3f9fc5cd5c488ab2a18a1f6}\label{classmtl_1_1ring__buffer_aa9ec0e52a3f9fc5cd5c488ab2a18a1f6} 
-\index{mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}!const\_reference@{const\_reference}}
-\index{const\_reference@{const\_reference}!mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}}
-\doxysubsubsection{\texorpdfstring{const\_reference}{const\_reference}}
-{\footnotesize\ttfamily template$<$typename T , size\+\_\+t SIZE$>$ \\
-using \mbox{\hyperlink{classmtl_1_1ring__buffer}{mtl\+::ring\+\_\+buffer}}$<$ T, SIZE $>$\+::const\+\_\+reference =  const T\&}
-
-
-
-Definition at line \mbox{\hyperlink{ringbuf_8h_source_l00025}{25}} of file \mbox{\hyperlink{ringbuf_8h_source}{ringbuf.\+h}}.
-
-\Hypertarget{classmtl_1_1ring__buffer_ab37901ae18ffb8eae9ebc51cc8d946c9}\label{classmtl_1_1ring__buffer_ab37901ae18ffb8eae9ebc51cc8d946c9} 
-\index{mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}!iterator@{iterator}}
-\index{iterator@{iterator}!mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}}
-\doxysubsubsection{\texorpdfstring{iterator}{iterator}}
-{\footnotesize\ttfamily template$<$typename T , size\+\_\+t SIZE$>$ \\
-using \mbox{\hyperlink{classmtl_1_1ring__buffer}{mtl\+::ring\+\_\+buffer}}$<$ T, SIZE $>$\+::iterator =  T\texorpdfstring{$\ast$}{*}}
-
-
-
-Definition at line \mbox{\hyperlink{ringbuf_8h_source_l00026}{26}} of file \mbox{\hyperlink{ringbuf_8h_source}{ringbuf.\+h}}.
-
-\Hypertarget{classmtl_1_1ring__buffer_a7d824e902fab3936563db0d27aa40482}\label{classmtl_1_1ring__buffer_a7d824e902fab3936563db0d27aa40482} 
-\index{mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}!reference@{reference}}
-\index{reference@{reference}!mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}}
-\doxysubsubsection{\texorpdfstring{reference}{reference}}
-{\footnotesize\ttfamily template$<$typename T , size\+\_\+t SIZE$>$ \\
-using \mbox{\hyperlink{classmtl_1_1ring__buffer}{mtl\+::ring\+\_\+buffer}}$<$ T, SIZE $>$\+::reference =  T\&}
-
-
-
-Definition at line \mbox{\hyperlink{ringbuf_8h_source_l00024}{24}} of file \mbox{\hyperlink{ringbuf_8h_source}{ringbuf.\+h}}.
-
-\Hypertarget{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}\label{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461} 
-\index{mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}!size\_type@{size\_type}}
-\index{size\_type@{size\_type}!mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}}
-\doxysubsubsection{\texorpdfstring{size\_type}{size\_type}}
-{\footnotesize\ttfamily template$<$typename T , size\+\_\+t SIZE$>$ \\
-using \mbox{\hyperlink{classmtl_1_1ring__buffer}{mtl\+::ring\+\_\+buffer}}$<$ T, SIZE $>$\+::size\+\_\+type =  size\+\_\+t}
-
-
-
-Definition at line \mbox{\hyperlink{ringbuf_8h_source_l00023}{23}} of file \mbox{\hyperlink{ringbuf_8h_source}{ringbuf.\+h}}.
-
-
-
-\doxysubsection{Member Function Documentation}
-\Hypertarget{classmtl_1_1ring__buffer_a65b40dd4d8e6c175f6a59b195a1db58f}\label{classmtl_1_1ring__buffer_a65b40dd4d8e6c175f6a59b195a1db58f} 
-\index{mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}!get\_free@{get\_free}}
-\index{get\_free@{get\_free}!mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}}
-\doxysubsubsection{\texorpdfstring{get\_free()}{get\_free()}}
-{\footnotesize\ttfamily template$<$typename T , size\+\_\+t SIZE$>$ \\
-auto \mbox{\hyperlink{classmtl_1_1ring__buffer}{mtl\+::ring\+\_\+buffer}}$<$ T, SIZE $>$\+::get\+\_\+free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}{size\+\_\+type}} \hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Definition at line \mbox{\hyperlink{ringbuf_8h_source_l00095}{95}} of file \mbox{\hyperlink{ringbuf_8h_source}{ringbuf.\+h}}.
-
-\Hypertarget{classmtl_1_1ring__buffer_a7b94d959d58c5671389bbb2f4518f5a5}\label{classmtl_1_1ring__buffer_a7b94d959d58c5671389bbb2f4518f5a5} 
-\index{mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}!get\_occupied@{get\_occupied}}
-\index{get\_occupied@{get\_occupied}!mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}}
-\doxysubsubsection{\texorpdfstring{get\_occupied()}{get\_occupied()}}
-{\footnotesize\ttfamily template$<$typename T , size\+\_\+t SIZE$>$ \\
-auto \mbox{\hyperlink{classmtl_1_1ring__buffer}{mtl\+::ring\+\_\+buffer}}$<$ T, SIZE $>$\+::get\+\_\+occupied (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ \mbox{\hyperlink{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}{size\+\_\+type}}     \hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Definition at line \mbox{\hyperlink{ringbuf_8h_source_l00080}{80}} of file \mbox{\hyperlink{ringbuf_8h_source}{ringbuf.\+h}}.
-
-\Hypertarget{classmtl_1_1ring__buffer_a5d6aad9ad3373a58621643859cc833b9}\label{classmtl_1_1ring__buffer_a5d6aad9ad3373a58621643859cc833b9} 
-\index{mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}!read@{read}}
-\index{read@{read}!mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}}
-\doxysubsubsection{\texorpdfstring{read()}{read()}}
-{\footnotesize\ttfamily template$<$typename T , size\+\_\+t SIZE$>$ \\
-auto \mbox{\hyperlink{classmtl_1_1ring__buffer}{mtl\+::ring\+\_\+buffer}}$<$ T, SIZE $>$\+::read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtl_1_1ring__buffer_ab37901ae18ffb8eae9ebc51cc8d946c9}{iterator}}}]{dest,  }\item[{\mbox{\hyperlink{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}{size\+\_\+type}}}]{n }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}{size\+\_\+type}}     \hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Definition at line \mbox{\hyperlink{ringbuf_8h_source_l00055}{55}} of file \mbox{\hyperlink{ringbuf_8h_source}{ringbuf.\+h}}.
-
 \Hypertarget{classmtl_1_1ring__buffer_a7e00b05f1ab035fa51c9fa487ae6483c}\label{classmtl_1_1ring__buffer_a7e00b05f1ab035fa51c9fa487ae6483c} 
-\index{mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}!write@{write}}
-\index{write@{write}!mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}}
-\doxysubsubsection{\texorpdfstring{write()}{write()}}
-{\footnotesize\ttfamily template$<$typename T , size\+\_\+t SIZE$>$ \\
-auto \mbox{\hyperlink{classmtl_1_1ring__buffer}{mtl\+::ring\+\_\+buffer}}$<$ T, SIZE $>$\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmtl_1_1ring__buffer_a9f3720fd1a6429d34099671dbcb09008}{const\+\_\+iterator}}}]{data,  }\item[{\mbox{\hyperlink{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}{size\+\_\+type}}}]{n }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}{size\+\_\+type}}     \hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Definition at line \mbox{\hyperlink{ringbuf_8h_source_l00029}{29}} of file \mbox{\hyperlink{ringbuf_8h_source}{ringbuf.\+h}}.
-
+auto {\bfseries write} (const\+\_\+iterator data, size\+\_\+type n) -\/$>$ size\+\_\+type
+\item 
+\Hypertarget{classmtl_1_1ring__buffer_a5d6aad9ad3373a58621643859cc833b9}\label{classmtl_1_1ring__buffer_a5d6aad9ad3373a58621643859cc833b9} 
+auto {\bfseries read} (iterator dest, size\+\_\+type n) -\/$>$ size\+\_\+type
+\item 
+\Hypertarget{classmtl_1_1ring__buffer_a7b94d959d58c5671389bbb2f4518f5a5}\label{classmtl_1_1ring__buffer_a7b94d959d58c5671389bbb2f4518f5a5} 
+auto {\bfseries get\+\_\+occupied} () const -\/$>$ size\+\_\+type
+\item 
+\Hypertarget{classmtl_1_1ring__buffer_a65b40dd4d8e6c175f6a59b195a1db58f}\label{classmtl_1_1ring__buffer_a65b40dd4d8e6c175f6a59b195a1db58f} 
+auto {\bfseries get\+\_\+free} () const -\/$>$ size\+\_\+type
+\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

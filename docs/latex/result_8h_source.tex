@@ -2,79 +2,79 @@
 \hypertarget{result_8h_source}{}\label{result_8h_source}\index{include/mtl/result.h@{include/mtl/result.h}}
 \mbox{\hyperlink{result_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_RESULT\_H}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ MTL\_RESULT\_H}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <cstddef>}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utility_8h}{utility.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{type__traits_8h}{type\_traits.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00019}00019\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemtl}{mtl}}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00020}00020\ \{}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00021}00021\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ E>}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00022}\mbox{\hyperlink{structmtl_1_1err}{00022}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1err}{err}}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00023}00023\ \{}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00024}\mbox{\hyperlink{structmtl_1_1err_a5bf6762c455f4ebd46d58925ede15b94}{00024}}\ \ \ \ \ E\ \mbox{\hyperlink{structmtl_1_1err_a5bf6762c455f4ebd46d58925ede15b94}{\_value}};}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00025}\mbox{\hyperlink{structmtl_1_1err_aefb67fd8fd04a5a753df0fca2b75c6bd}{00025}}\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{structmtl_1_1err_aefb67fd8fd04a5a753df0fca2b75c6bd}{err}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00026}\mbox{\hyperlink{structmtl_1_1err_a1e00438baa10affeecc2cd534c815c0a}{00026}}\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{structmtl_1_1err_a1e00438baa10affeecc2cd534c815c0a}{err}}(E\&\&\ e)\ :\ \mbox{\hyperlink{structmtl_1_1err_a5bf6762c455f4ebd46d58925ede15b94}{\_value}}(e)\ \{\};}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00027}00027\ \};}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00030}00030\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ E>}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00031}\mbox{\hyperlink{classmtl_1_1result}{00031}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1result}{result}}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00032}00032\ \{}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00033}00033\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00034}\mbox{\hyperlink{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}{00034}}\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}{ok\_type}}\ \ =\ T;}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00035}\mbox{\hyperlink{classmtl_1_1result_aad12e034f1f9acb9aeeee1d96fc04d3f}{00035}}\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ =\ \mbox{\hyperlink{structmtl_1_1err}{mtl::err<E>}};}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00036}00036\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class\ }...Args>}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00038}\mbox{\hyperlink{classmtl_1_1result_a53a901e7295cfbd88065a34e4646cc07}{00038}}\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result_a53a901e7295cfbd88065a34e4646cc07}{result}}(Args\&\&...args)}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00039}00039\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ (\&this-\/>\_value.\_ok)\ T(forward<Args>(args)...);}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00042}00042\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00043}00043\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00044}\mbox{\hyperlink{classmtl_1_1result_aea95c528c4fdc964b0aa45e6659d7059}{00044}}\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result_aea95c528c4fdc964b0aa45e6659d7059}{result}}(\mbox{\hyperlink{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}{ok\_type}}\ \&\&val)}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00045}00045\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ this-\/>\_value.\_ok\ =\ move(val);}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00048}00048\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00050}\mbox{\hyperlink{classmtl_1_1result_a9097a008e32c26189f1a502f9b5fb0fa}{00050}}\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result_a9097a008e32c26189f1a502f9b5fb0fa}{result}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ \&e)}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00051}00051\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00052}00052\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00053}00053\ \ \ \ \ \ \ \ \ this-\/>\_value.\_err\ =\ e;}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00054}00054\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00055}00055\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00056}\mbox{\hyperlink{classmtl_1_1result_a495e89363d52f22fc241efc63825100c}{00056}}\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result_a495e89363d52f22fc241efc63825100c}{result}}(\mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ \&\&e)}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00057}00057\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00058}00058\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00059}00059\ \ \ \ \ \ \ \ \ this-\/>\_value.\_err\ =\ move(e);}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00060}00060\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00061}00061\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00062}\mbox{\hyperlink{classmtl_1_1result_af8b6bbf4f6df6019658e4bece206a00c}{00062}}\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1result_af8b6bbf4f6df6019658e4bece206a00c}{is\_ok}}()\ const\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_ok;\ \}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00063}\mbox{\hyperlink{classmtl_1_1result_aa54b17c7ce7eafa2c3e7be2847816bd1}{00063}}\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1result_aa54b17c7ce7eafa2c3e7be2847816bd1}{is\_err}}()\ const\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ !(this-\/>\_ok);\ \}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00064}00064\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00065}\mbox{\hyperlink{classmtl_1_1result_a5fccf8151b98c3e1eb13e138191f2dda}{00065}}\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1result_a5fccf8151b98c3e1eb13e138191f2dda}{ok}}()\ -\/>\ \mbox{\hyperlink{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}{ok\_type}}\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_ok;\ \}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00066}\mbox{\hyperlink{classmtl_1_1result_a86723558f592c017c561adcc086373d1}{00066}}\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1result_a86723558f592c017c561adcc086373d1}{ok}}()\ const\ -\/>\ const\ \mbox{\hyperlink{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}{ok\_type}}\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_ok;\ \}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00067}00067\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00068}\mbox{\hyperlink{classmtl_1_1result_a1607f7130df4aac34c9f992d64676112}{00068}}\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1result_a1607f7130df4aac34c9f992d64676112}{err}}()\ -\/>\ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_err;\ \}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00069}\mbox{\hyperlink{classmtl_1_1result_a83a782888f5af1a3ea8a2976e5399214}{00069}}\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1result_a83a782888f5af1a3ea8a2976e5399214}{err}}()\ const\ -\/>\ const\ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_err;\ \}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00070}00070\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00071}00071\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00072}00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_ok\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00073}00073\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00074}00074\ \ \ \ \ \textcolor{keyword}{union}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00075}00075\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00076}\mbox{\hyperlink{classmtl_1_1result_a2ab00535530aea09192a8d80e1b7421b}{00076}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ \mbox{\hyperlink{classmtl_1_1result_a2ab00535530aea09192a8d80e1b7421b}{\_err}};}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00077}\mbox{\hyperlink{classmtl_1_1result_ab98963e740c07736d4a0e3933e1b0f2e}{00077}}\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}{ok\_type}}\ \mbox{\hyperlink{classmtl_1_1result_ab98963e740c07736d4a0e3933e1b0f2e}{\_ok}};}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00078}00078\ \ \ \ \ \}\ \_value;}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00079}00079\ \};}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00080}00080\ \}}
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00081}00081\ }
-\DoxyCodeLine{\Hypertarget{result_8h_source_l00082}00082\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_RESULT\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MTL\_RESULT\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utility_8h}{utility.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{type__traits_8h}{type\_traits.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }mtl}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ E>}
+\DoxyCodeLine{00022\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1err}{err}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ E\ \_value;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{structmtl_1_1err}{err}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{structmtl_1_1err}{err}}(E\&\&\ e)\ :\ \_value(e)\ \{\};}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ E>}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1result}{result}}}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{using\ }ok\_type\ \ =\ T;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ =\ \mbox{\hyperlink{structmtl_1_1err}{mtl::err<E>}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class\ }...Args>}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result}{result}}(Args\&\&...args)}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ (\&this-\/>\_value.\_ok)\ T(forward<Args>(args)...);}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result}{result}}(ok\_type\ \&\&val)}
+\DoxyCodeLine{00045\ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ this-\/>\_value.\_ok\ =\ move(val);}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result}{result}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ \&e)}
+\DoxyCodeLine{00051\ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ this-\/>\_value.\_err\ =\ e;}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result}{result}}(\mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ \&\&e)}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ this-\/>\_value.\_err\ =\ move(e);}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ is\_ok()\ \textcolor{keyword}{const}\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_ok;\ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ is\_err()\ \textcolor{keyword}{const}\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ !(this-\/>\_ok);\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ ok()\ -\/>\ ok\_type\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_ok;\ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ ok()\ \textcolor{keyword}{const}\ -\/>\ \textcolor{keyword}{const}\ ok\_type\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_ok;\ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{structmtl_1_1err}{err}}()\ -\/>\ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_err;\ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{structmtl_1_1err}{err}}()\ \textcolor{keyword}{const}\ -\/>\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_err;\ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_ok\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{union}}
+\DoxyCodeLine{00075\ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ \_err;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ ok\_type\ \_ok;}
+\DoxyCodeLine{00078\ \ \ \ \ \}\ \_value;}
+\DoxyCodeLine{00079\ \};}
+\DoxyCodeLine{00080\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

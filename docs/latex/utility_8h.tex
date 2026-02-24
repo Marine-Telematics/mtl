@@ -1,20 +1,31 @@
 \doxysection{include/mtl/utility.h File Reference}
 \hypertarget{utility_8h}{}\label{utility_8h}\index{include/mtl/utility.h@{include/mtl/utility.h}}
 {\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+Include dependency graph for utility.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{utility_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{utility_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{structmtl_1_1final__action}{mtl\+::final\+\_\+action$<$ Fn $>$}}
 \begin{DoxyCompactList}\small\item\em Runs a callable object at the end of the scope. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Namespaces}
-\begin{DoxyCompactItemize}
-\item 
-namespace \mbox{\hyperlink{namespacemtl}{mtl}}
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename Fn , typename Ret  = final\+\_\+action$<$\+Fn$>$$>$ }\\auto \mbox{\hyperlink{namespacemtl_a5e14ed377b76d2207590be48823fe80d}{mtl\+::defer}} (Fn \&\&f) -\/$>$ Ret
+{\footnotesize template$<$typename Fn , typename Ret  = final\+\_\+action$<$\+Fn$>$$>$ }\\auto \mbox{\hyperlink{utility_8h_a5e14ed377b76d2207590be48823fe80d}{mtl\+::defer}} (Fn \&\&f) -\/$>$ Ret
 \begin{DoxyCompactList}\small\item\em Runs a callable object at the end of the scope of the calle. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -30,5 +41,28 @@ Gabriel Novalski (\href{mailto:gabriel@marinetelematics.com.br}{\texttt{ gabriel
 \DoxyHorRuler{0}
  
 
-Definition in file \mbox{\hyperlink{utility_8h_source}{utility.\+h}}.
+\doxysubsection{Function Documentation}
+\Hypertarget{utility_8h_a5e14ed377b76d2207590be48823fe80d}\label{utility_8h_a5e14ed377b76d2207590be48823fe80d} 
+\index{utility.h@{utility.h}!defer@{defer}}
+\index{defer@{defer}!utility.h@{utility.h}}
+\doxysubsubsection{\texorpdfstring{defer()}{defer()}}
+{\footnotesize\ttfamily template$<$typename Fn , typename Ret  = final\+\_\+action$<$\+Fn$>$$>$ \\
+auto mtl\+::defer (\begin{DoxyParamCaption}\item[{Fn \&\&}]{f }\end{DoxyParamCaption}) -\/$>$ Ret }
 
+
+
+Runs a callable object at the end of the scope of the calle. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{static}\ mutex<int>\ \_mutex\_obj;}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ increment\_mutex\_val()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \_mutex\_obj.lock();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{auto}\ \_\ =\ \mbox{\hyperlink{utility_8h_a5e14ed377b76d2207590be48823fe80d}{mtl::defer}}([\&]\ \{\ \_mutex\_obj.unlock();\ \})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \_mutex\_obj.with\_lock([](\textcolor{keywordtype}{int}\ \&val)\ \{\ return\ ++val;\ \});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

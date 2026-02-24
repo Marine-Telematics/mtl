@@ -3,21 +3,24 @@
 {\ttfamily \#include $<$cstdint$>$}\newline
 {\ttfamily \#include $<$cstddef$>$}\newline
 {\ttfamily \#include "{}string\+\_\+view.\+h"{}}\newline
-\doxysubsubsection*{Namespaces}
-\begin{DoxyCompactItemize}
-\item 
-namespace \mbox{\hyperlink{namespacemtl}{mtl}}
-\item 
-namespace \mbox{\hyperlink{namespacemtl_1_1detail__fnv1a}{mtl\+::detail\+\_\+fnv1a}}
-\end{DoxyCompactItemize}
+Include dependency graph for hash.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{hash_8h__incl}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-{\footnotesize template$<$typename T , T Basis, T Prime$>$ }\\constexpr T \mbox{\hyperlink{namespacemtl_1_1detail__fnv1a_a2a2649573fbc471a827a2e6d4ab72705}{mtl\+::detail\+\_\+fnv1a\+::fnv1a}} (const \mbox{\hyperlink{namespacemtl_acb2e27d832622b8b104e130739e5519a}{mtl\+::string\+\_\+view}} s)
+{\footnotesize template$<$typename T , T Basis, T Prime$>$ }\\constexpr T \mbox{\hyperlink{hash_8h_a2a2649573fbc471a827a2e6d4ab72705}{mtl\+::detail\+\_\+fnv1a\+::fnv1a}} (const \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl\+::string\+\_\+view}} s)
 \begin{DoxyCompactList}\small\item\em Computes the FNV-\/1a hash of a string. \end{DoxyCompactList}\item 
-constexpr auto \mbox{\hyperlink{namespacemtl_ab77378575eeb38bd160e2a077504e688}{mtl\+::fnv1a\+\_\+32}} (const \mbox{\hyperlink{namespacemtl_acb2e27d832622b8b104e130739e5519a}{mtl\+::string\+\_\+view}} s) -\/$>$ uint32\+\_\+t
+\Hypertarget{hash_8h_ab77378575eeb38bd160e2a077504e688}\label{hash_8h_ab77378575eeb38bd160e2a077504e688} 
+constexpr auto {\bfseries mtl\+::fnv1a\+\_\+32} (const \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl\+::string\+\_\+view}} s) -\/$>$ uint32\+\_\+t
 \begin{DoxyCompactList}\small\item\em Computes the 32-\/bit FNV-\/1a hash of a string. \end{DoxyCompactList}\item 
-constexpr auto \mbox{\hyperlink{namespacemtl_a274176992794c10e24ddb0b36fc74237}{mtl\+::fnv1a\+\_\+64}} (const \mbox{\hyperlink{namespacemtl_acb2e27d832622b8b104e130739e5519a}{mtl\+::string\+\_\+view}} s) -\/$>$ uint64\+\_\+t
+\Hypertarget{hash_8h_a274176992794c10e24ddb0b36fc74237}\label{hash_8h_a274176992794c10e24ddb0b36fc74237} 
+constexpr auto {\bfseries mtl\+::fnv1a\+\_\+64} (const \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl\+::string\+\_\+view}} s) -\/$>$ uint64\+\_\+t
 \begin{DoxyCompactList}\small\item\em Computes the 64-\/bit FNV-\/1a hash of a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -35,5 +38,29 @@ FNV-\/1a hash function implementation. \href{https://en.wikipedia.org/wiki/Fowle
 \DoxyHorRuler{0}
  
 
-Definition in file \mbox{\hyperlink{hash_8h_source}{hash.\+h}}.
+\doxysubsection{Function Documentation}
+\Hypertarget{hash_8h_a2a2649573fbc471a827a2e6d4ab72705}\label{hash_8h_a2a2649573fbc471a827a2e6d4ab72705} 
+\index{hash.h@{hash.h}!fnv1a@{fnv1a}}
+\index{fnv1a@{fnv1a}!hash.h@{hash.h}}
+\doxysubsubsection{\texorpdfstring{fnv1a()}{fnv1a()}}
+{\footnotesize\ttfamily template$<$typename T , T Basis, T Prime$>$ \\
+constexpr T mtl\+::detail\+\_\+fnv1a\+::fnv1a (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{mtl\+::string\+\_\+view}}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
 
+
+
+Computes the FNV-\/1a hash of a string. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of the hash value (e.\+g., std\+::uint32\+\_\+t, std\+::uint64\+\_\+t). \\
+\hline
+{\em Basis} & The FNV offset basis. \\
+\hline
+{\em Prime} & The FNV prime.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The input string to hash. \\
+\hline
+\end{DoxyParams}

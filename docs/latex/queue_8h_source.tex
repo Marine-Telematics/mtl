@@ -2,63 +2,63 @@
 \hypertarget{queue_8h_source}{}\label{queue_8h_source}\index{include/mtl/queue.h@{include/mtl/queue.h}}
 \mbox{\hyperlink{queue_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_QUEUE\_H}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ MTL\_QUEUE\_H}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <cstddef>}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{option_8h}{option.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ringbuf_8h}{ringbuf.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00019}00019\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemtl}{mtl}}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00020}00020\ \{}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00021}\mbox{\hyperlink{classmtl_1_1queue}{00021}}\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keywordtype}{size\_t}\ LEN>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1queue}{queue}}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00022}00022\ \{}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00024}\mbox{\hyperlink{classmtl_1_1queue_aeb8f0e14fbc83a77f3449e14deebc863}{00024}}\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1ring__buffer}{storage\_type}}\ \ \ \ =\ \mbox{\hyperlink{classmtl_1_1ring__buffer}{ring\_buffer<T,\ LEN>}};}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00025}\mbox{\hyperlink{classmtl_1_1queue_a83487a3b717dfa74c6276b82f4b62ec5}{00025}}\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1queue_a83487a3b717dfa74c6276b82f4b62ec5}{reference}}\ \ \ \ \ \ \ =\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{classmtl_1_1ring__buffer_a7d824e902fab3936563db0d27aa40482}{storage\_type::reference}};}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00026}\mbox{\hyperlink{classmtl_1_1queue_abf1096ef09f0c28c079749f5fa3a6a8e}{00026}}\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1queue_abf1096ef09f0c28c079749f5fa3a6a8e}{const\_reference}}\ =\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{classmtl_1_1ring__buffer_aa9ec0e52a3f9fc5cd5c488ab2a18a1f6}{storage\_type::const\_reference}};}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00027}00027\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00028}\mbox{\hyperlink{classmtl_1_1queue_a3f419fead1f230e7e9e752eb18f54876}{00028}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1queue_a3f419fead1f230e7e9e752eb18f54876}{is\_empty}}()\ const\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_ringbuffer.\mbox{\hyperlink{classmtl_1_1ring__buffer_a7b94d959d58c5671389bbb2f4518f5a5}{get\_occupied}}()\ ==\ 0u;\ \}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00029}\mbox{\hyperlink{classmtl_1_1queue_a3abd7e5fd4c549cf1662590fb839f2c7}{00029}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1queue_a3abd7e5fd4c549cf1662590fb839f2c7}{is\_full}}()\ const\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_ringbuffer.\mbox{\hyperlink{classmtl_1_1ring__buffer_a65b40dd4d8e6c175f6a59b195a1db58f}{get\_free}}()\ ==\ 0u;\ \}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00030}00030\ }
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00031}\mbox{\hyperlink{classmtl_1_1queue_af94102cc53fe903d79dabe449c660e14}{00031}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1queue_af94102cc53fe903d79dabe449c660e14}{enqueue}}(\mbox{\hyperlink{classmtl_1_1queue_abf1096ef09f0c28c079749f5fa3a6a8e}{const\_reference}}\ data)\ -\/>\ \textcolor{keywordtype}{bool}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00032}00032\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\_ringbuffer.\mbox{\hyperlink{classmtl_1_1ring__buffer_a65b40dd4d8e6c175f6a59b195a1db58f}{get\_free}}()\ <\ 1u)}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00037}00037\ }
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\_ringbuffer.\mbox{\hyperlink{classmtl_1_1ring__buffer_a7e00b05f1ab035fa51c9fa487ae6483c}{write}}(\&data,\ 1u)\ ==\ 1u;}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00039}00039\ \ \ \ \ \};}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00041}\mbox{\hyperlink{classmtl_1_1queue_a5c3db5dbfad1a0ec362b0da91db47f1c}{00041}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1queue_a5c3db5dbfad1a0ec362b0da91db47f1c}{dequeue}}(\mbox{\hyperlink{classmtl_1_1queue_a83487a3b717dfa74c6276b82f4b62ec5}{reference}}\ data)\ -\/>\ \textcolor{keywordtype}{bool}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00042}00042\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\_ringbuffer.\mbox{\hyperlink{classmtl_1_1ring__buffer_a7b94d959d58c5671389bbb2f4518f5a5}{get\_occupied}}()\ <\ 1u)}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00047}00047\ }
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\_ringbuffer.\mbox{\hyperlink{classmtl_1_1ring__buffer_a5d6aad9ad3373a58621643859cc833b9}{read}}(\&data,\ 1u)\ ==\ 1u;}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00049}00049\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00050}00050\ }
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00051}\mbox{\hyperlink{classmtl_1_1queue_a72914937f7eb9a9a25c72b6fe0cfe62b}{00051}}\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1queue_a72914937f7eb9a9a25c72b6fe0cfe62b}{dequeue}}()\ -\/>\ \mbox{\hyperlink{classmtl_1_1option}{option<T>}}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00052}00052\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (T\ val;\ this-\/>\mbox{\hyperlink{classmtl_1_1queue_a72914937f7eb9a9a25c72b6fe0cfe62b}{dequeue}}(val))}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00054}00054\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ move(val);}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00057}00057\ }
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ none;}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00059}00059\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00060}00060\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00061}00061\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00062}00062\ \ \ \ \ \mbox{\hyperlink{classmtl_1_1queue_aeb8f0e14fbc83a77f3449e14deebc863}{storage\_type}}\ \_ringbuffer;}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00063}00063\ \};}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00064}00064\ \}}
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00065}00065\ }
-\DoxyCodeLine{\Hypertarget{queue_8h_source_l00066}00066\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_QUEUE\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MTL\_QUEUE\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{option_8h}{option.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ringbuf_8h}{ringbuf.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }mtl}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keywordtype}{size\_t}\ LEN>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1queue}{queue}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1ring__buffer}{storage\_type}}\ \ \ \ =\ \mbox{\hyperlink{classmtl_1_1ring__buffer}{ring\_buffer<T,\ LEN>}};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{using\ }reference\ \ \ \ \ \ \ =\ \textcolor{keyword}{typename}\ storage\_type::reference;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{using\ }const\_reference\ =\ \textcolor{keyword}{typename}\ storage\_type::const\_reference;}
+\DoxyCodeLine{00027\ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{auto}\ is\_empty()\ \textcolor{keyword}{const}\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_ringbuffer.get\_occupied()\ ==\ 0u;\ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{auto}\ is\_full()\ \textcolor{keyword}{const}\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_ringbuffer.get\_free()\ ==\ 0u;\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{auto}\ enqueue(const\_reference\ data)\ -\/>\ \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\_ringbuffer.get\_free()\ <\ 1u)}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\_ringbuffer.write(\&data,\ 1u)\ ==\ 1u;}
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{auto}\ dequeue(reference\ data)\ -\/>\ \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{00042\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\_ringbuffer.get\_occupied()\ <\ 1u)}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\_ringbuffer.read(\&data,\ 1u)\ ==\ 1u;}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{auto}\ dequeue()\ -\/>\ \mbox{\hyperlink{classmtl_1_1option}{option<T>}}}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (T\ val;\ this-\/>dequeue(val))}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ move(val);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ none;}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{classmtl_1_1ring__buffer}{storage\_type}}\ \_ringbuffer;}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

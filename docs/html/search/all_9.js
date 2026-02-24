@@ -1,8 +1,15 @@
 var searchData=
 [
-  ['has_5fconst_5fiterator_0',['has_const_iterator',['../classmtl_1_1has__const__iterator.html',1,'mtl']]],
-  ['has_5fconst_5fiterator_5fv_1',['has_const_iterator_v',['../namespacemtl.html#a9b28e165eb5f839901d7bd9441750cf7',1,'mtl']]],
-  ['hash_2eh_2',['hash.h',['../hash_8h.html',1,'']]],
-  ['high_3',['high',['../classmtl_1_1logic__level.html#a429656f88906da77352d54cc5275b7baa06ed88a6bed23ab752481dfb910f163f',1,'mtl::logic_level::high'],['../namespacemtl_1_1i2c.html#a3867a492653b0e3129f2d2d1479370d7a8d966b2253a917086c8604959e152243',1,'mtl::i2c::high']]],
-  ['however_20attenuation_20slope_20is_20n_2020db_20dec_20where_20n_20is_20the_20filter_20order_4',['However, attenuation slope is n * (-20dB/dec), where n is the filter order.',['../butterworth__lpf_8h.html#autotoc_md9',1,'']]]
+  ['largest_2eh_0',['largest.h',['../largest_8h.html',1,'']]],
+  ['largest_5falignment_1',['largest_alignment',['../structmtl_1_1largest__alignment.html',1,'mtl']]],
+  ['largest_5falignment_3c_20t1_20_3e_2',['largest_alignment&lt; T1 &gt;',['../structmtl_1_1largest__alignment_3_01T1_01_4.html',1,'mtl']]],
+  ['largest_5ftype_3',['largest_type',['../structmtl_1_1largest__type.html',1,'mtl']]],
+  ['largest_5ftype_3c_20t1_20_3e_4',['largest_type&lt; T1 &gt;',['../structmtl_1_1largest__type_3_01T1_01_4.html',1,'mtl']]],
+  ['library_20c_202025_20marine_20telematics_5',['library c 2025 marine telematics',['../utility_8h.html#autotoc_md42',1,'MarineTelematics Template Library - (c) 2025 Marine Telematics'],['../type__traits_8h.html#autotoc_md40',1,'MarineTelematics Template Library - (c) 2025 Marine Telematics'],['../static__list_8h.html#autotoc_md36',1,'MarineTelematics Template Library - (c) 2025 Marine Telematics'],['../singleton_8h.html#autotoc_md34',1,'MarineTelematics Template Library - (c) 2025 Marine Telematics'],['../ringbuf_8h.html#autotoc_md32',1,'MarineTelematics Template Library - (c) 2025 Marine Telematics'],['../result_8h.html#autotoc_md30',1,'MarineTelematics Template Library - (c) 2025 Marine Telematics'],['../queue_8h.html#autotoc_md28',1,'MarineTelematics Template Library - (c) 2025 Marine Telematics'],['../option_8h.html#autotoc_md24',1,'MarineTelematics Template Library - (c) 2025 Marine Telematics'],['../math__constants_8h.html#autotoc_md22',1,'MarineTelematics Template Library - (c) 2025 Marine Telematics'],['../ll_8h.html#autotoc_md20',1,'MarineTelematics Template Library - (c) 2025 Marine Telematics'],['../hash_8h.html#autotoc_md12',1,'MarineTelematics Template Library - (c) 2025 Marine Telematics'],['../bitset_8h.html#autotoc_md4',1,'MarineTelematics Template Library - (c) 2025 Marine Telematics'],['../algorithm_8h.html#autotoc_md0',1,'MarineTelematics Template Library - (c) 2025 Marine Telematics']]],
+  ['library_20c_202026_20marine_20telematics_6',['library c 2026 marine telematics',['../largest_8h.html#autotoc_md18',1,'MarineTelematics Template Library - (c) 2026 Marine Telematics'],['..//home/runner/work/mtl/mtl/include/mtl/periph/fm24cl64b.h#autotoc_md26',1,'MarineTelematics Template Library - (c) 2026 Marine Telematics'],['../bus_8h.html#autotoc_md6',1,'MarineTelematics Template Library - (c) 2026 Marine Telematics'],['../aligned__storage_8h.html#autotoc_md2',1,'MarineTelematics Template Library - (c) 2026 Marine Telematics'],['../string__view_8h.html#autotoc_md38',1,'MarineTelematics Template Library - (c) 2026 Marine Telematics']]],
+  ['library_20interface_20c_202025_20marine_20telematics_7',['MarineTelematics Template Library (Interface) - (c) 2025 Marine Telematics',['../can_8h.html#autotoc_md14',1,'']]],
+  ['library_20interface_20c_202026_20marine_20telematics_8',['MarineTelematics Template Library (Interface) - (c) 2026 Marine Telematics',['../i2c_8h.html#autotoc_md16',1,'']]],
+  ['ll_2eh_9',['ll.h',['../ll_8h.html',1,'']]],
+  ['logic_5flevel_10',['logic_level',['../classmtl_1_1logic__level.html',1,'mtl']]],
+  ['low_20pass_20filter_20c_202025_20marine_20telematics_11',['Butterworth Low Pass Filter - (c) 2025 marine telematics',['../butterworth__lpf_8h.html#autotoc_md8',1,'']]]
 ];

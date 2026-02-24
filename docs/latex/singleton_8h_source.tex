@@ -2,56 +2,56 @@
 \hypertarget{singleton_8h_source}{}\label{singleton_8h_source}\index{include/mtl/singleton.h@{include/mtl/singleton.h}}
 \mbox{\hyperlink{singleton_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00001}00001\ }
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00010}00010\ }
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_SINGLETON\_H}}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ MTL\_SINGLETON\_H}}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <new>}}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <utility>}}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{aligned__storage_8h}{aligned\_storage.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00019}00019\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemtl}{mtl}}}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00020}00020\ \{}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00021}\mbox{\hyperlink{classmtl_1_1singleton}{00021}}\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1singleton}{singleton}}}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00022}00022\ \{}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00024}\mbox{\hyperlink{classmtl_1_1singleton_a6b92106d83078401fd23653bbed53dfd}{00024}}\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1singleton_a6b92106d83078401fd23653bbed53dfd}{value\_t}}\ \ \ =\ T;}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00025}\mbox{\hyperlink{classmtl_1_1singleton_a9fb47b87bdf1fedb71e67646d876c5b7}{00025}}\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1singleton_a9fb47b87bdf1fedb71e67646d876c5b7}{reference}}\ =\ T\&;}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00026}\mbox{\hyperlink{classmtl_1_1singleton_a33a12b9d0c07af54ca35f0b3a21ecaec}{00026}}\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{classmtl_1_1singleton_a33a12b9d0c07af54ca35f0b3a21ecaec}{pointer}}\ \ \ =\ T*;}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00028}00028\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}...\ Args>}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00029}\mbox{\hyperlink{classmtl_1_1singleton_a5660ae8a5ca83a232d0bb60d2702f50c}{00029}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1singleton_a5660ae8a5ca83a232d0bb60d2702f50c}{create}}(Args\&\&...\ args)\ -\/>\ \mbox{\hyperlink{classmtl_1_1singleton_a9fb47b87bdf1fedb71e67646d876c5b7}{reference}}}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00030}00030\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!constructed)}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ (buffer.\mbox{\hyperlink{classmtl_1_1aligned__storage_ae70e59c5ff42f7613784994320b8b8ed}{data}}())\ \mbox{\hyperlink{classmtl_1_1singleton_a6b92106d83078401fd23653bbed53dfd}{value\_t}}(std::forward<Args>(args)...);}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ constructed\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00035}00035\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00036}00036\ }
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmtl_1_1singleton_a3ca62b643705f8981dd5f2e1eb047b31}{instance}}();}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00038}00038\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00039}00039\ }
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00040}\mbox{\hyperlink{classmtl_1_1singleton_a3ca62b643705f8981dd5f2e1eb047b31}{00040}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1singleton_a3ca62b643705f8981dd5f2e1eb047b31}{instance}}()\ -\/>\ \mbox{\hyperlink{classmtl_1_1singleton_a9fb47b87bdf1fedb71e67646d876c5b7}{reference}}\ \{\ \textcolor{keywordflow}{return}\ *(buffer.\mbox{\hyperlink{classmtl_1_1aligned__storage_ae70e59c5ff42f7613784994320b8b8ed}{data}}());\ \}}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00041}00041\ }
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00042}\mbox{\hyperlink{classmtl_1_1singleton_af4fd173eeabacefb5e606a39a241b84b}{00042}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmtl_1_1singleton_af4fd173eeabacefb5e606a39a241b84b}{destroy}}()}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00043}00043\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (constructed)}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmtl_1_1singleton_a3ca62b643705f8981dd5f2e1eb047b31}{instance}}().\string~value\_t();}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ constructed\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00049}00049\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00050}00050\ }
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00051}\mbox{\hyperlink{classmtl_1_1singleton_a80a257c665cdddbe04a6ca67899c93f8}{00051}}\ \ \ \ \ \mbox{\hyperlink{classmtl_1_1singleton_a80a257c665cdddbe04a6ca67899c93f8}{singleton}}()\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00053}00053\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00054}00054\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classmtl_1_1aligned__storage}{aligned\_storage<value\_t>}}\ buffer\{\};}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00055}00055\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ constructed;}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00056}00056\ \};}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00057}00057\ \}}
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{singleton_8h_source_l00059}00059\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_SINGLETON\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MTL\_SINGLETON\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <new>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{aligned__storage_8h}{aligned\_storage.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }mtl}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1singleton}{singleton}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{using\ }value\_t\ \ \ =\ T;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{using\ }reference\ =\ T\&;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{using\ }pointer\ \ \ =\ T*;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{auto}\ create(Args\&\&...\ args)\ -\/>\ reference}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!constructed)}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ (buffer.data())\ value\_t(std::forward<Args>(args)...);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ constructed\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance();}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{auto}\ instance()\ -\/>\ reference\ \{\ \textcolor{keywordflow}{return}\ *(buffer.data());\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ destroy()}
+\DoxyCodeLine{00043\ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (constructed)}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ instance().\string~value\_t();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ constructed\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{classmtl_1_1singleton}{singleton}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{classmtl_1_1aligned__storage}{aligned\_storage<value\_t>}}\ buffer\{\};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ constructed;}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}
