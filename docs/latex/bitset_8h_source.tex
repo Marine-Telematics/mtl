@@ -17,9 +17,9 @@
 \DoxyCodeLine{00021\ \{}
 \DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{using\ }value\_type\ =}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ conditional\_t<N\ <=\ 8u,\ \ uint8\_t,}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ conditional\_t<N\ <=\ 16u,\ uint16\_t,}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ conditional\_t<N\ <=\ 32u,\ uint32\_t,}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::conditional\_t<N\ <=\ 8u,\ \ uint8\_t,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::conditional\_t<N\ <=\ 16u,\ uint16\_t,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::conditional\_t<N\ <=\ 32u,\ uint32\_t,}
 \DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint64\_t>>>;;}
 \DoxyCodeLine{00028\ }
 \DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static\_assert}(N\ >\ 0,\ \ \ \textcolor{stringliteral}{"{}bitset<N>:\ N\ must\ be\ >\ 0"{}});}
