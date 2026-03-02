@@ -57,20 +57,20 @@
 \DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_extended\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{00062\ }
 \DoxyCodeLine{00063\ \ \ \ \ size\_type\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_dlc\ =\ 0u;}
-\DoxyCodeLine{00064\ \ \ \ \ array<data\_type,\ max\_dlc>\ \_data\{\};}
+\DoxyCodeLine{00064\ \ \ \ \ std::array<data\_type,\ max\_dlc>\ \_data\{\};}
 \DoxyCodeLine{00065\ }
 \DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{structmtl_1_1can_1_1message}{message}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{00067\ }
 \DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{structmtl_1_1can_1_1message}{message}}(\textcolor{keyword}{const}\ id\_type\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ ext,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ len,\ \textcolor{keyword}{const}\ data\_type\ *payload)}
 \DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ :\ \_identifier(\textcolor{keywordtype}{id}),\ \_extended(ext),\ \_dlc(len)}
 \DoxyCodeLine{00070\ \ \ \ \ \{}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ std::copy\_n(payload,\ len,\ this-\/>\_data.data());}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ len;\ ++i)\ \{\ this-\/>\_data[i]\ =\ payload[i];\ \}}
 \DoxyCodeLine{00072\ \ \ \ \ \}}
 \DoxyCodeLine{00073\ }
 \DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{structmtl_1_1can_1_1message}{message}}(\textcolor{keyword}{const}\ id\_type\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ ext,\ \textcolor{keyword}{const}\ std::span<const\ data\_type>\ payload)}
 \DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ :\ \_identifier(\textcolor{keywordtype}{id}),\ \_extended(ext),\ \_dlc(payload.size())}
 \DoxyCodeLine{00076\ \ \ \ \ \{}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ std::ranges::copy(payload,\ this-\/>\_data);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ payload.size();\ ++i)\ \{\ this-\/>\_data[i]\ =\ payload[i];\ \}}
 \DoxyCodeLine{00078\ \ \ \ \ \}}
 \DoxyCodeLine{00079\ \};}
 \DoxyCodeLine{00080\ \};\ \textcolor{comment}{//\ namespace\ trait::can}}
