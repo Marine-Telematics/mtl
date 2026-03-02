@@ -21,9 +21,9 @@ template<size_t N = 0u> class bitset
 {
     public:
     using value_type =
-        conditional_t<N <= 8u,  uint8_t,
-        conditional_t<N <= 16u, uint16_t,
-        conditional_t<N <= 32u, uint32_t,
+        std::conditional_t<N <= 8u,  uint8_t,
+        std::conditional_t<N <= 16u, uint16_t,
+        std::conditional_t<N <= 32u, uint32_t,
                                 uint64_t>>>;;
 
     static_assert(N > 0,   "bitset<N>: N must be > 0");
