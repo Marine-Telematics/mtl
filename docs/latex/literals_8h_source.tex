@@ -1,0 +1,78 @@
+\doxysection{literals.\+h}
+\hypertarget{literals_8h_source}{}\label{literals_8h_source}\index{include/mtl/literals.h@{include/mtl/literals.h}}
+\mbox{\hyperlink{literals_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_LITERALS\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MTL\_LITERALS\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }mtl::time\_literals}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }private\_time\_literals}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1time__literals_1_1private__time__literals_1_1base}{base}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ uint32\_t\ \_val;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{operator}\ uint32\_t()\ \{\ \textcolor{keywordflow}{return}\ \_val;\ \}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1private__time__literals_1_1base}{base}}(uint32\_t\ v)\ :\ \_val(v)\ \{\}}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1time__literals_1_1hz}{hz}};}
+\DoxyCodeLine{00031\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1time__literals_1_1ms}{ms}};}
+\DoxyCodeLine{00032\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1time__literals_1_1s}{s}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1time__literals_1_1hz}{hz}}\ :\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1private__time__literals_1_1base}{private\_time\_literals::base}}}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{operator}\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1ms}{ms}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{operator}\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1s}{s}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{using\ }private\_time\_literals::base::base;}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1time__literals_1_1ms}{ms}}\ :\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1private__time__literals_1_1base}{private\_time\_literals::base}}}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{operator}\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1hz}{hz}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{operator}\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1s}{s}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{using\ }private\_time\_literals::base::base;}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1time__literals_1_1s}{s}}\ :\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1private__time__literals_1_1base}{private\_time\_literals::base}}}
+\DoxyCodeLine{00049\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{operator}\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1hz}{hz}}();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{operator}\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1ms}{ms}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{using\ }private\_time\_literals::base::base;}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{constexpr}\ hz::operator\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1ms}{ms}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1ms}{ms}}(1000u\ /\ this-\/>\_val);\ \}}
+\DoxyCodeLine{00056\ \textcolor{keyword}{constexpr}\ hz::operator\ s()\ \{\ \textcolor{keywordflow}{return}\ ms(1u\ /\ this-\/>\_val);\ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{constexpr}\ ms::operator\ hz()\ \{\ \textcolor{keywordflow}{return}\ hz(1000u\ /\ this-\/>\_val);\ \}}
+\DoxyCodeLine{00059\ \textcolor{keyword}{constexpr}\ ms::operator\ s()\ \{\ \textcolor{keywordflow}{return}\ s(this-\/>\_val\ /\ 1000u);\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{constexpr}\ s::operator\ hz()\ \{\ \textcolor{keywordflow}{return}\ hz(1u\ /\ this-\/>\_val);\ \}}
+\DoxyCodeLine{00062\ \textcolor{keyword}{constexpr}\ s::operator\ ms()\ \{\ \textcolor{keywordflow}{return}\ ms(this-\/>\_val\ *\ 1000u);\ \}}
+\DoxyCodeLine{00063\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1hz}{mtl::time\_literals::hz}}\ \textcolor{keyword}{operator}\textcolor{stringliteral}{"{}"{}}\ \_hz(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ v)}
+\DoxyCodeLine{00066\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1hz}{mtl::time\_literals::hz}}(\textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(v));}
+\DoxyCodeLine{00068\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1ms}{mtl::time\_literals::ms}}\ \textcolor{keyword}{operator}\textcolor{stringliteral}{"{}"{}}\ \_ms(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ v)}
+\DoxyCodeLine{00071\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1ms}{mtl::time\_literals::ms}}(\textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(v));}
+\DoxyCodeLine{00073\ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1s}{mtl::time\_literals::s}}\ \textcolor{keyword}{operator}\textcolor{stringliteral}{"{}"{}}\ \_s(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ v)}
+\DoxyCodeLine{00076\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{structmtl_1_1time__literals_1_1s}{mtl::time\_literals::s}}(\textcolor{keyword}{static\_cast<}uint32\_t\textcolor{keyword}{>}(v));}
+\DoxyCodeLine{00078\ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

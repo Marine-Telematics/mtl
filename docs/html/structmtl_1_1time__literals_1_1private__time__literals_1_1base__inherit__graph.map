@@ -1,0 +1,9 @@
+<map id="mtl::time_literals::private_time_literals::base" name="mtl::time_literals::private_time_literals::base">
+<area shape="rect" id="Node000001" title=" " alt="" coords="166,5,370,45"/>
+<area shape="rect" id="Node000002" href="$structmtl_1_1time__literals_1_1hz.html" title=" " alt="" coords="5,93,163,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,53,112,96,110,91,211,48"/>
+<area shape="rect" id="Node000003" href="$structmtl_1_1time__literals_1_1ms.html" title=" " alt="" coords="187,93,349,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="271,59,271,93,265,93,265,59"/>
+<area shape="rect" id="Node000004" href="$structmtl_1_1time__literals_1_1s.html" title=" " alt="" coords="373,93,523,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="325,48,422,91,420,96,323,53"/>
+</map>
