@@ -53,8 +53,8 @@
 \DoxyCodeLine{00060\ }
 \DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ buffer[0]\ =\ (addr\ >>\ 8u)\ \&\ 0xffu;}
 \DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ buffer[1]\ =\ addr\ \&\ 0xffu;}
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ std::copy\_n(\&obj,\ \textcolor{keyword}{sizeof}(T),\ buffer.data()\ +\ \textcolor{keyword}{sizeof}(address));}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ std::memcpy(buffer.data()\ +\ \textcolor{keyword}{sizeof}(address),\ \&obj,\ \textcolor{keyword}{sizeof}(T));}
 \DoxyCodeLine{00065\ }
 \DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sender(this-\/>\_i2c\_addr,\ buffer.data(),\ buffer.size());}
 \DoxyCodeLine{00067\ \ \ \ \ \}}
