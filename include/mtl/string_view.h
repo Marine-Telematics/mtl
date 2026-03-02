@@ -11,6 +11,8 @@
 #ifndef MTL_STRING_VIEW_H
 #define MTL_STRING_VIEW_H
 
+#include <cstddef>
+
 namespace mtl
 {
 namespace detail_string_view
