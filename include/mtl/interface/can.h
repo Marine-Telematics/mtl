@@ -61,20 +61,20 @@ struct message
     bool _extended = true;
 
     size_type                 _dlc = 0u;
-    array<data_type, max_dlc> _data{};
+    std::array<data_type, max_dlc> _data{};
 
     message() = default;
 
     message(const id_type id, const bool ext, const size_t len, const data_type *payload)
         : _identifier(id), _extended(ext), _dlc(len)
     {
-        std::copy_n(payload, len, this->_data.data());
+        for(size_t i = 0; i < len; ++i) { this->_data[i] = payload[i]; }
     }
 
     message(const id_type id, const bool ext, const std::span<const data_type> payload)
         : _identifier(id), _extended(ext), _dlc(payload.size())
     {
-        std::ranges::copy(payload, this->_data);
+        for(size_t i = 0; i < payload.size(); ++i) { this->_data[i] = payload[i]; }
     }
 };
 }; // namespace trait::can
