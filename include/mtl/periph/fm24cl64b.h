@@ -60,8 +60,8 @@ class fm24cl64b_impl : public fm24cl64b
 
         buffer[0] = (addr >> 8u) & 0xffu;
         buffer[1] = addr & 0xffu;
-
-        std::copy_n(&obj, sizeof(T), buffer.data() + sizeof(address));
+        
+        std::memcpy(buffer.data() + sizeof(address), &obj, sizeof(T));
 
         return sender(this->_i2c_addr, buffer.data(), buffer.size());
     }
