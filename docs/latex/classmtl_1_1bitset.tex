@@ -1,0 +1,33 @@
+\doxysection{mtl\+::bitset\texorpdfstring{$<$}{<} N \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmtl_1_1bitset}{}\label{classmtl_1_1bitset}\index{mtl::bitset$<$ N $>$@{mtl::bitset$<$ N $>$}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmtl_1_1bitset_1_1bit__ref}{bit\+\_\+ref}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmtl_1_1bitset_a8efbbcfdae623004efb68c190c376792}\label{classmtl_1_1bitset_a8efbbcfdae623004efb68c190c376792} 
+using {\bfseries value\+\_\+type} = conditional\+\_\+t$<$ N$<$=8u, uint8\+\_\+t, conditional\+\_\+t$<$ N$<$=16u, uint16\+\_\+t, conditional\+\_\+t$<$ N$<$=32u, uint32\+\_\+t, uint64\+\_\+t $>$ $>$ $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmtl_1_1bitset_a474b956221eb46e35231a0170184f631}\label{classmtl_1_1bitset_a474b956221eb46e35231a0170184f631} 
+constexpr {\bfseries bitset} (const char \texorpdfstring{$\ast$}{*}bitstring)
+\item 
+\Hypertarget{classmtl_1_1bitset_aafa7efd0520c87d529006cdb5f941b2d}\label{classmtl_1_1bitset_aafa7efd0520c87d529006cdb5f941b2d} 
+constexpr auto {\bfseries value} () const -\/$>$ value\+\_\+type
+\begin{DoxyCompactList}\small\item\em Gets the equivalent numbers of this bitset. \end{DoxyCompactList}\item 
+\Hypertarget{classmtl_1_1bitset_aad5245b2bf25db294d2bed6c612096f7}\label{classmtl_1_1bitset_aad5245b2bf25db294d2bed6c612096f7} 
+constexpr auto {\bfseries operator\mbox{[}$\,$\mbox{]}} (const size\+\_\+t i) -\/$>$ \mbox{\hyperlink{structmtl_1_1bitset_1_1bit__ref}{bit\+\_\+ref}}
+\begin{DoxyCompactList}\small\item\em bit level proxy access, for assign operator. \end{DoxyCompactList}\item 
+\Hypertarget{classmtl_1_1bitset_a7c95b0cdf5690ef847f0cabe4d98d651}\label{classmtl_1_1bitset_a7c95b0cdf5690ef847f0cabe4d98d651} 
+constexpr auto {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t i) const -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Gets the value of a single bit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mtl/\mbox{\hyperlink{bitset_8h}{bitset.\+h}}\end{DoxyCompactItemize}

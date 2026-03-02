@@ -1,0 +1,40 @@
+\doxysection{mtl\+::ring\+\_\+buffer\texorpdfstring{$<$}{<} T, SIZE \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmtl_1_1ring__buffer}{}\label{classmtl_1_1ring__buffer}\index{mtl::ring\_buffer$<$ T, SIZE $>$@{mtl::ring\_buffer$<$ T, SIZE $>$}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461}\label{classmtl_1_1ring__buffer_a857e1d4b7e46219cca5331212491d461} 
+using {\bfseries size\+\_\+type} = size\+\_\+t
+\item 
+\Hypertarget{classmtl_1_1ring__buffer_a7d824e902fab3936563db0d27aa40482}\label{classmtl_1_1ring__buffer_a7d824e902fab3936563db0d27aa40482} 
+using {\bfseries reference} = T \&
+\item 
+\Hypertarget{classmtl_1_1ring__buffer_aa9ec0e52a3f9fc5cd5c488ab2a18a1f6}\label{classmtl_1_1ring__buffer_aa9ec0e52a3f9fc5cd5c488ab2a18a1f6} 
+using {\bfseries const\+\_\+reference} = const T \&
+\item 
+\Hypertarget{classmtl_1_1ring__buffer_ab37901ae18ffb8eae9ebc51cc8d946c9}\label{classmtl_1_1ring__buffer_ab37901ae18ffb8eae9ebc51cc8d946c9} 
+using {\bfseries iterator} = T \texorpdfstring{$\ast$}{*}
+\item 
+\Hypertarget{classmtl_1_1ring__buffer_a9f3720fd1a6429d34099671dbcb09008}\label{classmtl_1_1ring__buffer_a9f3720fd1a6429d34099671dbcb09008} 
+using {\bfseries const\+\_\+iterator} = const T \texorpdfstring{$\ast$}{*}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmtl_1_1ring__buffer_a7e00b05f1ab035fa51c9fa487ae6483c}\label{classmtl_1_1ring__buffer_a7e00b05f1ab035fa51c9fa487ae6483c} 
+auto {\bfseries write} (const\+\_\+iterator data, size\+\_\+type n) -\/$>$ size\+\_\+type
+\item 
+\Hypertarget{classmtl_1_1ring__buffer_a5d6aad9ad3373a58621643859cc833b9}\label{classmtl_1_1ring__buffer_a5d6aad9ad3373a58621643859cc833b9} 
+auto {\bfseries read} (iterator dest, size\+\_\+type n) -\/$>$ size\+\_\+type
+\item 
+\Hypertarget{classmtl_1_1ring__buffer_a7b94d959d58c5671389bbb2f4518f5a5}\label{classmtl_1_1ring__buffer_a7b94d959d58c5671389bbb2f4518f5a5} 
+auto {\bfseries get\+\_\+occupied} () const -\/$>$ size\+\_\+type
+\item 
+\Hypertarget{classmtl_1_1ring__buffer_a65b40dd4d8e6c175f6a59b195a1db58f}\label{classmtl_1_1ring__buffer_a65b40dd4d8e6c175f6a59b195a1db58f} 
+auto {\bfseries get\+\_\+free} () const -\/$>$ size\+\_\+type
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mtl/\mbox{\hyperlink{ringbuf_8h}{ringbuf.\+h}}\end{DoxyCompactItemize}

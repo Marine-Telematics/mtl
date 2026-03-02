@@ -1,0 +1,260 @@
+\doxysection{mtl Namespace Reference}
+\hypertarget{namespacemtl}{}\label{namespacemtl}\index{mtl@{mtl}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacemtl_1_1bus}{bus}}
+\item 
+namespace \mbox{\hyperlink{namespacemtl_1_1can}{can}}
+\item 
+namespace \mbox{\hyperlink{namespacemtl_1_1detail__fnv1a}{detail\+\_\+fnv1a}}
+\item 
+namespace \mbox{\hyperlink{namespacemtl_1_1detail__string__view}{detail\+\_\+string\+\_\+view}}
+\item 
+namespace \mbox{\hyperlink{namespacemtl_1_1filter}{filter}}
+\item 
+namespace \mbox{\hyperlink{namespacemtl_1_1i2c}{i2c}}
+\item 
+namespace \mbox{\hyperlink{namespacemtl_1_1static__list__detail}{static\+\_\+list\+\_\+detail}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmtl_1_1aligned__storage}{aligned\+\_\+storage}}
+\begin{DoxyCompactList}\small\item\em Creates a buffer of type {\ttfamily B} using the size and alignment of {\ttfamily T}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmtl_1_1alignment__of}{alignment\+\_\+of}}
+\item 
+class \mbox{\hyperlink{classmtl_1_1bitset}{bitset}}
+\item 
+struct \mbox{\hyperlink{structmtl_1_1err}{err}}
+\item 
+struct \mbox{\hyperlink{structmtl_1_1final__action}{final\+\_\+action}}
+\begin{DoxyCompactList}\small\item\em Runs a callable object at the end of the scope. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmtl_1_1fm24cl64b}{fm24cl64b}}
+\item 
+class \mbox{\hyperlink{classmtl_1_1fm24cl64b__impl}{fm24cl64b\+\_\+impl}}
+\item 
+class \mbox{\hyperlink{classmtl_1_1has__const__iterator}{has\+\_\+const\+\_\+iterator}}
+\item 
+struct \mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\+\_\+alignment}}
+\item 
+struct \mbox{\hyperlink{structmtl_1_1largest__alignment_3_01T1_01_4}{largest\+\_\+alignment$<$ T1 $>$}}
+\item 
+struct \mbox{\hyperlink{structmtl_1_1largest__type}{largest\+\_\+type}}
+\item 
+struct \mbox{\hyperlink{structmtl_1_1largest__type_3_01T1_01_4}{largest\+\_\+type$<$ T1 $>$}}
+\item 
+class \mbox{\hyperlink{classmtl_1_1logic__level}{logic\+\_\+level}}
+\item 
+struct \mbox{\hyperlink{structmtl_1_1math__constants}{math\+\_\+constants}}
+\item 
+class \mbox{\hyperlink{classmtl_1_1option}{option}}
+\item 
+class \mbox{\hyperlink{classmtl_1_1queue}{queue}}
+\item 
+class \mbox{\hyperlink{classmtl_1_1result}{result}}
+\item 
+class \mbox{\hyperlink{classmtl_1_1ring__buffer}{ring\+\_\+buffer}}
+\item 
+class \mbox{\hyperlink{classmtl_1_1singleton}{singleton}}
+\item 
+class \mbox{\hyperlink{classmtl_1_1static__list}{static\+\_\+list}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T1 , typename ... TRest$>$ }\\using \mbox{\hyperlink{namespacemtl_a8b8c69ad2b25261f4c33a2ef8784ab99}{largest\+\_\+type\+\_\+t}} = typename \mbox{\hyperlink{structmtl_1_1largest__type}{largest\+\_\+type}}$<$ T1, TRest... $>$\+::type
+\item 
+using \mbox{\hyperlink{namespacemtl_acb2e27d832622b8b104e130739e5519a}{string\+\_\+view}} = \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view}}$<$ const char $>$
+\item 
+using \mbox{\hyperlink{namespacemtl_a5e85f9c2a59f47dec3298153cd620e0b}{mutable\+\_\+string\+\_\+view}} = \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view}}$<$ char $>$
+\item 
+{\footnotesize template$<$typename T $>$ }\\using \mbox{\hyperlink{namespacemtl_a9b28e165eb5f839901d7bd9441750cf7}{has\+\_\+const\+\_\+iterator\+\_\+v}} = typename \mbox{\hyperlink{classmtl_1_1has__const__iterator}{has\+\_\+const\+\_\+iterator}}$<$ T $>$\+::value
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename... Opts$>$ }\\constexpr auto \mbox{\hyperlink{namespacemtl_a3e68bb435f1c78c81b2cd03dab8f5fa5}{oneof}} (T \&\&val, Opts \&\&...opts) -\/$>$ bool
+\begin{DoxyCompactList}\small\item\em Checks if {\ttfamily val} is the same value as one of many {\ttfamily opts}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr bool \mbox{\hyperlink{namespacemtl_ad10c339e6ae595a7c2ad7f08e4bb62a1}{in\+\_\+range}} (const T value, const T desired, const T diff)
+\item 
+constexpr auto \mbox{\hyperlink{namespacemtl_ab77378575eeb38bd160e2a077504e688}{fnv1a\+\_\+32}} (const \mbox{\hyperlink{namespacemtl_acb2e27d832622b8b104e130739e5519a}{mtl\+::string\+\_\+view}} s) -\/$>$ uint32\+\_\+t
+\begin{DoxyCompactList}\small\item\em Computes the 32-\/bit FNV-\/1a hash of a string. \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{namespacemtl_a274176992794c10e24ddb0b36fc74237}{fnv1a\+\_\+64}} (const \mbox{\hyperlink{namespacemtl_acb2e27d832622b8b104e130739e5519a}{mtl\+::string\+\_\+view}} s) -\/$>$ uint64\+\_\+t
+\begin{DoxyCompactList}\small\item\em Computes the 64-\/bit FNV-\/1a hash of a string. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class... Args$>$ }\\constexpr auto \mbox{\hyperlink{namespacemtl_a88c9185857e1d6d1169d9f70e0a3c9e5}{make\+\_\+optional}} (Args \&\&... args) -\/$>$ \mbox{\hyperlink{classmtl_1_1option}{option}}$<$ T $>$
+\item 
+{\footnotesize template$<$typename Fn , typename Ret  = final\+\_\+action$<$\+Fn$>$$>$ }\\auto \mbox{\hyperlink{namespacemtl_a5e14ed377b76d2207590be48823fe80d}{defer}} (Fn \&\&f) -\/$>$ Ret
+\begin{DoxyCompactList}\small\item\em Runs a callable object at the end of the scope of the calle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T1 , typename... TRest$>$ }\\constexpr size\+\_\+t \mbox{\hyperlink{namespacemtl_a5ddc91f359e047de1484b30b8ada5c3e}{largest\+\_\+alignment\+\_\+v}} = \mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\+\_\+alignment}}$<$T1, TRest...$>$\+::value
+\item 
+{\footnotesize template$<$typename T $>$ }\\constexpr size\+\_\+t \mbox{\hyperlink{namespacemtl_a98040aa861e9882eb28979b012b75408}{alignment\+\_\+of\+\_\+v}} = \mbox{\hyperlink{structmtl_1_1alignment__of}{alignment\+\_\+of}}$<$T$>$\+::value
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespacemtl_a9b28e165eb5f839901d7bd9441750cf7}\label{namespacemtl_a9b28e165eb5f839901d7bd9441750cf7} 
+\index{mtl@{mtl}!has\_const\_iterator\_v@{has\_const\_iterator\_v}}
+\index{has\_const\_iterator\_v@{has\_const\_iterator\_v}!mtl@{mtl}}
+\doxysubsubsection{\texorpdfstring{has\_const\_iterator\_v}{has\_const\_iterator\_v}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+using \mbox{\hyperlink{namespacemtl_a9b28e165eb5f839901d7bd9441750cf7}{mtl\+::has\+\_\+const\+\_\+iterator\+\_\+v}} = typedef typename \mbox{\hyperlink{classmtl_1_1has__const__iterator}{has\+\_\+const\+\_\+iterator}}$<$T$>$\+::value}
+
+
+
+Definition at line \mbox{\hyperlink{type__traits_8h_source_l00029}{29}} of file \mbox{\hyperlink{type__traits_8h_source}{type\+\_\+traits.\+h}}.
+
+\Hypertarget{namespacemtl_a8b8c69ad2b25261f4c33a2ef8784ab99}\label{namespacemtl_a8b8c69ad2b25261f4c33a2ef8784ab99} 
+\index{mtl@{mtl}!largest\_type\_t@{largest\_type\_t}}
+\index{largest\_type\_t@{largest\_type\_t}!mtl@{mtl}}
+\doxysubsubsection{\texorpdfstring{largest\_type\_t}{largest\_type\_t}}
+{\footnotesize\ttfamily template$<$typename T1 , typename ... TRest$>$ \\
+using \mbox{\hyperlink{namespacemtl_a8b8c69ad2b25261f4c33a2ef8784ab99}{mtl\+::largest\+\_\+type\+\_\+t}} = typedef typename \mbox{\hyperlink{structmtl_1_1largest__type}{largest\+\_\+type}}$<$T1, TRest...$>$\+::type}
+
+
+
+Definition at line \mbox{\hyperlink{largest_8h_source_l00044}{44}} of file \mbox{\hyperlink{largest_8h_source}{largest.\+h}}.
+
+\Hypertarget{namespacemtl_a5e85f9c2a59f47dec3298153cd620e0b}\label{namespacemtl_a5e85f9c2a59f47dec3298153cd620e0b} 
+\index{mtl@{mtl}!mutable\_string\_view@{mutable\_string\_view}}
+\index{mutable\_string\_view@{mutable\_string\_view}!mtl@{mtl}}
+\doxysubsubsection{\texorpdfstring{mutable\_string\_view}{mutable\_string\_view}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacemtl_a5e85f9c2a59f47dec3298153cd620e0b}{mtl\+::mutable\+\_\+string\+\_\+view}} = typedef \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view}}$<$char$>$}
+
+
+
+Definition at line \mbox{\hyperlink{string__view_8h_source_l00051}{51}} of file \mbox{\hyperlink{string__view_8h_source}{string\+\_\+view.\+h}}.
+
+\Hypertarget{namespacemtl_acb2e27d832622b8b104e130739e5519a}\label{namespacemtl_acb2e27d832622b8b104e130739e5519a} 
+\index{mtl@{mtl}!string\_view@{string\_view}}
+\index{string\_view@{string\_view}!mtl@{mtl}}
+\doxysubsubsection{\texorpdfstring{string\_view}{string\_view}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacemtl_acb2e27d832622b8b104e130739e5519a}{mtl\+::string\+\_\+view}} = typedef \mbox{\hyperlink{classmtl_1_1detail__string__view_1_1basic__string__view}{detail\+\_\+string\+\_\+view\+::basic\+\_\+string\+\_\+view}}$<$const char$>$}
+
+
+
+Definition at line \mbox{\hyperlink{string__view_8h_source_l00050}{50}} of file \mbox{\hyperlink{string__view_8h_source}{string\+\_\+view.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacemtl_a5e14ed377b76d2207590be48823fe80d}\label{namespacemtl_a5e14ed377b76d2207590be48823fe80d} 
+\index{mtl@{mtl}!defer@{defer}}
+\index{defer@{defer}!mtl@{mtl}}
+\doxysubsubsection{\texorpdfstring{defer()}{defer()}}
+{\footnotesize\ttfamily template$<$typename Fn , typename Ret  = final\+\_\+action$<$\+Fn$>$$>$ \\
+auto mtl\+::defer (\begin{DoxyParamCaption}\item[{Fn \&\&}]{f }\end{DoxyParamCaption}) -\/$>$ Ret }
+
+
+
+Runs a callable object at the end of the scope of the calle. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{static}\ mutex<int>\ \_mutex\_obj;}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ increment\_mutex\_val()}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \_mutex\_obj.lock();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{auto}\ \_\ =\ \mbox{\hyperlink{namespacemtl_a5e14ed377b76d2207590be48823fe80d}{mtl::defer}}([\&]\ \{\ \_mutex\_obj.unlock();\ \})}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \_mutex\_obj.with\_lock([](\textcolor{keywordtype}{int}\ \&val)\ \{\ return\ ++val;\ \});}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Definition at line \mbox{\hyperlink{utility_8h_source_l00041}{41}} of file \mbox{\hyperlink{utility_8h_source}{utility.\+h}}.
+
+\Hypertarget{namespacemtl_ab77378575eeb38bd160e2a077504e688}\label{namespacemtl_ab77378575eeb38bd160e2a077504e688} 
+\index{mtl@{mtl}!fnv1a\_32@{fnv1a\_32}}
+\index{fnv1a\_32@{fnv1a\_32}!mtl@{mtl}}
+\doxysubsubsection{\texorpdfstring{fnv1a\_32()}{fnv1a\_32()}}
+{\footnotesize\ttfamily constexpr auto mtl\+::fnv1a\+\_\+32 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemtl_acb2e27d832622b8b104e130739e5519a}{mtl\+::string\+\_\+view}}}]{s }\end{DoxyParamCaption}) -\/$>$ uint32\+\_\+t \hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Computes the 32-\/bit FNV-\/1a hash of a string. 
+
+
+
+Definition at line \mbox{\hyperlink{hash_8h_source_l00048}{48}} of file \mbox{\hyperlink{hash_8h_source}{hash.\+h}}.
+
+\Hypertarget{namespacemtl_a274176992794c10e24ddb0b36fc74237}\label{namespacemtl_a274176992794c10e24ddb0b36fc74237} 
+\index{mtl@{mtl}!fnv1a\_64@{fnv1a\_64}}
+\index{fnv1a\_64@{fnv1a\_64}!mtl@{mtl}}
+\doxysubsubsection{\texorpdfstring{fnv1a\_64()}{fnv1a\_64()}}
+{\footnotesize\ttfamily constexpr auto mtl\+::fnv1a\+\_\+64 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacemtl_acb2e27d832622b8b104e130739e5519a}{mtl\+::string\+\_\+view}}}]{s }\end{DoxyParamCaption}) -\/$>$ uint64\+\_\+t \hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Computes the 64-\/bit FNV-\/1a hash of a string. 
+
+
+
+Definition at line \mbox{\hyperlink{hash_8h_source_l00054}{54}} of file \mbox{\hyperlink{hash_8h_source}{hash.\+h}}.
+
+\Hypertarget{namespacemtl_ad10c339e6ae595a7c2ad7f08e4bb62a1}\label{namespacemtl_ad10c339e6ae595a7c2ad7f08e4bb62a1} 
+\index{mtl@{mtl}!in\_range@{in\_range}}
+\index{in\_range@{in\_range}!mtl@{mtl}}
+\doxysubsubsection{\texorpdfstring{in\_range()}{in\_range()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr bool mtl\+::in\+\_\+range (\begin{DoxyParamCaption}\item[{const T}]{value,  }\item[{const T}]{desired,  }\item[{const T}]{diff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{algorithm_8h_source_l00024}{24}} of file \mbox{\hyperlink{algorithm_8h_source}{algorithm.\+h}}.
+
+\Hypertarget{namespacemtl_a88c9185857e1d6d1169d9f70e0a3c9e5}\label{namespacemtl_a88c9185857e1d6d1169d9f70e0a3c9e5} 
+\index{mtl@{mtl}!make\_optional@{make\_optional}}
+\index{make\_optional@{make\_optional}!mtl@{mtl}}
+\doxysubsubsection{\texorpdfstring{make\_optional()}{make\_optional()}}
+{\footnotesize\ttfamily template$<$class T , class... Args$>$ \\
+constexpr auto mtl\+::make\+\_\+optional (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{classmtl_1_1option}{option}}$<$T$>$ \hspace{0.3cm}{\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{option_8h_source_l00035}{35}} of file \mbox{\hyperlink{option_8h_source}{option.\+h}}.
+
+\Hypertarget{namespacemtl_a3e68bb435f1c78c81b2cd03dab8f5fa5}\label{namespacemtl_a3e68bb435f1c78c81b2cd03dab8f5fa5} 
+\index{mtl@{mtl}!oneof@{oneof}}
+\index{oneof@{oneof}!mtl@{mtl}}
+\doxysubsubsection{\texorpdfstring{oneof()}{oneof()}}
+{\footnotesize\ttfamily template$<$typename T , typename... Opts$>$ \\
+constexpr auto mtl\+::oneof (\begin{DoxyParamCaption}\item[{T \&\&}]{val,  }\item[{Opts \&\&...}]{opts }\end{DoxyParamCaption}) -\/$>$ bool \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Checks if {\ttfamily val} is the same value as one of many {\ttfamily opts}. 
+
+
+
+Definition at line \mbox{\hyperlink{algorithm_8h_source_l00018}{18}} of file \mbox{\hyperlink{algorithm_8h_source}{algorithm.\+h}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacemtl_a98040aa861e9882eb28979b012b75408}\label{namespacemtl_a98040aa861e9882eb28979b012b75408} 
+\index{mtl@{mtl}!alignment\_of\_v@{alignment\_of\_v}}
+\index{alignment\_of\_v@{alignment\_of\_v}!mtl@{mtl}}
+\doxysubsubsection{\texorpdfstring{alignment\_of\_v}{alignment\_of\_v}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+constexpr size\+\_\+t mtl\+::alignment\+\_\+of\+\_\+v = \mbox{\hyperlink{structmtl_1_1alignment__of}{alignment\+\_\+of}}$<$T$>$\+::value\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{type__traits_8h_source_l00035}{35}} of file \mbox{\hyperlink{type__traits_8h_source}{type\+\_\+traits.\+h}}.
+
+\Hypertarget{namespacemtl_a5ddc91f359e047de1484b30b8ada5c3e}\label{namespacemtl_a5ddc91f359e047de1484b30b8ada5c3e} 
+\index{mtl@{mtl}!largest\_alignment\_v@{largest\_alignment\_v}}
+\index{largest\_alignment\_v@{largest\_alignment\_v}!mtl@{mtl}}
+\doxysubsubsection{\texorpdfstring{largest\_alignment\_v}{largest\_alignment\_v}}
+{\footnotesize\ttfamily template$<$typename T1 , typename... TRest$>$ \\
+constexpr size\+\_\+t mtl\+::largest\+\_\+alignment\+\_\+v = \mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\+\_\+alignment}}$<$T1, TRest...$>$\+::value\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{largest_8h_source_l00070}{70}} of file \mbox{\hyperlink{largest_8h_source}{largest.\+h}}.
+

@@ -1,0 +1,22 @@
+\doxysection{mtl\+::largest\+\_\+type\texorpdfstring{$<$}{<} T1, TRest \texorpdfstring{$>$}{>} Struct Template Reference}
+\hypertarget{structmtl_1_1largest__type}{}\label{structmtl_1_1largest__type}\index{mtl::largest\_type$<$ T1, TRest $>$@{mtl::largest\_type$<$ T1, TRest $>$}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structmtl_1_1largest__type_a2ad6625ae3f85ffc59abb8fba4f50a45}\label{structmtl_1_1largest__type_a2ad6625ae3f85ffc59abb8fba4f50a45} 
+using {\bfseries largest\+\_\+other} = typename \mbox{\hyperlink{structmtl_1_1largest__type}{largest\+\_\+type}}$<$ TRest... $>$\+::type
+\item 
+\Hypertarget{structmtl_1_1largest__type_abd00069e899f589bdbb5d8376c1cb2ed}\label{structmtl_1_1largest__type_abd00069e899f589bdbb5d8376c1cb2ed} 
+using {\bfseries type} = conditional\+\_\+t$<$(sizeof(T1) $>$ sizeof(largest\+\_\+other)), T1, largest\+\_\+other $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structmtl_1_1largest__type_a026c38248435bc97ea8213b2894dd400}\label{structmtl_1_1largest__type_a026c38248435bc97ea8213b2894dd400} 
+static constexpr size\+\_\+t {\bfseries size} = sizeof(type)
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mtl/\mbox{\hyperlink{largest_8h}{largest.\+h}}\end{DoxyCompactItemize}

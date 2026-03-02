@@ -1,0 +1,42 @@
+\doxysection{mtl\+::filter\+::butterworth\+\_\+lpf\texorpdfstring{$<$}{<} Order, T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmtl_1_1filter_1_1butterworth__lpf}{}\label{classmtl_1_1filter_1_1butterworth__lpf}\index{mtl::filter::butterworth\_lpf$<$ Order, T $>$@{mtl::filter::butterworth\_lpf$<$ Order, T $>$}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmtl_1_1filter_1_1butterworth__lpf_ad74f1a4e17765ecf19251ce0db5cb1e1}\label{classmtl_1_1filter_1_1butterworth__lpf_ad74f1a4e17765ecf19251ce0db5cb1e1} 
+constexpr auto {\bfseries value} () const -\/$>$ T
+\begin{DoxyCompactList}\small\item\em Retrieves the current output value of the filter. \end{DoxyCompactList}\item 
+\Hypertarget{classmtl_1_1filter_1_1butterworth__lpf_a850f4e55966b287cdd9155961fcd05fe}\label{classmtl_1_1filter_1_1butterworth__lpf_a850f4e55966b287cdd9155961fcd05fe} 
+constexpr void {\bfseries reset} ()
+\begin{DoxyCompactList}\small\item\em Resets the filter state to its initial condition. \end{DoxyCompactList}\item 
+\Hypertarget{classmtl_1_1filter_1_1butterworth__lpf_a297e5eaf61e8d361b2a05b179a11eb1d}\label{classmtl_1_1filter_1_1butterworth__lpf_a297e5eaf61e8d361b2a05b179a11eb1d} 
+constexpr auto {\bfseries update} (const T val) -\/$>$ T
+\begin{DoxyCompactList}\small\item\em Updates the filter state with a new input value and computes the output. \end{DoxyCompactList}\item 
+constexpr \mbox{\hyperlink{classmtl_1_1filter_1_1butterworth__lpf_acef46e02d969bf8c18eb095cb2e6638e}{butterworth\+\_\+lpf}} (T fc, T fs)
+\begin{DoxyCompactList}\small\item\em Constructor for Butterworth Low Pass Filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmtl_1_1filter_1_1butterworth__lpf_acef46e02d969bf8c18eb095cb2e6638e}\label{classmtl_1_1filter_1_1butterworth__lpf_acef46e02d969bf8c18eb095cb2e6638e} 
+\index{mtl::filter::butterworth\_lpf$<$ Order, T $>$@{mtl::filter::butterworth\_lpf$<$ Order, T $>$}!butterworth\_lpf@{butterworth\_lpf}}
+\index{butterworth\_lpf@{butterworth\_lpf}!mtl::filter::butterworth\_lpf$<$ Order, T $>$@{mtl::filter::butterworth\_lpf$<$ Order, T $>$}}
+\doxysubsubsection{\texorpdfstring{butterworth\_lpf()}{butterworth\_lpf()}}
+{\footnotesize\ttfamily template$<$order Order, typename T  = float$>$ \\
+constexpr \mbox{\hyperlink{classmtl_1_1filter_1_1butterworth__lpf}{mtl\+::filter\+::butterworth\+\_\+lpf}}$<$ Order, T $>$\+::butterworth\+\_\+lpf (\begin{DoxyParamCaption}\item[{T}]{fc,  }\item[{T}]{fs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}}
+
+
+
+Constructor for Butterworth Low Pass Filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fc} & Cut-\/off frequency in Hz \\
+\hline
+{\em fs} & Sampling frequency in Hz \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mtl/filter/\mbox{\hyperlink{butterworth__lpf_8h}{butterworth\+\_\+lpf.\+h}}\end{DoxyCompactItemize}

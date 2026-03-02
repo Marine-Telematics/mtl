@@ -61,6 +61,6 @@ template <typename T, size_t LEN> class queue
     private:
     storage_type _ringbuffer;
 };
-} // namespace util
+}
 
 #endif

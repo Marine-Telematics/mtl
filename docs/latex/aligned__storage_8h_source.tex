@@ -1,0 +1,31 @@
+\doxysection{aligned\+\_\+storage.\+h}
+\hypertarget{aligned__storage_8h_source}{}\label{aligned__storage_8h_source}\index{include/mtl/aligned\_storage.h@{include/mtl/aligned\_storage.h}}
+\mbox{\hyperlink{aligned__storage_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_ALIGNED\_STORAGE\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MTL\_ALIGNED\_STORAGE\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }mtl}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ B\ =\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1aligned__storage}{aligned\_storage}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{using\ }pointer\ \ \ \ \ \ \ =\ T\ *;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{using\ }const\_pointer\ =\ \textcolor{keyword}{const}\ T\ *;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{auto}\ data()\ -\/>\ pointer\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{reinterpret\_cast<}pointer\textcolor{keyword}{>}(this-\/>\_t\_buff);\ \}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{auto}\ data()\ \textcolor{keyword}{const}\ -\/>\ const\_pointer\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{reinterpret\_cast<}const\_pointer\textcolor{keyword}{>}(this-\/>\_t\_buff);\ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ std::aligned\_storage\_t<sizeof(T),\ alignof(T)>\ t\_buff;}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{alignas}(T)\ B\ \_t\_buff[\textcolor{keyword}{sizeof}(T)];}
+\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00032\ \}\ \textcolor{comment}{//\ namespace\ mtl}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

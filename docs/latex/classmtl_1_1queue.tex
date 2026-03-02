@@ -1,0 +1,37 @@
+\doxysection{mtl\+::queue\texorpdfstring{$<$}{<} T, LEN \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmtl_1_1queue}{}\label{classmtl_1_1queue}\index{mtl::queue$<$ T, LEN $>$@{mtl::queue$<$ T, LEN $>$}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmtl_1_1queue_aeb8f0e14fbc83a77f3449e14deebc863}\label{classmtl_1_1queue_aeb8f0e14fbc83a77f3449e14deebc863} 
+using {\bfseries storage\+\_\+type} = \mbox{\hyperlink{classmtl_1_1ring__buffer}{ring\+\_\+buffer}}$<$ T, LEN $>$
+\item 
+\Hypertarget{classmtl_1_1queue_a83487a3b717dfa74c6276b82f4b62ec5}\label{classmtl_1_1queue_a83487a3b717dfa74c6276b82f4b62ec5} 
+using {\bfseries reference} = typename storage\+\_\+type\+::reference
+\item 
+\Hypertarget{classmtl_1_1queue_abf1096ef09f0c28c079749f5fa3a6a8e}\label{classmtl_1_1queue_abf1096ef09f0c28c079749f5fa3a6a8e} 
+using {\bfseries const\+\_\+reference} = typename storage\+\_\+type\+::const\+\_\+reference
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmtl_1_1queue_a3f419fead1f230e7e9e752eb18f54876}\label{classmtl_1_1queue_a3f419fead1f230e7e9e752eb18f54876} 
+auto {\bfseries is\+\_\+empty} () const -\/$>$ bool
+\item 
+\Hypertarget{classmtl_1_1queue_a3abd7e5fd4c549cf1662590fb839f2c7}\label{classmtl_1_1queue_a3abd7e5fd4c549cf1662590fb839f2c7} 
+auto {\bfseries is\+\_\+full} () const -\/$>$ bool
+\item 
+\Hypertarget{classmtl_1_1queue_af94102cc53fe903d79dabe449c660e14}\label{classmtl_1_1queue_af94102cc53fe903d79dabe449c660e14} 
+auto {\bfseries enqueue} (const\+\_\+reference data) -\/$>$ bool
+\item 
+\Hypertarget{classmtl_1_1queue_a5c3db5dbfad1a0ec362b0da91db47f1c}\label{classmtl_1_1queue_a5c3db5dbfad1a0ec362b0da91db47f1c} 
+auto {\bfseries dequeue} (reference data) -\/$>$ bool
+\item 
+\Hypertarget{classmtl_1_1queue_a72914937f7eb9a9a25c72b6fe0cfe62b}\label{classmtl_1_1queue_a72914937f7eb9a9a25c72b6fe0cfe62b} 
+auto {\bfseries dequeue} () -\/$>$ \mbox{\hyperlink{classmtl_1_1option}{option}}$<$ T $>$
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mtl/\mbox{\hyperlink{queue_8h}{queue.\+h}}\end{DoxyCompactItemize}

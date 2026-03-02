@@ -1,0 +1,49 @@
+\doxysection{mtl\+::result\texorpdfstring{$<$}{<} T, E \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmtl_1_1result}{}\label{classmtl_1_1result}\index{mtl::result$<$ T, E $>$@{mtl::result$<$ T, E $>$}}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221}\label{classmtl_1_1result_a45e4f00026a786c99dff5998f7eac221} 
+using {\bfseries ok\+\_\+type} = T
+\item 
+\Hypertarget{classmtl_1_1result_aad12e034f1f9acb9aeeee1d96fc04d3f}\label{classmtl_1_1result_aad12e034f1f9acb9aeeee1d96fc04d3f} 
+using {\bfseries err\+\_\+type} = \mbox{\hyperlink{structmtl_1_1err}{mtl\+::err}}$<$ E $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmtl_1_1result_a53a901e7295cfbd88065a34e4646cc07}\label{classmtl_1_1result_a53a901e7295cfbd88065a34e4646cc07} 
+{\footnotesize template$<$class ... Args$>$ }\\constexpr {\bfseries result} (Args \&\&...args)
+\item 
+\Hypertarget{classmtl_1_1result_aea95c528c4fdc964b0aa45e6659d7059}\label{classmtl_1_1result_aea95c528c4fdc964b0aa45e6659d7059} 
+constexpr {\bfseries result} (ok\+\_\+type \&\&val)
+\item 
+\Hypertarget{classmtl_1_1result_a9097a008e32c26189f1a502f9b5fb0fa}\label{classmtl_1_1result_a9097a008e32c26189f1a502f9b5fb0fa} 
+constexpr {\bfseries result} (const \mbox{\hyperlink{structmtl_1_1err}{err\+\_\+type}} \&e)
+\item 
+\Hypertarget{classmtl_1_1result_a495e89363d52f22fc241efc63825100c}\label{classmtl_1_1result_a495e89363d52f22fc241efc63825100c} 
+constexpr {\bfseries result} (\mbox{\hyperlink{structmtl_1_1err}{err\+\_\+type}} \&\&e)
+\item 
+\Hypertarget{classmtl_1_1result_af8b6bbf4f6df6019658e4bece206a00c}\label{classmtl_1_1result_af8b6bbf4f6df6019658e4bece206a00c} 
+constexpr auto {\bfseries is\+\_\+ok} () const -\/$>$ bool
+\item 
+\Hypertarget{classmtl_1_1result_aa54b17c7ce7eafa2c3e7be2847816bd1}\label{classmtl_1_1result_aa54b17c7ce7eafa2c3e7be2847816bd1} 
+constexpr auto {\bfseries is\+\_\+err} () const -\/$>$ bool
+\item 
+\Hypertarget{classmtl_1_1result_a5fccf8151b98c3e1eb13e138191f2dda}\label{classmtl_1_1result_a5fccf8151b98c3e1eb13e138191f2dda} 
+constexpr auto {\bfseries ok} () -\/$>$ ok\+\_\+type \&
+\item 
+\Hypertarget{classmtl_1_1result_a86723558f592c017c561adcc086373d1}\label{classmtl_1_1result_a86723558f592c017c561adcc086373d1} 
+constexpr auto {\bfseries ok} () const -\/$>$ const ok\+\_\+type \&
+\item 
+\Hypertarget{classmtl_1_1result_a1607f7130df4aac34c9f992d64676112}\label{classmtl_1_1result_a1607f7130df4aac34c9f992d64676112} 
+constexpr auto {\bfseries err} () -\/$>$ \mbox{\hyperlink{structmtl_1_1err}{err\+\_\+type}} \&
+\item 
+\Hypertarget{classmtl_1_1result_a83a782888f5af1a3ea8a2976e5399214}\label{classmtl_1_1result_a83a782888f5af1a3ea8a2976e5399214} 
+constexpr auto {\bfseries err} () const -\/$>$ const \mbox{\hyperlink{structmtl_1_1err}{err\+\_\+type}} \&
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mtl/\mbox{\hyperlink{result_8h}{result.\+h}}\end{DoxyCompactItemize}

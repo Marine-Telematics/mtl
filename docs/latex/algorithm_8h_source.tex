@@ -1,0 +1,27 @@
+\doxysection{algorithm.\+h}
+\hypertarget{algorithm_8h_source}{}\label{algorithm_8h_source}\index{include/mtl/algorithm.h@{include/mtl/algorithm.h}}
+\mbox{\hyperlink{algorithm_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_ALGORITHM\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MTL\_ALGORITHM\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }mtl}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}...\ Opts>}
+\DoxyCodeLine{00018\ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{algorithm_8h_a3e68bb435f1c78c81b2cd03dab8f5fa5}{oneof}}(T\ \&\&val,\ Opts\ \&\&...opts)\ -\/>\ \textcolor{keywordtype}{bool}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{sizeof}...(opts)\ ==\ 0\ ?\ \textcolor{keyword}{false}\ :\ (...\ ||\ (val\ ==\ opts));}
+\DoxyCodeLine{00021\ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00024\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{bool}\ in\_range(\textcolor{keyword}{const}\ T\ value,\ \textcolor{keyword}{const}\ T\ desired,\ \textcolor{keyword}{const}\ T\ diff)}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{return}\ (desired\ -\/\ diff\ <\ value\ \&\&\ desired\ +\ diff\ >\ value);}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

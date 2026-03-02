@@ -1,0 +1,64 @@
+\doxysection{include/mtl/interface/i2c.h File Reference}
+\hypertarget{i2c_8h}{}\label{i2c_8h}\index{include/mtl/interface/i2c.h@{include/mtl/interface/i2c.h}}
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cstddef$>$}\newline
+Include dependency graph for i2c.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{i2c_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{i2c_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmtl_1_1i2c_1_1message}{mtl\+::i2c\+::message$<$ SZ $>$}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{i2c_8h_a13dc2887866a1616137cc96c9baa224c}\label{i2c_8h_a13dc2887866a1616137cc96c9baa224c} 
+using {\bfseries mtl\+::i2c\+::addr\+\_\+type} = uint8\+\_\+t
+\item 
+\Hypertarget{i2c_8h_ab7cc2bba7d82f272df4d004a88e65353}\label{i2c_8h_ab7cc2bba7d82f272df4d004a88e65353} 
+using {\bfseries mtl\+::i2c\+::data\+\_\+type} = uint8\+\_\+t
+\item 
+\Hypertarget{i2c_8h_a2b7df74148000e1337bd08e61a9db95a}\label{i2c_8h_a2b7df74148000e1337bd08e61a9db95a} 
+using {\bfseries mtl\+::i2c\+::size\+\_\+type} = size\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{i2c_8h_a262b40f37e9319dd0c1f3b9d1bc8d5ec}\label{i2c_8h_a262b40f37e9319dd0c1f3b9d1bc8d5ec} 
+enum class {\bfseries mode} \+: uint8\+\_\+t \{ {\bfseries master} = 0
+, {\bfseries slave} = 1
+ \}
+\item 
+\Hypertarget{i2c_8h_a3867a492653b0e3129f2d2d1479370d7}\label{i2c_8h_a3867a492653b0e3129f2d2d1479370d7} 
+enum class {\bfseries speed} \+: uint8\+\_\+t \{ {\bfseries standard} = 0
+, {\bfseries fast} = 1
+, {\bfseries fast\+\_\+plus} = 2
+, {\bfseries high} = 3
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler{0}
+ \hypertarget{i2c_8h_autotoc_md16}{}\doxysubsubsection{\texorpdfstring{Marine\+Telematics Template Library (\+Interface) -\/ (c) 2026 Marine Telematics}{MarineTelematics Template Library (Interface) - (c) 2026 Marine Telematics}}\label{i2c_8h_autotoc_md16}
+\begin{DoxyAuthor}{Author}
+Gabriel Novalski (\href{mailto:gabriel@marinetelematics.com.br}{\texttt{ gabriel@marinetelematics.\+com.\+br}}) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+09-\/02-\/2026
+\end{DoxyDate}
+\DoxyHorRuler{0}
+ 

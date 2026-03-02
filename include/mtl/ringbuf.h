@@ -12,8 +12,7 @@
 #define MTL_RINGBUF_H
 
 #include <cstddef>
-
-#include "algorithm.h"
+#include <algorithm>
 
 namespace mtl
 {
@@ -29,19 +28,19 @@ class ring_buffer
     
     auto write(const_iterator data, size_type n) -> size_type
     {
-        n = min(n, this->get_free());
+        n = std::min(n, this->get_free());
         if (n == 0) { return n; }
 
-        const size_type first_chunk = min(n, SIZE - this->_end);
+        const size_type first_chunk = std::min(n, SIZE - this->_end);
         
-        copy_n(data, first_chunk * sizeof(T), this->_arena + this->_end);
+        std::copy_n(data, first_chunk * sizeof(T), this->_arena + this->_end);
         this->_end = (this->_end + first_chunk) % SIZE;
 
         if (first_chunk < n)
         {
             const size_type second_chunk = n - first_chunk;
 
-            copy_n(data + first_chunk, second_chunk * sizeof(T), this->_arena + this->_end);
+            std::copy_n(data + first_chunk, second_chunk * sizeof(T), this->_arena + this->_end);
             this->_end = (this->_end + second_chunk) % SIZE;
         }
 
@@ -55,7 +54,7 @@ class ring_buffer
 
     auto read(iterator dest, size_type n) -> size_type
     {
-        n = min(n, get_occupied());
+        n = std::min(n, get_occupied());
         if (n == 0) { return n; }
 
         if (this->_wrap)
@@ -63,15 +62,15 @@ class ring_buffer
             this->_wrap = false;
         }
 
-        const size_type first_chunk = min(n, SIZE - this->_begin);
+        const size_type first_chunk = std::min(n, SIZE - this->_begin);
         
-        copy_n(this->_arena + this->_begin, first_chunk * sizeof(T), dest);
+        std::copy_n(this->_arena + this->_begin, first_chunk * sizeof(T), dest);
         this->_begin = (this->_begin + first_chunk) % SIZE;
 
         if (first_chunk < n)
         {
             const size_type second_chunk = n - first_chunk;
-            copy_n(this->_arena + this->_begin, second_chunk * sizeof(T), dest + first_chunk);
+            std::copy_n(this->_arena + this->_begin, second_chunk * sizeof(T), dest + first_chunk);
 
             this->_begin = (this->_begin + second_chunk) % SIZE;
         }

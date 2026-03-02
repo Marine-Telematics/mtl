@@ -1,0 +1,173 @@
+\doxysection{butterworth\+\_\+lpf.\+h}
+\hypertarget{butterworth__lpf_8h_source}{}\label{butterworth__lpf_8h_source}\index{include/mtl/filter/butterworth\_lpf.h@{include/mtl/filter/butterworth\_lpf.h}}
+\mbox{\hyperlink{butterworth__lpf_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#ifndef\ MTL\_FILTER\_BUTTERWORTH\_LPF\_H}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ MTL\_FILTER\_BUTTERWORTH\_LPF\_H}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}../algorithm.h"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}../array.h"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}../math.h"{}}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ "{}../math\_constants.h"{}}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}../type\_traits.h"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{defs_8h}{defs.h}}"{}}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{namespace\ }mtl::filter}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ Butterworth\ Low\ Pass\ Filter\ (LPF)\ class\ template}}
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ Order:\ 1\ to\ 4}}
+\DoxyCodeLine{00038\ \textcolor{keyword}{template}\ <order\ Order,\ \textcolor{keyword}{typename}\ T\ =\ \textcolor{keywordtype}{float}>}
+\DoxyCodeLine{00039\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1filter_1_1butterworth__lpf}{butterworth\_lpf}}}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ order\ ORDER\ =\ Order;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ PI\ =\ \mbox{\hyperlink{structmtl_1_1math__constants}{math\_constants<T>::pi}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ T\ \_wc\ =\ T\{0\};\ \textcolor{comment}{//\ [rad/s]\ \ Cut-\/off\ frequency}}
+\DoxyCodeLine{00046\ \ \ \ \ T\ \_t\ \ =\ T\{1\};\ \textcolor{comment}{//\ [s]\ Sample\ time,\ default\ to\ 1\ second}}
+\DoxyCodeLine{00047\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ T\ \_fc;}
+\DoxyCodeLine{00049\ \ \ \ \ T\ \_fs;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ array<T,\ static\_cast<size\_t>(ORDER)\ +\ 1u>\ \_num\{\};}
+\DoxyCodeLine{00052\ \ \ \ \ array<T,\ static\_cast<size\_t>(ORDER)\ +\ 1u>\ \_den\{\};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ array<T,\ static\_cast<size\_t>(ORDER)\ +\ 1u>\ \_u\{\};}
+\DoxyCodeLine{00055\ \ \ \ \ array<T,\ static\_cast<size\_t>(ORDER)\ +\ 1u>\ \_y\{\};}
+\DoxyCodeLine{00056\ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{void}\ pre\_warp()}
+\DoxyCodeLine{00064\ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Check\ that\ fc\ <=\ fs\ /\ 2\ (Nyquist)}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ T\ fc\ =\ clamp<T>(this-\/>\_fc,\ T\{0\},\ this-\/>\_fs\ /\ T\{2\});}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ this-\/>\_t\ =\ T\{1\}\ /\ this-\/>\_fs;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Computes\ the\ pre-\/warped\ cut-\/off\ frequency\ (`\_wc`)\ in\ rad/s.}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ this-\/>\_wc\ =\ (T\{2\}\ /\ this-\/>\_t)\ *\ tanf(PI\ *\ fc\ /\ this-\/>\_fs);}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1filter_1_1butterworth__lpf_ad74f1a4e17765ecf19251ce0db5cb1e1}{value}}()\ const\ -\/>\ T\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_y[0];\ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmtl_1_1filter_1_1butterworth__lpf_a850f4e55966b287cdd9155961fcd05fe}{reset}}()}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ this-\/>\_u.fill(0.f);}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ this-\/>\_y.fill(0.f);}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{classmtl_1_1filter_1_1butterworth__lpf_a297e5eaf61e8d361b2a05b179a11eb1d}{update}}(\textcolor{keyword}{const}\ T\ val)\ -\/>\ T}
+\DoxyCodeLine{00088\ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Shift\ samples}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(ORDER);\ i\ >\ 0;\ -\/-\/i)}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_u[i]\ =\ this-\/>\_u[i\ -\/\ 1];}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_y[i]\ =\ this-\/>\_y[i\ -\/\ 1];}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ new\ input}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ this-\/>\_u[0]\ =\ val;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ this-\/>\_y[0]\ =\ T\{0\};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ loop\ calculates\ the\ output\ value\ (`\_y[0]`)\ of\ the\ filter\ by}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ applying\ the\ filter\ coefficients\ to\ the\ input\ (`\_u`)\ and\ output}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (`\_y`)\ buffers.}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/\ The\ numerator\ coefficients\ (`\_num`)\ are\ multiplied\ with\ the\ input}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ values\ to\ contribute\ to\ the\ output.}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/\ The\ denominator\ coefficients\ (`\_den`)\ are\ multiplied\ with\ the\ past}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ output\ values\ (for\ \`{}i\ >\ 0`)\ and\ subtracted\ to\ account\ for\ feedback.}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ result\ is\ stored\ in\ \`{}\_y[0]`,\ representing\ the\ current\ filtered}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ output.}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <=\ static\_cast<size\_t>(ORDER);\ ++i)}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_y[0]\ +=\ this-\/>\_num[i]\ *\ this-\/>\_u[i];}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ >\ 0)}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_y[0]\ -\/=\ this-\/>\_den[i]\ *\ this-\/>\_y[i];}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ this-\/>\_y[0]\ /=\ this-\/>\_den[0];}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this-\/>\_y[0];}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1filter_1_1butterworth__lpf_acef46e02d969bf8c18eb095cb2e6638e}{butterworth\_lpf}}(T\ fc,\ T\ fs)\ :\ \_fc(fc),\ \_fs(fs)}
+\DoxyCodeLine{00130\ \ \ \ \ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ this-\/>pre\_warp();}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classmtl_1_1filter_1_1butterworth__lpf_a850f4e55966b287cdd9155961fcd05fe}{reset}}();}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Set\ filter\ numerator\ and\ denominator\ coefficients}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pre-\/warped\ cut-\/off\ frequency\ in\ seconds}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ wc\_t\ =\ this-\/>\_wc\ *\ this-\/>\_t;}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pre-\/warped\ cut-\/off\ frequency\ squared}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ wc\_tsq\ =\ wc\_t\ *\ wc\_t;}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pre-\/warped\ cut-\/off\ frequency\ cubed}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ wc\_tcu\ =\ wc\_t\ *\ wc\_tsq;}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pre-\/warped\ cut-\/off\ frequency\ to\ the\ fourth\ power}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ wc\_tfo\ =\ wc\_tsq\ *\ wc\_tsq;}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (ORDER\ ==\ order::first)}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_num[0]\ =\ wc\_t;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_num[1]\ =\ wc\_t;}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_den[0]\ =\ 2\ +\ wc\_t;}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_den[1]\ =\ -\/2\ +\ wc\_t;}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (ORDER\ ==\ order::second)}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_num[0]\ =\ wc\_tsq;}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_num[1]\ =\ 2\ *\ wc\_tsq;}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_num[2]\ =\ wc\_tsq;}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_den[0]\ =\ 4\ +\ 2.8284\ *\ wc\_t\ +\ wc\_tsq;}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_den[1]\ =\ -\/8\ +\ 2\ *\ wc\_tsq;}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_den[2]\ =\ 4\ -\/\ 2.8284\ *\ wc\_t\ +\ wc\_tsq;}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (ORDER\ ==\ order::third)}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_num[0]\ =\ wc\_tcu;}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_num[1]\ =\ 3\ *\ wc\_tcu;}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_num[2]\ =\ 3\ *\ wc\_tcu;}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_num[3]\ =\ wc\_tcu;}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_den[0]\ =\ 8\ +\ 8\ *\ wc\_t\ +\ 4\ *\ wc\_tsq\ +\ wc\_tcu;}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_den[1]\ =\ -\/24\ -\/\ 8\ *\ wc\_t\ +\ 4\ *\ wc\_tsq\ +\ 3\ *\ wc\_tcu;}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_den[2]\ =\ 24\ -\/\ 8\ *\ wc\_t\ -\/\ 4\ *\ wc\_tsq\ +\ 3\ *\ wc\_tcu;}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_den[3]\ =\ -\/8\ +\ 8\ *\ wc\_t\ -\/\ 4\ *\ wc\_tsq\ +\ wc\_tcu;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (ORDER\ ==\ order::fourth)}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_num[0]\ =\ wc\_tfo;}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_num[1]\ =\ 4\ *\ wc\_tfo;}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_num[2]\ =\ 6\ *\ wc\_tfo;}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_num[3]\ =\ 4\ *\ wc\_tfo;}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_num[4]\ =\ wc\_tfo;}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ ALPHA\ =\ 2.6132;}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ BETA\ \ =\ 3.41430612;}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_den[0]\ =\ 16\ +\ 8\ *\ ALPHA\ *\ wc\_t\ +\ 4\ *\ BETA\ *\ wc\_tsq\ +\ 2\ *\ ALPHA\ *\ wc\_tcu\ +\ wc\_tfo;}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_den[1]\ =\ -\/64\ -\/\ 16\ *\ ALPHA\ *\ wc\_t\ +\ 4\ *\ ALPHA\ *\ wc\_tcu\ +\ 4\ *\ wc\_tfo;}
+\DoxyCodeLine{00189\ }
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_den[2]\ =\ 96\ -\/\ 8\ *\ BETA\ *\ wc\_tsq\ +\ 6\ *\ wc\_tfo;}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_den[3]\ =\ -\/64\ +\ 16\ *\ ALPHA\ *\ wc\_t\ -\/\ 4\ *\ ALPHA\ *\ wc\_tcu\ +\ 4\ *\ wc\_tfo;}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\_den[4]\ =\ 16\ -\/\ 8\ *\ ALPHA\ *\ wc\_t\ +\ 4\ *\ BETA\ *\ wc\_tsq\ -\/\ 2\ *\ ALPHA\ *\ wc\_tcu\ +\ wc\_tfo;}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ \ \ \ \ \}}
+\DoxyCodeLine{00197\ \};}
+\DoxyCodeLine{00198\ \}\ \textcolor{comment}{//\ namespace\ filter}}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

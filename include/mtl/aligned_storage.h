@@ -16,7 +16,7 @@
 
 namespace mtl
 {
-// To replace std::aligned_storage
+/// @brief Creates a buffer of type `B` using the size and alignment of `T`.
 template <typename T, typename B = unsigned char> class aligned_storage
 {
     public:

@@ -1,0 +1,71 @@
+\doxysection{largest.\+h}
+\hypertarget{largest_8h_source}{}\label{largest_8h_source}\index{include/mtl/largest.h@{include/mtl/largest.h}}
+\mbox{\hyperlink{largest_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_LARGEST\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MTL\_LARGEST\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }mtl}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{comment}{//***************************************************************************}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ largest\_type}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}...\ TRest>}
+\DoxyCodeLine{00022\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1largest__type}{largest\_type}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ Define\ 'largest\_other'\ as\ 'largest\_type'\ with\ all\ but\ the\ first\ parameter.\ }}
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ }largest\_other\ =\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{structmtl_1_1largest__type}{largest\_type}}<TRest...>::type;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ Set\ 'type'\ to\ be\ the\ largest\ of\ the\ first\ parameter\ and\ any\ of\ the\ others.}}
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ This\ is\ recursive.}}
+\DoxyCodeLine{00029\ \textcolor{keyword}{using\ }type\ =\ conditional\_t<}
+\DoxyCodeLine{00030\ \ \ \ \ (\textcolor{keyword}{sizeof}(T1)\ >\ \textcolor{keyword}{sizeof}(largest\_other)),\ T1,\ largest\_other>;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ The\ size\ of\ the\ largest\ type.}}
+\DoxyCodeLine{00033\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ size\ =\ \textcolor{keyword}{sizeof}(type);}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1>}
+\DoxyCodeLine{00037\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1largest__type}{largest\_type}}<T1>}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \textcolor{keyword}{using\ }type\ =\ T1;}
+\DoxyCodeLine{00040\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ size\ =\ \textcolor{keyword}{sizeof}(T1);}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}\ ...TRest>}
+\DoxyCodeLine{00044\ \textcolor{keyword}{using\ }largest\_type\_t\ =\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{structmtl_1_1largest__type}{largest\_type}}<T1,\ TRest...>::type;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{comment}{//***************************************************************************}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ largest\_alignment}}
+\DoxyCodeLine{00048\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}...\ TRest>}
+\DoxyCodeLine{00049\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\_alignment}}}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \textcolor{comment}{//\ Define\ 'largest\_other'\ as\ 'largest\_type'\ with\ all\ but\ the\ first\ parameter.}}
+\DoxyCodeLine{00052\ \textcolor{keyword}{using\ }largest\_other\ =\ \textcolor{keyword}{typename}\ \mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\_alignment}}<TRest...>::type;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ Set\ 'type'\ to\ be\ the\ largest\ of\ the\ first\ parameter\ and\ any\ of\ the\ others.}}
+\DoxyCodeLine{00055\ \textcolor{comment}{//\ This\ is\ recursive.}}
+\DoxyCodeLine{00056\ \textcolor{keyword}{using\ }type\ =\ conditional\_t<}
+\DoxyCodeLine{00057\ \ \ \ \ (alignment\_of\_v<T1>\ >\ alignment\_of\_v<largest\_other>),\ T1,\ largest\_other>;}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ value\ =\ alignment\_of\_v<type>;}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1>}
+\DoxyCodeLine{00063\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\_alignment}}<T1>}
+\DoxyCodeLine{00064\ \{}
+\DoxyCodeLine{00065\ \textcolor{keyword}{typedef}\ T1\ type;}
+\DoxyCodeLine{00066\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ value\ =\ alignment\_of\_v<type>;}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}...\ TRest>}
+\DoxyCodeLine{00070\ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ largest\_alignment\_v\ =\ \mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\_alignment}}<T1,\ TRest...>::value;}
+\DoxyCodeLine{00071\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
