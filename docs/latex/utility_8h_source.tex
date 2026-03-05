@@ -12,20 +12,21 @@
 \DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }mtl}
 \DoxyCodeLine{00017\ \{}
 \DoxyCodeLine{00020\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Fn>}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{requires}\ std::is\_invocable\_v<Fn>}
-\DoxyCodeLine{00022\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1final__action}{final\_action}}}
-\DoxyCodeLine{00023\ \{}
-\DoxyCodeLine{00024\ \ \ \ \ Fn\ f;}
-\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{structmtl_1_1final__action}{\string~final\_action}}()\ \{\ f();\ \}}
-\DoxyCodeLine{00026\ \};}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00040\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Fn,\ \textcolor{keyword}{typename}\ Ret\ =\ final\_action<Fn>>}
-\DoxyCodeLine{00041\ [[nodiscard]]\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{utility_8h_a5e14ed377b76d2207590be48823fe80d}{defer}}(Fn\ \&\&f)\ -\/>\ Ret}
-\DoxyCodeLine{00042\ \{}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{return}\ \{f\};}
-\DoxyCodeLine{00044\ \}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1final__action}{final\_action}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{static\_assert}(std::is\_invocable\_v<Fn>,\ \textcolor{stringliteral}{"{}Fn\ must\ be\ invocable"{}});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ Fn\ f;}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{structmtl_1_1final__action}{\string~final\_action}}()\ \{\ f();\ \}}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Fn,\ \textcolor{keyword}{typename}\ Ret\ =\ final\_action<Fn>>}
+\DoxyCodeLine{00042\ [[nodiscard]]\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{utility_8h_a5e14ed377b76d2207590be48823fe80d}{defer}}(Fn\ \&\&f)\ -\/>\ Ret}
+\DoxyCodeLine{00043\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{return}\ \{f\};}
 \DoxyCodeLine{00045\ \}}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00046\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

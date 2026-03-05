@@ -8,73 +8,72 @@
 \DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MTL\_RESULT\_H}}
 \DoxyCodeLine{00013\ }
 \DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cstddef>}}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{utility_8h}{utility.h}}"{}}}
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{type__traits_8h}{type\_traits.h}}"{}}}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }mtl}
-\DoxyCodeLine{00020\ \{}
-\DoxyCodeLine{00021\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ E>}
-\DoxyCodeLine{00022\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1err}{err}}}
-\DoxyCodeLine{00023\ \{}
-\DoxyCodeLine{00024\ \ \ \ \ E\ \_value;}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{structmtl_1_1err}{err}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{structmtl_1_1err}{err}}(E\&\&\ e)\ :\ \_value(e)\ \{\};}
-\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }mtl}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ E>}
+\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1err}{err}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ E\ \_value;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{structmtl_1_1err}{err}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{structmtl_1_1err}{err}}(E\&\&\ e)\ :\ \_value(e)\ \{\};}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
 \DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ E>}
-\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1result}{result}}}
-\DoxyCodeLine{00032\ \{}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{using\ }ok\_type\ \ =\ T;}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ =\ \mbox{\hyperlink{structmtl_1_1err}{mtl::err<E>}};}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class\ }...Args>}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result}{result}}(Args\&\&...args)}
-\DoxyCodeLine{00039\ \ \ \ \ \{}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ (\&this-\/>\_value.\_ok)\ T(forward<Args>(args)...);}
-\DoxyCodeLine{00042\ \ \ \ \ \}}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result}{result}}(ok\_type\ \&\&val)}
-\DoxyCodeLine{00045\ \ \ \ \ \{}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ this-\/>\_value.\_ok\ =\ move(val);}
-\DoxyCodeLine{00048\ \ \ \ \ \}}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result}{result}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ \&e)}
-\DoxyCodeLine{00051\ \ \ \ \ \{}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ this-\/>\_value.\_err\ =\ e;}
-\DoxyCodeLine{00054\ \ \ \ \ \}}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result}{result}}(\mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ \&\&e)}
-\DoxyCodeLine{00057\ \ \ \ \ \{}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ this-\/>\_value.\_err\ =\ move(e);}
-\DoxyCodeLine{00060\ \ \ \ \ \}}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ is\_ok()\ \textcolor{keyword}{const}\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_ok;\ \}}
-\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ is\_err()\ \textcolor{keyword}{const}\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ !(this-\/>\_ok);\ \}}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ ok()\ -\/>\ ok\_type\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_ok;\ \}}
-\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ ok()\ \textcolor{keyword}{const}\ -\/>\ \textcolor{keyword}{const}\ ok\_type\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_ok;\ \}}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{structmtl_1_1err}{err}}()\ -\/>\ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_err;\ \}}
-\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{structmtl_1_1err}{err}}()\ \textcolor{keyword}{const}\ -\/>\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_err;\ \}}
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_ok\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00073\ }
-\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{union}}
-\DoxyCodeLine{00075\ \ \ \ \ \{}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ \_err;}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ ok\_type\ \_ok;}
-\DoxyCodeLine{00078\ \ \ \ \ \}\ \_value;}
-\DoxyCodeLine{00079\ \};}
-\DoxyCodeLine{00080\ \}}
-\DoxyCodeLine{00081\ }
-\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00029\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ E>}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmtl_1_1result}{result}}}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{using\ }ok\_type\ \ =\ T;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ =\ \mbox{\hyperlink{structmtl_1_1err}{mtl::err<E>}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class\ }...Args>}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result}{result}}(Args\&\&...args)}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ (\&this-\/>\_value.\_ok)\ T(std::forward<Args>(args)...);}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result}{result}}(ok\_type\ \&\&val)}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ this-\/>\_value.\_ok\ =\ std::move(val);}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result}{result}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ \&e)}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ this-\/>\_value.\_err\ =\ e;}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{constexpr}\ \mbox{\hyperlink{classmtl_1_1result}{result}}(\mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ \&\&e)}
+\DoxyCodeLine{00056\ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ this-\/>\_ok\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ this-\/>\_value.\_err\ =\ std::move(e);}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ is\_ok()\ \textcolor{keyword}{const}\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_ok;\ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ is\_err()\ \textcolor{keyword}{const}\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ !(this-\/>\_ok);\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ ok()\ -\/>\ ok\_type\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_ok;\ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ ok()\ \textcolor{keyword}{const}\ -\/>\ \textcolor{keyword}{const}\ ok\_type\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_ok;\ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{structmtl_1_1err}{err}}()\ -\/>\ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_err;\ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{structmtl_1_1err}{err}}()\ \textcolor{keyword}{const}\ -\/>\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\&\ \{\ \textcolor{keywordflow}{return}\ this-\/>\_value.\_err;\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{bool}\ \_ok\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{union}}
+\DoxyCodeLine{00074\ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structmtl_1_1err}{err\_type}}\ \_err;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ ok\_type\ \_ok;}
+\DoxyCodeLine{00077\ \ \ \ \ \}\ \_value;}
+\DoxyCodeLine{00078\ \};}
+\DoxyCodeLine{00079\ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}
