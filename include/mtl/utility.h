@@ -18,9 +18,10 @@ namespace mtl
 /// @brief Runs a callable object at the end of the scope.
 /// @note This class is menat to be used by `mtl::defer`
 template<typename Fn>
-    requires std::is_invocable_v<Fn>
 struct final_action
 {
+    static_assert(std::is_invocable_v<Fn>, "Fn must be invocable");
+
     Fn f;
     ~final_action() { f(); }
 };

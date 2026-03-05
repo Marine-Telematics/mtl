@@ -25,7 +25,7 @@ namespace detail_fnv1a
 {
     /// @brief Computes the FNV-1a hash of a string.
     ///
-    /// @tparam T Type of the hash value (e.g., std::uint32_t, std::uint64_t).
+    /// @tparam T Type of the hash value (e.g., uint32_t, uint64_t).
     /// @tparam Basis The FNV offset basis.
     /// @tparam Prime The FNV prime.
     ///

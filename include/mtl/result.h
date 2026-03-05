@@ -12,9 +12,8 @@
 #define MTL_RESULT_H
 
 #include <cstddef>
-
-#include "utility.h"
-#include "type_traits.h"
+#include <utility>
+#include <type_traits>
 
 namespace mtl
 {
@@ -38,13 +37,13 @@ class result
 	constexpr result(Args&&...args)
 	{
 		this->_ok = true;
-		new (&this->_value._ok) T(forward<Args>(args)...);
+		new (&this->_value._ok) T(std::forward<Args>(args)...);
 	}
 
 	constexpr result(ok_type &&val)
 	{
 		this->_ok = true;
-		this->_value._ok = move(val);
+		this->_value._ok = std::move(val);
 	}
 
 	constexpr result(const err_type &e)
@@ -56,7 +55,7 @@ class result
 	constexpr result(err_type &&e)
 	{
 		this->_ok = false;
-		this->_value._err = move(e);
+		this->_value._err = std::move(e);
 	}
 
 	constexpr auto is_ok() const -> bool { return this->_ok; }

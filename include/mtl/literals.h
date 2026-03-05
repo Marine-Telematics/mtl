@@ -12,7 +12,6 @@
 #define MTL_LITERALS_H
 
 #include <cstdint>
-#include <type_traits>
 
 namespace mtl::time_literals
 {
@@ -22,7 +21,7 @@ struct base
 {
     uint32_t _val;
 
-    constexpr operator uint32_t() { return _val; }
+    constexpr operator uint32_t() const { return _val; }
     constexpr explicit base(uint32_t v) : _val(v) {}
 };
 }
@@ -33,33 +32,33 @@ struct s;
 
 struct hz : private_time_literals::base
 {
-    constexpr operator ms();
-    constexpr operator s();
+    constexpr auto period_ms() const -> ms;
+    constexpr auto period_s() const -> s;
     using private_time_literals::base::base;
 };
 
 struct ms : private_time_literals::base
 {
-    constexpr operator hz();
-    constexpr operator s();
+    constexpr auto frequency() const -> hz;
+    constexpr operator s() const;
     using private_time_literals::base::base;
 };
 
 struct s : private_time_literals::base
 {
-    constexpr operator hz();
-    constexpr operator ms();
+    constexpr auto frequency() const -> hz;
+    constexpr operator ms() const;
     using private_time_literals::base::base;
 };
 
-constexpr hz::operator ms() { return ms(1000u / this->_val); }
-constexpr hz::operator s() { return ms(1u / this->_val); }
+constexpr auto hz::period_ms() const -> ms { return ms(1000u / this->_val); }
+constexpr auto hz::period_s() const -> s { return s(1u / this->_val); }
 
-constexpr ms::operator hz() { return hz(1000u / this->_val); }
-constexpr ms::operator s() { return s(this->_val / 1000u); }
+constexpr auto ms::frequency() const -> hz { return hz(1000u / this->_val); }
+constexpr ms::operator s() const { return s(this->_val / 1000u); }
 
-constexpr s::operator hz() { return hz(1u / this->_val); }
-constexpr s::operator ms() { return ms(this->_val * 1000u); }
+constexpr auto s::frequency() const -> hz { return hz(1u / this->_val); }
+constexpr s::operator ms() const { return ms(this->_val * 1000u); }
 }
 
 constexpr mtl::time_literals::hz operator"" _hz(unsigned long long v)
