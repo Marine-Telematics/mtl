@@ -1,9 +1,13 @@
 <map id="include/mtl/interface/i2c.h" name="include/mtl/interface/i2c.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="40,5,197,45"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,61,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,48,58,86,54,82,96,44"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="85,93,152,119"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="121,46,121,79,116,79,116,46"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="177,93,247,119"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="143,44,189,82,186,86,140,48"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="117,5,275,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,59,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,48,69,90,67,85,156,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="83,93,139,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="177,48,135,86,132,82,174,44"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="163,93,229,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="199,46,199,79,193,79,193,46"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="254,93,325,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="220,44,266,82,263,86,217,48"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="349,93,409,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="241,43,340,85,338,90,239,48"/>
 </map>
