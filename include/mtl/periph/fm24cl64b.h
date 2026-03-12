@@ -14,7 +14,7 @@
 #include <array>
 #include <cstddef>
 #include <cstdint>
-#include <algorithm>
+#include <cstring>
 
 #include "../interface/i2c.h"
 
@@ -44,9 +44,13 @@ struct fm24cl64b
     }
 };
 
+template<typename Bus = void>
+class fm24cl64b_impl;
+
 /// This interface provides a abstraction in the way the FM24C16B FRAM expects data.
 /// The implementation is Bus agnostic, user shall provide write and read functions.
-class fm24cl64b_impl : public fm24cl64b
+template<>
+class fm24cl64b_impl<void> : public fm24cl64b
 {   
     public:
     fm24cl64b_impl(const device_select sel) : _i2c_addr(get_addr(sel)) {}
@@ -56,35 +60,68 @@ class fm24cl64b_impl : public fm24cl64b
     template<typename T, typename Fn>
     auto write(const address addr, const T &obj, Fn &&sender)
     {
-        std::array<i2c::data_type, sizeof(T) + sizeof(address)> buffer{};
-
-        buffer[0] = (addr >> 8u) & 0xffu;
-        buffer[1] = addr & 0xffu;
+        i2c::message<sizeof(T) + sizeof(address)> message{this->_i2c_addr, {}};
         
-        std::memcpy(buffer.data() + sizeof(address), &obj, sizeof(T));
+        message._data[0] = (addr >> 8u) & 0xffu;
+        message._data[1] = addr & 0xffu;
+        
+        std::memcpy(message._data.data() + sizeof(address), &obj, sizeof(T));
 
-        return sender(this->_i2c_addr, buffer.data(), buffer.size());
+        return sender(message);
     }
 
     template<typename T, typename Fn>
     auto read(T &obj_out, Fn &&reader)
     {
-        return reader(this->_i2c_addr, &obj_out, sizeof(T));
+        i2c::message<> message {
+            this->_i2c_addr,
+            {reinterpret_cast<uint8_t *>(&obj_out), sizeof(T)}
+        };
+
+        return reader(message);
     }
 
     template<typename Fn>
     auto point_to_addr(const address addr, Fn &&sender)
     {
-        std::array<i2c::data_type, sizeof(address)> buffer{};
+        i2c::message<sizeof(address)> message{this->_i2c_addr, {}};
 
-        buffer[0] = (addr >> 8u) & 0xffu;
-        buffer[1] = addr & 0xffu;
+        message._data[0] = (addr >> 8u) & 0xffu;
+        message._data[1] = addr & 0xffu;
 
-        return sender(this->_i2c_addr, buffer.data(), buffer.size());
+        return sender(message);
     }
 
     private:
     const i2c::addr_type _i2c_addr;
+};
+
+template<typename Bus>
+class fm24cl64b_impl : private fm24cl64b_impl<>
+{
+    public:
+    fm24cl64b_impl(Bus &bus, const device_select sel)
+        : fm24cl64b_impl<>(sel), _bus(bus) { }
+    
+    template<typename T>
+    auto write(const address addr, const T &obj)
+    {
+        auto sender = [&] (auto &m) { return this->_bus.write(m); };
+        return fm24cl64b_impl<>::write(addr, obj, sender);
+    }
+
+    template<typename T>
+    auto read(const address addr, T &obj_out)
+    {
+        auto sender = [&] (auto &m) { return this->_bus.write(m); };
+        auto reader = [&] (auto &m) { return this->_bus.read(m); };
+
+        fm24cl64b_impl<>::point_to_addr(addr, sender);
+        return fm24cl64b_impl<>::read(obj_out, reader);
+    }
+    
+    private:
+    Bus &_bus;
 };
 }
 

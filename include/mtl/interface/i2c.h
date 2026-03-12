@@ -11,9 +11,11 @@
 #ifndef MTL_INTERFACE_I2C_H
 #define MTL_INTERFACE_I2C_H
 
+#include <span>
 #include <array>
 #include <cstdint>
 #include <cstddef>
+#include <utility>
 
 namespace mtl::i2c
 {
@@ -35,10 +37,24 @@ enum class speed : uint8_t
     high      = 3, // 3.4 MHz
 };
 
-template<size_type SZ> class message
+inline static constexpr auto message_use_span_flag = std::numeric_limits<size_type>::max();
+
+template<size_type SZ = message_use_span_flag>
+struct message;
+
+template<> struct message<message_use_span_flag>
+{
+    addr_type _addr;
+    std::span<data_type> _data;
+};
+
+template<size_type SZ> struct message
 {
     addr_type _addr;
     std::array<data_type, SZ> _data{};
+
+    constexpr operator message<>() { return {_addr, _data}; }
+    constexpr operator message<>() const { return {_addr, _data}; }
 };
 }
 
