@@ -1,0 +1,69 @@
+\doxysection{mtl\+::fm24cl64b\+\_\+impl\texorpdfstring{$<$}{<} void \texorpdfstring{$>$}{>} Class Reference}
+\hypertarget{classmtl_1_1fm24cl64b__impl_3_01void_01_4}{}\label{classmtl_1_1fm24cl64b__impl_3_01void_01_4}\index{mtl::fm24cl64b\_impl$<$ void $>$@{mtl::fm24cl64b\_impl$<$ void $>$}}
+
+
+{\ttfamily \#include $<$fm24cl64b.\+h$>$}
+
+
+
+Inheritance diagram for mtl\+::fm24cl64b\+\_\+impl\texorpdfstring{$<$}{<} void \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classmtl_1_1fm24cl64b__impl_3_01void_01_4__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for mtl\+::fm24cl64b\+\_\+impl\texorpdfstring{$<$}{<} void \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classmtl_1_1fm24cl64b__impl_3_01void_01_4__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmtl_1_1fm24cl64b__impl_3_01void_01_4_a46521d9ab6b5320aab4a289a67f8a4b2}\label{classmtl_1_1fm24cl64b__impl_3_01void_01_4_a46521d9ab6b5320aab4a289a67f8a4b2} 
+{\bfseries fm24cl64b\+\_\+impl} (const \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select}{device\+\_\+select}} sel)
+\item 
+\Hypertarget{classmtl_1_1fm24cl64b__impl_3_01void_01_4_ae016d1befdb06331bbe6a8a9f1002c1e}\label{classmtl_1_1fm24cl64b__impl_3_01void_01_4_ae016d1befdb06331bbe6a8a9f1002c1e} 
+{\footnotesize template$<$typename T , typename Fn $>$ }\\auto {\bfseries write} (const address addr, const T \&obj, Fn \&\&sender)
+\begin{DoxyCompactList}\small\item\em Bus agnostic implementations\+: \end{DoxyCompactList}\item 
+\Hypertarget{classmtl_1_1fm24cl64b__impl_3_01void_01_4_a223cd6d943b5a7871245ac35213cd2bc}\label{classmtl_1_1fm24cl64b__impl_3_01void_01_4_a223cd6d943b5a7871245ac35213cd2bc} 
+{\footnotesize template$<$typename T , typename Fn $>$ }\\auto {\bfseries read} (T \&obj\+\_\+out, Fn \&\&reader)
+\item 
+\Hypertarget{classmtl_1_1fm24cl64b__impl_3_01void_01_4_abcd879d5111c389b9320ccb58735887b}\label{classmtl_1_1fm24cl64b__impl_3_01void_01_4_abcd879d5111c389b9320ccb58735887b} 
+{\footnotesize template$<$typename Fn $>$ }\\auto {\bfseries point\+\_\+to\+\_\+addr} (const address addr, Fn \&\&sender)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{structmtl_1_1fm24cl64b}{mtl\+::fm24cl64b}}}
+\begin{DoxyCompactItemize}
+\item 
+using {\bfseries address} = uint16\+\_\+t
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{structmtl_1_1fm24cl64b}{mtl\+::fm24cl64b}}}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto {\bfseries get\+\_\+addr} (const \mbox{\hyperlink{structmtl_1_1fm24cl64b_1_1device__select}{device\+\_\+select}} sel) -\/$>$ i2c\+::addr\+\_\+type
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{structmtl_1_1fm24cl64b}{mtl\+::fm24cl64b}}}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr address {\bfseries START\+\_\+\+ADDR} = 0x0000u
+\item 
+static constexpr address {\bfseries END\+\_\+\+ADDR} = 0x1fffu
+\item 
+static constexpr i2c\+::addr\+\_\+type {\bfseries BASE\+\_\+\+ADDR} = 0b1010000u
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This interface provides a abstraction in the way the FM24\+C16B FRAM expects data. The implementation is Bus agnostic, user shall provide write and read functions. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mtl/periph/fm24cl64b.\+h\end{DoxyCompactItemize}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MarineTelematics Template Library: mtl::fm24cl64b_impl Class Reference</title>
+<title>MarineTelematics Template Library: mtl::fm24cl64b_impl&lt; Bus &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -78,75 +78,25 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classmtl_1_1fm24cl64b__impl-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">mtl::fm24cl64b_impl Class Reference</div></div>
+  <div class="headertitle"><div class="title">mtl::fm24cl64b_impl&lt; Bus &gt; Class Template Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="fm24cl64b_8h_source.html">fm24cl64b.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for mtl::fm24cl64b_impl:</div>
-<div class="dyncontent">
-<div class="center"><img src="classmtl_1_1fm24cl64b__impl__inherit__graph.png" border="0" usemap="#amtl_1_1fm24cl64b__impl_inherit__map" alt="Inheritance graph"/></div>
-<map name="amtl_1_1fm24cl64b__impl_inherit__map" id="amtl_1_1fm24cl64b__impl_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,79,163,104"/>
-<area shape="rect" href="structmtl_1_1fm24cl64b.html" title=" " alt="" coords="23,5,145,31"/>
-<area shape="poly" title=" " alt="" coords="87,44,87,79,81,79,81,44"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for mtl::fm24cl64b_impl:</div>
-<div class="dyncontent">
-<div class="center"><img src="classmtl_1_1fm24cl64b__impl__coll__graph.png" border="0" usemap="#amtl_1_1fm24cl64b__impl_coll__map" alt="Collaboration graph"/></div>
-<map name="amtl_1_1fm24cl64b__impl_coll__map" id="amtl_1_1fm24cl64b__impl_coll__map">
-<area shape="rect" title=" " alt="" coords="5,79,163,104"/>
-<area shape="rect" href="structmtl_1_1fm24cl64b.html" title=" " alt="" coords="23,5,145,31"/>
-<area shape="poly" title=" " alt="" coords="87,44,87,79,81,79,81,44"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa5f17065c958df0b4237d07301674e01" id="r_aa5f17065c958df0b4237d07301674e01"><td class="memItemLeft" align="right" valign="top"><a id="aa5f17065c958df0b4237d07301674e01" name="aa5f17065c958df0b4237d07301674e01"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>fm24cl64b_impl</b> (const <a class="el" href="structmtl_1_1fm24cl64b_1_1device__select.html">device_select</a> sel)</td></tr>
-<tr class="separator:aa5f17065c958df0b4237d07301674e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a390dc9e2b348cd397fbcb83469b9c45b" id="r_a390dc9e2b348cd397fbcb83469b9c45b"><td class="memTemplParams" colspan="2"><a id="a390dc9e2b348cd397fbcb83469b9c45b" name="a390dc9e2b348cd397fbcb83469b9c45b"></a>
-template&lt;typename T , typename Fn &gt; </td></tr>
-<tr class="memitem:a390dc9e2b348cd397fbcb83469b9c45b"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>write</b> (const address addr, const T &amp;obj, Fn &amp;&amp;sender)</td></tr>
-<tr class="memdesc:a390dc9e2b348cd397fbcb83469b9c45b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bus agnostic implementations: <br /></td></tr>
-<tr class="separator:a390dc9e2b348cd397fbcb83469b9c45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40ab19c2b768477b23278bbe50f7bbcc" id="r_a40ab19c2b768477b23278bbe50f7bbcc"><td class="memTemplParams" colspan="2"><a id="a40ab19c2b768477b23278bbe50f7bbcc" name="a40ab19c2b768477b23278bbe50f7bbcc"></a>
-template&lt;typename T , typename Fn &gt; </td></tr>
-<tr class="memitem:a40ab19c2b768477b23278bbe50f7bbcc"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>read</b> (T &amp;obj_out, Fn &amp;&amp;reader)</td></tr>
-<tr class="separator:a40ab19c2b768477b23278bbe50f7bbcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f7b5f9f55436cb3fb68e41799a2c829" id="r_a1f7b5f9f55436cb3fb68e41799a2c829"><td class="memTemplParams" colspan="2"><a id="a1f7b5f9f55436cb3fb68e41799a2c829" name="a1f7b5f9f55436cb3fb68e41799a2c829"></a>
-template&lt;typename Fn &gt; </td></tr>
-<tr class="memitem:a1f7b5f9f55436cb3fb68e41799a2c829"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>point_to_addr</b> (const address addr, Fn &amp;&amp;sender)</td></tr>
-<tr class="separator:a1f7b5f9f55436cb3fb68e41799a2c829"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_types_structmtl_1_1fm24cl64b"><td colspan="2" onclick="javascript:toggleInherit('pub_types_structmtl_1_1fm24cl64b')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="structmtl_1_1fm24cl64b.html">mtl::fm24cl64b</a></td></tr>
-<tr class="memitem:a594d4e745cdb446693397fe5b61fab06 inherit pub_types_structmtl_1_1fm24cl64b" id="r_a594d4e745cdb446693397fe5b61fab06"><td class="memItemLeft" align="right" valign="top">
-using&#160;</td><td class="memItemRight" valign="bottom"><b>address</b> = uint16_t</td></tr>
-<tr class="separator:a594d4e745cdb446693397fe5b61fab06 inherit pub_types_structmtl_1_1fm24cl64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_methods_structmtl_1_1fm24cl64b"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_structmtl_1_1fm24cl64b')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="structmtl_1_1fm24cl64b.html">mtl::fm24cl64b</a></td></tr>
-<tr class="memitem:a84b6f7610e8e29dc1c1ef5c3f0927bfa inherit pub_static_methods_structmtl_1_1fm24cl64b" id="r_a84b6f7610e8e29dc1c1ef5c3f0927bfa"><td class="memItemLeft" align="right" valign="top">
-static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><b>get_addr</b> (const <a class="el" href="structmtl_1_1fm24cl64b_1_1device__select.html">device_select</a> sel) -&gt; i2c::addr_type</td></tr>
-<tr class="separator:a84b6f7610e8e29dc1c1ef5c3f0927bfa inherit pub_static_methods_structmtl_1_1fm24cl64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_attribs_structmtl_1_1fm24cl64b"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_structmtl_1_1fm24cl64b')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="structmtl_1_1fm24cl64b.html">mtl::fm24cl64b</a></td></tr>
-<tr class="memitem:aedf1f9ceb76633689127450b35e1468a inherit pub_static_attribs_structmtl_1_1fm24cl64b" id="r_aedf1f9ceb76633689127450b35e1468a"><td class="memItemLeft" align="right" valign="top">
-static constexpr address&#160;</td><td class="memItemRight" valign="bottom"><b>START_ADDR</b> = 0x0000u</td></tr>
-<tr class="separator:aedf1f9ceb76633689127450b35e1468a inherit pub_static_attribs_structmtl_1_1fm24cl64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09a27fb376402d2a95e9481777b5e344 inherit pub_static_attribs_structmtl_1_1fm24cl64b" id="r_a09a27fb376402d2a95e9481777b5e344"><td class="memItemLeft" align="right" valign="top">
-static constexpr address&#160;</td><td class="memItemRight" valign="bottom"><b>END_ADDR</b> = 0x1fffu</td></tr>
-<tr class="separator:a09a27fb376402d2a95e9481777b5e344 inherit pub_static_attribs_structmtl_1_1fm24cl64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa83014e222f99cf3099a6927f11d5088 inherit pub_static_attribs_structmtl_1_1fm24cl64b" id="r_aa83014e222f99cf3099a6927f11d5088"><td class="memItemLeft" align="right" valign="top">
-static constexpr i2c::addr_type&#160;</td><td class="memItemRight" valign="bottom"><b>BASE_ADDR</b> = 0b1010000u</td></tr>
-<tr class="separator:aa83014e222f99cf3099a6927f11d5088 inherit pub_static_attribs_structmtl_1_1fm24cl64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72acf11781fa33e888359b557f2f6979" id="r_a72acf11781fa33e888359b557f2f6979"><td class="memItemLeft" align="right" valign="top"><a id="a72acf11781fa33e888359b557f2f6979" name="a72acf11781fa33e888359b557f2f6979"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>fm24cl64b_impl</b> (Bus &amp;bus, const device_select sel)</td></tr>
+<tr class="separator:a72acf11781fa33e888359b557f2f6979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade54eb93d3cf99aae8cf0f636b99acfb" id="r_ade54eb93d3cf99aae8cf0f636b99acfb"><td class="memTemplParams" colspan="2"><a id="ade54eb93d3cf99aae8cf0f636b99acfb" name="ade54eb93d3cf99aae8cf0f636b99acfb"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ade54eb93d3cf99aae8cf0f636b99acfb"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>write</b> (const address addr, const T &amp;obj)</td></tr>
+<tr class="separator:ade54eb93d3cf99aae8cf0f636b99acfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaba674c556aa5cecdfdbf6d70757a237" id="r_aaba674c556aa5cecdfdbf6d70757a237"><td class="memTemplParams" colspan="2"><a id="aaba674c556aa5cecdfdbf6d70757a237" name="aaba674c556aa5cecdfdbf6d70757a237"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aaba674c556aa5cecdfdbf6d70757a237"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>read</b> (const address addr, T &amp;obj_out)</td></tr>
+<tr class="separator:aaba674c556aa5cecdfdbf6d70757a237"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This interface provides a abstraction in the way the FM24C16B FRAM expects data. The implementation is Bus agnostic, user shall provide write and read functions. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>include/mtl/periph/<a class="el" href="fm24cl64b_8h_source.html">fm24cl64b.h</a></li>
 </ul>
 </div><!-- contents -->
