@@ -31,4 +31,10 @@
     constexpr E &operator&=(E &a, E b) { return a = a & b; }                              \
     constexpr E &operator^=(E &a, E b) { return a = a ^ b; }
 
+namespace mtl
+{
+template<typename E>
+auto has_flag(const E e, E f) -> bool { return ((e & f) == f); }
+}
+
 #endif

@@ -22,7 +22,7 @@ struct base
     uint32_t _val;
 
     constexpr operator uint32_t() const { return _val; }
-    constexpr explicit base(uint32_t v) : _val(v) {}
+    constexpr base(uint32_t v) : _val(v) {}
 };
 }
 
