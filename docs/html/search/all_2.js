@@ -8,7 +8,7 @@ var searchData=
   ['bitset_5',['bitset',['../classmtl_1_1bitset.html',1,'mtl']]],
   ['bitset_2eh_6',['bitset.h',['../bitset_8h.html',1,'']]],
   ['bus_2eh_7',['bus.h',['../bus_8h.html',1,'']]],
-  ['butterworth_20low_20pass_20filter_20c_202025_20marine_20telematics_8',['Butterworth Low Pass Filter - (c) 2025 marine telematics',['../butterworth__lpf_8h.html#autotoc_md8',1,'']]],
+  ['butterworth_20low_20pass_20filter_20c_202025_20marine_20telematics_8',['Butterworth Low Pass Filter - (c) 2025 marine telematics',['../butterworth__lpf_8h.html#autotoc_md10',1,'']]],
   ['butterworth_5flpf_9',['butterworth_lpf',['../classmtl_1_1filter_1_1butterworth__lpf.html',1,'mtl::filter::butterworth_lpf&lt; Order, T &gt;'],['../classmtl_1_1filter_1_1butterworth__lpf.html#acef46e02d969bf8c18eb095cb2e6638e',1,'mtl::filter::butterworth_lpf::butterworth_lpf()']]],
   ['butterworth_5flpf_2eh_10',['butterworth_lpf.h',['../butterworth__lpf_8h.html',1,'']]]
 ];

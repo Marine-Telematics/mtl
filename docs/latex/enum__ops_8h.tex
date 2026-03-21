@@ -1,0 +1,57 @@
+\doxysection{include/mtl/enum\+\_\+ops.h File Reference}
+\hypertarget{enum__ops_8h}{}\label{enum__ops_8h}\index{include/mtl/enum\_ops.h@{include/mtl/enum\_ops.h}}
+{\ttfamily \#include $<$cstdint$>$}\newline
+Include dependency graph for enum\+\_\+ops.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{enum__ops_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{enum__ops_8h_ab071e4ddb5dab20320b299df224a632f}{MTL\+\_\+\+ADD\+\_\+\+ENUM\+\_\+\+OPS}}(E)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler{0}
+ \hypertarget{enum__ops_8h_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{Marine\+Telematics Template Library               -\/ (c) 2026 Marine Telematics}{MarineTelematics Template Library               - (c) 2026 Marine Telematics}}\label{enum__ops_8h_autotoc_md8}
+\begin{DoxyAuthor}{Author}
+Gabriel Novalski (\href{mailto:gabriel@marinetelematics.com.br}{\texttt{ gabriel@marinetelematics.\+com.\+br}}) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+12-\/03-\/2026
+\end{DoxyDate}
+\DoxyHorRuler{0}
+ 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{enum__ops_8h_ab071e4ddb5dab20320b299df224a632f}\label{enum__ops_8h_ab071e4ddb5dab20320b299df224a632f} 
+\index{enum\_ops.h@{enum\_ops.h}!MTL\_ADD\_ENUM\_OPS@{MTL\_ADD\_ENUM\_OPS}}
+\index{MTL\_ADD\_ENUM\_OPS@{MTL\_ADD\_ENUM\_OPS}!enum\_ops.h@{enum\_ops.h}}
+\doxysubsubsection{\texorpdfstring{MTL\_ADD\_ENUM\_OPS}{MTL\_ADD\_ENUM\_OPS}}
+{\footnotesize\ttfamily \#define MTL\+\_\+\+ADD\+\_\+\+ENUM\+\_\+\+OPS(\begin{DoxyParamCaption}\item[{}]{E }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{constexpr}\ E\ operator|(\textcolor{keyword}{const}\ E\ a,\ \textcolor{keyword}{const}\ E\ b)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}E\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(a)\ |\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(b));\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{constexpr}\ E\ operator\&(\textcolor{keyword}{const}\ E\ a,\ \textcolor{keyword}{const}\ E\ b)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}E\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(a)\ \&\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(b));\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{constexpr}\ E\ operator\string^(\textcolor{keyword}{const}\ E\ a,\ \textcolor{keyword}{const}\ E\ b)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}E\textcolor{keyword}{>}(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(a)\ \string^\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{size\_t}\textcolor{keyword}{>}(b));\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{constexpr}\ E\ \ operator\string~(\textcolor{keyword}{const}\ E\ a)\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}E\textcolor{keyword}{>}(\string~static\_cast<size\_t>(a));\ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{constexpr}\ E\ \&operator|=(E\ \&a,\ E\ b)\ \{\ \textcolor{keywordflow}{return}\ a\ =\ a\ |\ b;\ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{constexpr}\ E\ \&operator\&=(E\ \&a,\ E\ b)\ \{\ \textcolor{keywordflow}{return}\ a\ =\ a\ \&\ b;\ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{constexpr}\ E\ \&operator\string^=(E\ \&a,\ E\ b)\ \{\ \textcolor{keywordflow}{return}\ a\ =\ a\ \string^\ b;\ \}}
+
+\end{DoxyCode}
