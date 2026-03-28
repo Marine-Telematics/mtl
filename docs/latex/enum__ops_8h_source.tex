@@ -27,6 +27,12 @@
 \DoxyCodeLine{00031\ \textcolor{preprocessor}{\ \ \ \ constexpr\ E\ \&operator\&=(E\ \&a,\ E\ b)\ \{\ return\ a\ =\ a\ \&\ b;\ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
 \DoxyCodeLine{00032\ \textcolor{preprocessor}{\ \ \ \ constexpr\ E\ \&operator\string^=(E\ \&a,\ E\ b)\ \{\ return\ a\ =\ a\ \string^\ b;\ \}}}
 \DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00034\ \textcolor{keyword}{namespace\ }mtl}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ E>}
+\DoxyCodeLine{00037\ \textcolor{keyword}{auto}\ has\_flag(\textcolor{keyword}{const}\ E\ e,\ E\ f)\ -\/>\ \textcolor{keywordtype}{bool}\ \{\ \textcolor{keywordflow}{return}\ ((e\ \&\ f)\ ==\ f);\ \}}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}
