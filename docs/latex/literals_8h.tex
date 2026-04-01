@@ -11,13 +11,21 @@ Include dependency graph for literals.\+h\+:\nopagebreak
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structmtl_1_1time__literals_1_1private__time__literals_1_1base}{mtl\+::time\+\_\+literals\+::private\+\_\+time\+\_\+literals\+::base}}
+struct \mbox{\hyperlink{structmtl_1_1time__literals_1_1private__literals_1_1base}{mtl\+::time\+\_\+literals\+::private\+\_\+literals\+::base}}
 \item 
 struct \mbox{\hyperlink{structmtl_1_1time__literals_1_1hz}{mtl\+::time\+\_\+literals\+::hz}}
 \item 
 struct \mbox{\hyperlink{structmtl_1_1time__literals_1_1ms}{mtl\+::time\+\_\+literals\+::ms}}
 \item 
 struct \mbox{\hyperlink{structmtl_1_1time__literals_1_1s}{mtl\+::time\+\_\+literals\+::s}}
+\item 
+struct \mbox{\hyperlink{structmtl_1_1electric__literals_1_1private__literals_1_1base}{mtl\+::electric\+\_\+literals\+::private\+\_\+literals\+::base$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structmtl_1_1electric__literals_1_1V}{mtl\+::electric\+\_\+literals\+::V}}
+\item 
+struct \mbox{\hyperlink{structmtl_1_1electric__literals_1_1A}{mtl\+::electric\+\_\+literals\+::A}}
+\item 
+struct \mbox{\hyperlink{structmtl_1_1electric__literals_1_1Ohms}{mtl\+::electric\+\_\+literals\+::\+Ohms}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -30,6 +38,33 @@ constexpr \mbox{\hyperlink{structmtl_1_1time__literals_1_1ms}{mtl\+::time\+\_\+l
 \item 
 \Hypertarget{literals_8h_a2ea916b82f3e70a0e1373f491281979d}\label{literals_8h_a2ea916b82f3e70a0e1373f491281979d} 
 constexpr \mbox{\hyperlink{structmtl_1_1time__literals_1_1s}{mtl\+::time\+\_\+literals\+::s}} {\bfseries operator"{}"{}\+\_\+s} (unsigned long long v)
+\item 
+\Hypertarget{literals_8h_a457bfaab97cef442c3551a96d0d9b006}\label{literals_8h_a457bfaab97cef442c3551a96d0d9b006} 
+constexpr auto {\bfseries operator"{}"{}\+\_\+V} (unsigned long long v) -\/$>$ \mbox{\hyperlink{structmtl_1_1electric__literals_1_1V}{mtl\+::electric\+\_\+literals\+::V}}
+\item 
+\Hypertarget{literals_8h_a1830b711dbb111b2d0371fe152f22b0d}\label{literals_8h_a1830b711dbb111b2d0371fe152f22b0d} 
+constexpr auto {\bfseries operator"{}"{}\+\_\+mV} (unsigned long long v) -\/$>$ \mbox{\hyperlink{structmtl_1_1electric__literals_1_1V}{mtl\+::electric\+\_\+literals\+::V}}
+\item 
+\Hypertarget{literals_8h_a0d9dd719e36ec1ca3d501b4a5a737578}\label{literals_8h_a0d9dd719e36ec1ca3d501b4a5a737578} 
+constexpr auto {\bfseries operator"{}"{}\+\_\+uV} (unsigned long long v) -\/$>$ \mbox{\hyperlink{structmtl_1_1electric__literals_1_1V}{mtl\+::electric\+\_\+literals\+::V}}
+\item 
+\Hypertarget{literals_8h_a57205ac48458012322b05c743b8ec3bc}\label{literals_8h_a57205ac48458012322b05c743b8ec3bc} 
+constexpr auto {\bfseries operator"{}"{}\+\_\+A} (unsigned long long v) -\/$>$ \mbox{\hyperlink{structmtl_1_1electric__literals_1_1A}{mtl\+::electric\+\_\+literals\+::A}}
+\item 
+\Hypertarget{literals_8h_a489c73596d13a8f92d3b8d8f0799b6d9}\label{literals_8h_a489c73596d13a8f92d3b8d8f0799b6d9} 
+constexpr auto {\bfseries operator"{}"{}\+\_\+mA} (unsigned long long v) -\/$>$ \mbox{\hyperlink{structmtl_1_1electric__literals_1_1A}{mtl\+::electric\+\_\+literals\+::A}}
+\item 
+\Hypertarget{literals_8h_a02afb13255235ee4e1d51389efc7e399}\label{literals_8h_a02afb13255235ee4e1d51389efc7e399} 
+constexpr auto {\bfseries operator"{}"{}\+\_\+uA} (unsigned long long v) -\/$>$ \mbox{\hyperlink{structmtl_1_1electric__literals_1_1A}{mtl\+::electric\+\_\+literals\+::A}}
+\item 
+\Hypertarget{literals_8h_af309bcf657a1f8d552f0e26e138e5935}\label{literals_8h_af309bcf657a1f8d552f0e26e138e5935} 
+constexpr auto {\bfseries operator"{}"{}\+\_\+k\+Ohms} (unsigned long long v) -\/$>$ \mbox{\hyperlink{structmtl_1_1electric__literals_1_1Ohms}{mtl\+::electric\+\_\+literals\+::\+Ohms}}
+\item 
+\Hypertarget{literals_8h_a8553cedd427aa577703adeafeec00299}\label{literals_8h_a8553cedd427aa577703adeafeec00299} 
+constexpr auto {\bfseries operator"{}"{}\+\_\+\+Ohms} (unsigned long long v) -\/$>$ \mbox{\hyperlink{structmtl_1_1electric__literals_1_1Ohms}{mtl\+::electric\+\_\+literals\+::\+Ohms}}
+\item 
+\Hypertarget{literals_8h_ae0f45f0568ac67e16c25b38385f4383a}\label{literals_8h_ae0f45f0568ac67e16c25b38385f4383a} 
+constexpr auto {\bfseries operator"{}"{}\+\_\+m\+Ohms} (unsigned long long v) -\/$>$ \mbox{\hyperlink{structmtl_1_1electric__literals_1_1Ohms}{mtl\+::electric\+\_\+literals\+::\+Ohms}}
 \end{DoxyCompactItemize}
 
 

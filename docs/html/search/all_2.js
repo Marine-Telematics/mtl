@@ -1,7 +1,7 @@
 var searchData=
 [
   ['back_0',['back',['../classmtl_1_1static__list.html#a818f01fc1501a54ea0eb1ede09b6c023',1,'mtl::static_list']]],
-  ['base_1',['base',['../structmtl_1_1time__literals_1_1private__time__literals_1_1base.html',1,'mtl::time_literals::private_time_literals']]],
+  ['base_1',['base',['../structmtl_1_1electric__literals_1_1private__literals_1_1base.html',1,'mtl::electric_literals::private_literals::base&lt; T &gt;'],['../structmtl_1_1time__literals_1_1private__literals_1_1base.html',1,'mtl::time_literals::private_literals::base']]],
   ['basic_5fstring_5fview_2',['basic_string_view',['../classmtl_1_1detail__string__view_1_1basic__string__view.html',1,'mtl::detail_string_view']]],
   ['begin_3',['begin',['../classmtl_1_1static__list.html#afcf224212419c710a812e584eff033ac',1,'mtl::static_list']]],
   ['bit_5fref_4',['bit_ref',['../structmtl_1_1bitset_1_1bit__ref.html',1,'mtl::bitset']]],
