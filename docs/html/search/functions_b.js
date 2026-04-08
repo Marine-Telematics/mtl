@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['write_0',['write',['../classmtl_1_1fm24cl64b__impl_3_01void_01_4.html#ae016d1befdb06331bbe6a8a9f1002c1e',1,'mtl::fm24cl64b_impl&lt; void &gt;']]]
+  ['value_0',['value',['../classmtl_1_1bitset.html#aafa7efd0520c87d529006cdb5f941b2d',1,'mtl::bitset::value()'],['../classmtl_1_1filter_1_1butterworth__lpf.html#ad74f1a4e17765ecf19251ce0db5cb1e1',1,'mtl::filter::butterworth_lpf::value()']]]
 ];

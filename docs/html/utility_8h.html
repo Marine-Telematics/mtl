@@ -81,15 +81,18 @@ $(function() {
   <div class="headertitle"><div class="title">utility.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;type_traits&gt;</code><br />
+<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for utility.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="utility_8h__incl.png" border="0" usemap="#ainclude_2mtl_2utility_8h" alt=""/></div>
 <map name="ainclude_2mtl_2utility_8h" id="ainclude_2mtl_2utility_8h">
-<area shape="rect" title=" " alt="" coords="5,5,152,31"/>
-<area shape="rect" title=" " alt="" coords="33,79,125,104"/>
-<area shape="poly" title=" " alt="" coords="81,31,81,65,76,65,76,31"/>
+<area shape="rect" title=" " alt="" coords="17,5,164,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,72,104"/>
+<area shape="poly" title=" " alt="" coords="84,33,57,69,53,66,80,29"/>
+<area shape="rect" title=" " alt="" coords="97,79,189,104"/>
+<area shape="poly" title=" " alt="" coords="101,29,128,66,124,69,97,33"/>
 </map>
 </div>
 </div>
@@ -107,6 +110,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a5e14ed377b76d2207590be48823fe80d"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="utility_8h.html#a5e14ed377b76d2207590be48823fe80d">mtl::defer</a> (Fn &amp;&amp;f) -&gt; Ret</td></tr>
 <tr class="memdesc:a5e14ed377b76d2207590be48823fe80d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs a callable object at the end of the scope of the calle.  <br /></td></tr>
 <tr class="separator:a5e14ed377b76d2207590be48823fe80d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78eb8cd3c6d971907a800ee593013c55" id="r_a78eb8cd3c6d971907a800ee593013c55"><td class="memItemLeft" align="right" valign="top"><a id="a78eb8cd3c6d971907a800ee593013c55" name="a78eb8cd3c6d971907a800ee593013c55"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>mtl::to_bcd</b> (const uint8_t value) -&gt; uint8_t</td></tr>
+<tr class="memdesc:a78eb8cd3c6d971907a800ee593013c55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a value into a BCD representation, useful for displays. <br /></td></tr>
+<tr class="separator:a78eb8cd3c6d971907a800ee593013c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23203eef3d60d83bdaf8a66566a03864" id="r_a23203eef3d60d83bdaf8a66566a03864"><td class="memItemLeft" align="right" valign="top"><a id="a23203eef3d60d83bdaf8a66566a03864" name="a23203eef3d60d83bdaf8a66566a03864"></a>
+auto&#160;</td><td class="memItemRight" valign="bottom"><b>mtl::to_bcd</b> (const uint16_t value) -&gt; uint16_t</td></tr>
+<tr class="memdesc:a23203eef3d60d83bdaf8a66566a03864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a value into a BCD representation, useful for displays. <br /></td></tr>
+<tr class="separator:a23203eef3d60d83bdaf8a66566a03864"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><hr  />

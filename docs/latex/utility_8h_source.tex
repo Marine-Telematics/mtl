@@ -7,26 +7,44 @@
 \DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ MTL\_UTILITY\_H}}
 \DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MTL\_UTILITY\_H}}
 \DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }mtl}
-\DoxyCodeLine{00017\ \{}
-\DoxyCodeLine{00020\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Fn>}
-\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1final__action}{final\_action}}}
-\DoxyCodeLine{00022\ \{}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{static\_assert}(std::is\_invocable\_v<Fn>,\ \textcolor{stringliteral}{"{}Fn\ must\ be\ invocable"{}});}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ Fn\ f;}
-\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{structmtl_1_1final__action}{\string~final\_action}}()\ \{\ f();\ \}}
-\DoxyCodeLine{00027\ \};}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00041\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Fn,\ \textcolor{keyword}{typename}\ Ret\ =\ final\_action<Fn>>}
-\DoxyCodeLine{00042\ [[nodiscard]]\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{utility_8h_a5e14ed377b76d2207590be48823fe80d}{defer}}(Fn\ \&\&f)\ -\/>\ Ret}
-\DoxyCodeLine{00043\ \{}
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{return}\ \{f\};}
-\DoxyCodeLine{00045\ \}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }mtl}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Fn>}
+\DoxyCodeLine{00022\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1final__action}{final\_action}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static\_assert}(std::is\_invocable\_v<Fn>,\ \textcolor{stringliteral}{"{}Fn\ must\ be\ invocable"{}});}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ Fn\ f;}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{structmtl_1_1final__action}{\string~final\_action}}()\ \{\ f();\ \}}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Fn,\ \textcolor{keyword}{typename}\ Ret\ =\ final\_action<Fn>>}
+\DoxyCodeLine{00043\ [[nodiscard]]\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{utility_8h_a5e14ed377b76d2207590be48823fe80d}{defer}}(Fn\ \&\&f)\ -\/>\ Ret}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{return}\ \{f\};}
 \DoxyCodeLine{00046\ \}}
 \DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00049\ \textcolor{keyword}{inline}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{utility_8h_a78eb8cd3c6d971907a800ee593013c55}{to\_bcd}}(\textcolor{keyword}{const}\ uint8\_t\ value)\ -\/>\ uint8\_t}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ tens\ \ =\ value\ /\ 10u;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{const}\ uint8\_t\ units\ =\ value\ \%\ 10u;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{return}\ (uint8\_t)((tens\ <<\ 4u)\ |\ units);}
+\DoxyCodeLine{00054\ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{inline}\ \textcolor{keyword}{auto}\ \mbox{\hyperlink{utility_8h_a78eb8cd3c6d971907a800ee593013c55}{to\_bcd}}(\textcolor{keyword}{const}\ uint16\_t\ value)\ -\/>\ uint16\_t}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{const}\ uint16\_t\ thousands\ =\ value\ /\ 1000u;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{const}\ uint16\_t\ hundreds\ \ =\ (value\ /\ 100u)\ \%\ 10u;}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{const}\ uint16\_t\ tens\ \ \ \ \ \ =\ (value\ /\ 10u)\ \%\ 10u;}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{const}\ uint16\_t\ units\ \ \ \ \ =\ value\ \%\ 10u;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{return}\ (uint16\_t)((thousands\ <<\ 12u)\ |\ (hundreds\ <<\ 8u)\ |\ (tens\ <<\ 4u)\ |\ units);}
+\DoxyCodeLine{00065\ \}}
+\DoxyCodeLine{00066\ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}
