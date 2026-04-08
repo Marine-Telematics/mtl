@@ -12,6 +12,7 @@
 #define MTL_ENUM_OPS_H
 
 #include <cstddef>
+#include <utility>
 
 #define MTL_ADD_ENUM_OPS(E)                                                             \
     constexpr E operator|(const E a, const E b)                                           \
