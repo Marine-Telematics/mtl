@@ -104,7 +104,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// Set &#39;type&#39; to be the largest of the first parameter and any of the others.</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// This is recursive.</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">using </span>type = conditional_t&lt;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">using </span>type = std::conditional_t&lt;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    (<span class="keyword">sizeof</span>(T1) &gt; <span class="keyword">sizeof</span>(largest_other)), T1, largest_other&gt;;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">// The size of the largest type.</span></div>
@@ -135,10 +135,10 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">// Set &#39;type&#39; to be the largest of the first parameter and any of the others.</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">// This is recursive.</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">using </span>type = conditional_t&lt;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    (alignment_of_v&lt;T1&gt; &gt; alignment_of_v&lt;largest_other&gt;), T1, largest_other&gt;;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">using </span>type = std::conditional_t&lt;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    (std::alignment_of_v&lt;T1&gt; &gt; std::alignment_of_v&lt;largest_other&gt;), T1, largest_other&gt;;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> value = alignment_of_v&lt;type&gt;;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> value = std::alignment_of_v&lt;type&gt;;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>};</div>
 </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
@@ -147,7 +147,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structmtl_1_1largest__alignment_3_01T1_01_4.html">   63</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structmtl_1_1largest__alignment.html">largest_alignment</a>&lt;T1&gt;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>{</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">typedef</span> T1 type;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> value = alignment_of_v&lt;type&gt;;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> value = std::alignment_of_v&lt;type&gt;;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
 </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
