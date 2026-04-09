@@ -26,7 +26,7 @@ using largest_other = typename largest_type<TRest...>::type;
 
 // Set 'type' to be the largest of the first parameter and any of the others.
 // This is recursive.
-using type = conditional_t<
+using type = std::conditional_t<
     (sizeof(T1) > sizeof(largest_other)), T1, largest_other>;
 
 // The size of the largest type.
@@ -53,17 +53,17 @@ using largest_other = typename largest_alignment<TRest...>::type;
 
 // Set 'type' to be the largest of the first parameter and any of the others.
 // This is recursive.
-using type = conditional_t<
-    (alignment_of_v<T1> > alignment_of_v<largest_other>), T1, largest_other>;
+using type = std::conditional_t<
+    (std::alignment_of_v<T1> > std::alignment_of_v<largest_other>), T1, largest_other>;
 
-    static constexpr size_t value = alignment_of_v<type>;
+    static constexpr size_t value = std::alignment_of_v<type>;
 };
 
 template <typename T1>
 struct largest_alignment<T1>
 {
 typedef T1 type;
-static constexpr size_t value = alignment_of_v<type>;
+static constexpr size_t value = std::alignment_of_v<type>;
 };
 
 template<typename T1, typename... TRest>
