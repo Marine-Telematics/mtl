@@ -88,14 +88,14 @@ Public Types</h2></td></tr>
 <tr class="memitem:a0c2e6ce277d3d30737c139c48e2fe083" id="r_a0c2e6ce277d3d30737c139c48e2fe083"><td class="memItemLeft" align="right" valign="top"><a id="a0c2e6ce277d3d30737c139c48e2fe083" name="a0c2e6ce277d3d30737c139c48e2fe083"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>largest_other</b> = typename <a class="el" href="structmtl_1_1largest__alignment.html">largest_alignment</a>&lt; TRest... &gt;::type</td></tr>
 <tr class="separator:a0c2e6ce277d3d30737c139c48e2fe083"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4adb84b20ddb3f8d5863caf42f5d1af9" id="r_a4adb84b20ddb3f8d5863caf42f5d1af9"><td class="memItemLeft" align="right" valign="top"><a id="a4adb84b20ddb3f8d5863caf42f5d1af9" name="a4adb84b20ddb3f8d5863caf42f5d1af9"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> = conditional_t&lt;(alignment_of_v&lt; T1 &gt; &gt; alignment_of_v&lt; largest_other &gt;), T1, largest_other &gt;</td></tr>
-<tr class="separator:a4adb84b20ddb3f8d5863caf42f5d1af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5a5733e2133bbe82c462ffa8cab4ef3" id="r_ac5a5733e2133bbe82c462ffa8cab4ef3"><td class="memItemLeft" align="right" valign="top"><a id="ac5a5733e2133bbe82c462ffa8cab4ef3" name="ac5a5733e2133bbe82c462ffa8cab4ef3"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>type</b> = std::conditional_t&lt;(std::alignment_of_v&lt; T1 &gt; &gt; std::alignment_of_v&lt; largest_other &gt;), T1, largest_other &gt;</td></tr>
+<tr class="separator:ac5a5733e2133bbe82c462ffa8cab4ef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a344e543e91e59e6b2d0fdbfa71ccdaa6" id="r_a344e543e91e59e6b2d0fdbfa71ccdaa6"><td class="memItemLeft" align="right" valign="top"><a id="a344e543e91e59e6b2d0fdbfa71ccdaa6" name="a344e543e91e59e6b2d0fdbfa71ccdaa6"></a>
-static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> = alignment_of_v&lt;type&gt;</td></tr>
+static constexpr size_t&#160;</td><td class="memItemRight" valign="bottom"><b>value</b> = std::alignment_of_v&lt;type&gt;</td></tr>
 <tr class="separator:a344e543e91e59e6b2d0fdbfa71ccdaa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>

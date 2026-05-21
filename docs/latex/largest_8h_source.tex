@@ -22,7 +22,7 @@
 \DoxyCodeLine{00026\ }
 \DoxyCodeLine{00027\ \textcolor{comment}{//\ Set\ 'type'\ to\ be\ the\ largest\ of\ the\ first\ parameter\ and\ any\ of\ the\ others.}}
 \DoxyCodeLine{00028\ \textcolor{comment}{//\ This\ is\ recursive.}}
-\DoxyCodeLine{00029\ \textcolor{keyword}{using\ }type\ =\ conditional\_t<}
+\DoxyCodeLine{00029\ \textcolor{keyword}{using\ }type\ =\ std::conditional\_t<}
 \DoxyCodeLine{00030\ \ \ \ \ (\textcolor{keyword}{sizeof}(T1)\ >\ \textcolor{keyword}{sizeof}(largest\_other)),\ T1,\ largest\_other>;}
 \DoxyCodeLine{00031\ }
 \DoxyCodeLine{00032\ \textcolor{comment}{//\ The\ size\ of\ the\ largest\ type.}}
@@ -49,17 +49,17 @@
 \DoxyCodeLine{00053\ }
 \DoxyCodeLine{00054\ \textcolor{comment}{//\ Set\ 'type'\ to\ be\ the\ largest\ of\ the\ first\ parameter\ and\ any\ of\ the\ others.}}
 \DoxyCodeLine{00055\ \textcolor{comment}{//\ This\ is\ recursive.}}
-\DoxyCodeLine{00056\ \textcolor{keyword}{using\ }type\ =\ conditional\_t<}
-\DoxyCodeLine{00057\ \ \ \ \ (alignment\_of\_v<T1>\ >\ alignment\_of\_v<largest\_other>),\ T1,\ largest\_other>;}
+\DoxyCodeLine{00056\ \textcolor{keyword}{using\ }type\ =\ std::conditional\_t<}
+\DoxyCodeLine{00057\ \ \ \ \ (std::alignment\_of\_v<T1>\ >\ std::alignment\_of\_v<largest\_other>),\ T1,\ largest\_other>;}
 \DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ value\ =\ alignment\_of\_v<type>;}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ value\ =\ std::alignment\_of\_v<type>;}
 \DoxyCodeLine{00060\ \};}
 \DoxyCodeLine{00061\ }
 \DoxyCodeLine{00062\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T1>}
 \DoxyCodeLine{00063\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmtl_1_1largest__alignment}{largest\_alignment}}<T1>}
 \DoxyCodeLine{00064\ \{}
 \DoxyCodeLine{00065\ \textcolor{keyword}{typedef}\ T1\ type;}
-\DoxyCodeLine{00066\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ value\ =\ alignment\_of\_v<type>;}
+\DoxyCodeLine{00066\ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ value\ =\ std::alignment\_of\_v<type>;}
 \DoxyCodeLine{00067\ \};}
 \DoxyCodeLine{00068\ }
 \DoxyCodeLine{00069\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T1,\ \textcolor{keyword}{typename}...\ TRest>}
