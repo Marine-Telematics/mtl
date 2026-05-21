@@ -1,0 +1,15 @@
+<map id="mtl::token_list&lt; N &gt;" name="mtl::token_list&lt; N &gt;">
+<area shape="rect" id="Node000001" title="Splits a comma&#45;separated value into a span of trimmed tokens." alt="" coords="107,285,261,311"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,183,173,223"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,230,174,283,170,287,116,234"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="46,95,133,120"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="92,134,92,182,87,182,87,134"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="20,5,159,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="92,59,92,94,87,94,87,59"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="198,183,362,223"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="253,234,198,287,194,283,249,230"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="217,95,343,120"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="283,134,283,182,277,182,277,134"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="197,5,363,45"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="283,59,283,94,277,94,277,59"/>
+</map>

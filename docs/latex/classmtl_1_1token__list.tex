@@ -1,0 +1,57 @@
+\doxysection{mtl\+::token\+\_\+list\texorpdfstring{$<$}{<} N \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classmtl_1_1token__list}{}\label{classmtl_1_1token__list}\index{mtl::token\_list$<$ N $>$@{mtl::token\_list$<$ N $>$}}
+
+
+Splits a comma-\/separated value into a span of trimmed tokens.  
+
+
+
+
+{\ttfamily \#include $<$token\+\_\+list.\+h$>$}
+
+
+
+Collaboration diagram for mtl\+::token\+\_\+list\texorpdfstring{$<$}{<} N \texorpdfstring{$>$}{>}\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classmtl_1_1token__list__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmtl_1_1token__list_ad185018a1b2d4464744c5c5e272f6a6f}\label{classmtl_1_1token__list_ad185018a1b2d4464744c5c5e272f6a6f} 
+auto {\bfseries parse} (const std\+::string \&csv) -\/$>$ std\+::span$<$ const std\+::string\+\_\+view $>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmtl_1_1token__list_a9de14d55a877c7fe9bd65af0bb7e783b}\label{classmtl_1_1token__list_a9de14d55a877c7fe9bd65af0bb7e783b} 
+std\+::array$<$ std\+::string, max\+\_\+items $>$ {\bfseries \+\_\+storage} \{\}
+\item 
+\Hypertarget{classmtl_1_1token__list_a1a9c0102337b0d945f1adbd5ed21e542}\label{classmtl_1_1token__list_a1a9c0102337b0d945f1adbd5ed21e542} 
+std\+::array$<$ std\+::string\+\_\+view, max\+\_\+items $>$ {\bfseries \+\_\+views} \{\}
+\item 
+\Hypertarget{classmtl_1_1token__list_a9999b064c4afab02b99c7e1bb5798d8b}\label{classmtl_1_1token__list_a9999b064c4afab02b99c7e1bb5798d8b} 
+size\+\_\+t {\bfseries \+\_\+count} = 0u
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmtl_1_1token__list_ab9d98fc9db1609ad3919f696f03a3472}\label{classmtl_1_1token__list_ab9d98fc9db1609ad3919f696f03a3472} 
+static constexpr size\+\_\+t {\bfseries max\+\_\+items} = N
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$size\+\_\+t N$>$\newline
+class mtl\+::token\+\_\+list$<$ N $>$}
+Splits a comma-\/separated value into a span of trimmed tokens. 
+
+The tokens are copied into static storage so the returned string\+\_\+views stay valid regardless of later changes to the parsed source file. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/mtl/\mbox{\hyperlink{token__list_8h}{token\+\_\+list.\+h}}\end{DoxyCompactItemize}
