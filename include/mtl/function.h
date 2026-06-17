@@ -12,6 +12,7 @@
 #define MTL_FUNCTION_H
 
 #include <new>
+#include <cstddef>
 #include <cstring>
 #include <utility>
 #include <type_traits>
