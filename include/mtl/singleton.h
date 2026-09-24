@@ -25,6 +25,11 @@ template <typename T> class singleton
     using reference = T&;
     using pointer   = T*;
 
+    static auto is_created() -> bool
+    {
+        return constructed;
+    }
+
     template <typename... Args>
     static auto create(Args&&... args) -> reference
     {
@@ -37,7 +42,10 @@ template <typename T> class singleton
         return instance();
     }
 
-    static auto instance() -> reference { return *(buffer.data()); }
+    static auto instance() -> reference
+    {
+        return *(buffer.data());
+    }
 
     static void destroy()
     {
