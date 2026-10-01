@@ -81,18 +81,21 @@ $(function() {
   <div class="headertitle"><div class="title">utility.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cstdint&gt;</code><br />
+<div class="textblock"><code>#include &lt;span&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
 <code>#include &lt;type_traits&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for utility.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="utility_8h__incl.png" border="0" usemap="#ainclude_2mtl_2utility_8h" alt=""/></div>
 <map name="ainclude_2mtl_2utility_8h" id="ainclude_2mtl_2utility_8h">
-<area shape="rect" title=" " alt="" coords="17,5,164,31"/>
-<area shape="rect" title=" " alt="" coords="5,79,72,104"/>
-<area shape="poly" title=" " alt="" coords="84,33,57,69,53,66,80,29"/>
-<area shape="rect" title=" " alt="" coords="97,79,189,104"/>
-<area shape="poly" title=" " alt="" coords="101,29,128,66,124,69,97,33"/>
+<area shape="rect" title=" " alt="" coords="43,5,189,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,59,104"/>
+<area shape="poly" title=" " alt="" coords="104,33,58,72,55,67,101,29"/>
+<area shape="rect" title=" " alt="" coords="83,79,149,104"/>
+<area shape="poly" title=" " alt="" coords="119,31,119,65,113,65,113,31"/>
+<area shape="rect" title=" " alt="" coords="174,79,266,104"/>
+<area shape="poly" title=" " alt="" coords="134,28,193,68,190,73,131,33"/>
 </map>
 </div>
 </div>
@@ -118,6 +121,14 @@ auto&#160;</td><td class="memItemRight" valign="bottom"><b>mtl::to_bcd</b> (cons
 auto&#160;</td><td class="memItemRight" valign="bottom"><b>mtl::to_bcd</b> (const uint16_t value) -&gt; uint16_t</td></tr>
 <tr class="memdesc:a23203eef3d60d83bdaf8a66566a03864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a value into a BCD representation, useful for displays. <br /></td></tr>
 <tr class="separator:a23203eef3d60d83bdaf8a66566a03864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92ba552b48c409deb912232eca335758" id="r_a92ba552b48c409deb912232eca335758"><td class="memTemplParams" colspan="2"><a id="a92ba552b48c409deb912232eca335758" name="a92ba552b48c409deb912232eca335758"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a92ba552b48c409deb912232eca335758"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>mtl::as_bytes</b> (T &amp;obj) -&gt; std::span&lt; uint8_t &gt;</td></tr>
+<tr class="separator:a92ba552b48c409deb912232eca335758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb6d5aaa2020fef3b2fe908574f6bf2a" id="r_aeb6d5aaa2020fef3b2fe908574f6bf2a"><td class="memTemplParams" colspan="2"><a id="aeb6d5aaa2020fef3b2fe908574f6bf2a" name="aeb6d5aaa2020fef3b2fe908574f6bf2a"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aeb6d5aaa2020fef3b2fe908574f6bf2a"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><b>mtl::as_bytes</b> (const T &amp;obj) -&gt; std::span&lt; const uint8_t &gt;</td></tr>
+<tr class="separator:aeb6d5aaa2020fef3b2fe908574f6bf2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><hr  />
