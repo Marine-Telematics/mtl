@@ -11,6 +11,7 @@
 #ifndef MTL_UTILITY_H
 #define MTL_UTILITY_H
 
+#include <span>
 #include <cstdint>
 #include <type_traits>
 
@@ -62,6 +63,18 @@ inline auto to_bcd(const uint16_t value) -> uint16_t
     const uint16_t units     = value % 10u;
 
     return (uint16_t)((thousands << 12u) | (hundreds << 8u) | (tens << 4u) | units);
+}
+
+template<typename T>
+auto as_bytes(T &obj) -> std::span<uint8_t>
+{
+    return {reinterpret_cast<uint8_t *>(&obj), sizeof(T)};
+}
+
+template<typename T>
+auto as_bytes(const T &obj) -> std::span<const uint8_t>
+{
+    return {reinterpret_cast<const uint8_t *>(&obj), sizeof(T)};
 }
 }
 
