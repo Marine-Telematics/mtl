@@ -22,7 +22,7 @@ namespace mtl::can
 {
 using id_type   = uint32_t;
 using data_type = uint8_t;
-using size_type = size_t;
+using size_type = uint8_t; // keeps message at 16 bytes
 
 
 // special address description flags for the CAN_ID:
