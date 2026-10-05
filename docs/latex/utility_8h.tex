@@ -1,12 +1,14 @@
 \doxysection{include/mtl/utility.h File Reference}
 \hypertarget{utility_8h}{}\label{utility_8h}\index{include/mtl/utility.h@{include/mtl/utility.h}}
+{\ttfamily \#include $<$span$>$}\newline
 {\ttfamily \#include $<$cstdint$>$}\newline
 {\ttfamily \#include $<$type\+\_\+traits$>$}\newline
-Include dependency graph for utility.\+h\+:\nopagebreak
+Include dependency graph for utility.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=218pt]{utility_8h__incl}
+\includegraphics[width=276pt]{utility_8h__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Classes}
@@ -24,7 +26,13 @@ auto {\bfseries mtl\+::to\+\_\+bcd} (const uint8\+\_\+t value) -\/$>$ uint8\+\_\
 \begin{DoxyCompactList}\small\item\em Converts a value into a BCD representation, useful for displays. \end{DoxyCompactList}\item 
 \Hypertarget{utility_8h_a23203eef3d60d83bdaf8a66566a03864}\label{utility_8h_a23203eef3d60d83bdaf8a66566a03864} 
 auto {\bfseries mtl\+::to\+\_\+bcd} (const uint16\+\_\+t value) -\/$>$ uint16\+\_\+t
-\begin{DoxyCompactList}\small\item\em Converts a value into a BCD representation, useful for displays. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Converts a value into a BCD representation, useful for displays. \end{DoxyCompactList}\item 
+\Hypertarget{utility_8h_a92ba552b48c409deb912232eca335758}\label{utility_8h_a92ba552b48c409deb912232eca335758} 
+{\footnotesize template$<$typename T $>$ }\\auto {\bfseries mtl\+::as\+\_\+bytes} (T \&obj) -\/$>$ std\+::span$<$ uint8\+\_\+t $>$
+\item 
+\Hypertarget{utility_8h_aeb6d5aaa2020fef3b2fe908574f6bf2a}\label{utility_8h_aeb6d5aaa2020fef3b2fe908574f6bf2a} 
+{\footnotesize template$<$typename T $>$ }\\auto {\bfseries mtl\+::as\+\_\+bytes} (const T \&obj) -\/$>$ std\+::span$<$ const uint8\+\_\+t $>$
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
